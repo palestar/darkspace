@@ -14,8 +14,8 @@ A Tactical starship combat MMO
 # Running the Client:
 * Open the solution, DarkSpace/DarkSpace.sln, compile the solution.
 * Set the working directory for debugging to /DarkSpace (the same directory containing the Data/) directory.
-* Add "-login <user> <pass>" to the command line options and provide your username/password from the gamecq server.
-* Add "-connect <host> <port>" to specify the server to connect into. 
+* Add "-login [user] [pass]" to the command line options and provide your username/password from the gamecq server.
+* Add "-connect [host] [port]" to specify the server to connect into. 
 
 # Running a Server:
 * Open the solution, DarkSpace/Server.sln, compile the solution if needed.
