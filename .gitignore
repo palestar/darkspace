@@ -1,4 +1,14 @@
 Bin/
-Build/BuildInstaller.bat
 Build/
 config.ini
+*.ncb
+*.obj
+BuildLog.htm
+*.user
+*.idb
+*.pdb
+*.res
+*.manifest
+*.dep
+*.pch
+*.rsp
