@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Client"
+	ProjectGUID="{A06C7575-E090-442C-BF8A-5D3A4C3AF873}"
+	RootNamespace="Client"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="\\vm1\mirrors\Alpha\DarkSpace"
+			IntermediateDirectory=".\."
+			ConfigurationType="10"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+				Description="Updating Data..."
+				CommandLine="xcopy.exe  /y  /d  ..\..\Data\*.*     &quot;$(OutDir)\Data\&quot;"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="M:\Alpha\DarkSpace/Client.tlb"
+				HeaderFileName=""
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="EXE"
+			Filter="*.exe"
+			>
+			<File
+				RelativePath="..\..\Tools\Bin\BugReport.exe"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\DarkSpaceClient.exe"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\DarkSpaceSetup.exe"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\LocalServer.exe"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="DLL"
+			Filter="*.dll"
+			>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\AudioDS.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\DarkSpace.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\dbghelp.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\DisplayD3D.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\Gadgets.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\GCQ.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\Gui3d.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\ijl15.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\Interface.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\Medusa.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\Network.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\Render3D.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\GameCQ\Bin\SelfUpdate.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\SystemWin.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\World.dll"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="BMP"
+			>
+			<File
+				RelativePath="..\..\DarkSpace\DS.bmp"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="INI"
+			Filter="*.ini"
+			>
+			<File
+				RelativePath="..\..\Constants.ini"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\Version.ini"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="FX"
+			>
+			<File
+				RelativePath="..\..\Shaders\Default.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\PS_BrightPass.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\PS_ColorEdgeDetect.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\PS_Combine.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\PS_HorzBlur.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\PS_PassThrough.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\PS_VertBlur.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\ShadowMap.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\ShadowScene.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Shaders\VS_PassThrough.fx"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Shaders\"
+						CommandLine="copy $(InputPath) $(OutDir)\Shaders\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Shaders\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<File
+			RelativePath="..\..\..\GameCQ\GCQL\WordFilter.txt"
+			>
+			<FileConfiguration
+				Name="Release|Win32"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="copy $(InputPath) $(OutDir)"
+					CommandLine="copy $(InputPath) $(OutDir)"
+					Outputs="$(OutDir)\$(InputFileName)"
+				/>
+			</FileConfiguration>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

@@ -1,0 +1,65 @@
+<HTML><Body>
+<p align="left"><font face="Arial" size="4">DarkSpace Script Reference </font>
+</p>
+<p><font face="Arial" size="2">
+Last Updated Sunday, November 30, 2003 by
+<a href="mailto:shigernafy@palestar.com">Shigernafy</a>.&nbsp; I recommend a 
+resolution of <b>at least</b> 1024x768 for viewing this document well.</font></p>
+<p><font face="Arial" size="2">
+See </font><a href="http://www.lua.org/"><font face="Arial" size="2">www.lua.org</font></a><font face="Arial" size="2"> 
+for information on the scripting language used by DarkSpace.</font></p>
+<p><font face="Arial" size="2">This document is simply information on the 
+additional functions that have been attached to the Lua scripting language.&nbsp; 
+It is divided into 10 sections, based upon the headings found in the window to 
+the left.&nbsp; Each section has its own page, showing in this frame.&nbsp; If 
+you have any issues with the script reference, find errors, or have general 
+questions, find Shigernafy (@29) in chat, or via
+<a href="mailto:shigernafy@palestar.com">email</a> and ask me.&nbsp; Complicated 
+questions upon the deep inner workings should probably be directed to Chromix 
+(@107; <a href="mailto:chromix@palestar.com">email</a>), as asking me will more than 
+likely just result in my referring your question to him.. </font></p>
+<p><font face="Arial" size="2">There are a few functions that are currently disabled. 
+I have made their font color light grey; do not use them.  This was mainly done this way so
+that I wouldn't have to re-number everything, and in case they are re-enabled in the future.</font></p>
+
+<p><br><font face="Arial" size="2">Important other information:&nbsp; </font></p>
+<p><font face="Arial" size="2">Doing things like calling a nil function 
+(mistyped function name), trying to concatenate a nil value, etc., outputs an 
+error and immediately aborts the script execution. Callback functions like 
+timers however could still execute functions within the script, so make sure 
+starting a timer is the last last thing you do in a function.</font></p>
+<p><font face="Arial" size="2">If any kind of callback fails, i.e. onInitialize(), 
+onTimer(), remoteCall()... the errormessage is only displayed if enableAlerts(1) 
+was executed previously. <br>
+<br>
+Callbacks ( initiated by remoteCall, startTimer, watchKey etc... ) are 
+&quot;broadcasted&quot; at the destination. The destination receives the call and executes 
+this in the context of all running scripts. This allows scripts to communicate, 
+however all defined functions also need unique names or to be defined within a 
+namespace to prevent &quot;accidental&quot; calls of a function from another script 
+running at the same time.</font></p>
+<p><font face="Arial" size="2">All boolean functions which returned 1/0/nil or 
+1/nil/nil for Yes/No/Error before now return true/false/nil.&nbsp; The value a 
+function returns has been notated for most functions, but where it is missing, 
+it should be apparent via the following general return rules; if a return is 
+missing somewhere that should be mentioned, let Shig know:</font></p>
+<p><font face="Arial" size="2">If Yes/No is expected: return <i>true</i> / <i>
+false</i> <br>
+If numerical Id/amount is expected: return number <br>
+If text/general object id is expected: return string <br>
+If error: return <i>nil</i> </font></p>
+<p><br><font face="Arial" size="2">Updates:&nbsp; </font></p>
+
+<p><font face="Arial" size="2">Updated a ton of additional calls made available 
+with the Lua 5.0 upgrade.&nbsp; For a full list, go to Chromix's 
+thread, <a href="http://www.darkspace.net/phpBB/topicredirect.php?topic=23999">
+here</a>.&nbsp; Some additional notes on some of the API changes are the 
+following:</font></p>
+
+<p><font face="Arial" size="2">Some Unit functions have been added, but the 
+addition of another page would have been too much work, so I added them to the 
+Standard Functions page, though at the very end, so they're at least somewhat 
+separated.</font></p>
+<p>&nbsp;</p>
+
+</body></html>

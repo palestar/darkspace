@@ -1,0 +1,104 @@
+PRT
+B768E76C674D7856
+9C74C32A225640C5
+{
+[
+m_Name
+The War Begins in Luyten 726
+]
+[
+m_Description
+The conflict has finally erupted into war! The UGTO are making a bold move on the Luyten system (a neutral system close to ICC home space) in an effort to gain a "beach-head" from which to launch further operations. ICC intelligence has had plenty of forewarning regarding the upcoming assault so neither side has the element of surprise. This will be the first chance for each side to feel the other out and may very well have an outstanding effect on the outcome of the entire war.
+]
+[
+m_Type
+0
+]
+[
+m_Script
+
+]
+[
+m_Scenery
+scenery\\luyten scenery.prt
+]
+[
+m_Position
+000000000000000000000000
+]
+[
+m_Zones
+1
+1
+universe\\systems\\luyten 726\\luyten 726 8 0.prt
+000000000000000000000000
+]
+[
+m_Teams
+2
+4
+2
+
+UGTO
+This is our chance to gain a foothold in a system near ICC home space.
+00FFFF00
+ships\\ugto\\ugto fleet.prt
+0
+4
+3
+
+ICC
+We must keep the UGTO from gaining a presence in the Luyten system.
+FFFF0000
+ships\\icc\\icc fleet.prt
+0
+]
+[
+m_Conditions
+2
+The combined ICC forces have beaten back the UGTO in their attempt at taking the offensive. This gives them the chance to strengthen the system and now move on to the 61 Cygnus system in an effort to further strengthen their position in this sector.
+3
+2
+Take control of Ihzack.
+00000000
+3
+Ihzack
+2
+Take control of Mycopia.
+00000000
+3
+Mycopia
+2
+Take control of Dawn.
+00000000
+3
+Dawn
+release\\a thread\\a.prt
+The UGTO have shown the ICC that it is futile to attempt to rebel against the forces of civilization in the universe! This battle is only the first step in showing the ICC that their rebellion is complete foolishness. Before moving into ICC home space the UGTO will now take control of the 61 Cygnus system in order to further strengthen their presence in this sector.
+3
+2
+Take control of Ihzack.
+00000000
+2
+Ihzack
+2
+Take control of Mycopia.
+00000000
+2
+Mycopia
+2
+Take control of Dawn.
+00000000
+2
+Dawn
+release\\b thread\\b.prt
+]
+[
+m_TimeLimit
+216000
+]
+[
+m_UniversePort
+
+]
+}

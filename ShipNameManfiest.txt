@@ -1,0 +1,1097 @@
+2,10,UWS Mercury
+2,10,UWS Venus
+2,10,UWS Phobes
+2,10,UWS Deimos
+2,10,UWS Eros
+2,10,UWS Jupiter
+2,10,UWS Io
+2,10,UWS Europa
+2,10,UWS Callisto
+2,10,UWS Saturn
+2,10,UWS Hyperion
+2,10,UWS Rhea
+2,10,UWS Titania
+2,10,UWS Neptune
+2,10,UWS Triton
+2,10,UWS Ceres
+2,10,UWS Pluto
+2,10,UWS Zeal
+2,10,UWS Vigor
+2,10,UWS Augustine
+2,10,UWS Helena
+2,10,UWS Michael
+2,10,UWS Acropolis
+2,10,UWS Rho Aias
+2,10,UWS Crimson Red
+
+2,9,UWS Excalibur
+2,9,UWS Caladbolg
+2,9,UWS Hrunting
+2,9,UWS Mjolnir
+2,9,UWS Fragarach
+2,9,UWS Gae Bolg
+2,9,UWS Gungnir
+2,9,UWS Dainslef
+2,9,UWS Merodach
+2,9,UWS Vajra
+2,9,UWS Houtengeki
+2,9,UWS Ea
+2,9,UWS Enuma Elish
+2,9,UWS Gram
+2,9,UWS Laevateinn
+2,9,UWS Durandal
+2,9,UWS Cortana
+2,9,UWS Fafnir
+2,9,UWS Joyeuse
+2,9,UWS Tonogiri
+2,9,UWS Masamune
+2,9,UWS Colada
+2,9,UWS Muramasa
+2,9,UWS Avalon
+2,9,UWS Stormbringer
+
+2,8,UWS Ravishment
+2,8,UWS Usurper
+2,8,UWS Encroacher
+2,8,UWS Assailer
+2,8,UWS Bombarder
+2,8,UWS Onslaught
+2,8,UWS Ensarement
+2,8,UWS Aggresser
+2,8,UWS Containment
+2,8,UWS Diplomacy
+2,8,UWS Foreign Policy
+2,8,UWS Peace Keeper
+2,8,UWS Authority
+2,8,UWS Justifiable Action
+2,8,UWS Battering Ram
+2,8,UWS Descent
+2,8,UWS Terrorizer
+2,8,UWS Battle Cry
+2,8,UWS Alteraction
+2,8,UWS Belligerence
+2,8,UWS Argument Starter
+2,8,UWS Avenger
+2,8,UWS Vengence
+2,8,UWS Executor
+2,8,UWS Divine Right
+2,8,UWS Tyrant
+2,8,UWS Accuser
+2,8,UWS Iron Fist
+2,8,UWS Reaper
+2,8,UWS Adjudicator
+2,8,UWS Virulent
+
+2,7,UWS Hawk
+2,7,UWS Eagle
+2,7,UWS Buzzard
+2,7,UWS Falcon
+2,7,UWS Osprey
+2,7,UWS Vulture
+2,7,UWS Harrier
+2,7,UWS Harpy
+2,7,UWS Rubedo
+2,7,UWS Albedo
+2,7,UWS Nigredo
+2,7,UWS Aqua Regia
+2,7,UWS Aqua Vitae
+2,7,UWS Acidum Salis
+2,7,UWS Aqua Fortis
+2,7,UWS Liquor Hepatis
+2,7,UWS Raptor
+2,7,UWS Philosopher\'s Stone
+2,7,UWS Elixer
+2,7,UWS Panacea
+2,7,UWS Citrinitas
+2,7,UWS Shikra
+2,7,UWS Merlin
+2,7,UWS Kestrel
+2,7,UWS Peregrine
+2,7,UWS Gyrfalcon2,7,UWS 
+2,7,UWS Saker
+2,7,UWS Sparrowhawk
+2,7,UWS Kite
+
+2,6,UWS Angelfish
+2,6,UWS Anthias
+2,6,UWS Bass
+2,6,UWS Batfish
+2,6,UWS Blennies
+2,6,UWS Pufferfish
+2,6,UWS Chromis
+2,6,UWS Clownfish
+2,6,UWS Dartfish
+2,6,UWS Foxface
+2,6,UWS Goatfish
+2,6,UWS Jawfish
+2,6,UWS Lionfish
+2,6,UWS Hawkfish
+2,6,UWS Seahorse
+2,6,UWS Rays
+2,6,UWS Rabbitfish
+2,6,UWS Tangs
+2,6,UWS Wrasse
+2,6,UWS Gobies
+2,6,UWS Garfish
+2,6,UWS Rainbowfish
+2,6,UWS Eel
+2,6,UWS Loach
+2,6,UWS Danio
+2,6,UWS Snapper
+2,6,UWS Grouper
+
+2,5,UWS Lux
+2,5,UWS Illuminaton
+2,5,UWS Fluorescent
+2,5,UWS Lucent
+2,5,UWS Radiance
+2,5,UWS Scintillant
+2,5,UWS Vividly
+2,5,UWS Glitter
+2,5,UWS Smoldering
+2,5,UWS Gleam
+2,5,UWS Rationale
+2,5,UWS Princple
+2,5,UWS Determinator
+2,5,UWS Mitigator
+2,5,UWS Vindication
+2,5,UWS Advocator
+2,5,UWS Immaculate
+2,5,UWS Devotion
+2,5,UWS Seraphic
+2,5,UWS Reverent
+2,5,UWS Animus
+2,5,UWS Clairvoyance
+2,5,UWS Premonition
+2,5,UWS Acumen
+2,5,UWS Foreknowledge
+2,5,UWS Paradox
+2,5,UWS Prophecy
+2,5,UWS Deduction
+2,5,UWS Photon
+2,5,UWS Inference
+2,5,UWS Reflection
+
+2,3,UWS Rocky
+2,3,UWS Amaro
+2,3,UWS Kilimanjaro
+2,3,UWS Kipengere
+2,3,UWS Himalaya
+2,3,UWS Sierra
+2,3,UWS Alps
+2,3,UWS Spearhead
+2,3,UWS Agricola
+2,3,UWS Secchi
+2,3,UWS Granite
+2,3,UWS Shale
+2,3,UWS Limestone
+2,3,UWS Basalt
+2,3,UWS Blue Quartz
+2,3,UWS Claystone
+2,3,UWS Coal
+2,3,UWS Flint
+2,3,UWS Gneiss
+2,3,UWS Schist
+2,3,UWS Slate
+2,3,UWS Marble
+2,3,UWS Pyrolite
+2,3,UWS Pumice2,3,UWS 
+2,3,UWS Pumice
+2,3,UWS Sandstone
+2,3,UWS Ural
+2,3,UWS Andes
+2,3,UWS Summit
+2,3,UWS McKinley
+
+; UGTO 
+2,0,UWS Styx
+2,0,UWS Nile
+2,0,UWS Amazon
+2,0,UWS Mississippi
+2,0,UWS Yenisei
+2,0,UWS Yangtze
+2,0,UWS Missouri
+2,0,UWS Severn
+2,0,UWS Ohio
+2,0,UWS Congo
+2,0,UWS Rhine
+2,0,UWS Memuru
+2,0,UWS Seine
+2,0,UWS Loire
+2,0,UWS Thames
+2,0,UWS Congo
+2,0,UWS Danube
+2,0,UWS Mosman
+2,0,UWS Rio Grande
+2,0,UWS Colorodo
+2,0,UWS Volga
+2,0,UWS Rhone
+2,0,UWS Ural
+2,0,UWS Kartong
+2,0,UWS Ottawa
+2,0,UWS Ebro
+2,0,UWS Amur
+2,0,UWS Yukon
+2,0,UWS Zambezi
+2,0,UWS Vilyuy
+2,0,UWS Dnieper
+2,0,UWS Kasai
+2,0,UWS Oka
+2,0,UWS Brazos
+2,0,UWS Cauca
+2,0,UWS Shire
+
+; ICC Stations
+3,10,ICS Hemmingway
+3,10,ICS Asmiov
+3,10,ICS Adams
+3,10,ICS Aesop
+3,10,ICS Aristotle
+3,10,ICS Homer
+3,10,ICS Heinlein
+3,10,ICS Bradbury
+3,10,ICS Herbert
+3,10,ICS Clarke
+3,10,ICS Wells
+3,10,ICS Abraham
+3,10,ICS John Adams
+3,10,ICS Washington
+3,10,ICS Abel
+3,10,ICS Roosevelt
+3,10,ICS Jefferson
+3,10,ICS Woodrow Wilson
+3,10,ICS Elizabeth
+3,10,ICS Warhol
+3,10,ICS Churchill
+3,10,ICS Gatsby
+3,10,ICS Fitzgerald
+3,10,ICS Chimera
+3,10,ICS Leonardo
+3,10,ICS Machiavelli
+3,10,ICS Divine Comedy
+3,10,ICS Magus
+3,10,ICS Black Omen
+3,10,ICS Vermillion
+3,10,ICS Amlitzer
+3,10,ICS Iserlohn
+3,10,ICS Socrates
+
+; ICC dreads
+3,9,ICS Clarent
+3,9,ICS Deus
+3,9,ICS Lancelot
+3,9,ICS Guinevere
+3,9,ICS Anshar
+3,9,ICS Enlil
+3,9,ICS Marduk
+3,9,ICS Anubis
+3,9,ICS Horus
+3,9,ICS Osiris
+3,9,ICS Ra
+3,9,ICS Thoth
+3,9,ICS Airmid
+3,9,ICS Midir
+3,9,ICS Zeus
+3,9,ICS Hades
+3,9,ICS Apollo
+3,9,ICS Ares
+3,9,ICS Poseidon
+3,9,ICS Loki
+3,9,ICS Odin
+3,9,ICS Thor
+3,9,ICS Freya
+3,9,ICS Aegir
+3,9,ICS Guanyin
+3,9,ICS Ishtar
+3,9,ICS Iris
+3,9,ICS Leto
+3,9,ICS Cerberus
+3,9,ICS Minotaur
+3,9,ICS Centaur
+3,9,ICS Achilles
+3,9,ICS Tiamat
+3,9,ICS Artemis
+3,9,ICS Cronus
+3,9,ICS Gaia
+3,9,ICS Shiva
+3,9,ICS Vishnu
+
+; ICC Cruisers
+3,8,ICS Protector
+3,8,ICS Guardian
+3,8,ICS Aegis
+3,8,ICS Paladin
+3,8,ICS Warden
+3,8,ICS Vigiliant
+3,8,ICS Keep
+3,8,ICS Sentinel
+3,8,ICS Rook
+3,8,ICS Bastion
+3,8,ICS Casement
+3,8,ICS Paliside
+3,8,ICS Pickett
+3,8,ICS Entrenchment
+3,8,ICS Bulwark
+3,8,ICS Buttress
+3,8,ICS Citadel
+3,8,ICS Honor Garrison
+3,8,ICS Honor Guard
+3,8,ICS Resistance
+3,8,ICS Embankment
+3,8,ICS Fortitude
+3,8,ICS Invigoration
+3,8,ICS Knight\'s Vow
+3,8,ICS Salvation
+3,8,ICS Reparations
+3,8,ICS Legitamacy
+3,8,ICS Rectitude
+3,8,ICS Benevolance
+3,8,ICS Rebel Yell
+3,8,ICS Vanguard
+3,8,ICS Sanctity
+3,8,ICS Fellowship
+3,8,ICS Heroic Strength
+3,8,ICS Heroic Resolve
+
+; ICC Destroyers
+3,7,ICS Agate
+3,7,ICS Amber
+3,7,ICS Malachite
+3,7,ICS Moonstone
+3,7,ICS Amethyst
+3,7,ICS Ammolite
+3,7,ICS Apatite
+3,7,ICS Onyx
+3,7,ICS Aquamarine
+3,7,ICS Opal
+3,7,ICS Bloodstone
+3,7,ICS Pearl
+3,7,ICS Peridot
+3,7,ICS Quartz
+3,7,ICS Ruby
+3,7,ICS Sapphire
+3,7,ICS Serpentine
+3,7,ICS Coral
+3,7,ICS Diamond
+3,7,ICS Emerald
+3,7,ICS Spinel
+3,7,ICS Gaspeite
+3,7,ICS Star Ruby
+3,7,ICS Hambergite
+3,7,ICS Sunstone
+3,7,ICS Jasper
+3,7,ICS Topaz
+3,7,ICS Turquiose
+3,7,ICS Zircon
+3,7,ICS Larimar
+3,7,ICS Tourmaline
+3,7,ICS Prehnite
+3,7,ICS Lapis Lazuli
+3,7,ICS Pyrite
+3,7,ICS Jade
+
+; ICC Frigates
+3,6,ICS Hornet
+3,6,ICS Wasp
+3,6,ICS Yellow Jacket
+3,6,ICS Dirk
+3,6,ICS Stiletto
+3,6,ICS Dagger
+3,6,ICS Kukri
+3,6,ICS Cinquedea
+3,6,ICS Katara
+3,6,ICS Broadsword
+3,6,ICS Parry
+3,6,ICS Coup de Jarnac
+3,6,ICS Fleche
+3,6,ICS Legion Fulminante
+3,6,ICS Piu Grave
+3,6,ICS Feint
+3,6,ICS Riposte
+3,6,ICS Foil
+3,6,ICS Sabre
+3,6,ICS Pariser
+3,6,ICS Wakizashi
+3,6,ICS Katana
+3,6,ICS Kodachi
+3,6,ICS Tsurigi
+3,6,ICS Naginata
+3,6,ICS Glaive
+3,6,ICS Halberd
+3,6,ICS Guisarme
+3,6,ICS Morningstar
+3,6,ICS Rapier
+3,6,ICS Scimitar
+3,6,ICS Gauche
+
+; ICC Scouts
+3,5,ICS Ghost
+3,5,ICS Wraith
+3,5,ICS Specter
+3,5,ICS Apparition
+3,5,ICS Banshee
+3,5,ICS Demon
+3,5,ICS Phantasm
+3,5,ICS Shade
+3,5,ICS Shadow
+3,5,ICS Revenant
+3,5,ICS Eldritch
+3,5,ICS Mirage
+3,5,ICS Fantasy
+3,5,ICS Spirit
+3,5,ICS Delusion
+3,5,ICS Illusion
+3,5,ICS Disillusion
+3,5,ICS Deception
+3,5,ICS Psychosis
+3,5,ICS Oracle
+3,5,ICS Aura
+3,5,ICS Seer
+3,5,ICS Soothsayer
+3,5,ICS Premonition
+3,5,ICS Prophet
+3,5,ICS Prescient
+3,5,ICS Hypnosis
+3,5,ICS Mystic
+3,5,ICS Celestial
+3,5,ICS Enigma
+3,5,ICS Arcane
+
+; ICC Supply
+3,3,ICS Aluminium 
+3,3,ICS Magnesium
+3,3,ICS Iron
+3,3,ICS Calcium
+3,3,ICS Feldspars
+3,3,ICS Olivines
+3,3,ICS Pyroxenes
+3,3,ICS Amphiboles
+3,3,ICS Garnets
+3,3,ICS Micas
+3,3,ICS Gold
+3,3,ICS Silver
+3,3,ICS Cobaltite
+3,3,ICS Beryl
+3,3,ICS Barite
+3,3,ICS Bauxite
+3,3,ICS Hematite
+3,3,ICS Magnetite
+3,3,ICS Pyrolusite
+3,3,ICS Zinc
+3,3,ICS Copper
+3,3,ICS Bismith
+3,3,ICS Mercury
+3,3,ICS Thorium
+3,3,ICS Sodium
+3,3,ICS Platinum
+3,3,ICS Gallium
+3,3,ICS Cobalt3,3,ICS 
+3,3,ICS Bullion
+3,3,ICS Urdanium
+3,3,ICS Darkmatter
+3,3,ICS Hypermatter
+3,3,ICS Tin
+3,3,ICS Silicon
+3,3,ICS Lead
+
+; ICC general
+3,0,ICS Elephant
+3,0,ICS Camel
+3,0,ICS Yak
+3,0,ICS Reindeer
+3,0,ICS Goat
+3,0,ICS Water Buffalo
+3,0,ICS Llama
+3,0,ICS Donkey
+3,0,ICS Ox
+3,0,ICS Mule
+3,0,ICS Work Horse
+3,0,ICS Barrel
+3,0,ICS Packhorse
+3,0,ICS Bulkead
+3,0,ICS Captain's Protest
+3,0,ICS In Advance
+3,0,ICS Cosigner
+3,0,ICS Hazardous Cargo
+3,0,ICS Letters of Credit
+3,0,ICS Large Lien
+3,0,ICS Piggyback
+3,0,ICS Established Quota
+3,0,ICS Serviced Well
+3,0,ICS Demanding Supply
+3,0,ICS Supplying Demand
+3,0,ICS Rational Ignorance
+3,0,ICS Profiteer
+3,0,ICS Speculation
+
+; K'Luth Names
+4,0,Shall'kar
+4,0,Kejatir
+4,0,Kraddax'ger
+4,0,Retten
+4,0,Quor'pon
+4,0,Atar'mon
+4,0,Jemah'tek
+4,0,Irrat'tek
+4,0,Ezza'tek
+4,0,Kerrid'tek
+4,0,Var'tek
+4,0,Ulan'tek
+4,0,Gendith'tek
+4,0,Tomank'tek
+4,0,Y'Rath'mon
+4,0,Cher'ton
+4,0,Ter'qat
+4,0,Per'tix
+4,0,Qer'tin
+4,0,Fer'fon
+4,0,Her'rut
+4,0,Yer'jut
+4,0,Der'ren
+4,0,Gur'len
+4,0,Jur'ray
+4,0,Kur'n
+4,0,Nur't
+4,0,Vur'at
+4,0,Pur'ut
+4,0,Zur'qa
+4,0,Lur'y'un
+4,0,Gar'put
+4,0,Har'la
+4,0,Tar'e
+4,0,Nar'na
+4,0,Par'u'aon
+4,0,Qar'th
+4,0,Eur'fa'nur
+4,0,Jar'daj
+4,0,Zar'ey
+4,0,Xar'poq
+4,0,Kar'he'ut
+4,0,Lut'va
+4,0,Kut'hux
+4,0,Mut'eun
+4,0,Put'te
+4,0,Rut'un'y
+4,0,Cut'hie
+4,0,Qut'or
+4,0,Nar'e
+4,0,Kur'ray
+4,0,Qer'hie
+4,0,Eur'y
+4,0,Put'tie
+
+; Pirate Names
+6,0,Red Recluse
+6,0,Catapultum Habeo 
+6,0,Wreckage on the White Shores
+6,0,Cross Counter
+6,0,Round Two
+6,0,Second\'s Out
+6,0,Fuurinkazan
+6,0,Fierce as Fire
+6,0,Swift as Wind
+6,0,Bloody Crimson
+6,0,The End of 1000 Years
+6,0,Midnight Raider
+6,0,Absolute Chain
+6,0,Wallet Cleanser
+6,0,Last Buster
+6,0,Your Shadow
+6,0,Perpetual Motion Machine of Misery
+6,0,The Gigantic Plunderer
+6,0,Tin Tyrant
+6,0,Mere Thief
+6,0,Not a Mere Thief
+6,0,Charming Demeanor 
+6,0,Signifying Nothing
+6,0,Zen Ender
+6,0,Cavalier Afterlife 
+6,0,Void Dragon
+6,0,Privat Privateer
+6,0,Silent Advocate
+6,0,The Hated King
+6,0,The Eternal Recurrence
+6,0,An Endless Flask
+6,0,Escapade
+6,0,My Ship Is Fight
+6,0,Armor Durability Tester
+6,0,Last Luck
+6,0,Tales and Trails
+6,0,Star Shattering
+6,0,The Devil King
+6,0,Borderline of Emptiness
+6,0,Zealous Anger
+6,0,Final Fortune
+6,0,Just An Asteroid
+6,0,Nothing Over Here
+6,0,Dim Dream
+6,0,Plunder\'s Paradise
+6,0,No Reedeming Value
+6,0,Positive Thinking
+6,0,Terrible Damage
+6,0,I Hate
+6,0,Metal Fighter
+6,0,Maximum Mockery
+6,0,Confidence In Domination
+6,0,Create Corrupt Consume
+6,0,Misery Loves Company
+6,0,Cultural Reform
+6,0,Instant Plundering - Just Add Pirates!
+6,0,Red Illusion
+6,0,Your Money or Your Money
+6,0,Impeccable Taste
+6,0,Unlimited Booty
+6,0,Black Heart
+6,0,Soul Of Steel
+6,0,Last Dinosaur
+6,0,Salavaged Nightmare
+6,0,Incredible Speed
+6,0,Victor's Revenge
+6,0,Darkest Before Death
+6,0,My Socrates Note
+6,0,Flavor Of The Week
+6,0,The Incantation Of Resurrection
+6,0,Merely Tuesday
+6,0,A Regular Life
+6,0,Canned Hatred
+6,0,Privateer's Thunder
+6,0,Pirate\'s Poison Lie
+6,0,The Cruel Captain
+6,0,Cheese Thief
+6,0,Dead Bones
+6,0,Rogen's Delight
+6,0,Drake\'s Dewclaw
+6,0,Tuatha de Danaan
+6,0,Jolly Roger
+
+; Generic Names
+0,0,Able
+0,0,Adroit
+0,0,Aegis
+0,0,Agate
+0,0,Agile
+0,0,Alacrity
+0,0,Alcibiades
+0,0,Alyattes
+0,0,Anathma
+0,0,Ancestral Home
+0,0,Andromeda Mirage
+0,0,Andromeda
+0,0,Antisthenes
+0,0,Appian
+0,0,Archer
+0,0,Aristophanes
+0,0,Aristotle
+0,0,Ark Royal
+0,0,Armageddon
+0,0,Arrian
+0,0,Atropos
+0,0,Auriga
+0,0,Avalanche
+0,0,Avenger
+0,0,Azula
+0,0,Azulon
+0,0,Babylon
+0,0,Balmung
+0,0,Bane
+0,0,Bear's Den
+0,0,Bellum
+0,0,Bernlad
+0,0,Berserker
+0,0,Black Adder
+0,0,Black Beard
+0,0,Black Ghost
+0,0,Black Justice
+0,0,Black Knight
+0,0,Black Talon
+0,0,Blade
+0,0,Blind Faith
+0,0,Blizzard
+0,0,Blizzard
+0,0,Blood Fury
+0,0,Blood Horse
+0,0,Blood Lust
+0,0,Blood Oath
+0,0,Bloodletter
+0,0,Blue Aerie
+0,0,Blue Lancer
+0,0,Blue Quest
+0,0,Blue Talon
+0,0,Bold Venture
+0,0,Bolg
+0,0,Bonaventure
+0,0,Bond
+0,0,Brimstone
+0,0,Bucephalus
+0,0,Caladbolg
+0,0,Caliburn
+0,0,Cambyses
+0,0,Cataclysm
+0,0,Catalyst
+0,0,Centaur
+0,0,Chaos Sailor
+0,0,Cho Polu
+0,0,Chronicle
+0,0,Chrysippus
+0,0,Cold Hunter
+0,0,Cold Hunter
+0,0,Collrane
+0,0,Conquerer
+0,0,Conqueror
+0,0,Consequence
+0,0,Constant
+0,0,Constantineau
+0,0,Constrictor
+0,0,Cooper
+0,0,Corona Austrina
+0,0,Corona Borealis
+0,0,Cortana
+0,0,Corvidae
+0,0,Cosgrove
+0,0,Coterie
+0,0,Courage
+0,0,Courageous
+0,0,Courageous
+0,0,Crucible
+0,0,Cyaxares
+0,0,Damnation
+0,0,Dancer
+0,0,Daring
+0,0,Dark Asp
+0,0,Democritus
+0,0,Den Mother
+0,0,Des
+0,0,Deus
+0,0,Devestation
+0,0,Devourer
+0,0,Dieron's Run
+0,0,Dire Wolf
+0,0,Doomsday
+0,0,Drake
+0,0,Durandal
+0,0,Dynamic
+0,0,Ea
+0,0,Eagle
+0,0,Emerald Talon
+0,0,Emerald
+0,0,Endurance
+0,0,Enkidu
+0,0,Epictetus
+0,0,Epicurus
+0,0,Epimethus
+0,0,Eruption
+0,0,Eternity
+0,0,Excalibur
+0,0,Exsanguine
+0,0,Faithful
+0,0,Falcon's Nest
+0,0,Fidelity
+0,0,Fire-Eater
+0,0,Firetender
+0,0,Flamberge
+0,0,Formality
+0,0,Fredrickson
+0,0,Frost Falcon
+0,0,Gae
+0,0,Gagarin
+0,0,Garlon
+0,0,Gauntlet
+0,0,Ghost
+0,0,Gold Knight
+0,0,Gold Talon
+0,0,Graceful
+0,0,Great Bear
+0,0,Green Lantern
+0,0,Guardian
+0,0,Hager
+0,0,Halberd
+0,0,Hawk Eye
+0,0,Hawker
+0,0,Hell Fury
+0,0,Hellion's Pride
+0,0,Hephestus
+0,0,Heraclitus
+0,0,Herodotus
+0,0,Hill
+0,0,Holy Grace0,0,
+0,0,Holy
+0,0,Homer
+0,0,Honor of Ages
+0,0,Howler
+0,0,Howling
+0,0,Hunnin
+0,0,Hyper
+0,0,Hyperion
+0,0,Ice Storm
+0,0,Icepick
+0,0,Ilah
+0,0,Illusive
+0,0,Impaler
+0,0,Incense
+0,0,Indignated
+0,0,Indignation
+0,0,Indignation's Judgement
+0,0,Indomitable
+0,0,Infinite
+0,0,Inquisitor
+0,0,Inquisitor
+0,0,Integrity
+0,0,Interjection
+0,0,Intrepid
+0,0,Iron Will
+0,0,Jade Aerie
+0,0,Jade Talon
+0,0,Janice Hazen
+0,0,Joyeuse
+0,0,Judgement
+0,0,Judgement
+0,0,Kaja
+0,0,Karttikeya
+0,0,Keen
+0,0,Keeper
+0,0,Keiji
+0,0,Kraken
+0,0,Lancer
+0,0,Leader
+0,0,Lee
+0,0,Lei Kung
+0,0,Leviathan
+0,0,Liberation
+0,0,Lightning Fury
+0,0,Lightning Strike
+0,0,Lively
+0,0,Lord Death
+0,0,Loyalty
+0,0,Lucid
+0,0,Magpie
+0,0,Maker
+0,0,Merodach
+0,0,Messinia
+0,0,Meteor
+0,0,Midnight Star
+0,0,Morning Star
+0,0,Mount Olympus
+0,0,Mountbatton
+0,0,Munnin
+0,0,Nagasawa
+0,0,Nahima
+0,0,Nebulus
+0,0,Nestling
+0,0,Niflheim
+0,0,Notable
+0,0,Nygaard
+0,0,Obsidian
+0,0,Onyx
+0,0,Ophidian
+0,0,Opportune
+0,0,Orpheus
+0,0,Ozai
+0,0,Paladin
+0,0,Parmenides
+0,0,Pearl
+0,0,Pegasus
+0,0,Perdition's Flame
+0,0,Perilous Vision
+0,0,Phantom
+0,0,Pit Viper
+0,0,Plato
+0,0,Plotinus
+0,0,Plutarch
+0,0,Polybius
+0,0,Pompeii
+0,0,Poseidon
+0,0,Predator
+0,0,Prime
+0,0,Principle
+0,0,Prism
+0,0,Prometheus
+0,0,Promise
+0,0,Protector
+0,0,Provider
+0,0,Pyrrho
+0,0,Pythagoras
+0,0,Quinin
+0,0,Radiance
+0,0,Radiant
+0,0,Rage
+0,0,Rancor
+0,0,Reaver
+0,0,Red Knight
+0,0,Red Talon
+0,0,Red Tide
+0,0,Regent
+0,0,Regular
+0,0,Remembrance
+0,0,Renown
+0,0,Resolute
+0,0,Revenge
+0,0,Rocinante
+0,0,Rogue
+0,0,Roku
+0,0,Rook
+0,0,Ruin
+0,0,Saber
+0,0,Sage
+0,0,Sagitta
+0,0,Sapphire
+0,0,Scabbard
+0,0,Scavanger
+0,0,Second Coming
+0,0,Sentinel
+0,0,Sentry
+0,0,Serket
+0,0,Shyu
+0,0,Sinew
+0,0,Sleipnir
+0,0,Snake Pit
+0,0,Snowflake
+0,0,Socrates
+0,0,Solar Blaze
+0,0,Soverign
+0,0,Sozin
+0,0,Space Hunter
+0,0,Spectre
+0,0,Speculator
+0,0,Spirit Sight
+0,0,Spirited
+0,0,Spur
+0,0,Stalwart
+0,0,Star Fire
+0,0,Star Swimmer
+0,0,Steadfast
+0,0,Steady
+0,0,Steel Fang
+0,0,Steel Python
+0,0,Steel Shield
+0,0,Stellar Serpent
+0,0,Stonewall
+0,0,Stooping Kite
+0,0,Storm Crow
+0,0,Storm
+0,0,Streaking Mist
+0,0,Sturdy
+0,0,Supreme
+0,0,Surefire
+0,0,Swift Bait
+0,0,Swift Strike
+0,0,Synthesis
+0,0,Taroke
+0,0,Tehuantepec
+0,0,Tempest
+0,0,Tenacity
+0,0,Tenacity
+0,0,Terror of the Deep
+0,0,Thales
+0,0,Thucydides
+0,0,Thunderbolt
+0,0,Thypho
+0,0,Titanic
+0,0,Torment
+0,0,Trailblazer
+0,0,Treachery
+0,0,Trombe
+0,0,True Path
+0,0,True Sight
+0,0,True Vision
+0,0,Trump
+0,0,Tsunami
+0,0,Unyielding
+0,0,Ursa Major
+0,0,Ursa Minor
+0,0,Ursa
+0,0,Ursine Boatman
+0,0,Valiant
+0,0,Valiant
+0,0,Venal
+0,0,Venture Star
+0,0,Vicious Fang
+0,0,Victorious
+0,0,Vigilant
+0,0,Vim
+0,0,Viscious
+0,0,Vision Quest
+0,0,Void
+0,0,Vorpal
+0,0,Vritra
+0,0,Warden
+0,0,Warlock
+0,0,Whelp
+0,0,White Aerie
+0,0,White Claw
+0,0,White Fang
+0,0,White Talon
+0,0,White Terror
+0,0,Whitefire
+0,0,Whitworth
+0,0,Windrunner
+0,0,Wisdom of Ages
+0,0,Wraith
+0,0,Xenophon
+0,0,Yggdrasil
+0,0,Yodan
+0,0,Yukio
+0,0,Zeno
+0,0,Zozia
+0,0,41 Fish
+0,0,Additional Credits
+0,0,Armors Hollow
+0,0,Beginning War
+0,0,Binary Assault
+0,0,Bitspace
+0,0,Box Full of Noise
+0,0,CRC Error
+0,0,Deathshell
+0,0,Eight of Clubs
+0,0,End Run
+0,0,Hellshot
+0,0,Kick In a Door
+0,0,Legend's Descent
+0,0,Limit Break
+0,0,No Heaven
+0,0,Polar Outhouse
+0,0,Public Service
+0,0,Sixty One Eighty Four
+0,0,Start a Fight
+0,0,Strafing Run
+0,0,Wingnut
+0,0,Blissful Irresponsibility
+0,0,Chromatic Aberration
+0,0,Cohesion Transaction
+0,0,Conduct Unbecoming
+0,0,Effeminate Screaming
+0,0,Electronic Cacophony
+0,0,Enduring Fire
+0,0,Falcon's Crossroad
+0,0,Falling Fifty
+0,0,Flagrant Disregard
+0,0,Gearsimple
+0,0,Going Large
+0,0,Gross Generalization
+0,0,Imagined Pinnacle
+0,0,Impenetrable Darkness
+0,0,Persistant Moniker
+0,0,Prophecy of Tears
+0,0,Proximal Shadow
+0,0,Reflective Facet
+0,0,Revenging Angel
+0,0,Righteous Indignation
+0,0,Shady Business
+0,0,Shattered Construct
+0,0,Tact and Discretion
+0,0,Temporal Discount
+0,0,Throttle Jockey
+0,0,Unmitigated Disaster
+0,0,Wind Baffling
+0,0,Work of Despair
+0,0,Youthful Indiscretion
+0,0,Cognative Dissonence
+0,0,Emotional Distress
+0,0,Gravity Accelerated
+0,0,Impetuous Proximate
+0,0,Indefinite Hold
+0,0,Intentional Variation
+0,0,Paltry Offering
+0,0,Percussive Maintenance
+0,0,Tears and Bitter Resentment
+0,0,Veritable Quandary
+0,0,Virtuous Regret

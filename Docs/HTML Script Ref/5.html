@@ -1,0 +1,102 @@
+<html><body>
+
+  <A name=5><h2>5.  Interface Functions</h2>
+  <OL><br>
+    <LI><A name=5.1></FONT><FONT face=Arial size=4><I><b><font color="#C0C0C0">flushChat()</font></B></I></FONT></A><FONT face=Arial size=4><I><b><font color="#C0C0C0">
+    </font> 
+    </B></I></FONT><FONT face=Verdana size=2><font color="#C0C0C0"><BR>This function clears all chat 
+    from the chat buffer. <BR>&nbsp;<I><B>function startTutorial() 
+    <BR>flushChat(); <BR>pushChat( "&lt;Color;00ffff&gt;Tutorial: Basic Command 
+    and Control&lt;/Color&gt;\nPressing the &lt;Color;00ffff&gt;F4&lt;/Color&gt; 
+    key will display the message log, allowing you review the tutorial text." ); 
+    <BR>pushChat( "\nPress the &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key to 
+    begin the tutorial.\n" ); <BR>trapKey( 13, "onStep1()" ); <BR>end</B></I>
+    </font> 
+    <BR>&nbsp; 
+    <LI><A name=5.2></FONT><B><I><FONT face=Arial size=4>pushChat( text 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function sends a 
+    chat message to the local chat buffer.<B><I> <BR>function onStep2() 
+    <BR>pushChat( "Now for a closer look you can zoom the camera towards your 
+    ship with either the &lt;color;00ffff&gt;Mouse Wheel&lt;/color&gt; or by 
+    pressing the &lt;color;00ffff&gt;Z&lt;/color&gt; key.\n\nYou can zoom out 
+    for an overview of the battle field with &lt;color;00ffff&gt;X&lt;/color&gt; 
+    key or again by using your mouse wheel in the other direction." ); 
+    <BR>pushChat( "\nPress the &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key 
+    to continue.\n" ); <BR>trapKey( 13, "onStep3()" ); <BR>end</B></I> 
+    <BR>&nbsp; 
+    <LI><A name=5.3></FONT><B><I><FONT face=Arial size=4>sendChat( 
+    target, scope, text )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+    function sends a chat message to the specified target and scope. See the 
+    following table for valid scopes.&nbsp; This function returns <i>true</i> if 
+    it succeeds, and <i>nil</i> on errors.</FONT> 
+    <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>LOCAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>GLOBAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>SERVER</FONT></TD>
+        <TD vAlign=top width="50%"><font face="Verdana" size="2">2</font></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><font face="Verdana" size="2">MASTER</font></TD>
+        <TD vAlign=top width="50%"><font face="Verdana" size="2">3</font></TD></TR></TBODY></TABLE><I><B><FONT face=Arial size=2><BR><BR>
+  <LI><A name=5.4></FONT><FONT face=Arial size=4>trapKey( key, [script] 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function creates a 
+  trap for a certain key, when that key is pressed a function within the script 
+  is called by the game. The key will stay trapped, until this function is 
+  called again with the same key but no second argument.&nbsp; The function 
+  returns <i>true </i>if the keyhook is activated, <i>false</i> if the keyhook 
+  was removed, and <i>nil </i>if there was an error.<I><B><BR>-- trap the 
+  enter key, call the function "onStep14" when the enter key is pressed 
+  <BR>trapKey( 13, "onStep14()" ); <BR>-- untrap the enter key <BR>trapKey( 13 
+  );</B></I> <BR>&nbsp; 
+  <LI><A name=5.5></FONT><B><I><FONT face=Arial size=4>watchKey( key, 
+  [script] )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function is 
+  like trapKey, except it allows the keyboard message to be passed onto the 
+  game. The function returns <i>true </i>if the keyhook is activated, <i>false</i> 
+  if the keyhook was removed, and <i>nil </i>if there was an error.<BR><BR>
+  <LI><A name=5.6></FONT><B><I><FONT face=Arial size=4>highlightWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function places 
+  a rectangle around the specific window.<B><I> <BR>function onStep15() 
+  <BR>highlightWindow( "CargoButtons" ); <BR>pushChat( "The highlighted area is 
+  where your cargo icons are displayed. Press the 
+  &lt;color;00ffff&gt;U&lt;/color&gt; key to unload an infantry unit onto the 
+  planet's surface. "); <BR>watchKey( "U", "onStep16()" ); <BR>end</B></I> 
+  <BR>&nbsp; 
+  <LI><A name=5.7></FONT><B><I><FONT face=Arial size=4>hideWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function hides 
+  the specified window.<B><I> <BR>function onStep17() <BR>hideWindow( 
+  "ViewTactical" ); <BR>showWindow( "ViewEngineering" ); <BR>enableWindow( 
+  "ButtonEngineering" ); <BR>pushChat( "This is the 
+  &lt;color;00ffff&gt;ENGINEERING&lt;/color&gt; view. This view shows you the 
+  current status of your ship. You can toggle the engineering view with the 
+  &lt;color;00ffff&gt;F3&lt;/color&gt; key." ); <BR>pushChat( "\nPress the 
+  &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key to continue.\n" ); <BR>trapKey( 
+  13, "onStep18()" ); <BR>end</B></I> <BR>&nbsp; 
+  <LI><A name=5.8></FONT><B><I><FONT face=Arial size=4>showWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function shows 
+  the specified window, see <B><I>hideWindow</B></I>. <BR><BR>
+  <LI><A name=5.9></FONT><B><I><FONT face=Arial size=4>disableWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  disables a window.<B><I> <BR>function onStep1() <BR>-- Disable the different 
+  screen buttons so we can control the user <BR>disableWindow( "ButtonHelp" ); 
+  <BR>disableWindow( "ButtonNavigation" ); <BR>disableWindow( 
+  "ButtonEngineering" ); <BR>pushChat( "You are now in the 
+  &lt;color;00ffff&gt;TACTICAL&lt;/color&gt; view, this is where you will spend 
+  most of your time while playing DarkSpace. Your ship is always displayed in 
+  the center of the screen." ); <BR>pushChat( "\nFirst, begin by holding down 
+  the &lt;color;00ffff&gt;right button&lt;/color&gt; on your mouse and then 
+  &lt;color;00ffff&gt;dragging&lt;/color&gt; your mouse around. This changes 
+  your camera position around your ship, allowing you to view your ship from any 
+  direction." ); <BR>pushChat( "\nPress the 
+  &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key to continue.\n" ); <BR>trapKey( 
+  13, "onStep2()" );<BR>end</B></I> <BR>&nbsp; 
+  <LI><A name=5.10></FONT><B><I><FONT face=Arial size=4>enableWindow( 
+  window )</A></B></I></FONT><FONT face=Arial size=2> <BR>This function enables 
+  a window. see <B>disableWindow</B>.</FONT><FONT face=Verdana 
+size=2></LI>
+
+</body></html>

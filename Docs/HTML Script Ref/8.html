@@ -1,0 +1,162 @@
+<html><body>
+
+<A name=8><h2>8.  Gadget Functions</h2>
+<OL><BR>
+  <LI><A name=8.1></FONT><B><I><FONT face=Arial size=4>isGadget( id 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns <i>true </i>or<i> 
+  false, </i>or<i> nil </i>on error if 
+  the item is a gadget. <BR>&nbsp; 
+  <LI><A name=8.2></FONT><B><I><FONT face=Arial size=4>gadgetCount( 
+  ship )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns 
+  the number of gadgets attached to the specified ship, or <i>nil</i> on errors. <BR>&nbsp; 
+  <LI><A name=8.3></FONT><B><I><FONT face=Arial size=4>getGadget( ship, 
+  n )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+  key of gadget n on the specified ship, or <i>nil</i> on errors. <BR>&nbsp; 
+  <LI><A name=8.4></FONT><B><I><FONT face=Arial size=4>getGadgetType( 
+  gadget )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the type of gadget from it’s key. See the following table for the 
+  current types of gadgets.</FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+    <TBODY>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>UKNOWN</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>DRIVE</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>SPECIAL</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>SPECIAL_HEAVY</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>JUMP_DRIVE</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>5</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON_HEAVY</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>6</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON_BEAM</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>7</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON_MEDIUM_BEAM</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>8</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON_HEAVY_BEAM</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>9</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON_BOMB</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>10</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>WEAPON_HEAVY_BOMB</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>11</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>ARMOR</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>12</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>FIGHTER_BAY</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>13</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>DRONE_BAY</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>14</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>ORB</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>15</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>CLOAK</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>16</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>HULL</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>17</FONT></TD></TR></TBODY>
+      </TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+
+  <LI><A name=8.5></FONT><B><I><FONT face=Arial size=4>getGadgetMount( 
+  gadget )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the facing of a gadget. See the table below.</FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+    <TBODY>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>FRONT</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>RIGHT</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>LEFT</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT face=Verdana size=2>BACK</FONT></TD>
+      <TD width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD width="50%"><FONT size=2>FULL</FONT></TD>
+      <TD width="50%"><FONT size=2>4</FONT></TD></TR></TBODY></TABLE>
+      <FONT size=2><BR>&nbsp; 
+  <LI><A name=8.6></FONT><B><I><FONT face=Arial size=4>setGadgetMount( 
+  gadget, mount )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  sets the mount for a gadget, based upon the above table.&nbsp; This function returns <i>true</i> if it 
+  succeeds, and <i>nil</i> on errors. <BR><BR>
+  <LI><A name=8.7></FONT><B><I><FONT face=Arial size=4>getGadgetAmmo( 
+  gadget )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the amount of ammo remaining if the gadget is a weapon that requires 
+  ammo, or 0 if no ammo is used. <BR>&nbsp; 
+  <LI><A name=8.8></FONT><B><I><FONT face=Arial size=4>setGadgetAmmo( 
+  gadget, amount )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  allows you to set the amount of ammo in a gadget. <BR>&nbsp; 
+  <LI><A name=8.9></FONT><B><I><FONT face=Arial size=4>useGadget2( 
+  gadget, target, shift )</A></B></I></FONT><FONT face=Verdana 
+size=2><BR>This function will use the specified gadget on the target. This 
+function takes a gadget key, unlike the older useGadget() function which uses a 
+gadget based on it’s hotkey.&nbsp; This function returns <i>true</i> if it 
+  succeeds, and <i>nil</i> on errors.<br>&nbsp;
+<LI><A name=8.10></FONT><B><I><FONT face=Arial size=4>isGadgetActive( 
+  gadgetId )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns <i>true</i> 
+if the gadget is active or<i> false, </i>or<i> nil </i>on error.&nbsp; The jumpdrive will show up as active 
+when aligning, as well as jumping; use <a href="7.html#13">isJumping()</a> to 
+check for an active jump. <BR>&nbsp; 
+
+<LI><A name=8.11></FONT><B><I><FONT face=Arial size=4>isGadgetUsable( 
+  gadgetId, shiftStatus [, targetId] )</A> </B></I></FONT><FONT face=Verdana size=2><BR>
+Returns 1 if gadget is usable, <i>nil </i>if false.&nbsp; shitStatus = 1 if 
+shift should be pressed, 0 if not.&nbsp; targetId is an optional target; some 
+gadgets (such as the tractor beam) need a target for the check, others (like 
+ECM) do not.&nbsp; If no target is given though one is needed, the function will 
+return<i> nil</i>.<i> </i> <BR>&nbsp; 
+
+  </FONT> 
+
+<LI><A name=8.12><B><I><FONT face=Arial size=4>beamPointDefenseEnabled( 
+  gadgetId )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns 1 if point 
+defense is enabled for the passed gadget, <i>nil</i> if it is not.. <BR>&nbsp; 
+
+<LI><A name=8.13></FONT><B><I><FONT face=Arial size=4>setBeamPointDefense( 
+  gadgetId, enable )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  lets you set the point defense on a gadget via the enable variable: 1 enables 
+PD, 0 disables it.&nbsp; This function returns <i>true</i> if it succeeds, and
+<i>nil</i> on errors.<BR>&nbsp;
+  
+<LI><A name=8.14></FONT><B><I><FONT face=Arial size=4>getJumpTarget( 
+  gadgetId, enable )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the jumptarget of the jumpdrive.&nbsp; If there is no target,<i> nil</i> 
+is returned.<BR>&nbsp;
+
+  </font><FONT face=Arial size=4>
+
+<LI><a name="8.15"><b><i>hasGadgetAmmo</a></i></b></font><FONT face=Verdana size=2><FONT face=Arial size=4><I><B><A name=8.14>( 
+  gadgetId )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns true if 
+the gadget uses ammo for operation. <BR>&nbsp; 
+
+<LI><A name=8.16></FONT></font><b><i><FONT face=Arial size=4>g</font></i></b><I><FONT face=Verdana size=2><FONT face=Arial size=4><B>etShielding( 
+  gadgetId )</B></FONT></font></A><FONT face=Verdana size=2><FONT face=Verdana size=2><FONT face=Arial size=4><B> </B></FONT>
+</font></font></I><FONT face=Verdana size=2><FONT face=Verdana size=2><FONT face=Verdana size=2><BR>
+Returns the current strength of the shield or armor given, in percent.<BR>&nbsp;
+  
+<LI></FONT></font></font><A name=8.17><FONT face=Arial size=4><b><i>s</i></b></font><I><FONT face=Verdana size=2><FONT face=Arial size=4><B>etShielding( 
+  gadgetId, percent )</B></FONT></font></A><FONT face=Arial size=4><B> </B></FONT></I><FONT face=Verdana size=2><FONT face=Verdana size=2><BR>
+This allows you to set the strength of a shield or armor gadget in percent.
+
+
+</body></html>

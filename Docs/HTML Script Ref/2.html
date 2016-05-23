@@ -1,0 +1,24 @@
+<html><body>
+
+  <A name=2><H2>2.  Callbacks</h2></a>
+  <FONT face=Verdana size=2>These functions are called by the 
+  game into the script after certain events.&nbsp; </font>
+  <font size="2" face="Arial">Callbacks ( initiated by remoteCall, startTimer, 
+  watchKey etc... ) are &quot;broadcasted&quot; at the destination. The destination 
+  receives the call and executes this in the context of all running scripts. 
+  This allows scripts to communicate, however all defined functions also need 
+  unique names or to be defined within a namespace to prevent &quot;accidental&quot; calls 
+  of a function from another script running at the same time</font><FONT face=Verdana size=2>&nbsp; 
+  If any callback fails, </font><font size="2" face="Arial">the error message is 
+  only displayed if enableAlerts(1) was executed previously</font><FONT face=Verdana size=2>.
+  <OL><BR>
+    <LI></font></a>
+  <FONT face=Verdana size=2><A name=2.1><B><I><FONT face=Arial 
+    size=4>onInitialize()</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Perform any initialization here, this is called right after the 
+    script is loaded. <BR>&nbsp; 
+    <LI><A name=2.2><B><I><FONT face=Arial 
+    size=4>onRelease()</A></B></I> </FONT><FONT face=Verdana size=2><BR>Called 
+    before the script is released. </I></LI>
+
+</body></html>

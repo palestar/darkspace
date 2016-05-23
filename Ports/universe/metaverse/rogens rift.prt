@@ -1,0 +1,106 @@
+PRT
+B768E76C674D7856
+99372F5EA03C0080
+{
+[
+m_Name
+Rogen's Rift
+]
+[
+m_Description
+This collection of systems are a haven for pirates and other raiders.
+]
+[
+m_Type
+3
+]
+[
+m_Script
+
+]
+[
+m_Scenery
+scenery\\metaverse scenery.prt
+]
+[
+m_Position
+6666A63F295C8F3EE17AF43F
+]
+[
+m_Zones
+3
+1
+universe\\metaverse\\systems\\dres-kona.prt
+0000003F00000000CDCCCC3E
+1
+universe\\metaverse\\systems\\ross 348.prt
+3D0A57BF000000003D0AD73E
+1
+universe\\metaverse\\systems\\ross 448.prt
+3D0A573F000000003D0AD7BE
+]
+[
+m_Teams
+6
+4
+2
+
+UGTO
+United Galactic Trade Organization, fighting for a united humanity and a strong defense against common foes. By far the oldest faction in the Metaverse, the UGTO operates with a certain heavy-handed ethnocentric attitude due to their origins on Earth.
+00FFFF00
+ships\\ugto\\ugto fleet.prt
+0
+4
+3
+
+ICC
+Interstellar Cultural Confederation, fighting for planetary rights and freedom from oppression under the UGTO. Formerly composed of outlying UGTO colony worlds, the ICC has grown from a mutual defense pact to a major player across the Metaverse.
+FFFF0000
+ships\\icc\\icc fleet.prt
+0
+4
+4
+
+K'Luth
+The alien K'Luth, refugees of an attack in their galaxy, are fighting the humans for habitable space.
+FF00FF00
+ships\\kluth\\k'luth fleet.prt
+0
+4
+7
+
+MI
+Unknown alien force.
+FFFFFF00
+ships\\mi\\mi fleet.prt
+1
+4
+6
+
+Pirates
+Lawless bands of pirates and mercenaries, money is their only love. Pirates make do with whatever ships and weapons they can steal, capture, or salvage, which often results in their ships being weaker than their ICC or UGTO counterparts.
+FFFFFF00
+ships\\pirate\\pirate fleet.prt
+1
+4
+8
+
+Teros
+Teros Description
+80008000
+monsters\\Teros\\terosfleet.prt
+1
+]
+[
+m_Conditions
+0
+]
+[
+m_TimeLimit
+0
+]
+[
+m_UniversePort
+
+]
+}

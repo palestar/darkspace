@@ -1,0 +1,341 @@
+<HTML><BODY>
+
+  <A name=4><h2>4.  Standard Functions</h2>
+  <OL><br>
+    <LI><I><FONT face=Arial size=4><B><A name=4.1>scriptAlert( 
+    message )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Send alert 
+    message. <BR><BR>
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.2>enableAlerts( 
+    enable )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    enables/disables the script error messages. The default is not to display 
+    alerts.&nbsp; Keep in mind this is a <b>universal </b>setting, so setting it 
+    will affect all running or to-be-run scripts. <BR>&nbsp; 
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.3>enableTrace( 
+    mode )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Sets the Trace 
+    setting.&nbsp; Modes - 0: disable 1: function calls and returns 2: each line 
+    3: calls, returns and each line.&nbsp;&nbsp; This function ignores 
+    enableAlerts() setting.&nbsp; <b>Never use it on live servers</b>, as it 
+    will seriously lag the server it is executed on.&nbsp; It is for debugging 
+    purposes only. <BR>&nbsp; 
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.4>randomNumber( 
+    low, high )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    returns a number that is &gt;= low and &lt;= high. <BR><BR>
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.5>isClient()</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>This function returns a number 
+    indicating if the script is running on the client or on the server side. 
+    Returns <i>true </i>or<i> false, </i>or<i> nil </i>on error.<BR>&nbsp;
+    </FONT>
+    <LI><I><FONT face=Arial size=4><B><A name=4.6>isServer()</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Just like <B>isClient, </B>except 
+    this function returns <i>true </i>or<i> false, </i>or<i> nil </i>on error 
+    depending upon if the script is running on the server. <BR>&nbsp; 
+    <LI></FONT><FONT face=Arial 
+    size=4><I><B><A name=4.7>teamCount()</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+    function returns the total number of teams in the current context. 
+    <BR>&nbsp; 
+    <LI></FONT><FONT face=Arial 
+    size=4><I><B><A name=4.8>getTeamFaction( int n )</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Get the faction for team n. A number is returned which is the 
+    faction for the specified team, see table below.</FONT> 
+    <TABLE cellSpacing=1 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>NEUTRAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>ICC</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>KLUTH</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>ICC/UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>UNKNOWN</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>5</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+    size=2><BR>&nbsp; 
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.9>getTeamName( n 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Get the name for team n. 
+    <BR><BR>
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.10>getName( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    name of an object by its key. <BR><BR>
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.11>getKey( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    key of the specified object. Since multiple objects can have the same name, 
+    you may not always get the correct object by using it’s name.<I><B> 
+    <BR>local mycopia = getKey( "Mycopia" );</B></I> <BR>&nbsp; 
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.12>getClass( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    class name of the specified object.<B><I> <BR>If getClass( "Cadet" ) == 
+    "ShipTransport" then <BR>-- player is in a transport <BR>end <BR><BR>
+    <LI></i></b></FONT><B><FONT face=Arial size=4><I><A name=4.13>getRadius( nounId 
+    )</A> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function returns the radius (size) of the specified object, in 
+    gu's. <i><B> <BR><BR>
+    <LI></b></i></FONT><I><FONT face=Arial size=4><A name=4.14><B>nodeCount( [parent ] 
+    )</b></A><B> </b></i></FONT><FONT face=Verdana size=2><I><B><BR>
+    </b></i>This function returns the 
+    number of nodes attached to the specified parent. <BR>If no parent is 
+    passed, then the number of nodes attached to the root is returned. Ships, 
+    Planets, Asteroids, and stars are all attached to the root. <I><B> <BR><BR>
+    <LI></b></i></FONT><I><FONT face=Arial size=4><B><A name=4.15>getNode( n, 
+    [parent ] )</A> </b></i></FONT><FONT face=Verdana size=2><I><B><BR>
+    </b></i>This function 
+    returns the key for node n of parent. Make sure you check returned objects 
+    with isNoun(), since not all objects returned are noun objects.<B> <I> 
+    <BR>Local n = nodeCount(); <BR>Local asteroids = 0; <BR>while n &gt; 0 do 
+    <BR>n = n – 1; <BR>if isAsteroid( getNode( n ) ) then <BR>asteroids = 
+    asteroids + 1; <BR>end <BR>end <BR>&nbsp; 
+    <LI></i> 
+    </B></FONT><B><FONT face=Arial size=4><A name=4.16><I>isNoun( id )</i></A><I>
+    </i>
+    </b> 
+    </FONT><FONT face=Arial size=2><I><B><BR></b></i></FONT>
+    <FONT face=Verdana size=2>This function looks for the named noun in the 
+    current context.</FONT><B><FONT face=Verdana size=2> <I> &nbsp;</i></FONT></b><FONT face=Verdana size=2>Returns
+    <i>true </i>or<i> false, </i>or<i> nil </i>on error.</FONT><B><I><FONT face=Verdana size=2><BR>If IsNoun( "Mycopia" ) == 
+    1 then <BR>-- mycopia found <BR>else <BR>-- mycopia not found <BR>end 
+    <BR>
+    <LI> 
+    </FONT> <FONT face=Arial size=4><A name=4.17>isStar( id )</A>
+    </FONT> 
+    </i> 
+    <FONT face=Verdana size=2><I><BR>
+    </i></FONT></b><FONT face=Verdana size=2>Returns <i>true </i>or<i> 
+    false, </i>or<i> nil </i>on error if the 
+    object is a star. <I><B> <BR>&nbsp; 
+    <LI></b></i></FONT><B><FONT face=Arial size=4><I><A name=4.18>isAsteroid( id 
+    )</A> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>Returns <i>true </i>or<i> false, </i>or<i> nil </i>on error 
+    if the object is an asteroid. <BR><B><I>&nbsp; 
+    <LI></i></b></FONT><B><FONT face=Arial size=4><I><A name=4.19>isNebula( id 
+    )</A> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>Returns <i>true </i>or<i> false, </i>or<i> nil </i>on error 
+    if the object is a nebula.</FONT><B><FONT face=Arial size=2> <BR><I>&nbsp; 
+    <LI></i></FONT><FONT face=Arial size=4><I><A name=4.20>isBody( id )</A>
+    </i></FONT> 
+    </B><FONT face=Verdana size=2><B><I><BR>
+    </i></b>Returns <i>true </i>or<i> false, </i>or<i> nil </i>on error if the object is a body.&nbsp; A body is an object that can orbit another object and 
+    can be owned by a team. Bodies include ships, planets, and asteroids. 
+    <BR><i>
+    <b>
+    <LI>
+    </b></i>
+    </FONT><FONT face=Arial size=4><i>
+    <B><A name=4.21>
+    canDetect( detectorId, nounId )</A>
+    </b></i>
+    <B>
+    </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></i></b>Returns <i>true </i>or<i> false, </i>or<i> nil </i>on error if 
+    the object specified by detectorId can detect the object specified by nounId.<B><BR><br>
+    <LI></b></FONT><A name=4.22><FONT face=Arial size=4><B><I>getOwner( body 
+    )</i></b></A></FONT><FONT face=Verdana size=2><B><BR>
+    </b>This function returns the 
+    ownerId (team) for a body. See getFaction() if you are interested in getting 
+    the faction of an object. If there is no body, an error message is created, 
+    and <i>nil</i> is returned.&nbsp; If there is some other error (missing 
+    parameter), an error message is created and <i>nil</i> is returned.<B> <BR><I>-- get the team that controls mycopia <BR>local team = 
+    getOwner( "Mycopia" ); <BR>-- translate the team into a faction <BR>local 
+    faction = getTeamFaction( team );<BR><BR>
+    <LI></i> </B></FONT><B><FONT face=Arial size=4><A name=4.23><I>setOwner( body, team 
+    )*</i></A><I> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function can force 
+    the specified body to be owned by a team. The object must be a body. This is 
+    a server side function only.&nbsp; This function returns <i>true</i> if it 
+    succeeds, and <i>nil</i> on errors.<B> <BR><I>-- place mycopia under control of the 
+    UGTO <BR>setOwner( "Mycopia", 0 ); <BR>-- do the same thing, by using the 
+    revoltPlanet function <BR>revoltPlanet( "Mycopia", 0 ); <BR><BR>
+    <LI></i> </B></FONT><B><FONT face=Arial size=4><A name=4.24><I>isOrbiting( id1, id2 
+    )</i></A><I> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function returns <i>true </i>or<i> false, </i>or<i> nil
+    </i>on error if "id1" is orbiting "id2". <BR><B><I><BR>
+    <LI></i></b></FONT><B><FONT face=Arial size=4><I><A name=4.25>enterOrbit( 
+    body, orbiting, velocity )*</A> </i>
+    </b></FONT><FONT face=Verdana 
+    size=2><B><I><BR></i></b>This function can make a body orbit 
+    another body at the specified orbit velocity. The velocity is in 
+    radians/second.&nbsp; This function returns <i>true</i> if it succeeds, and
+    <i>nil</i> on errors. <BR><B><I><BR>
+    <LI></i></b></FONT><B><FONT face=Arial size=4><I><A name=4.26>breakOrbit( 
+    body )*</A> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function removes the specified body from it’s orbit.&nbsp; 
+    This function returns <i>true</i> if it succeeds, and <i>nil</i> on errors. <BR><B><I><BR>
+    <LI></i></b></FONT><B><FONT face=Arial size=4><I><A name=4.27>IsBeaconed( id 
+    )</A> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>Returns <i>true </i>or<i> false, </i>or<i> nil </i>on error 
+    if the specified object has a enemy beacon attached. <BR><B><I><BR>
+    <LI></i></b></FONT><B><FONT face=Arial size=4><I><A name=4.28>isFaction( id, 
+    faction )</A> </i></FONT><FONT face=Arial size=2><I><BR>
+    </i></FONT></b><FONT face=Verdana size=2>Returns <i>true </i>or<i> 
+    false, </i>or<i> nil </i>on error if the specified object belongs to that 
+    faction.</FONT><B><FONT face=Verdana size=2> <BR></FONT><FONT face=Arial size=2><I>If isFaction( "Mycopia", 2 ) <BR>-- Mycopia belongs to 
+    the ICC <BR>end</i></FONT><I> 
+    <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+          size=2><B>Faction</B></FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2><B>Value</B></FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>Neutral</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>ICC</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>2</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>K’Luth</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>3</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>ICC/UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>4</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>UKNOWN</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+      size=2>5</FONT></TD></TR></TBODY></TABLE><FONT face=Arial size=2><BR></FONT>
+    <FONT face=Verdana size=2>&nbsp; 
+    </FONT> 
+    <LI><FONT face=Arial 
+    size=4><A name=4.29>getFactionTeam( faction )</A> <BR></FONT></i></B><FONT face=Verdana 
+    size=2>This function returns to the first available team for the 
+    specified faction. <BR></FONT><B><I><FONT face=Arial size=4><BR>
+    <LI><A name=4.30>remoteCall( target, scope, call )</A> </FONT>
+    <FONT face=Verdana size=2><BR>
+    </FONT>
+    </i></b><FONT face=Verdana size=2>This function sends out a verb 
+    through the network connection, when received by the client or server and 
+    the verb is executed it calls the specified function within the 
+    script.&nbsp; If the scope is out of range, a global call is made.&nbsp; If
+    <i>true</i> is returned, it only means the call was executed, but does not 
+    confirm execution on the target.&nbsp; Callbacks (such as those initiated by 
+    remoteCall) are  broadcasted at the destination. The destination receives 
+    the call and executes this in the context of all running scripts. This 
+    allows scripts to communicate, however all defined functions also need 
+    unique names or to be defined within a namespace to prevent &quot;accidental&quot; 
+    calls of a function from another script running at the same time.&nbsp; If 
+    any callback fails, the error message is only displayed if enableAlerts(1) 
+    was executed previously.</FONT><FONT face=Arial size=2><B><BR><I>-- remoteCall( target, scope, call ) <BR>remoteCall( "", 
+    5, "Spawn1()" ); <BR>-- the above function sent a verb to the server, thus 
+    no target needed to be specified, once the verb arrives on the server side, 
+    it will execute the function "Spawn1()" in the server script.</i></B></FONT><B><I> 
+
+    <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2><B>Scope</B></FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2><B>Value</B></FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>LOCAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>GLOBAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>SERVER</FONT></TD>
+        <TD vAlign=top width="50%"><font face="Arial" size="2">2</font></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><font face="Arial" size="2">MASTER</font></TD>
+        <TD vAlign=top width="50%"><font face="Arial" size="2">3</font></TD></TR></TBODY></TABLE><FONT face=Arial size=2><BR>&nbsp; 
+    <LI></FONT><FONT face=Arial size=4><A name=4.31>getDistance( 
+    id1, id2 )</A> </FONT><FONT face=Verdana size=2><BR></FONT></i></b><FONT face=Verdana size=2>This function 
+    returns the distance between two objects in the current context. <i>nil</i> is 
+    returned if one or both of the objects is not found.<B> <BR><I>local d = 
+    getDistance( "Ship1", "Mycopia" ); <BR><BR>
+    <LI></i> 
+    </B></FONT><B><FONT face=Arial size=4><A name=4.32><I>getFaction( id )</i></A><I> </i></b></FONT><FONT face=Verdana size=2><B><I><BR></i>
+    </b>Returns the faction of the 
+    specified object, or <i>nil</i> on error.<B> <BR><I>Local f = getFaction( "Mycopia" ); <BR><BR>
+    <LI></i> </B></FONT><B><FONT face=Arial size=4><A name=4.33><I>createSpawn( name, 
+    x, y, z )</i></A><I> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function 
+    creates a spawn point in space, which can be used by spawnShip() to create a 
+    location on the fly for spawning ships. This function creates the spawn 
+    point only on the local context.<B> <BR><I>-- create a spawn point <BR>local 
+    key = createSpawn( "Spawn1", 50,0,1000 ); <BR>-- do stuff <BR>-- remove the 
+    spawn point when done, otherwise memory leak! <BR>detachNoun( key ); 
+<BR><BR>
+    <LI></i> </B></FONT><B><FONT face=Arial size=4><A name=4.34><I>getPosition( id 
+    )</i></A><I> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function gets the 3d 
+    position of an object.<B> <BR><I>local x,y,z = getPosition( "Cadet" ); 
+    <BR>pushChat( "X:"..x..", Y:"..y..", Z:"..z ); <BR>&nbsp; 
+    <LI></i></B></FONT><B><FONT face=Arial size=4><I><A name=4.35>setPosition( 
+    id, x, y, z )</A> </i></b></FONT><FONT face=Verdana size=2><B><I><BR>
+    </i></b>This function 
+    sets the current position of an object.&nbsp; This function returns <i>true</i> 
+    if it succeeds, and <i>nil</i> on errors. <B><BR><I>setPosition( "Mycopia", 
+    5000, 0, 10000 ); <BR>updateNoun( "Mycopia" );</i></B></FONT><B><I><FONT 
+    face=Arial size=2> <BR>&nbsp; 
+    <LI></FONT><FONT face=Arial size=4><A name=4.36>spawnNoun( 
+    template, location, name, [parent] )*</A> </FONT><FONT face=Verdana 
+    size=2><BR></FONT></i></b><FONT face=Verdana 
+    size=2>This function will create a new object in game using the supplied 
+    template. For additional information, <a href="SpawnNoun.html">see this page</a>, 
+	which contains a table with paths to all current game objects, as well as 
+	usage notes.<br>
+	To jump directly to a certain section of the table, you may select from 
+	among the following links:<br>
+	<a href="SpawnNoun.html#Gadgets">Gadgets</a> <br>
+	<a href="SpawnNoun.html#IShips">ICC Ships </a><br>
+	<a href="SpawnNoun.html#KShips">Kluth Ships</a> <br>
+	<a href="SpawnNoun.html#UShips">UGTO Ships </a><br>
+	<a href="SpawnNoun.html#Structs">Structures</a></FONT><br>
+	<font face="Verdana" size="2"><a href="SpawnNoun.html#Monsters">Monsters</a><B><I><BR>&nbsp; 
+    <LI></i></b></font><B> 
+    <I> 
+    <FONT face=Arial size=4><A name=4.37>detachNoun( id 
+    )*</A> </FONT><FONT face=Verdana size=2><BR></FONT></i></b><FONT face=Verdana size=2>This function detaches 
+    the object from the universe. Use this function to remove createSpawn() 
+    objects after you are done, otherwise the object will stay attached to the 
+    universe causing a memory leak.&nbsp; This function returns <i>true</i> if 
+    it succeeds, and <i>nil</i> on errors. <BR>&nbsp; 
+    <LI><A name=4.38></i></b></A></FONT><I><FONT face=Arial size=4><B><A name=4.38>startTimer( 
+    seconds, script )</A></B></I></FONT><FONT face=Verdana size=2><B><I> <BR>
+    </i></b>This 
+    function begins a timer which will call a function in n seconds; once called 
+    the timer is destroyed.&nbsp; This function returns <i>true</i> if it 
+    succeeds, and <i>nil</i> on errors. <BR><B><I>startTimer( 30, "onTimer()" ); 
+    <BR>function onTimer() <BR>-- do something <BR>-- setup another timer to 
+    check again in 30 seconds <BR>startTimer( 30, "onTimer()" ); <BR>end</i><BR>&nbsp;
+    
+    <LI></b></FONT><B><FONT face=Arial size=4><I><A name=4.39>getUserId( nounId 
+    )*</A> </I></FONT><FONT face=Verdana size=2><BR></i></FONT></b><FONT face=Verdana size=2>This function 
+    returns the userId number of the user who (indirectly) owns this noun, or 0 
+    if it is not owned. <BR>&nbsp;
+    
+	</FONT>
+    
+	<LI><I><FONT face=Arial size=4><B><A name=4.40>getAllNouns( nounId, 
+    range )*</A> </B></I></FONT><FONT face=Verdana size=2><BR></i></b>This function 
+    returns a table (1 .. n) containing all nouns found within<i> range</i> gu's 
+    of the given nounId.<BR>&nbsp;
+    
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.41>getConstants( )</A>
+    </B></I></FONT><FONT face=Verdana size=2><BR></i></b>This function 
+    returns a (hash)table containing all all ingame constants as name/value pairs<BR>&nbsp;
+
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.42>getUnitExperience( unitId 
+    )*</A> </B></I></FONT><FONT face=Verdana size=2><BR></i></b>This function returns 
+    the experience level of the unit ( 0 - 100 ), or <i>nil</i> on error..  0 = green, 91+ = elite <BR>&nbsp;
+    <LI></FONT><FONT face=Arial size=4><I><B><A name=4.43>setUnitExperience( unitId, 
+    experience 
+    )*</A> </B></I></FONT><FONT face=Verdana size=2><BR></i></b>Sets the Units 
+    experience level to the amount specified, following the system specified in 
+    getUnitExperience().&nbsp; This function returns <i>true</i> if it succeeds, 
+    and <i>nil</i> on errors.
+
+
+</BODY></HTML>

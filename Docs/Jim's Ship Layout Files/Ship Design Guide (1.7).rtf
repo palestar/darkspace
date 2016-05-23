@@ -1,0 +1,573 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}{\f1\fswiss\fcharset0 Arial;}{\f2\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sl240\slmult1\lang9\fs20\par
+\par
+\par
+\ul\b Ship Design Rules\ulnone\b0\par
+\par
+This document will outline the system by which ship layouts are planned and designed in Darkspace 1.7+. Many of the basics are retained from the 1.5/1.6-era system, but there have been some important changes both in mechanics and values. This document will assume the reader has no prior familiarity with the system and will explain everything from the ground up.\par
+\par
+\b The Basics\b0\par
+\par
+Ship designs in Darkspace are primarily governed by a point system. All of the ships in the game, from the lowly Scout to the mighty Dreadnought, have a \b Point Cap\b0 , and each gadget added to the ship has a value. The sum total value of all gadgets on the ship must equal its point cap.\par
+\par
+Most gadgets have a flat point cost, which is the same no matter which ship the device is placed on. Some types--mostly weapons--have an \b arc cost\b0 , which multiplies the point cost of the gadget based upon how wide a field of fire it has. Gadgets may have one of four kinds of arc coverage:\par
+\par
+- Single-arc: This gadget can only fire at targets within a single 90\lang1033\'b0 cone\par
+- Dual-arc: This gadget can fire at targets within a 180\'b0 cone, or within two different 90\'b0 cones\par
+- Tri-arc: This gadget can fire at targets within a 270\'b0 cone\par
+- Full-arc: This gadget can fire at targets in a full 360\'b0 circle\par
+\par
+The arc coverage a gadget has will multiply its base point cost by a given factor:\par
+\par
+- Single-arc: 1x base cost\par
+- Dual-arc: 1.5x base cost\par
+- Tri-arc: 2x base cost\par
+- Full-arc: 2.5x base cost\par
+\par
+Full-arc weapons have strict limitations on when they can be used. In most cases, a ship will only have 1-2 Full-arc Point-defense Beams. Specific types of weapons--Missiles, Bombs and Fighters--are automatically Full-arc; rather than recalculate their arc cost every time, their listed values will incorporate this.\par
+\par
+\fs18 A side note on arc notation: the four sides of a ship are usually denoted as "Fore" (F), "Port" (P), "Starboard" (S) and "Aft" (A), with a combination of these describing the precise arcs a weapon can fire in (FPS = Fore, Port and Starboard). If it can fire in all arcs, "Full" is used instead.\fs20\par
+\par
+Additionally, Electronic Warfare gadgets and K'luth missiles will vary their cost by their \b gadget level\b0 . Gadgets may have a level from 1 to 10. Each ship type has an associated gadget level; any gadgets placed on a ship of that type will be automatically set to that level.\lang9\par
+\par
+These gadgets always cost the same, regardless of arc:\par
+\par
+\pard\lang1033\f1 Sublight Engine: 9 points\par
+Jump Drive: 6 points\par
+Wormhole Drive: 6 points\par
+Station Sublight Engine: 45 pts\par
+Armor: 6 points\par
+Shields: 5.5 points\par
+Reactor: 2 points\par
+Cloak: 3 points\par
+Auto-Hull Repair: 3 pts\par
+Special Weapon: 5 points\par
+EWar: Level - 1 point\par
+Scanner: 1 point\par
+Beacon: 1 point\par
+Drone Bay: 6 points\par
+Jump Disruptor: 32 Points\par
+\pard\sl240\slmult1 Command Module: 12 points\par
+Repair Field: 32 points\lang9\f0\par
+\par
+These gadgets have arc costs:\par
+\par
+\pard\lang1033\f1 Light Beam: 1 point\par
+Medium Beam: 2 points\par
+Heavy Beam: 4 points\par
+Point-defense Beam: 2 points\par
+Utility Beam: 2 points\par
+Cannons: 1 point\par
+Heavy Cannons: 2 points\par
+Core Cannons: 5 points\par
+Torpedoes: 1 point\par
+Core Torpedoes: 5 points\par
+\par
+These gadgets are always Full-arc and need no arc cost applied:\par
+\par
+Mine Launcher: 5 points\par
+Sub-capital Missile Launcher: 2.5 points\par
+Capital Missile Launcher: 5 points\par
+K'luth Missile Launcher: Level - 1 point\par
+\pard\sl240\slmult1 Bomb Launcher: 8 points\lang9\f0\par
+\pard\lang1033\f1 Fighter Bay: 8 points\par
+\pard\sl240\slmult1\lang9\f0\par
+\par
+\b Roles, Tiers and Talents\b0\par
+\par
+The biggest change in the 1.7+ ship design system comes from the addition of three new factors in ship design.\par
+\par
+The \b Role\b0  of a ship describes what function the ship performs, usually relating to what kind of weapons or support gadgets it has onboard. For example, a ship equipped with a large number of missile launchers is filling a \b Missile\b0  role.\par
+\par
+\b Tiers\b0  are a way of defining the strength and complexity of ships of the same type. A ship may be Tier 1, Tier 2 or Tier 3.\par
+\par
+- \b Tier 1\b0  ships are the first ships a player unlocks as they rank up and have an extra Full-arc armor to make them easier for new players to handle. They may only be assigned \b one \b0 Role at a time; consequently, they can only have a single type of offensive weapon; they cannot mix multiple types.\par
+\par
+- \b Tier 2\b0  ships begin unlocking at the rank of Commander. They have no bonus armor, so they will be somewhat more fragile than their T1 equivalents. They may be assigned up to \b two\b0  roles at a time, and have a higher point cap than T1 equivalents to let them carry more weapons.\par
+\par
+- \b Tier 3\b0  ships being unlocking at the rank of Fleet Admiral, and are the most powerful ships in the game. They are mostly similar to T2 ships, but their point cap has been expanded even further to let them handle \b three\b0  roles at once. Each faction can only have a single T3 ship of any given type.\par
+\par
+\b Talents\b0  are bonus capabilities or penalties assigned to a ship based upon their Roles. They usually take the form of a gadget that must be added to or subtracted from the layout of the ship.\par
+\par
+All the possible roles a ship may have, and their associated talents, are listed below:\par
+\par
+\b - Cannons (Frigates or better only)\par
+\b0 -- Cannon ships are optimized for engaging ships one level smaller than themselves.\par
+-- Talent: +1 Scanner\par
+\par
+- \b Beams\b0\par
+-- Beam ships are optimized for engaging ships of equal level.\par
+-- Talent: +1 Fore armor, no EWar gadgets, cannot be combined with EWar role\par
+\par
+- \b Torpedoes\b0\par
+-- Torpedo ships are optimized for engaging ships one level larger than themselves.\par
+-- No talent\par
+\par
+- \b Missiles (Frigates or better only)\b0\par
+-- Missile ships are optimized for engaging ships two levels larger than themselves.\par
+-- Talent: Lose 1 armor\par
+\par
+- \b Carrier (Cruisers or better only)\b0\par
+-- Carriers use fighters to engage ships of all levels.\par
+-- No talent.\par
+\par
+- \b Electronic Warfare\b0\par
+-- EWar ships make use of sensors and jamming devices to hide friendlies and reveal enemies.\par
+-- Talent: Cannot be combined with Beams role\par
+\par
+- \b Escort (Frigates or better only)\b0\par
+-- Escort ships have additional Point-defense Beams to screen other ships from attack.\par
+-- Talent: +1 Scanner and +1 EWar\par
+\par
+- \b Bomber\b0\par
+-- Bombers are equipped with specialized bombardment weapons to attack planets.\par
+-- Talent: +1 Scanner , Lose 1 armor, option for +1 EWar or PD Beam if there's room\par
+\par
+- \b Minelayer (Frigates or better only)\b0\par
+-- Minelayers deploy mines and act as minesweepers.\par
+-- Talent: +1 Scanner, +3 single-arc PD Beams for minesweeping\par
+\par
+- \b Interdictor (T2 Cruisers only, takes up both Roles)\b0\par
+-- Interdictor cruisers carry a device that can stop enemy ships from jumping in a large area.\par
+-- Talent: +1 Full armor\par
+\par
+- \b Command (Cruiser or better only, T2 or better only)\b0\par
+-- Command ships carry command modules that let them strengthen nearby allies.\par
+-- Talent: +1 Wormhole Drive, +1 Construction Drone Bay\par
+\par
+\par
+\b Ship Types\b0\par
+\par
+There are 9 types of ship in the game. Ship type determines many of the base characteristics of a ship, which are then modified by the gadgets added to it. Each ship type has an associated gadget level and a point cap for each tier.\par
+\par
+- \b Scouts\b0\par
+-- Scouts are the smallest, fastest ships in the game, and all are available to starting players. Unlike most ships, they can only ever be Tier 1.\par
+-- Gadget level: 2\par
+-- Tier 1 point cap: 56 pts\par
+\par
+- \b Frigates\b0\par
+-- Frigates are the first main combat ship, with the first available at starting ranks and additional ships unlocking as the player ranks up. Due to their small size and fragility, Frigates rely heavily on Electronic Warfare to survive in combat; almost all Frigates have a significant EWar capability.\par
+-- Gadget level: 3\par
+-- Tier 1 point cap: 86 pts\par
+-- Tier 2 point cap: 94 pts\par
+-- Tier 3 point cap: 105 pts\par
+\par
+- \b Transports\b0\par
+-- Transports are support ships primarily valued for their large cargo holds, which let them carry troops for invading planets or boarding other ships. They can also be used to move resources from planet to planet, depending on where they are needed. Transports are single-role ships at all Tiers.\par
+-- Gadget level: 3\par
+-- Tier 1 point cap: 88\par
+-- Tier 2 point cap: 102\par
+-- Tier 3 point cap: 116\par
+\par
+- \b Engineers\b0\par
+-- Engineers are support ships used to build structures on the surface of planets, or to build small space platforms to support player ships. They carry a heavier point-defense armament to protect the planets they are working on from attack by enemy bombers. Like Transports, they are single-role ships at all Tiers.\par
+-- Gadget level: 4\par
+-- Tier 1 point cap: 82\par
+-- Tier 2 point cap: 102\par
+-- Tier 3 point cap: 122\par
+\par
+- \b Destroyers\b0\par
+-- Destroyers are mid-sized ships specializing in combat. They have far more weapons and much heavier defenses than Frigates, but lack any form of EWar capability.\par
+-- Gadget level: 4\par
+-- Tier 1 point cap: 104\par
+-- Tier 2 point cap: 119\par
+-- Tier 3 point cap: 133\par
+\par
+- \b Supply Ships\b0\par
+-- Supplies are support ships dedicated to repairing other ships and restoring their ammunition and fuel stores. As with the other support ships, they are single-role ships at all Tiers.\par
+-- Gadget level: 3\par
+-- Tier 1 point cap: 81\par
+-- Tier 2 point cap: 86\par
+-- Tier 3 point cap: 93\par
+\par
+- \b Cruisers\b0\par
+-- Cruisers are heavy combat ships with additional armor and weapons. Larger and slower than Destroyers, most of them carry at least one EWar module to protect themselves.\par
+-- Gadget level: 5\par
+-- Tier 1 point cap: 139\par
+-- Tier 2 point cap: 152\par
+-- Tier 3 point cap: 171\par
+\par
+- \b Dreadnoughts\b0\par
+-- Dreadnoughts are the most powerful of the main combat ships in the game. Huge, slow and incredibly durable, they carry more weapons than all the smaller ship types combined. Like Cruisers, most of them have at least one EWar module.\par
+-- Gadget level: 6\par
+-- Tier 1 point cap: 184\par
+-- Tier 2 point cap: 206\par
+-- Tier 3 point cap: 236\par
+\par
+- \b Stations\b0\par
+-- While Dreadnoughts are the most powerful offensive units, Stations are the ultimate form of defense. These huge, spaceborne fortresses are practically immobile, but are extremely tough and can bring a wide variety of capabilities to bear, including heavy weapons, fighters and repair fields to fix all ships in a large area. Stations are single-Tier but multi-role, and do not quite operate by the same rules as smaller ships.\par
+-- Gadget level: 10\par
+-- Tier 1 point cap: 300\par
+\par
+\par
+\b Templates\b0\par
+\par
+While you could, in theory, put whatever gadgets you wanted onto a ship within the bounds of its Role, in practice all ships tend to follow a common format. The gadgets assigned to a ship can be grouped into two categories:\par
+\par
+- \b Standard Equipment\b0\par
+-- These are gadgets that will be found on all ships of this type and tier, and include such things as engines, defenses and point-defense beams. The roles assigned to an individual ship may add or subtract to the Standard Equipment, but it can always be used as a starting point when designing a new ship.\par
+\par
+- \b Role Points\b0\par
+-- This is simply the number of points left in the ship's total point cap which are not used up by the Standard Equipment, and are thus available to be used for gadgets associated with the ship's roles. Some roles may remove gadgets from the Standard Equipment, which will indirectly increase this value and let the ship carry additional weapons or other devices.\par
+\par
+Here are templates for the various ship types at each Tier.\par
+\par
+\pard\b Scout\b0\par
+\lang1033\par
+\b - Tier 1\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 1x Sublight Engine: 9 pts\par
+\pard\sl240\slmult1 -- 4x Defense: 24 pts \lang9 (1 F, 1 P, 1 S, 1 A)\lang1033\par
+-- 1x Point-defense Beam: 5 pts (1 Full-arc)\par
+-- 1x Reactor: 2 pts\par
+-- 2x EWar: 2 pts\par
+\par
+- Role Points: 8 pts\par
+\par
+- Total point cap: 56 pts\par
+\par
+\par
+\b Frigate\b0\par
+\par
+\b - Tier 1\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 7x Defense: 42 pts \lang9 (2 F, 1 P, 1 S, 2 A, 1 Full)\lang1033\par
+-- 1x Point-defense Beam: 5 pts (1 Full-arc)\par
+-- 1x Reactor: 2 pts\par
+-- 2x EWar: 4 pts\par
+\par
+- Role Points: 9 pts\par
+\par
+- Total point cap: 86 pts\par
+\par
+\b - Tier 2\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 6x Defense: 36 pts \lang9 (2 F, 1 P, 1 S, 2 A)\lang1033\par
+-- 1x Point-defense Beam: 5 pts (1 Full-arc)\par
+-- 1x Reactor: 2 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 2x EWar: 4 pts\par
+\par
+- Role Points: 18 pts\par
+\par
+- Total point cap: 94 pts\par
+\par
+\b - Tier 3\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 6x Defense: 36 pts \lang9 (2 F, 1 P, 1 S, 2 A)\lang1033\par
+-- 1x Point-defense Beam: 5 pts (1 Full-arc)\par
+-- 2x Reactor: 4 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 2x EWar: 4 pts\par
+\par
+- Role Points: 27 pts\lang9\par
+\lang1033\par
+- Total point cap: 105 pts\par
+\lang9\par
+\par
+Transport\par
+\par
+\lang1033\b - Tier 1\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 9x Defense: 54 pts (2 F, 2 P, 2 S, 2 A, 1 Full)\par
+-- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+\lang9\par
+-- Role Points: None\par
+\lang1033\par
+- Total point cap: 88 pts\lang9\par
+\par
+\lang1033\b - Tier 2\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 10x Defense: 60 pts (2 F, 2 P, 2 S, 2 A, 2 Full)\par
+-- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+\lang9\par
+-- Role Points: 8 pts\par
+\lang1033\par
+- Total point cap: 102 pts\par
+\par
+\b - Tier 3\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 11x Defense: 66 pts (2 F, 2 P, 2 S, 2 A, 3 Full)\par
+-- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+\lang9\par
+-- Role Points: 16 pts\par
+\lang1033\par
+- Total point cap: 116 pts\lang9\par
+\par
+\par
+\b Engineer\par
+\b0\par
+\b - Tier 1\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+\lang1033 -- 5x Defense: 30 pts (1 F, 1 P, 1 S, 1 A, 1 Full)\par
+\lang9 -- 3x Point-defense Beam: 14 pts \lang1033 (2 Full-arc, 1 Tri-arc)\lang9\par
+-- 1x Drone Bay: 6 pts\par
+-- 2x Tri-arc Utility Beam: 8 pts\par
+\par
+-- Role Points: None\par
+\par
+- \lang1033 Total point cap\lang9 : 82 pts\par
+\par
+\b - Tier 2\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+\lang1033 -- 6x Defense: 36 pts (1 F, 1 P, 1 S, 1 A, 2 Full)\par
+\lang9 -- 4x Point-defense Beam: 18 pts \lang1033 (2 Full-arc, 2 Tri-arc)\lang9\par
+-- 2x Drone Bay: 12 pts\par
+-- 3x Tri-arc Utility Beam: 12 pts\par
+\par
+-- Role Points: None\par
+\par
+- \lang1033 Total point cap\lang9 : 102 pts\par
+\par
+\b - Tier 3\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+\lang1033 -- 7x Defense: 42 pts (1 F, 1 P, 1 S, 1 A, 3 Full)\par
+\lang9 -- 5x Point-defense Beam: 22 pts \lang1033 (2 Full-arc, 3 Tri-arc)\lang9\par
+-- 3x Drone Bay: 18 pts\par
+-- 4x Tri-arc Utility Beam: 16 pts\par
+\par
+-- Role Points: None\par
+\par
+- \lang1033 Total point cap\lang9 : 122 pts\par
+\par
+\par
+\b Destroyer\par
+\b0\par
+\pard\b - Tier 1\par
+\pard\sl240\slmult1\lang1033\b0\par
+ - Standard Equipment:\par
+\pard  -- 1x Jumpdrive: 6 pts\par
+ -- 2x Sublight Engine: 18 pts\par
+\pard\sl240\slmult1  -- 9x Defense: 54 pts \lang9 (2 F, 2 P, 2 S, 2 A, 1 Full)\par
+\pard\lang1033  -- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+\pard\sl240\slmult1\lang9  -- 1x Reactor: 2 pts\par
+\par
+ - Role Points: 14 pts\par
+\par
+ - \lang1033 Total point cap\lang9 : 104 pts\par
+\par
+\pard\b - Tier 2\par
+\lang1033\b0\par
+\pard\sl240\slmult1  - Standard Equipment:\par
+\pard -- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+\pard\sl240\slmult1 -- 8x Defense: 48 pts \lang9 (2 F, 2 P, 2 S, 2 A)\par
+\pard\lang1033 -- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+\pard\sl240\slmult1\lang9 -- 2x Reactor: 4 pts\par
+\lang1033 -- 1x Special Weapon: 5 pts\par
+\lang9\par
+-- Role Points: 28\par
+\par
+- \lang1033 Total point cap\lang9 : 119 pts\par
+\par
+\pard\b - Tier 3 \par
+\b0\par
+\pard\sl240\slmult1\lang1033  - Standard Equipment:\par
+\pard -- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+\pard\sl240\slmult1 -- 8x Defense: 48 pts\lang9  (2 F, 2 P, 2 S, 2 A)\par
+\pard\lang1033 -- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+\pard\sl240\slmult1\lang9 -- 2x Reactor: 4 pts\par
+\lang1033 -- 1x Special Weapon: 5 pts\par
+\lang9\par
+-- Role Points: 42\par
+\par
+- \lang1033 Total point cap\lang9 : 133 pts\par
+\par
+\par
+\lang1033\b Supply\par
+\b0\par
+\b - Tier 1\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 3x Sublight Engine: 27 pts\par
+-- 5x Defense: 30 pts (1 F, 1 P, 1 S, 1 A, 1 Full)\par
+-- 2x Point-defense Beam: 10 pts (2 Full-arc)\par
+-- 1x Drone Bay: 6 pts\par
+-- 1x Reactor: 2 pts\par
+\lang9\par
+-- Role Points: None\par
+\lang1033\par
+- Total point cap: 81 pts\par
+\par
+\b - Tier 2\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 2x Sublight Engine: 18 pts\par
+-- 6x Defense: 36 pts (1 F, 1 P, 1 S, 1 A, 2 Full)\par
+-- 3x Point-defense Beam: 14 pts (2 Full-arc, 1 Tri-arc)\par
+-- 2x Drone Bay: 12 pts\par
+-- 1x Reactor: 2 pts\par
+\lang9\par
+-- Role Points: None\par
+\lang1033\par
+- Total point cap: 86 pts\lang9\par
+\par
+\lang1033\b - Tier 3\par
+\b0\par
+- Standard Equipment:\par
+-- 1x Jumpdrive: 6 pts\par
+-- 1x Sublight Engine: 9 pts\par
+-- 7x Defense: 42 pts (1 F, 1 P, 1 S, 1 A, 2 Full)\par
+-- 4x Point-defense Beam: 18 pts (2 Full-arc, 2 Tri-arc)\par
+-- 3x Drone Bay: 18 pts\par
+\lang9\par
+-- Role Points: None\par
+\lang1033\par
+- Total point cap: 93 pts\lang9\par
+\par
+\par
+\b Cruiser\par
+\b0\par
+\b - Tier 1\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 3x Sublight Engine: 27 pts\par
+-- 10x Defense: 60 pts (2 F, 2 P, 2 S, 2 A, 2 Full)\par
+-- 3x Point-defense Beam: 14 pts \lang1033 (2 Full-arc, 1 Tri-arc)\lang9\par
+-- 2x Reactor: 4 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 1x EWar: 4 pts\par
+\par
+-- Role Points: 19\par
+\par
+- \lang1033 Total point cap\lang9 : 139\par
+\par
+\b - Tier 2\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 3x Sublight Engine: 27 pts\par
+-- 9x Defense: 54 pts (2 F, 2 P, 2 S, 2 A, 1 Full)\par
+-- 3x Point-defense Beam: 14 pts \lang1033 (2 Full-arc, 1 Tri-arc)\lang9\par
+-- 2x Reactor: 4 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 1x EWar: 4 pts\par
+\par
+-- Role Points: 38\par
+\par
+- \lang1033 Total point cap\lang9 : 152\par
+\par
+\b - Tier 3\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 3x Sublight Engine: 27 pts\par
+-- 9x Defense: 54 pts (2 F, 2 P, 2 S, 2 A, 1 Full)\par
+-- 3x Point-defense Beam: 14 pts \lang1033 (2 Full-arc, 1 Tri-arc)\lang9\par
+-- 2x Reactor: 4 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 1x EWar: 4 pts\par
+\par
+-- Role Points: 57\par
+\par
+- \lang1033 Total point cap\lang9 : 171\par
+\par
+\par
+\b Dreadnought\par
+\b0\par
+\b - Tier 1\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 4x Sublight Engine: 36 pts\par
+-- 9x Defense: 54 pts (2 F, 2 P, 2 S, 2 A, 1 Full)\par
+-- 4x Point-defense Beam: 18 pts \lang1033 (2 Full-arc, 2 Tri-arc)\lang9\par
+-- 2x Reactor: 4 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 1x EWar: 5 pts\par
+\par
+-- Role Points: 56\par
+\par
+- \lang1033 Total point cap\lang9 : 184\par
+\par
+\b - Tier 2\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 4x Sublight Engine: 36 pts\par
+-- 8x Defense: 48 pts (2 F, 2 P, 2 S, 2 A)\par
+-- 4x Point-defense Beam: 18 pts \lang1033 (2 Full-arc, 2 Tri-arc)\lang9\par
+-- 2x Reactor: 4 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 1x EWar: 5 pts\par
+\par
+-- Role Points: 84\par
+\par
+- \lang1033 Total point cap\lang9 : 206\par
+\par
+\b - Tier 3\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 4x Sublight Engine: 36 pts\par
+-- 8x Defense: 48 pts (2 F, 2 P, 2 S, 2 A)\par
+-- 4x Point-defense Beam: 18 pts \lang1033 (2 Full-arc, 2 Tri-arc)\lang9\par
+-- 3x Reactor: 6 pts\par
+-- 1x Special Weapon: 5 pts\par
+-- 1x EWar: 5 pts\par
+\par
+-- Role Points: 112\par
+\par
+- \lang1033 Total point cap\lang9 : 236\par
+\par
+\par
+\b Station\b0\par
+\par
+\b - Tier 1\par
+\lang1033\b0\par
+- Standard Equipment:\par
+\lang9 -- 1x Jumpdrive: 6 pts\par
+-- 1x Wormhole Drive: 6 pts\par
+-- 1x Station Engine: 45 pts\par
+-- 8x Defense: 48 pts (2 F, 2 P, 2 S, 2 A)\par
+-- 6x Point-defense Beam: 26 pts \lang1033 (2 Full-arc, 4 Tri-arc)\lang9\par
+-- 4x Reactor: 8 pts\par
+-- 1x Damage Control: 6 pts\par
+-- 1x EWar: 9 pts\par
+\par
+- Role Points: 146\par
+\lang1033\f1\par
+- \f0 Total point cap\f1 : 300\par
+\lang9\f0\par
+\par
+\par
+\par
+\par
+\par
+\pard\sa200\sl276\slmult1\f2\fs22\par
+\pard\sl240\slmult1\f0\fs20\par
+}
+ 

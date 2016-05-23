@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: NounContextPort - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/NounContextPort.res" /d "_DEBUG" /d "_AFXDLL" "D:\Projects\DarkSpace\Tools\NounContextPort\NounContextPort.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA70.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "..\..\\" /I "..\..\Medusa" /I "..\..\Medusa\Tools" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_AFXEXT" /D "WIN32" /D "UNICODE" /Fp"Debug/NounContextPort.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Projects\DarkSpace\Tools\NounContextPort\ChildFrame.cpp"
+"D:\Projects\DarkSpace\Tools\NounContextPort\NounContextPort.cpp"
+"D:\Projects\DarkSpace\Tools\NounContextPort\Port.cpp"
+"D:\Projects\DarkSpace\Tools\NounContextPort\PortView.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA70.tmp" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA71.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "..\..\\" /I "..\..\Medusa" /I "..\..\Medusa\Tools" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_AFXEXT" /D "WIN32" /D "UNICODE" /Fp"Debug/NounContextPort.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Projects\DarkSpace\Tools\NounContextPort\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSPA71.tmp" 
+Creating temporary file "C:\WINDOWS\TEMP\RSPA72.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/NounContextPortD.pdb" /debug /machine:I386 /out:"..\Bin\NounContextPortD.dll" /implib:"Debug/NounContextPortD.lib" /pdbtype:sept /libpath:"..\..\Bin" /libpath:"..\Bin" /libpath:"..\..\Medusa\Bin" /libpath:"..\..\Medusa\Tools\Bin" 
+.\Debug\ChildFrame.obj
+.\Debug\NounContextPort.obj
+.\Debug\Port.obj
+.\Debug\PortView.obj
+.\Debug\StdAfx.obj
+.\Debug\NounContextPort.res
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSPA72.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrame.cpp
+NounContextPort.cpp
+Port.cpp
+PortView.cpp
+Generating Code...
+Linking...
+   Creating library Debug/NounContextPortD.lib and object Debug/NounContextPortD.exp
+NounContextPort.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall Port::~Port(void)" (__imp_??1Port@@UAE@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall Port::~Port(void)" (__imp_??1Port@@UAE@XZ)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall Port::~Port(void)" (__imp_??1Port@@UAE@XZ)
+NounContextPort.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static void __cdecl Port::unregisterPort(class Medusa::UniqueNumber const &)" (__imp_?unregisterPort@Port@@SAXABVUniqueNumber@Medusa@@@Z)
+NounContextPort.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static void __cdecl Port::registerPort(class Medusa::UniqueNumber const &,struct HICON__ *)" (__imp_?registerPort@Port@@SAXABVUniqueNumber@Medusa@@PAUHICON__@@@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class Medusa::UniqueNumber const & __cdecl Port::classKey(void)" (__imp_?classKey@Port@@SAABVUniqueNumber@Medusa@@XZ)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class Medusa::UniqueNumber const & __cdecl Port::classKey(void)" (__imp_?classKey@Port@@SAABVUniqueNumber@Medusa@@XZ)
+Port.obj : error LNK2001: unresolved external symbol "public: virtual int __thiscall Port::CanCloseFrame(class CFrameWnd *)" (?CanCloseFrame@Port@@UAEHPAVCFrameWnd@@@Z)
+Port.obj : error LNK2001: unresolved external symbol "public: virtual int __thiscall Port::OnOpenDocument(unsigned short const *)" (?OnOpenDocument@Port@@UAEHPBG@Z)
+Port.obj : error LNK2001: unresolved external symbol "protected: virtual int __thiscall Port::OnNewDocument(void)" (?OnNewDocument@Port@@MAEHXZ)
+Port.obj : error LNK2001: unresolved external symbol "protected: virtual struct AFX_MSGMAP const * __thiscall Port::GetMessageMap(void)const " (?GetMessageMap@Port@@MBEPBUAFX_MSGMAP@@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class Medusa::UniqueNumber const & __cdecl Medusa::Noun::classKey(void)" (__imp_?classKey@Noun@Medusa@@SAABVUniqueNumber@2@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall Port::Port(void)" (__imp_??0Port@@QAE@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall Port::read(class Medusa::InStream &)" (__imp_?read@Port@@UAEXAAVInStream@Medusa@@@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual void __thiscall Port::write(class Medusa::OutStream &)const " (__imp_?write@Port@@UBEXAAVOutStream@Medusa@@@Z)
+Port.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall Medusa::NounContext::read(class Medusa::InStream &)" (?read@NounContext@Medusa@@UAEXAAVInStream@2@@Z)
+Port.obj : error LNK2001: unresolved external symbol "public: virtual void __thiscall Medusa::NounContext::write(class Medusa::OutStream &)const " (?write@NounContext@Medusa@@UBEXAAVOutStream@2@@Z)
+Port.obj : error LNK2001: unresolved external symbol "public: virtual class Medusa::Factory * __thiscall Medusa::NounContext::factory(void)const " (?factory@NounContext@Medusa@@UBEPAVFactory@2@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall Medusa::NounContext::NounContext(void)" (__imp_??0NounContext@Medusa@@QAE@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall Medusa::NounContext::~NounContext(void)" (__imp_??1NounContext@Medusa@@UAE@XZ)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::addResource(unsigned short const *,class Medusa::Resource *)" (__imp_?addResource@NounContext@Medusa@@QAEXPBGPAVResource@2@@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setFlags(unsigned long)" (__imp_?setFlags@NounContext@Medusa@@QAEXK@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setTechnology(enum Medusa::Tech)" (__imp_?setTechnology@NounContext@Medusa@@QAEXW4Tech@2@@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setMass(float)" (__imp_?setMass@NounContext@Medusa@@QAEXM@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setScene(class Medusa::Scene *)" (__imp_?setScene@NounContext@Medusa@@QAEXPAVScene@2@@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class Medusa::Resource * __cdecl Port::portResource(unsigned short const *)" (__imp_?portResource@Port@@SAPAVResource@Medusa@@PBG@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setDescription(unsigned short const *)" (__imp_?setDescription@NounContext@Medusa@@QAEXPBG@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setName(unsigned short const *)" (__imp_?setName@NounContext@Medusa@@QAEXPBG@Z)
+Port.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: void __thiscall Medusa::NounContext::setType(class Medusa::UniqueNumber const &)" (__imp_?setType@NounContext@Medusa@@QAEXABVUniqueNumber@2@@Z)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall CSelectClass::~CSelectClass(void)" (__imp_??1CSelectClass@@UAE@XZ)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall CSelectClass::CSelectClass(class Medusa::UniqueNumber const &,class CWnd *)" (__imp_??0CSelectClass@@QAE@ABVUniqueNumber@Medusa@@PAVCWnd@@@Z)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: virtual __thiscall CSelectResource::~CSelectResource(void)" (__imp_??1CSelectResource@@UAE@XZ)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: __thiscall CSelectResource::CSelectResource(class Medusa::UniqueNumber const &,class CWnd *)" (__imp_??0CSelectResource@@QAE@ABVUniqueNumber@Medusa@@PAVCWnd@@@Z)
+PortView.obj : error LNK2001: unresolved external symbol "__declspec(dllimport) public: static class Medusa::UniqueNumber const & __cdecl ScenePort::classKey(void)" (__imp_?classKey@ScenePort@@SAABVUniqueNumber@Medusa@@XZ)
+..\Bin\NounContextPortD.dll : fatal error LNK1120: 31 unresolved externals
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+NounContextPortD.dll - 35 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html><body>
+
+  <A name=3><h2>3.  Client Callbacks</h2>
+  <FONT face=Verdana size=2>The following callbacks 
+  are only called when running on the client.&nbsp; If any callback fails, </FONT>
+  <font size="2" face="Arial">the error message is only displayed if 
+  enableAlerts(1) was executed previously</font><FONT face=Verdana size=2>.
+  <OL><br>
+    <LI></FONT><A name=3.1><B><I><FONT face=Arial 
+    size=4>onTeamSelect()</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called before the player selects a team <BR>&nbsp; 
+    <LI><A name=3.2></FONT><B><I><FONT face=Arial 
+    size=4>onFleetSelected( fleetId )</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called after the player selects a fleet, the fleet ID is passed 
+    <BR>&nbsp; 
+    <LI><A name=3.3></FONT><B><I><FONT face=Arial 
+    size=4>onShipSelect()</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called before the player selects a ship <BR>&nbsp; 
+    <LI><A name=3.4></FONT><B><I><FONT face=Arial 
+    size=4>onShipSelected( shipName )</FONT></I></B></A><B><I><FONT face=Arial 
+    size=4> </FONT></I> </B><FONT face=Verdana 
+    size=2><BR>Called after the player selects a ship<BR>&nbsp; 
+    <LI><A name=3.5></FONT><B><I><FONT face=Arial 
+    size=4>onShipAttached( shipId )</FONT></I></B></A><B><I><FONT face=Arial 
+    size=4> </FONT></I> </B><FONT face=Verdana 
+    size=2><BR>players ship is spawned, so i.e. entered through a (intersystem) jumpgate, from 
+    a shipyard etc<BR>&nbsp;
+    <LI><A name=3.5></FONT><B><I><FONT face=Arial 
+    size=4>onShipDetached( shipId )</FONT></I></B></A><B><I><FONT face=Arial 
+    size=4> </FONT></I> </B><FONT face=Verdana 
+    size=2><BR>players ship is removed from the universe, so i.e. entered a (intersystem) jumpgate, or 
+    a shipyard etc<BR>&nbsp;
+    <LI><A name=3.6></FONT><B><I><FONT face=Arial 
+    size=4>onTactical()</A></B></I></FONT><FONT face=Verdana size=2><BR>&nbsp; 
+    <LI><A name=3.7></FONT><B><I><FONT face=Arial size=4><A name=3.7>onDeath( 
+    shipId, killerId )</A>
+    </B></I></FONT><FONT face=Verdana size=2><BR>Called when the players ship is 
+    destroyed.&nbsp; shipId is the (now destroyed) players ship, killerId is the 
+    killers Id, or <i>nil</i> if no killer exists.<BR>&nbsp; 
+    <LI><A name=3.8></FONT><B><I><FONT face=Arial 
+    size=4>onCaptured( shipId, capturerId )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Called 
+    when the players ship is captured.&nbsp; shipId is the (now captured) 
+    players ship, capturerId is the capturers Id.&nbsp; <BR>&nbsp; 
+    <LI><A name=3.9></FONT><B><I><FONT face=Arial 
+    size=4>onEndGame()</B></I></A></FONT><FONT face=Verdana 
+  size=2><BR>Called when the scenario or mission is completed.</LI>
+
+</body></html>

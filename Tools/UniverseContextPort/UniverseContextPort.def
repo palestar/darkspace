@@ -1,0 +1,7 @@
+; UniverseContextPort.def : Declares the module parameters for the DLL.
+
+LIBRARY      "UniverseContextPort"
+DESCRIPTION  'TemplatePort Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

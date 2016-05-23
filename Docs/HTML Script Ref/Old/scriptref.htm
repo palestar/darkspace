@@ -1,0 +1,1387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>DarkSpace Script Reference</TITLE>
+</HEAD>
+<BODY text=#ffff00 vLink=#00ffff link=#00ffff bgColor=#000080><FONT face=Arial 
+size=2><BR>DarkSpace Script Reference <BR>Last Updated Wednesday, July 31, 2002 by
+<a href="mailto:Shigernafy@dsvault.com">Shigernafy</a>.
+<BR>See </FONT><A href="http://www.lua.org/"><FONT face=Arial 
+size=2>www.lua.org</FONT></A><FONT face=Arial size=2> for information on the 
+scripting language used by DarkSpace. This document is simply information on the 
+additional functions that have been attached to the <B>Lua scripting 
+language</B>.</FONT><BR>
+<P><FONT face=Verdana size=2><I><B>* Starred functions can be called only from 
+the server script code.</B></I></FONT></P>
+
+<TABLE id=AutoNumber1 style="BORDER-COLLAPSE: collapse" borderColor=#111111 
+cellSpacing=0 cellPadding=0 width="100%" border=1>
+  <TBODY>
+  <TR>
+    <TD width="50%"><FONT color=#00ff00><U><B>Concepts; Callbacks; Client 
+      Callbacks; Standard and Interface Functions</B></U></FONT></TD>
+    <TD width="50%"><FONT color=#00ff00><U><B>Planet, Ship, Gadget, Jumpgate, 
+      and Mission Functions</B></U></FONT></TD></TR>
+  <TR>
+    <TD width="50%" valign=top><br><A href="#1"><FONT face=Verdana size=2>
+	<I><B>1 Concepts </I></A> 
+      <DIR>
+      <P><BR><A href="#1.1">1.1 Server/Client</A><BR>
+	<A href="#1.2">1.2 Object ID’s </A><BR>
+	<A href="#1.3">1.3 Teams / Factions</A><BR>
+	<A href="#1.4">1.4 Mission Scripts</A></P></DIR>
+      <P><BR><A href="#2"><I>2 Callbacks </I></A> </P></DIR>
+      <DIR><P><BR><A href="#2.1">2.1 onInitialize() </A><BR>
+	<A href="#2.2">2.2 onRelease() </A></P></DIR>
+      <P><BR><A href="#3"><I>3 Client Callbacks </I></A> </P></DIR>
+      <DIR><P><BR><A href="#3.1">3.1 onTeamSelect() </A><BR>
+	<A href="#3.2">3.2 onTeamSelected( team ) </A><BR>
+	<A href="#3.3">3.3 onShipSelect() </A><BR>
+	<A href="#3.4">3.4 onShipSelected( shipName ) </A><BR>
+	<A href="#3.5">3.5 onTactical() </A><BR>
+	<A href="#3.6">3.6 onDeath() </A><BR>
+	<A href="#3.7">3.7 onCaptured() </A><BR>
+	<A href="#3.8">3.8 onEndGame() *</A></P></DIR>
+      <P><A href="#4"><I>4 Standard Functions </I></A> </P></DIR>
+      <DIR><P><BR><A href="#4.1">4.1 scriptAlert( message ) </A><BR>
+	<A href="#4.2">4.2 enableAlerts( enable ) </A><BR>
+	<A href="#4.3">4.3 randomNumber( low, high ) </A><BR>
+	<A href="#4.4">4.4 isClient() </A><BR>
+	<A href="#4.5">4.5 isServer() </A><BR>
+	<A href="#4.6">4.6 teamCount() </A><BR>
+	<A href="#4.7">4.7 getTeamFaction( int n ) </A><BR>
+	<A href="#4.8">4.8 getTeamName( n ) </A><BR>
+	<A href="#4.9">4.9 getName( id ) </A><BR>
+	<A href="#4.10">4.10 getKey( id ) </A><BR>
+	<A href="#4.11">4.11 getClass( id ) </A><BR>
+	<A href="#4.12">4.12 nodeCount( [parent] ) </A><BR>
+	<A href="#4.13">4.13 getNode( n, [parent] ) </A><BR>
+	<A href="#4.14">4.14 isNoun( id ) </A><BR>
+	<A href="#4.15">4.15 isStar( id ) </A><BR>
+	<A href="#4.16">4.16 isAsteroid( id ) </A><BR>
+	<A href="#4.17">4.17 isNebula( id ) </A><BR>
+	<A href="#4.18">4.18 isBody( id ) </A><BR>
+	<A href="#4.19">4.19 getOwner( body ) </A><BR>
+	<A href="#4.20">4.20 setOwner( body, team )*</A><BR>
+	<A href="#4.21">4.21 isOrbiting( id1, id2 ) </A><BR>
+	<A href="#4.22">4.22 enterOrbit( body, orbiting, velocity )*</A><BR>
+	<A href="#4.23">4.23 breakOrbit( body )*</A><BR>
+	<A href="#4.24">4.24 IsBeaconed( id ) </A><BR>
+	<A href="#4.25">4.25 isFaction( id, faction )</A><BR>
+	<A href="#4.26">4.26 getFactionTeam( faction ) </A><BR>
+	<A href="#4.27">4.27 remoteCall( target, scope, call ) </A><BR>
+	<A href="#4.28">4.28 getDistance( id1, id2 ) </A><BR>
+	<A href="#4.29">4.29 getFaction( id ) </A><BR>
+	<A href="#4.30">4.30 createSpawn( name, x, y, z ) </A><BR>
+	<A href="#4.31">4.31 getPosition( id ) </A><BR>
+	<A href="#4.32">4.32 setPosition( id, x, y, z ) </A><BR>
+	<A href="#4.33">4.33 spawnNoun( template, location, name, [parent] )*</A>
+	<BR>&nbsp;&nbsp;&nbsp; <A href="#Gadgets">Gadgets</A> 
+      <BR>&nbsp;&nbsp;&nbsp; <A href="#IShips">ICC Ships</A> 
+      <BR>&nbsp;&nbsp;&nbsp; <A href="#KShips">Kluth Ships</A> 
+      <BR>&nbsp;&nbsp;&nbsp; <A href="#UShips">UGTO Ships</A> 
+      <BR>&nbsp;&nbsp;&nbsp; <A href="#Structs">Structures</A> <BR>
+	<A href="#4.34">4.34 detachNoun( id )* </A><BR>
+	<A href="#4.35">4.35 updateNoun( id )* </A><BR>
+	<A href="#4.36">4.36 startTimer( seconds, script ) </A></P></DIR>
+      <P><A href="#5"><I>5 Interface Functions </I></A> </P></DIR>
+      <DIR><P><BR><A href="#5.1">5.1 flushChat() </A><BR>
+	<A href="#5.2">5.2 pushChat( text ) </A><BR>
+	<A href="#5.3">5.3 sendChat( target, scope, text ) </A><BR>
+	<A href="#5.4">5.4 trapKey( key, [script] ) </A><BR>
+	<A href="#5.5">5.5 watchKey( key, [script] ) </A><BR>
+	<A href="#5.6">5.6 highlightWindow( window ) </A><BR>
+	<A href="#5.7">5.7 hideWindow( window ) </A><BR>
+	<A href="#5.8">5.8 showWindow( window ) </A><BR>
+	<A href="#5.9">5.9 disableWindow( window ) </A><BR>
+	<A href="#5.10">5.10 enableWindow( window ) </A></P></DIR>
+      </DIR></TD>
+    <TD width="50%" valign=top><FONT face=Verdana size=2><BR>
+	<B><A href="#6"><I>6 Planet Functions </I></A> 
+      <DIR><P><BR><A href="#6.1">6.1 planetCount() </A><BR>
+	<A href="#6.2">6.2 getPlanet( n ) </A><BR>
+	<A href="#6.3">6.3 getPlanetMoral( id ) </A><BR>
+	<A href="#6.4">6.4 getPlanetPopulation(id)</A><BR>
+	<A href="#6.5">6.5 getPlanetValue( planet ) </A><BR>
+	<A href="#6.6">6.6 getPlanetFlags( planet ) </A><BR>
+	<A href="#6.7">6.7 planetEvent( planet, event, active )*</A><BR>
+	<A href="#6.8">6.8 revoltPlanet(id, team )*</A><BR>
+	<A href="#6.9">6.9 hexCount(id) </A><BR>
+	<A href="#6.10">6.10 getHex(id, hex ) </A><BR>
+	<A href="#6.11">6.11 getHexPosition(id, hex ) </A><BR>
+	<A href="#6.12">6.12 structureCount(id) </A><BR>
+	<A href="#6.13">6.13 getStructure(id, n ) </A><BR>
+	<A href="#6.14">6.14 getStructureHex( id ) </A><BR>
+	<A href="#6.15">6.15 unitCount(id) </A><BR>
+	<A href="#6.16">6.16 getUnit(id, n ) </A><BR>
+	<A href="#6.17">6.17 getUnitHex(id, n ) </A><BR>
+	<A href="#6.18">6.18 getRandomPlanet() </A><BR>
+	<A href="#6.19">6.19 getFriendlyPlanet( faction ) </A><BR>
+	<A href="#6.20">6.20 getEnemyPlanet( faction ) </A></P></DIR>
+      <P><BR><A href="#7"><I>7 Ship Functions </I></A> </P></DIR>
+      <DIR><P><BR><A href="#7.1">7.1 isShip( id ) </A><BR>
+	<A href="#7.2">7.2 isShipDestroyed( id ) </A><BR>
+	<A href="#7.3">7.3 shipCount() </A><BR>
+	<A href="#7.4">7.4 getShip( n ) </A><BR>
+	<A href="#7.5">7.5 getHull(id) </A><BR>
+	<A href="#7.6">7.6 setHull(id) </A><BR>
+	<A href="#7.7">7.7 getSignature(id) </A><BR>
+	<A href="#7.8">7.8 useGadget(id, key, target, shift ) </A><BR>
+	<A href="#7.9">7.9 playersShip() </A><BR>
+	<A href="#7.10">7.10 getShipType(id) </A><BR>
+	<A href="#7.11">7.11 spawnShip( resource, where, name, team )*</A><BR>
+	<A href="#7.12">7.12 orderShip(id, target, order )* </A><BR>
+	<A href="#7.13">7.13 isJumping( id ) </A><BR>
+	<A href="#7.14">7.14 hasMission( id ) </A></P></DIR>
+      <P><BR><A href="#8"><I>8 Gadget Functions </I></A> </P></DIR>
+      <DIR><P><BR><A href="#8.1">8.1 isGadget( id ) </A><BR>
+	<A href="#8.2">8.2 gadgetCount( ship ) </A><BR>
+	<A href="#8.3">8.3 getGadget( ship, n ) </A><BR>
+	<A href="#8.4">8.4 getGadgetType( gadget ) </A><BR>
+	<A href="#8.5">8.5 getGadgetMount( gadget ) </A><BR>
+	<A href="#8.6">8.6 setGadgetMount( gadget, mount ) </A><BR>
+	<A href="#8.7">8.7 getGadgetAmmo( gadget ) </A><BR>
+	<A href="#8.8">8.8 useGadget2( gadget, target, shift ) </A></P></DIR>
+      <P><BR><A href="#9"><I>9 Jumpgate Functions </I></A> </P></DIR>
+      <DIR><P><BR><A href="#9.1">9.1 jumpgateCount() </A><BR>
+	<A href="#9.2">9.2 getJumpgate( n ) </A><BR>
+	<A href="#9.3">9.3 getFriendlyJumpgate( faction ) </A><BR>
+	<A href="#9.4">9.4 getRandomJumpgate() </A></P></DIR>
+      <P><BR><A href="#10"><I>10 Mission Functions </I>*</A> </P></DIR>
+      <DIR><P><BR><A href="#10.1">10.1 openThisMission()* </A><BR>
+	<A href="#10.2">10.2 openShipMission( ship )*</A> <BR>
+	<A href="#10.3">10.3 openMission( type, faction, objective )*</A><BR>
+	<A href="#10.4">10.4 createMission( type, faction, name, description, duration, prestige, credits, [objectives ...] )*</A> <BR>
+		<A href="#10.4.1">10.4.1 Mission Types </A><BR>
+	<A href="#10.5">10.5 addMissionObjective( handle, objective )*</A><BR>
+	<A href="#10.6">10.6 addMissionTrigger( handle, action, script )*</A><BR>
+	<A href="#10.7">10.7 setNextMission( current, next )*</A><BR>
+	<A href="#10.8">10.8 setMissionState( mission, state )*</A><BR>
+	<A href="#10.9">10.9 assignMission( mission, ship )*</A><BR>
+	<A href="#10.10">10.10 getMissionOwner( mission )*</A><BR>
+	<A href="#10.11">10.11 pushMission( handle )*</A><BR>
+	<A href="#10.12">10.12 closeMission( handle )*</A><BR>
+	<A href="#10.13">10.13 closeAllMissions()*</A><BR>
+	<A href="#10.14">10.14 pushScoutMission(objective, faction )*</A><BR>
+	<A href="#10.15">10.15 pushRepairMission( objective )*</A><BR>
+	<A href="#10.16">10.16 pushDefendMission( objective, duration )*</A><BR>
+	<A href="#10.17">10.17 pushEscortMission( objective, location )*</A><BR>
+	<A href="#10.18">10.18 pushCaptureMission( objective, faction )*</A></P></DIR>
+      </DIR></TD></TR></TBODY></TABLE>
+<BR><BR></DIR>
+<OL>
+  <LI><A name=1></FONT><B><FONT face=Arial size=5>Concepts</A> 
+  </B></FONT><FONT face=Verdana size=2><BR>Before scripting your first mission 
+  or scenario, read this section to get familiar with several basic concepts. 
+  <BR>&nbsp; 
+  <OL>
+    <LI><A name=1.1></FONT><B><I><FONT face=Arial 
+    size=4>Server/Client</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Scripts must be designed to run both on the server side and 
+    client side. However, many functions in this API will only execute server 
+    side for obvious reasons. Those functions have an asterisk (*) appended in 
+    this documentation. <BR>Use the isServer() and isClient() functions to 
+    determine if the script is running server side or on one of the 
+    clients.<BR></FONT><BR>
+    <LI><A name=1.2><B><I><FONT face=Arial size=4>Object ID’s</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Objects within the game can be 
+    identified by their key or by their name. The most reliable way to find and 
+    use an object is by it’s key, which is a 64-bit number that uniquely 
+    identifies that object. <BR>Names can be used as well, but in some cases 
+    multiple objects may have the same name (i.e. infantry on a planet are all 
+    named infantry) additionally finding by name is much slower because it 
+    requires a search. <BR>All script functions that require an id as a 
+    parameter will firstly assume the id is a key, if not found by the key, then 
+    they will search by name for the object. <BR>Any script functions that 
+    create an object will always return the key of the object. Use getName() to 
+    get the name of an object by it’s key. Use getKey() to get the key for an 
+    object by name. <BR>&nbsp; 
+    <LI><A name=1.3></FONT><B><I><FONT face=Arial size=4>Teams / 
+    Factions</A> </B></I></FONT><FONT face=Verdana size=2><BR>Any one faction 
+    can have any number of teams. This is to facilitate the clan/fleet system in 
+    game, thus when a clan member joins a game server a team for their clan is 
+    dynamically created if needed. <BR>&nbsp; 
+    <LI><A name=1.4></FONT><B><I><FONT face=Arial size=4>Mission 
+    Scripts</A></B></I></FONT><FONT face=Verdana size=2><BR>These 
+  scripts are designed to provide a story/missions for the players. They are 
+  started by a moderator, and can remain running until the server is terminated 
+  or reset. Normally, they will initiate some starting conditions then 
+  eventually run their course and end. However, mission scripts can also be 
+  designed to continuously provide missions and motivation for the players. 
+  <BR>Mission scripts can also communicate, since they are all share the same 
+  environment. This means global variables and functions can all be shared. 
+  However, this can also be a source of problems, since a function from one 
+  script might replace a needed function in another script of the same name. 
+  <BR>All mission scripts should have their title, requirements, and description 
+  at the top of the file.<B><I> <BR>-- TITLE: ICC Diplomatic Mission <BR>-- REQ: 
+  ICC planet, UGTO <BR>-- DESC: Diplomatic mission to a random friendly planet.</LI></OL> 
+  <BR><BR>
+  <LI><A name=2></I></FONT><FONT face=Arial size=5>Callbacks</A> 
+  </B></FONT><FONT face=Verdana size=2><BR>These functions are called by the 
+  game into the script after certain events. <BR>&nbsp; 
+  <OL>
+    <LI><A name=2.1></FONT><B><I><FONT face=Arial 
+    size=4>onInitialize()</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Perform any initialization here, this is called right after the 
+    script is loaded. <BR>&nbsp; 
+    <LI><A name=2.2></FONT><B><I><FONT face=Arial 
+    size=4>onRelease()</A></B></I> </FONT><FONT face=Verdana size=2><BR>Called 
+    before the script is released. </I><BR>&nbsp;</LI></OL>
+  <LI><A name=3></FONT><B><FONT face=Arial size=5>Client 
+  Callbacks</A> </B></FONT><FONT face=Verdana size=2><BR>The following callbacks 
+  are only called when running on the client. <BR>&nbsp; 
+  <OL>
+    <LI><A name=3.1></FONT><B><I><FONT face=Arial 
+    size=4>onTeamSelect()</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called before the player selects a team <BR>&nbsp; 
+    <LI><A name=3.2></FONT><B><I><FONT face=Arial 
+    size=4>onTeamSelected( team )</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called after the player selects a team, the team ID is passed 
+    <BR>&nbsp; 
+    <LI><A name=3.3></FONT><B><I><FONT face=Arial 
+    size=4>onShipSelect()</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called before the player selects a ship <BR>&nbsp; 
+    <LI><A name=3.4></FONT><B><I><FONT face=Arial 
+    size=4>onShipSelected( shipName )</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Called after the player selects a ship <BR>&nbsp; 
+    <LI><A name=3.5></FONT><B><I><FONT face=Arial 
+    size=4>onTactical()</A> </B></I></FONT><FONT face=Verdana size=2><BR>&nbsp; 
+    <LI><A name=3.6></FONT><B><I><FONT face=Arial size=4>onDeath()</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Called when the players ship is 
+    destroyed <BR>&nbsp; 
+    <LI><A name=3.7></FONT><B><I><FONT face=Arial 
+    size=4>onCaptured()</A> </B></I></FONT><FONT face=Verdana size=2><BR>Called 
+    when the players ship is captured <BR>&nbsp; 
+    <LI><A name=3.8></FONT><B><I><FONT face=Arial 
+    size=4>onEndGame()</A></B></I></FONT><FONT face=Verdana 
+  size=2><BR>Called when the scenario or mission is completed.</LI></OL><BR>
+  <LI><A name=4></FONT><B><FONT face=Arial size=5>Standard 
+  Functions</A> </B></FONT><FONT face=Verdana size=2><BR>&nbsp; 
+  <OL>
+    <LI><A name=4.1></FONT><B><I><FONT face=Arial size=4>scriptAlert( 
+    message )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Send alert 
+    message. <BR><BR>
+    <LI><A name=4.2></FONT><B><I><FONT face=Arial size=4>enableAlerts( 
+    enable )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    enables/disables the script error messages. The default is not to display 
+    alerts. <BR>&nbsp; 
+    <LI><A name=4.3></FONT><B><I><FONT face=Arial size=4>randomNumber( 
+    low, high )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    returns a number that is &gt;= low and &lt;= high. <BR><BR>
+    <LI><A name=4.4></FONT><B><I><FONT face=Arial size=4>isClient()</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>This function returns a number 
+    indicating if the script is running on the client or on the server side. The 
+    number 1 is returned if the script is running on the client side, 0 is 
+    returned if server.<BR><BR>
+    <LI><A name=4.5></FONT><B><I><FONT face=Arial size=4>isServer()</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Just like <B>isClient, </B>except 
+    this function return 1 if the script is running on the server. <BR>&nbsp; 
+    <LI><A name=4.6></FONT><B><I><FONT face=Arial 
+    size=4>teamCount()</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+    function returns the total number of teams in the current context. 
+    <BR>&nbsp; 
+    <LI><A name=4.7></FONT><B><I><FONT face=Arial 
+    size=4>getTeamFaction( int n )</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Get the faction for team n. A number is returned which is the 
+    faction for the specified team, see table below.</FONT> 
+    <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>NEUTRAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>ICC</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>KLUTH</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>ICC/UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>UNKNOWN</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>5</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+    size=2><BR>&nbsp; 
+    <LI><A name=4.8></FONT><B><I><FONT face=Arial size=4>getTeamName( n 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Get the name for team n. 
+    <BR><BR>
+    <LI><A name=4.9></FONT><B><I><FONT face=Arial size=4>getName( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    name of an object by its key. <BR><BR>
+    <LI><A name=4.10></FONT><B><I><FONT face=Arial size=4>getKey( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    key of the specified object. Since multiple objects can have the same name, 
+    you may not always get the correct object by using it’s name.<B><I> 
+    <BR>local mycopia = getKey( "Mycopia" );</B></I> <BR>&nbsp; 
+    <LI><A name=4.11></FONT><B><I><FONT face=Arial size=4>getClass( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    class name of the specified object.<B><I> <BR>If getClass( "Cadet" ) == 
+    "ShipTransport" then <BR>-- player is in a transport <BR>end <BR><BR>
+    <LI><A name=4.12></FONT><FONT face=Arial size=4>nodeCount( [parent ] 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    number of nodes attached to the specified parent. <BR>If no parent is 
+    passed, then the number of nodes attached to the root is returned. Ships, 
+    Planets, Asteroids, and stars are all attached to the root. <BR><BR>
+    <LI><A name=4.13></FONT><B><I><FONT face=Arial size=4>getNode( n, 
+    [parent ] )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    returns the key for node n of parent. Make sure you check returned objects 
+    with isNoun(), since not all objects returned are noun objects.<B><I> 
+    <BR>Local n = nodeCount(); <BR>Local asteroids = 0; <BR>while n &gt; 0 do 
+    <BR>n = n – 1; <BR>if isAsteroid( getNode( n ) ) then <BR>asteroids = 
+    asteroids + 1; <BR>end <BR>end <BR>&nbsp; 
+    <LI><A name=4.14></FONT><FONT face=Arial size=4>isNoun( id )</A> 
+    </B></I></FONT><FONT face=Arial size=2><BR>This function looks for the named 
+    noun in the current context and returns 1 or 0 depending if the noun exists 
+    or not.</FONT><B><I><FONT face=Verdana size=2> <BR>If IsNoun( "Mycopia" ) == 
+    1 then <BR>-- mycopia found <BR>else <BR>-- mycopia not found <BR>end 
+    <BR>&nbsp; 
+    <LI><A name=4.15></FONT><FONT face=Arial size=4>isStar( id )</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Returns the value of "1" if the 
+    object is a star. <BR>&nbsp; 
+    <LI><A name=4.16></FONT><B><I><FONT face=Arial size=4>isAsteroid( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the value of "1" 
+    if the object is an asteroid. <BR>&nbsp; 
+    <LI><A name=4.17></FONT><B><I><FONT face=Arial size=4>isNebula( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the value of "1" 
+    if the object is a nebula.</FONT><B><I><FONT face=Arial size=2> <BR>&nbsp; 
+    <LI><A name=4.18></FONT><FONT face=Arial size=4>isBody( id )</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the value 
+    of "1" if the object is a body. If the object doesn’t exist or is not a body 
+    it will return "0". A body is an object that can orbit another object and 
+    can be owned by a team. Bodies include ships, planets, and asteroids. 
+    <BR>&nbsp; 
+    <LI><A name=4.19></FONT><B><I><FONT face=Arial size=4>getOwner( body 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    owner (team) for a body. See getFaction() if you are interested in getting 
+    the faction of an object. This function returns –1 if the object is not a 
+    body.<B><I> <BR>-- get the team that controls mycopia <BR>local team = 
+    getOwner( "Mycopia" ); <BR>-- translate the team into a faction <BR>local 
+    faction = getTeamFaction( team );<BR><BR>
+    <LI><A name=4.20></FONT><FONT face=Arial size=4>setOwner( body, team 
+    )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function can force 
+    the specified body to be owned by a team. The object must be a body. This is 
+    a server side function only.<B><I> <BR>-- place mycopia under control of the 
+    UGTO <BR>setOwner( "Mycopia", 0 ); <BR>-- do the same thing, by using the 
+    revoltPlanet function <BR>revoltPlanet( "Mycopia", 0 ); <BR><BR>
+    <LI><A name=4.21></FONT><FONT face=Arial size=4>isOrbiting( id1, id2 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+    value of "1" if "id1" is orbiting "id2". <BR><BR>
+    <LI><A name=4.22></FONT><B><I><FONT face=Arial size=4>enterOrbit( 
+    body, orbiting, velocity )*</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>This function can make a body orbit another body at the specified 
+    orbit velocity. The velocity is in radians/second. <BR><BR>
+    <LI><A name=4.23></FONT><B><I><FONT face=Arial size=4>breakOrbit( 
+    body )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    removes the specified body from it’s orbit. <BR><BR>
+    <LI><A name=4.24></FONT><B><I><FONT face=Arial size=4>IsBeaconed( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns 1 
+    if the specified object has a enemy beacon attached. <BR><BR>
+    <LI><A name=4.25></FONT><B><I><FONT face=Arial size=4>isFaction( id, 
+    faction )</A> </B></I></FONT><FONT face=Arial size=2><BR>This function 
+    returns 1 if the specified object belongs to that faction, if not then it 
+    returns 0.<B><I> <BR>If isFaction( "Mycopia", 2 ) <BR>-- Mycopia belongs to 
+    the ICC <BR>end</B></I></FONT> 
+    <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+          size=2><B>Faction</B></FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2><B>Value</B></FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>Neutral</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>ICC</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>2</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>K’Luth</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>3</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>ICC/UGTO</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>4</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>UKNOWN</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+      size=2>5</FONT></TD></TR></TBODY></TABLE><FONT face=Arial size=2><BR>&nbsp; 
+    <LI><A name=4.26></FONT><B><I><FONT face=Arial 
+    size=4>getFactionTeam( faction )</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>This function returns to the first available team for the 
+    specified faction.</FONT><B><I><FONT face=Arial size=4> <BR><BR>
+    <LI><A name=4.27>remoteCall( target, scope, call )</A> 
+    </B></I></FONT><FONT face=Arial size=2><BR>This function sends out a verb 
+    through the network connection, when received by the client or server and 
+    the verb is executed it calls the specified function within the 
+    script.<B><I> <BR>-- remoteCall( target, scope, call ) <BR>remoteCall( "", 
+    5, "Spawn1()" ); <BR>-- the above function sent a verb to the server, thus 
+    no target needed to be specified, once the verb arrives on the server side, 
+    it will execute the function "Spawn1()" in the server script.</B></I></FONT> 
+
+    <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2><B>Scope</B></FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2><B>Value</B></FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>LOCAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>GLOBAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>TEAM</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>2</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>FACTION</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>3</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>PRIVATE</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>4</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>SERVER</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial size=2>5</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+        size=2>NOT_FACTION</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Arial 
+      size=2>6</FONT></TD></TR></TBODY></TABLE><FONT face=Arial size=2><BR>&nbsp; 
+    <LI><A name=4.28></FONT><B><I><FONT face=Arial size=4>getDistance( 
+    id1, id2 )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    returns the distance between two objects in the current context. –1 is 
+    returned if one or both of the objects is not found.<B><I> <BR>local d = 
+    getDistance( "Ship1", "Mycopia" ); <BR><BR>
+    <LI><A name=4.29></FONT><FONT face=Arial size=4>getFaction( id )</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Returns the faction of the 
+    specified object.<B><I> <BR>Local f = getFaction( "Mycopia" ); <BR><BR>
+    <LI><A name=4.30></FONT><FONT face=Arial size=4>createSpawn( name, 
+    x, y, z )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    creates a spawn point in space, which can be used by spawnShip() to create a 
+    location on the fly for spawning ships. This function creates the spawn 
+    point only on the local context.<B><I> <BR>-- create a spawn point <BR>local 
+    key = createSpawn( "Spawn1", 50,0,1000 ); <BR>-- do stuff <BR>-- remove the 
+    spawn point when done, otherwise memory leak! <BR>detachNoun( key ); 
+<BR><BR>
+    <LI><A name=4.31></FONT><FONT face=Arial size=4>getPosition( id 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function gets the 3d 
+    position of an object.<B><I> <BR>local x,y,z = getPosition( "Cadet" ); 
+    <BR>pushChat( "X:"..x..", Y:"..y..", Z:"..z );</B></I> <BR>&nbsp; 
+    <LI><A name=4.32></FONT><B><I><FONT face=Arial size=4>setPosition( 
+    id, x, y, z )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+    sets the current position of an object. <B><I><BR>setPosition( "Mycopia", 
+    5000, 0, 10000 ); <BR>updateNoun( "Mycopia" );</B></I></FONT><FONT 
+    face=Arial size=2> <BR>&nbsp; 
+    <LI><A name=4.33></FONT><B><I><FONT face=Arial size=4>spawnNoun( 
+    template, location, name, [parent] )*</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>This function will create a new object in game using the supplied 
+    template (see table below). The spawn object will be created near the 
+    specified location. The object can be optionally attached to another object 
+    as a child. <BR>The server will automatically send new objects attached to 
+    the root to all clients in the area. However, when attaching the spawned 
+    object to a <B>existing</B> planet or ship, the parent object will need to 
+    be resent to the clients using updateNoun(). <BR>If using this function to 
+    create a ship instead of using spawnShip(), the ship will have no gadgets 
+    attached when created. You will need to use addition spawnNoun() calls to 
+    create the equipment for the ship. The same concept applies to structures as 
+    well, especially defense bases which must have gadgets attached to the noun. 
+    <BR>If the object created is a gadget, and the gadget is not being attached 
+    to a ship or structure it is converted automatically into a cargo object 
+    containing the gadget. <BR>The following table contains a partial listing of 
+    all the available objects that can be used by spawnNoun() as the template 
+    argument.</FONT> 
+    <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="22%"><FONT face=Verdana size=2>Misc\</FONT></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana size=2>Asteroid.prt 
+          <BR>AsteroidBelt.prt</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="22%"><FONT face=Verdana size=2>Misc\Resource 
+          Container\</FONT></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana 
+          size=2>NC_Resource.prt</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="22%"><FONT face=Verdana size=2>Nebula\</FONT></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana size=2>Gas 
+          Cloud.prt</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="22%"><A name=Gadgets><FONT face=Verdana 
+          size=2>Gadgets\</FONT></A></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana size=2>Active 
+          Shields.PRT <BR>Aft Light Armor.prt <BR>Aft Shields.prt <BR>AM 
+          Torpedo.prt <BR>AntiMatter Drive.PRT <BR>AntiMatter Mine.prt <BR>AR 
+          Missile.prt <BR>Auto Repair.prt <BR>Beacon.PRT <BR>Bio Bomb.prt 
+          <BR>Build - ICC.PRT <BR>Build - KLuth.PRT <BR>Build - UGTO.PRT <BR>CL 
+          1000.PRT <BR>CL 2000.PRT <BR>CL 300.prt <BR>CL 500.prt <BR>CL 550.prt 
+          <BR>Cloaking Device.prt <BR>Death Beam.PRT <BR>Disruptor.prt <BR>Drive 
+          - AFE.prt <BR>Drive - AME.prt <BR>Drive - IE.prt <BR>Drive - PFE.prt 
+          <BR>ECCM.prt <BR>ECM.prt <BR>ELF Beam.PRT <BR>ELF.PRT <BR>EMP 
+          Cannon.PRT <BR>EMP Mine.prt <BR>EMP.prt <BR>Fighter Bay - ICC.prt 
+          <BR>Fighter Bay - UGTO.PRT <BR>Flux Cannon.prt <BR>Flux Wave.PRT 
+          <BR>Fore Heavy Armor.prt <BR>Fore Light Armor.prt <BR>Fore Shields.prt 
+          <BR>Front Heavy Armor.prt <BR>Full Heavy Armor.prt <BR>Full Light 
+          Armor.prt <BR>Full Shields.prt <BR>Fusion Drive.prt <BR>Fusion Reactor 
+          1000.prt <BR>Fusion Reactor 1500.prt <BR>Fusion Reactor.prt <BR>Fusion 
+          Torpedo.prt <BR>Gauss Gun.prt <BR>Innards.prt <BR>IP Beam.PRT <BR>IPS 
+          Beam.PRT <BR>IT Missile.prt <BR>Jump Disruptor.prt <BR>Larvae 
+          Formation.prt <BR>Left Heavy Armor.prt <BR>Left Light Armor.prt 
+          <BR>Left Shields.prt <BR>Light Armor.prt <BR>Mining Beam.PRT <BR>MiRV 
+          Bomb.prt <BR>Mouth Beam.prt <BR>Nuke Mine.prt <BR>P Cannon.prt <BR>P 
+          Cruise Missile.prt <BR>P Torpedo.prt <BR>Psi Cannon.prt <BR>Psi 
+          Missile.prt <BR>Pulse Beam.PRT <BR>Pulse Shield.prt <BR>QSB.prt 
+          <BR>Railgun.prt <BR>Reactive Shields.PRT <BR>Reactor 1000.prt <BR>Rear 
+          Heavy Armor.prt <BR>Rear Light Armor.prt <BR>Reload.prt <BR>Right 
+          Heavy Armor.prt <BR>Right Light Armor.prt <BR>Right Shields.prt 
+          <BR>Sabot Rocket.prt <BR>Scanner.prt <BR>Script.PRT <BR>Spawn.PRT 
+          <BR>Tachyon Drive.prt <BR>Tractor Beam.prt</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="22%"><FONT face=Verdana size=2>Ships\</FONT></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana size=2><A 
+          name=IShips>ICC\Cruiser\M230 A\NC_M230A.PRT</A> <BR>ICC\Cruiser\M235 
+          I\NC_M235I.PRT <BR>ICC\Cruiser\M239 J\NC_M239J.PRT 
+          <BR>ICC\Cruiser\M245 A\NC_M245A.PRT <BR>ICC\Cruiser\M247 
+          M\NC_M247M.PRT <BR>ICC\Cruiser\M248C\NC_M248C.PRT 
+          <BR>ICC\Destroyer\M190 A\NC_M190A.PRT <BR>ICC\Destroyer\M190 
+          B\NC_M190B.PRT <BR>ICC\Destroyer\M192 F\NC_M192F.PRT 
+          <BR>ICC\Destroyer\Old\M194A\NC_M194A.PRT 
+          <BR>ICC\Dreadnought\M400-A\NC_M400A.PRT 
+          <BR>ICC\Dreadnought\M400-B\NC_M400B.prt 
+          <BR>ICC\Dreadnought\M410-A\NC_M410A.prt 
+          <BR>ICC\Dreadnought\Old\M300\NC_M300.prt 
+          <BR>ICC\Dreadnought\Old\M310\NC_M310.prt <BR>ICC\Engineering\MR 
+          110\NC_MR110.PRT <BR>ICC\Engineering\MR 115\NC_MR115.prt 
+          <BR>ICC\Engineering\MR 125\NC_MR125.PRT <BR>ICC\Fighter\M7\NC_M7.PRT 
+          <BR>ICC\Frigate\M40S\NC_M40S.prt <BR>ICC\Frigate\M42B\NC_M42B.prt 
+          <BR>ICC\Frigate\M44A\NC_M44A.prt <BR>ICC\Frigate\M45B\NC_M45B.prt 
+          <BR>ICC\Miner\ME 1522\NC_ME1522.prt <BR>ICC\Scout\M21 A\NC_M21A.prt 
+          <BR>ICC\Scout\M21 B\NC_M21B.prt <BR>ICC\Scout\M21 C\NC_M21C.prt 
+          <BR>ICC\Scout\M22 B\NC_M22B.prt <BR>ICC\Station\M2200 A\NC_M2200A.prt 
+          <BR>ICC\Supply\M S40 A\NC_MS40A.prt <BR>ICC\Supply\M S42 
+          A\NC_MS42A.prt <BR>ICC\Transport\M2111 Transport\NC_M2111.PRT 
+          <BR>ICC\Transport\M2122 Transpoer\NC_M2122.PRT <BR><A 
+          name=KShips>Kluth\Fighter\Larvae\NC_Larvae.PRT</A> 
+          <BR>Kluth\Frigate\Proboscis\NC_Proboscis.PRT 
+          <BR>Kluth\miner\Extractor\NC_Extractor.prt <BR>Moderator\NC_ORB.PRT 
+          <BR><A name=UShips>UGTO\Cruiser\ST-74 Torpedo Cruiser\NC_ST74.prt</A> 
+          <BR>UGTO\Cruiser\ST-75 Interdictor\NC_ST75.PRT <BR>UGTO\Cruiser\ST-76 
+          Battle Cruiser\NC_ST76.prt <BR>UGTO\Cruiser\ST-79 Missile 
+          Cruiser\NC_ST79.prt <BR>UGTO\Cruiser\ST-80 Bomber\NC_ST80.PRT 
+          <BR>UGTO\Destroyer\ST-10 Gunboat\NC_ST10.prt <BR>UGTO\Destroyer\ST-11 
+          Missile Buster\NC_ST11.prt <BR>UGTO\Destroyer\ST-14 
+          Assault\NC_ST14.prt <BR>UGTO\Dreadnought\ST-101 Super 
+          Carrier\NC_ST101.prt <BR>UGTO\Dreadnought\ST-105 Battle 
+          Platform\NC_ST105.PRT <BR>UGTO\Dreadnought\ST-106 Command 
+          Center\NC_ST106.prt <BR>UGTO\Dreadnought\ST-111 Elite 
+          Assault\NC_ST111.prt <BR>UGTO\Engineering\ST-7000\NC_ST7000.PRT 
+          <BR>UGTO\Engineering\ST-7010\NC_ST7010.prt <BR>UGTO\Fighter\B-27 
+          Fighter\NC_B27.PRT <BR>UGTO\Frigate\ST-5 Bomber\NC_ST5.prt 
+          <BR>UGTO\Frigate\ST-6 Interceptor\NC_ST6.prt <BR>UGTO\Frigate\ST-7 
+          Minelayer\NC_ST7.prt <BR>UGTO\Frigate\ST-8 Harrier\NC_ST8.prt 
+          <BR>UGTO\Miner\SE-7501\NC_SE7501.prt</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="22%"><FONT face=Verdana size=2><A 
+          name=Structs>Structures\</A></FONT></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana size=2>Common\AntiSensor 
+          Base.prt <BR>Common\Automated Farm.prt <BR>Common\Deep Core Mine.prt 
+          <BR>Common\Defense Base.prt <BR>Common\Depot.prt <BR>Common\Dome.prt 
+          <BR>Common\Fighter Base.PRT <BR>Common\Fusion Generator.prt 
+          <BR>Common\Hydro Farm.prt <BR>Common\Interdictor Base.prt 
+          <BR>Common\Mine.prt <BR>Common\Research Lab.prt <BR>Common\Sensor 
+          Base.prt <BR>Common\Solar Generator.prt <BR>ICC\Barracks.PRT 
+          <BR>ICC\Colony Hub.PRT <BR>ICC\Factory.PRT <BR>ICC\Shield 
+          Generator.prt <BR>ICC\StarPort.PRT <BR>KLuth\Barracks.prt 
+          <BR>KLuth\Colony Hub.prt <BR>KLuth\Factory.prt <BR>KLuth\StarPort.prt 
+          <BR>UGTO\Barracks.prt <BR>UGTO\Colony Hub.prt <BR>UGTO\Factory.prt 
+          <BR>UGTO\StarPort.prt</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="22%"><FONT face=Verdana size=2>Units\</FONT></TD>
+        <TD vAlign=top width="78%"><FONT face=Verdana size=2>Infantry.prt 
+          <BR>K’Luth Infantry.prt</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+    size=2><BR>&nbsp; 
+    <LI><A name=4.34></FONT><B><I><FONT face=Arial size=4>detachNoun( id 
+    )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function detaches 
+    the object from the universe. Use this function to remove createSpawn() 
+    objects after you are done, otherwise the object will stay attached to the 
+    universe causing a memory leak. <BR>&nbsp; 
+    <LI><A name=4.35></FONT><B><I><FONT face=Arial size=4>updateNoun( id 
+    )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function forces a 
+    new copy of the specified object to be sent to all clients in the local area 
+    of the object. Some functions such as setHull() and spawnNoun() will modify 
+    the state of the game, but not send those changes to all clients affected. 
+    This function allows the server script to send an updated version of an 
+    object to all clients in the area. <BR><B><I> -- change the ships hull to 50% 
+    <BR>setHull( "TransportA", 50 ); <BR>-- send the updated object to all 
+    clients near the transport <BR>updateNoun( "TransportA" );</B></I> <BR><BR>
+    <LI><A name=855></FONT><B><I><FONT face=Arial size=4>startTimer( 
+    seconds, script )</A></B></I></FONT><FONT face=Verdana size=2> <BR>This 
+    function begins a timer which will call a function in n seconds, once called 
+    the timer is destroyed. <B><I>startTimer( 30, "onTimer()" ); 
+    <BR>function onTimer() <BR>-- do something <BR>-- setup another timer to 
+    check again in 30 seconds <BR>startTimer( 30, "onTimer()" ); <BR>end</B></I> 
+    <BR>&nbsp;</LI></OL>
+  <LI><A name=5></FONT><B><FONT face=Arial size=5>Interface 
+  Functions</A> </FONT>
+  <OL>
+    <LI><A name=5.1></FONT><I><FONT face=Arial size=4>flushChat()</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>This function clears all chat 
+    from the chat buffer. <BR>&nbsp;<B><I>function startTutorial() 
+    <BR>flushChat(); <BR>pushChat( "&lt;Color;00ffff&gt;Tutorial: Basic Command 
+    and Control&lt;/Color&gt;\nPressing the &lt;Color;00ffff&gt;F4&lt;/Color&gt; 
+    key will display the message log, allowing you review the tutorial text." ); 
+    <BR>pushChat( "\nPress the &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key to 
+    begin the tutorial.\n" ); <BR>trapKey( 13, "onStep1()" ); <BR>end</B></I> 
+    <BR>&nbsp; 
+    <LI><A name=5.2></FONT><B><I><FONT face=Arial size=4>pushChat( text 
+    )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function sends a 
+    chat message to the local chat buffer.<B><I> <BR>function onStep2() 
+    <BR>pushChat( "Now for a closer look you can zoom the camera towards your 
+    ship with either the &lt;color;00ffff&gt;Mouse Wheel&lt;/color&gt; or by 
+    pressing the &lt;color;00ffff&gt;Z&lt;/color&gt; key.\n\nYou can zoom out 
+    for an overview of the battle field with &lt;color;00ffff&gt;X&lt;/color&gt; 
+    key or again by using your mouse wheel in the other direction." ); 
+    <BR>pushChat( "\nPress the &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key 
+    to continue.\n" ); <BR>trapKey( 13, "onStep3()" ); <BR>end</B></I> 
+    <BR>&nbsp; 
+    <LI><A name=5.3></FONT><B><I><FONT face=Arial size=4>sendChat( 
+    target, scope, text )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+    function sends a chat message to the specified target and scope. See the 
+    following table for valid scopes.</FONT> 
+    <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+      <TBODY>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>LOCAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>GLOBAL</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>TEAM</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>FACTION</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>PRIVATE</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>SERVER</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana size=2>5</FONT></TD></TR>
+      <TR>
+        <TD vAlign=top width="50%"><FONT face=Verdana 
+        size=2>NOT_FACTION</FONT></TD>
+        <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>6</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+    size=2></FONT><B><I><FONT face=Arial size=2>-- send private chat message 
+    <BR>sendChat( "Cadet", 4, "This is a private message!" ); <BR>-- send 
+    message to faction that controls the planet "Mycopia" <BR>sendChat( 
+    "Mycopia", 3, "Faction message" ); <BR>-- send message to the team that 
+    controls "Mycopia" <BR>sendChat( "Mycopia", 2, "Team message!");<BR><BR>
+  <LI><A name=5.4></FONT><FONT face=Arial size=4>trapKey( key, [script] 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function creates a 
+  trap for a certain key, when that key is pressed a function within the script 
+  is called by the game. The key will stay trapped, until this function is 
+  called again with the same key but no second argument.<B><I> <BR>-- trap the 
+  enter key, call the function "onStep14" when the enter key is pressed 
+  <BR>trapKey( 13, "onStep14()" ); <BR>-- untrap the enter key <BR>trapKey( 13 
+  );</B></I> <BR>&nbsp; 
+  <LI><A name=5.5></FONT><B><I><FONT face=Arial size=4>watchKey( key, 
+  [script] )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function is 
+  like trapKey, except it allows the keyboard message to be passed onto the 
+  game. <BR><BR>
+  <LI><A name=5.6></FONT><B><I><FONT face=Arial size=4>highlightWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function places 
+  a rectangle around the specific window.<B><I> <BR>function onStep15() 
+  <BR>highlightWindow( "CargoButtons" ); <BR>pushChat( "The highlighted area is 
+  where your cargo icons are displayed. Press the 
+  &lt;color;00ffff&gt;U&lt;/color&gt; key to unload an infantry unit onto the 
+  planet's surface. "); <BR>watchKey( "U", "onStep16()" ); <BR>end</B></I> 
+  <BR>&nbsp; 
+  <LI><A name=5.7></FONT><B><I><FONT face=Arial size=4>hideWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function hides 
+  the specified window.<B><I> <BR>function onStep17() <BR>hideWindow( 
+  "ViewTactical" ); <BR>showWindow( "ViewEngineering" ); <BR>enableWindow( 
+  "ButtonEngineering" ); <BR>pushChat( "This is the 
+  &lt;color;00ffff&gt;ENGINEERING&lt;/color&gt; view. This view shows you the 
+  current status of your ship. You can toggle the engineering view with the 
+  &lt;color;00ffff&gt;F3&lt;/color&gt; key." ); <BR>pushChat( "\nPress the 
+  &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key to continue.\n" ); <BR>trapKey( 
+  13, "onStep18()" ); <BR>end</B></I> <BR>&nbsp; 
+  <LI><A name=5.8></FONT><B><I><FONT face=Arial size=4>showWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function shows 
+  the specified window, see <B><I>hideWindow</B></I>. <BR><BR>
+  <LI><A name=5.9></FONT><B><I><FONT face=Arial size=4>disableWindow( 
+  window )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  disables a window.<B><I> <BR>function onStep1() <BR>-- Disable the different 
+  screen buttons so we can control the user <BR>disableWindow( "ButtonHelp" ); 
+  <BR>disableWindow( "ButtonNavigation" ); <BR>disableWindow( 
+  "ButtonEngineering" ); <BR>pushChat( "You are now in the 
+  &lt;color;00ffff&gt;TACTICAL&lt;/color&gt; view, this is where you will spend 
+  most of your time while playing DarkSpace. Your ship is always displayed in 
+  the center of the screen." ); <BR>pushChat( "\nFirst, begin by holding down 
+  the &lt;color;00ffff&gt;right button&lt;/color&gt; on your mouse and then 
+  &lt;color;00ffff&gt;dragging&lt;/color&gt; your mouse around. This changes 
+  your camera position around your ship, allowing you to view your ship from any 
+  direction." ); <BR>pushChat( "\nPress the 
+  &lt;Color;00ffff&gt;ENTER&lt;/Color&gt; key to continue.\n" ); <BR>trapKey( 
+  13, "onStep2()" );<BR>end</B></I> <BR>&nbsp; 
+  <LI><A name=5.10></FONT><B><I><FONT face=Arial size=4>enableWindow( 
+  window )</A></B></I></FONT><FONT face=Arial size=2> <BR>This function enables 
+  a window. see <B>disableWindow</B>.</FONT><FONT face=Verdana 
+size=2></LI></OL><BR><B><I>
+<LI><A name=6></I></FONT><FONT face=Arial size=5>Planet Functions</A> 
+</FONT>
+<OL>
+  <LI><A name=6.1></FONT><I><FONT face=Arial size=4>planetCount()</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the total 
+  number of planets in the current system.<B><I> <BR>local planets = 
+  planetCount();</B></I> <BR>&nbsp; 
+  <LI><A name=6.2></FONT><B><I><FONT face=Arial size=4>getPlanet( n 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function gets the key 
+  of the planet n.<B><I> <BR>local key = getPlanet( 0 );</B></I> <BR>&nbsp; 
+  <LI><A name=6.3></FONT><B><I><FONT face=Arial size=4>getPlanetMoral( 
+  id )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the moral of a 
+  planet, 0 – 100.<B><I> <BR>-- Usage <BR>local morale = getPlanetMoral( 
+  "Mycopia" ); <BR><BR>
+  <LI><A name=6.4></FONT><FONT face=Arial 
+  size=4>getPlanetPopulation(id)</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Returns the population of the given planet. <BR>&nbsp; 
+  <LI><A name=6.5></FONT><B><I><FONT face=Arial size=4>getPlanetValue( 
+  planet )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the value of a planet. <BR>&nbsp; 
+  <LI><A name=6.6></FONT><B><I><FONT face=Arial size=4>getPlanetFlags( 
+  planet )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the flags of a planet, see the table below for planet flags.</FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>HYDROGEN</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0x01</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>OXYGEN</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0x02</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>METALS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0x04</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>HEAVY_METALS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X08</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>CYRO_METALS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X10</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>HYPER_MATTER</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X20</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>DARK_MATTER</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X40</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>URDANIAM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X80</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>PLAGUE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X100</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>REVOLUTION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X200</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>RESESSION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X400</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>STRIKE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X800</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>BOOM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X1000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>SMUGGLERS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X2000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>MINING_FIND</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X4000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>FOOD_SHORT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X8000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>POWER_SHORT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>0X10000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>WORKER_SHORT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+    size=2>0X20000</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+  size=2><BR>&nbsp; 
+  <LI><A name=6.7></FONT><B><I><FONT face=Arial size=4>planetEvent( 
+  planet, event, active )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function generates a planet event, see the table below for available events. 
+  The "active" argument determines if your turning on the event, or turning it 
+  off. <BR>All of these events are generated randomly by the planet code, use 
+  this function to force an event to occur.<B><I> <BR>-- Start plague on Mycopia 
+  <BR>planetEvent( "Mycopia", 0, 1 ); <BR>-- stop strike on Mycopia 
+  <BR>planetEvent( "Mycopia", 3, 0 );</B></I></FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>PLAGUE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>REVOLUTION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>RESESSION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>STRIKE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>BOOM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>SMUGGLERS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>5</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>MINING_FIND</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>6</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FOOD_SHORT*</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>7</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>POWER_SHORT*</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>8</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>WORKER_SHORT*</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>9</FONT></TD></TR>
+	</TBODY></TABLE>
+	<FONT face=Verdana size=2><I>* These events are automatically set by the internal planet logic. If you generate these events, they might be turned back off the next turn by the 
+  planet logic. <BR>&nbsp; 
+  <LI><A name=6.8></FONT><B><FONT face=Arial size=4>revoltPlanet(id, 
+  team )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Change planet to be 
+  controlled by the specified faction. The server script can only call this 
+  function. <BR><BR>
+  <LI><A name=6.9></FONT><B><I><FONT face=Arial size=4>hexCount(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>Returns the number of hexes on 
+  the specified planet. <BR><BR>
+  <LI><A name=6.10></FONT><B><I><FONT face=Arial size=4>getHex(id, hex 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the object name, if 
+  any, in the specified hex on the planet. <BR><BR>
+  <LI><A name=6.11></FONT><B><I><FONT face=Arial 
+  size=4>getHexPosition(id, hex )</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Returns the X,Y,Z position of the hex on the planet.<B><I> <BR>-- 
+  Get the XYZ of hex 1 from the planet mycopia <BR>local x,y,z = getHexPosition( 
+  "Mycopia", 1 );</B></I> <BR><BR>
+  <LI><A name=6.12></FONT><B><I><FONT face=Arial 
+  size=4>structureCount(id)</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Returns the number of structures on a planet. <BR><BR>
+  <LI><A name=6.13></FONT><B><I><FONT face=Arial size=4>getStructure(id, 
+  n )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns structure n from 
+  the specified planet. <BR><BR>
+  <LI><A name=6.14></FONT><B><I><FONT face=Arial size=4>getStructureHex( 
+  id )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the hex 
+  currently assigned to structure n <BR>&nbsp; 
+  <LI><A name=6.15></FONT><B><I><FONT face=Arial 
+  size=4>unitCount(id)</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns 
+  the number of ground units on the specified planet. <BR>&nbsp; 
+  <LI><A name=6.16></FONT><B><I><FONT face=Arial size=4>getUnit(id, n 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the name of unit n 
+  on the specified planet. <BR>&nbsp; 
+  <LI><A name=6.17></FONT><B><I><FONT face=Arial size=4>getUnitHex(id, n 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the hex of the 
+  specified unit. <BR>&nbsp; 
+  <LI><A name=6.18></FONT><B><I><FONT face=Arial 
+  size=4>getRandomPlanet()</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function returns a inhabitable random planet from the current system. <BR><BR>
+  <LI><A name=6.19></FONT><B><I><FONT face=Arial 
+  size=4>getFriendlyPlanet( faction )</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function returns a random planet in the current system 
+  friendly to the specified faction. <BR><BR>
+  <LI><A name=6.20></FONT><B><I><FONT face=Arial size=4>getEnemyPlanet( 
+  faction )</A></B></I></FONT><FONT face=Verdana size=2> <BR>This function 
+  returns a random enemy planet. <BR>&nbsp;</LI></OL>
+<LI><A name=7></FONT><B><FONT face=Arial size=5>Ship Functions</A> 
+</B></FONT><FONT face=Verdana size=2><BR>&nbsp; 
+<OL>
+  <LI><A name=7.1></FONT><B><I><FONT face=Arial size=4>isShip( id )</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function, like isNoun(), 
+  returns a value of "1" is the object is a ship. <BR><BR>
+  <LI><A name=7.2></FONT><B><I><FONT face=Arial size=4>isShipDestroyed( 
+  id )</A> </B></I></FONT><FONT face=Arial size=2><BR>This function, like isNoun 
+  looks for the named object, if not found then it returns 1, if found and the 
+  object is a ship and is not destroy it returns 0, otherwise 1.</FONT><FONT 
+  face=Verdana size=2> <BR>&nbsp; 
+  <LI><A name=7.3></FONT><B><I><FONT face=Arial size=4>shipCount()</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the total 
+  number of ships in the current system.<B><I> <BR>local ships = 
+  shipCount();</B></I> <BR>&nbsp; 
+  <LI><A name=7.4></FONT><B><I><FONT face=Arial size=4>getShip( n )</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the key of 
+  ship n in the current system.<B><I> <BR>local key = getShip( 1 );</B></I> 
+  <BR>&nbsp; 
+  <LI><A name=7.5></FONT><B><I><FONT face=Arial size=4>getHull(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the hull 
+  percentage of a ship.<B><I> <BR>local h = getHull( "Cadet" );</B></I> 
+  <BR>&nbsp; 
+  <LI><A name=7.6></FONT><B><I><FONT face=Arial size=4>setHull(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function is used to set the 
+  hull of the specified ship. Returns 1 if hull is changed, returns nil if 
+  object not found or object is not a ship.<B><I> <BR>-- set the hull to 50% 
+  <BR>SetHull( "Cadet", 50 );</B></I> <BR>&nbsp; 
+  <LI><A name=7.7></FONT><B><I><FONT face=Arial 
+  size=4>getSignature(id)</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function returns the current signature of a ship.<B><I> <BR>local s = 
+  getSignature( "Cadet" );</B></I> <BR>&nbsp; 
+  <LI><A name=7.8></FONT><B><I><FONT face=Arial size=4>useGadget(id, 
+  key, target, shift )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function will use a gadget on the specified ship. Returns the number of 
+  gadgets that were used. <B><I><BR>-- useGadget( ship, key, target, shift ) 
+  <BR>useGadget( "Cadet", "K", nil, 0 );</B></I> <BR>&nbsp; 
+  <LI><A name=7.9></FONT><B><I><FONT face=Arial 
+  size=4>playersShip()</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function returns the name of the players ship, if any.<B><I> <BR>ship = 
+  playerShip(); <BR>pushChat( "Welcome to DarkSpace "..ship ); <BR><BR>
+  <LI><A name=7.10></FONT><FONT face=Arial size=4>getShipType(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the type of 
+  ship as a number value, the chart below maps the numbers to the actual classes 
+  of ships in DarkSpace. <B><I><BR>local shipType = getShipType( "Cadet" 
+  );</B></I></FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>0</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+size=2>Fighter</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>1</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana size=2>Scout</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>2</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+size=2>Frigate</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>3</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+    size=2>Destroyer</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>4</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+size=2>Cruiser</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>5</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+      size=2>Dreadnaught</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>6</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+    size=2>Engineer</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>7</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana size=2>Supply</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>8</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+    size=2>Transport</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>9</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+size=2>Station</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>10</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+    size=2>Platform</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="28%"><FONT face=Verdana size=2>11</FONT></TD>
+      <TD vAlign=top width="72%"><FONT face=Verdana 
+    size=2>Unknown</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+  size=2><BR>&nbsp; 
+  <LI><A name=7.11></FONT><B><I><FONT face=Arial size=4>spawnShip( 
+  resource, where, name, team )*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function creates a noun for the specified ship in the context. 
+  "where" can be a spawn point or a planet or other object that is currently 
+  in-game.<B><I> <BR>-- spawnShip( resource, where, name, team ) <BR>local key = 
+  SpawnShip( "ships/ICC/Engineering/MR 110/SC_MR110", "Spawn1", "Eng Alpha", 1 
+  );</B></I> <BR>&nbsp;</FONT><B><I><FONT face=Arial size=4> 
+  <LI><A name=7.12>orderShip(id, target, order )*</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function sets the order for 
+  the specified ship.</FONT><B><I><FONT face=Arial size=2> <BR>-- orderShip( 
+  name, target, order ) <BR>orderShip( "Eng Alpha", "Mycopia", 2 
+  );</B></I></FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>Order</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>Value</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>NOORDER</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>ATTACK</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>DEFEND</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>CAPTURE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>MOVE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>4</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>RELOAD</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>5</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>BEACON</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>6</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>HOLD</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial 
+  size=2>7</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+  <LI><A name=7.13></FONT><B><I><FONT face=Arial size=4>isJumping( id 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns 1 if 
+  the ship is currently in jump, or 0 if not. <BR>&nbsp; 
+  <LI><A name=7.14></FONT><B><I><FONT face=Arial size=4>hasMission( id 
+  )</A></B></I></FONT><FONT face=Verdana size=2> <BR>This function returns a 
+  value of 1 if the ship currently has a mission. The value is 0 if the ship 
+  currently does not have a mission. <BR>&nbsp;</LI></OL>
+<LI><A name=8></FONT><B><FONT face=Arial size=5>Gadget Functions</A> 
+</B></FONT><FONT face=Verdana size=2><BR>&nbsp; 
+<OL>
+  <LI><A name=8.1></FONT><B><I><FONT face=Arial size=4>isGadget( id 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the value of "1" if 
+  the item is a gadget, otherwise it returns "0". <BR>&nbsp; 
+  <LI><A name=8.2></FONT><B><I><FONT face=Arial size=4>gadgetCount( 
+  ship )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns 
+  the number of gadgets attached to the specified ship. <BR>&nbsp; 
+  <LI><A name=8.3></FONT><B><I><FONT face=Arial size=4>getGadget( ship, 
+  n )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the 
+  key of gadget n on the specified ship. <BR>&nbsp; 
+  <LI><A name=8.4></FONT><B><I><FONT face=Arial size=4>getGadgetType( 
+  gadget )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the type of gadget from it’s key. See the following table for the 
+  current types of gadgets.</FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>UKNOWN</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>DRIVE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>SPECIAL</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>JUMP_DRIVE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>WEAPON</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>WEAPON_HEAVY</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>5</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>WEAPON_BEAM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>6</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+        size=2>WEAPON_HEAVY_BEAM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>7</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ARMOR</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>8</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>SHIELDS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>9</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>FIGHTER_BAY</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>10</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>DRONE_BAY</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>11</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>MINE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>12</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>CLOAK</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>13</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>HULL</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>14</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>INTERDICTOR</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>15</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+        size=2>CRUISE_MISSILE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>16</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ORB</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+    size=2>17</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+
+  <LI><A name=8.5></FONT><B><I><FONT face=Arial size=4>getGadgetMount( 
+  gadget )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the facing of a gadget. See the table below.</FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FRONT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>RIGHT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>LEFT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>BACK</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FULL</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+    size=2>4</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+  <LI><A name=8.6></FONT><B><I><FONT face=Arial size=4>setGadgetMount( 
+  gadget, mount )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  sets the mount for a gadget. <BR><BR>
+  <LI><A name=8.7></FONT><B><I><FONT face=Arial size=4>getGadgetAmmo( 
+  gadget )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the amount of ammo remaining if the gadget is a weapon that requires 
+  ammo, otherwise –1 is returned. <BR>&nbsp; 
+  <LI><A name=8.8></FONT><B><I><FONT face=Arial size=4>useGadget2( 
+  gadget, target, shift )</A></B></I></FONT><FONT face=Verdana 
+size=2><BR>This function will use the specified gadget on the target. This 
+function takes a gadget key, unlike the older useGadget() function which uses a 
+gadget based on it’s hotkey. <BR>&nbsp; </LI></OL>
+<LI><A name=9></FONT><B><FONT face=Arial size=5>Jumpgate 
+Functions</A> </FONT>
+<OL>
+  <LI><A name=9.1></FONT><I><FONT face=Arial size=4>jumpgateCount()</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the number 
+  of jumpgates in the current system. <BR>&nbsp; 
+  <LI><A name=9.2></FONT><B><I><FONT face=Arial size=4>getJumpgate( n 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function gets the key 
+  of jumpgate n. <BR>&nbsp; 
+  <LI><A name=9.3></FONT><B><I><FONT face=Arial 
+  size=4>getFriendlyJumpgate( faction )</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function returns the name of the first friendly jumpgate. If 
+  none are found, it returns a random neutral jumpgate. <BR>&nbsp; 
+  <LI><A name=9.4></FONT><B><I><FONT face=Arial 
+  size=4>getRandomJumpgate()</A></B></I></FONT><FONT face=Verdana size=2> 
+  <BR>Returns a random jumpgate. <BR>&nbsp;</LI></OL>
+<LI><A name=10></FONT><B><FONT face=Arial size=5>Mission Functions</A> 
+</B></FONT><FONT face=Verdana size=2><BR>All mission functions should be called 
+on the server script only. If any mission functions are called from the client 
+side, they will fail. <BR>
+<OL><BR>
+  <LI><A name=10.1></FONT><B><I><FONT face=Arial 
+  size=4>openThisMission()*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function returns a handle for the mission, if any that is 
+  calling this script code. CloseMission() should be called after you are done 
+  to free up the handle. <BR>&nbsp; 
+  <LI><A name=10.2></FONT><B><I><FONT face=Arial size=4>openShipMission( 
+  ship )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function opens 
+  the mission assigned, if any, of the specified ship. If no mission is 
+  currently assigned to the ship, then the handle will be 0. <B><I><BR>mh = 
+  openShipMission( "Cadet" ); <BR><BR>
+  <LI><A name=10.3></FONT><FONT face=Arial size=4>openMission( type, 
+  faction, objective )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Open 
+  the specified mission by type, faction, and objective. No need to call 
+  pushMission() since this mission is already on the mission stack if found. 
+  This function returns the mission handle or 0 if no mission was found. 
+<BR><BR>
+  <LI><A name=10.4></FONT><B><I><FONT face=Arial size=4>createMission( 
+  type, faction, name, description, duration, prestige, credits, [objectives 
+  ...] )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function creates 
+  a new mission. You must call closeMission() with the returned handle, 
+  otherwise a memory leak will occur. <B><I><BR>mh = createMission( 0, 1, 
+  "Scout Mycopia", "Orbit mycopia and scan for enemy ships", 300, 5, 1000, 
+  "Mycopia" ); </B></I>
+  <OL>
+    <LI><A name=10.4.1></FONT><B><FONT face=Arial size=4>Mission 
+    Types</A></B></FONT><FONT face=Verdana size=2><BR>This table 
+  contains all the currently valid mission types. Depending on the type of 
+  mission, different numbers of objectives may be required. Use 
+  AddMissionObjective() to add objectives to the current mission object. </LI></OL>
+  Note: Different types of missions can only be assigned to certain types of 
+  ships.</FONT> 
+  <TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=670>
+<TR><TD WIDTH="11%" VALIGN="TOP"><B><FONT FACE="Verdana" SIZE=2><P>VALUE</B></FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><B><FONT FACE="Verdana" SIZE=2><P>TYPE</B></FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><B><FONT FACE="Verdana" SIZE=2><P>SHIPS</B></FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>-1</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>INVALID</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>*</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>0</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCOUT - move within 500gu of objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCOUT, FRIGATE</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>1</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>BEACON – Attach beacon to objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCOUT</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>2</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DESTROY – Destroy objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DESTROYER, CRUISER, DREAD</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>3</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ESCORT – Escort objective[0] to objective[1]</FONT></TD><TD WIDTH="36%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P>DESTROYER, CRUISER, DREAD</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>4</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>CAPTURE – Capture objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>TRANSPORT</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>5</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DEFEND – Defend objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DESTROYER, CRUISER, DREAD</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>6</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>TRANSFER – Move objective[0] to objective[1]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>7</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>AQUIRE – Find and load objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>8</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ORBIT – Orbit objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>9</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>REPAIR – Repair objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SUPPLY</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>10</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCRIPT</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>11</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>WAIT – Wait until objective[0] is within 100gu</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>12</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SLEEP – Wait for duration to expire</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>13</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>GOTO – Get within 100gu of objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+</TABLE>
+  <BR>&nbsp;<LI><A name=10.5></FONT><B><I><FONT face=Arial size=4>
+  addMissionObjective( handle, objective )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Add an objective to the current mission. Different 
+  missions require different numbers of objectives, see the mission types in the 
+  CreateMission() function. <BR>Returns 1 on success, 0 on failure. <BR>&nbsp; 
+  <LI><A name=10.6></FONT><B><I><FONT face=Arial 
+  size=4>addMissionTrigger( handle, action, script )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Add a trigger to the current mission. These triggers 
+  can call additional script code, to create additional missions or react to a 
+  mission being completed, failed, aborted, or assigned. <BR>AddTrigger( 0, 
+  "initializeMission()" );</FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>ACTION</B></FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>VALUE</B></FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>INITIALIZE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ASSIGNED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ABORTED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>COMPLETED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FAILED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+    size=2>4</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+  <LI><A name=10.7></FONT><B><I><FONT face=Arial size=4>setNextMission( 
+  current, next )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Set the next 
+  mission, which is activated when the current mission is completed. This is 
+  useful to setup a series of missions to be accomplished by the same ship in a 
+  specific order. <BR>-- create the missions <BR>current = createMission( 0, 1, 
+  "Scout Mycopia", "Orbit mycopia and scan for enemy ships", 300, 5, 1000, 
+  "Mycopia" ); <BR>next = createMission( 1, 1, "Beacon Mycopia", "Drop beacon 
+  onto the surface of mycopia", 300, 5, 1000, "Mycopia" ); <BR>setNextMission( 
+  current, next ); <BR>pushMission( current ); -- don’t push next, since it’s 
+  attached to this mission <BR>-- release the handles, so we don’t leak memory 
+  <BR>closeAllMissions(); <BR>&nbsp; 
+  <LI><A name=10.8></FONT><B><I><FONT face=Arial size=4>setMissionState( 
+  mission, state )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function changes the state of a mission, thus calling any assigned triggers. 
+  You can use this function to override the internal logic of the mission class 
+  if your script is used to determine the success or failure of a mission. 
+  <BR>Setting a mission active is best done using assignMission(). Setting a 
+  mission active without being attached to a ship will cause the mission to go 
+  inactive immediately.</FONT> 
+  <TABLE cellSpacing=1 cellPadding=7 width=590 border=1>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>VALUE</B></FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>STATE</B></FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>INACTIVE</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ACTIVE</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FAIL</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>COMPLETE</FONT></TD></TR>
+	</TBODY></TABLE>
+  <FONT face=Verdana size=2><B><I><BR>-- fail the mission 
+  <BR>setMissionState( mh, 2 ); <BR>-- 
+  complete the mission <BR>setMissionState( mh, 3 );</B></I> <BR>&nbsp; 
+  <LI><A name=10.9></FONT><B><I><FONT face=Arial size=4>assignMission( 
+  mission, ship )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Assign a 
+  mission to the specific ship. If the ship already has a mission assigned, this 
+  function will fail. This function should be called from the server script 
+  only, it will send the assigned mission to the clients ship as well. <BR><BR>
+  <LI><A name=10.10></FONT><B><I><FONT face=Arial size=4>getMissionOwner( 
+  mission )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the ship key assigned to the specified mission, if any. <BR><BR>
+  <LI><A name=10.11></FONT><B><I><FONT face=Arial size=4>pushMission( 
+  handle )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Push the specified 
+  mission onto the mission stack. <BR><BR>
+  <LI><A name=10.12></FONT><B><I><FONT face=Arial size=4>closeMission( 
+  handle )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Closes the 
+  specified mission handle, releasing any memory allocated. <BR>&nbsp; 
+  <LI><A name=10.13></FONT><B><I><FONT face=Arial 
+  size=4>closeAllMissions()*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This releases all currently open mission handles. <BR><BR>
+  <LI><A name=10.14></FONT><B><I><FONT face=Arial 
+  size=4>pushScoutMission(objective, faction )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>This function creates a scout mission to the specified 
+  objective. Returns 1 on success, 0 on failure. <BR>PushScoutMission( 
+  "Mycopia", 0 ); <BR>&nbsp; 
+  <LI><A name=10.15></FONT><B><I><FONT face=Arial 
+  size=4>pushRepairMission( objective )*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Creates and pushes a repair mission for the specified objective. 
+  <BR>&nbsp; 
+  <LI><A name=10.16></FONT><B><I><FONT face=Arial 
+  size=4>pushDefendMission( objective, duration )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Push a defend mission for the specified objective. 
+  Defend missions can be accepted by Destroyers, Cruisers, and Dreads. 
+  <BR>&nbsp; 
+  <LI><A name=10.17></FONT><B><I><FONT face=Arial 
+  size=4>pushEscortMission( objective, location )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Pushes a mission to escort objective to the specified 
+  location. <BR>&nbsp; 
+  <LI><A name=10.18></FONT><B><I><FONT face=Arial 
+  size=4>pushCaptureMission( objective, faction )*</A></B></I></FONT><FONT 
+  face=Verdana size=2> <BR>Creates and pushes a capture mission for the 
+  specified objective. Capture missions can only be taken by transports.</LI></OL>
+  </FONT></BODY></HTML>

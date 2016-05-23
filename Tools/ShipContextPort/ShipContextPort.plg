@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ShipContextPort - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP10EF.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "..\..\\" /I "..\..\Medusa" /I "..\..\Medusa\Tools" /I "..\..\GameCQ" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_AFXEXT" /D "WIN32" /D "UNICODE" /Fp"Debug/ShipContextPort.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Projects\DarkSpace\Tools\ShipContextPort\ChildFrame.cpp"
+"D:\Projects\DarkSpace\Tools\ShipContextPort\Mask.cpp"
+"D:\Projects\DarkSpace\Tools\ShipContextPort\Port.cpp"
+"D:\Projects\DarkSpace\Tools\ShipContextPort\PortView.cpp"
+"D:\Projects\DarkSpace\Tools\ShipContextPort\ShipContextPort.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP10EF.tmp" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP10F0.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GR /GX /ZI /Od /I "..\..\\" /I "..\..\Medusa" /I "..\..\Medusa\Tools" /I "..\..\GameCQ" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_AFXEXT" /D "WIN32" /D "UNICODE" /Fp"Debug/ShipContextPort.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Projects\DarkSpace\Tools\ShipContextPort\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP10F0.tmp" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP10F1.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:yes /pdb:"..\Bin/ShipContextPortD.pdb" /debug /machine:I386 /out:"..\Bin\ShipContextPortD.dll" /implib:"..\Bin/ShipContextPortD.lib" /pdbtype:sept /libpath:"..\..\Bin" /libpath:"..\Bin" /libpath:"..\..\Medusa\Bin" /libpath:"..\..\Medusa\Tools\Bin" 
+.\Debug\ChildFrame.obj
+.\Debug\Mask.obj
+.\Debug\Port.obj
+.\Debug\PortView.obj
+.\Debug\ShipContextPort.obj
+.\Debug\StdAfx.obj
+.\Debug\ShipContextPort.res
+\Projects\DarkSpace\Tools\NounContextPort\Debug\NounContextPortD.lib
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP10F1.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrame.cpp
+Mask.cpp
+Port.cpp
+PortView.cpp
+ShipContextPort.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1104: cannot open file "GCQD.lib"
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+ShipContextPortD.dll - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

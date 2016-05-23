@@ -1,0 +1,57 @@
+ Volume in drive E is Misc
+ Volume Serial Number is 6870-759E
+
+ Directory of E:\Palestar Development\Textures\ICC
+
+07/18/2007  11:56 PM    <DIR>          .
+07/18/2007  11:56 PM    <DIR>          ..
+07/18/2007  11:51 PM    <DIR>          Discontinued
+05/22/1999  12:52 AM           262,188 antn.tga
+12/14/2000  08:54 AM           196,626 antnAlpha.tga
+07/18/2007  11:48 PM           196,652 black window.tga
+05/16/2000  07:19 AM            49,196 circular.tga
+07/18/2007  11:47 PM           196,652 concrete_white.tga
+05/08/2000  01:36 AM           262,188 glow.tga
+07/18/2007  11:46 PM           196,652 helipad.tga
+07/18/2007  11:47 PM           196,652 helipad_lightmap.tga
+11/07/2000  04:31 PM            99,416 helmicons.tga
+11/07/2000  04:30 PM            99,416 helmicons_selected.tga
+07/18/2007  11:47 PM           196,652 icc.tga
+06/30/2000  08:37 AM            12,332 ICCEngine sprite.tga
+05/12/2000  12:45 AM           196,652 ICCLogo.tga
+05/10/2000  01:32 AM           196,652 inards_a.tga
+08/17/2000  03:17 PM           196,652 inards_b.tga
+07/18/2007  11:47 PM           196,652 landingbay.tga
+07/18/2007  11:47 PM           196,652 landingbay_lightmap.tga
+05/11/2000  06:39 PM           196,652 lightmap.tga
+07/18/2007  11:56 PM                 0 list.txt
+04/06/2000  03:59 PM           196,652 panels_a.tga
+05/16/2000  02:48 AM           196,652 panels_b.tga
+08/22/2000  01:23 PM           196,652 panels_c.tga
+04/07/2000  03:09 AM           196,652 panels_d.tga
+05/16/2000  07:19 AM           196,652 panels_e.tga
+07/18/2007  11:19 PM           196,652 panels_f.tga
+07/18/2007  11:11 PM           196,652 panels_g.tga
+07/18/2007  11:11 PM           786,476 panels_h.tga
+07/18/2007  11:22 PM           786,476 panels_i.tga
+07/18/2007  11:11 PM           196,652 panels_j.tga
+08/29/2000  03:33 PM           196,652 pipes_1.tga
+09/27/2000  09:22 AM           196,652 pipes_2.tga
+05/07/2000  08:31 AM           196,652 portholes1 lights.tga
+04/07/2000  04:31 AM           262,188 portholes1.tga
+02/19/2001  02:21 PM            49,196 portholes2.tga
+07/18/2007  11:38 PM           393,260 runwaystart.tga
+07/18/2007  11:39 PM           393,260 runwaystart_lightmap.tga
+07/18/2007  11:47 PM           196,652 rway_line.tga
+05/11/2000  05:34 PM           196,652 strips.tga
+12/15/2000  02:46 PM           196,652 Support 01 Alpha.tga
+12/15/2000  02:46 PM           196,652 Support1 Alpha.tga
+08/22/2000  03:50 PM           262,188 support1.tga
+05/16/2000  05:41 AM           262,188 support2.tga
+06/12/2000  12:12 PM           262,188 support2_light.tga
+05/08/2000  01:36 AM           262,188 thrust.tga
+05/11/2000  05:28 PM           196,652 UWSF.tga
+05/18/2000  03:12 PM            98,348 warpdrive.tga
+08/23/2000  02:38 PM            98,348 warpdrive_light.tga
+              47 File(s)     10,207,270 bytes
+               3 Dir(s)  169,093,730,304 bytes free

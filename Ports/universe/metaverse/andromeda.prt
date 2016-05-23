@@ -1,0 +1,98 @@
+PRT
+B768E76C674D7856
+164608C1199EFAD8
+{
+[
+m_Name
+Andromeda
+]
+[
+m_Description
+Home away from home for the alien K'Luth, the sanctuary of Sirius is replete with beautiful and bizarre cloaking organic vessels ranging from station analogs to massive colony vessels. Newcomers to human space, the K'luth hail from distant starts besieged by a great and mysterious threat. Though defeated and fleeing, the K'luth are well-equipped for the struggles in this area of space: wielding exotic technologies and heavily utilizing antimatter, the K'luth have carved a minor empire for themselves in the human quadrant, and will fiercely defend it against human warships.
+]
+[
+m_Type
+3
+]
+[
+m_Script
+
+]
+[
+m_Scenery
+scenery\\metaverse scenery.prt
+]
+[
+m_Position
+85EB1140CDCCCC3EE17A94BE
+]
+[
+m_Zones
+3
+1
+universe\\metaverse\\systems\\groombridge 34.prt
+3D0A173F000000000AD723BE
+1
+universe\\metaverse\\systems\\lacaille.prt
+0AD7A33E00000000EC51B83D
+1
+universe\\metaverse\\systems\\sirius.prt
+3D0A17BF000000000AD7233E
+]
+[
+m_Teams
+5
+4
+2
+
+UGTO
+United Galactic Trade Organization, fighting for a united humanity and a strong defense against common foes. By far the oldest faction in the Metaverse, the UGTO operates with a certain heavy-handed ethnocentric attitude due to their origins on Earth.
+00FFFF00
+ships\\ugto\\ugto fleet.prt
+0
+4
+3
+
+ICC
+Interstellar Cultural Confederation, fighting for planetary rights and freedom from oppression under the UGTO. Formerly composed of outlying UGTO colony worlds, the ICC has grown from a mutual defense pact to a major player across the Metaverse.
+FFFF0000
+ships\\icc\\icc fleet.prt
+0
+4
+4
+
+K'Luth
+The alien K'Luth, refugees of an attack in their galaxy, are fighting the humans for habitable space.
+FF00FF00
+ships\\kluth\\k'luth fleet.prt
+0
+4
+7
+
+MI
+Unknown alien force.
+FFFFFF00
+ships\\mi\\mi fleet.prt
+1
+4
+6
+
+Pirates
+Lawless bands of pirates and mercenaries, money is their only love. Pirates make do with whatever ships and weapons they can steal, capture, or salvage, which often results in their ships being weaker than their ICC or UGTO counterparts.
+FFFFFF00
+ships\\pirate\\pirate fleet.prt
+1
+]
+[
+m_Conditions
+0
+]
+[
+m_TimeLimit
+0
+]
+[
+m_UniversePort
+
+]
+}

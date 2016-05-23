@@ -1,0 +1,209 @@
+<html><body>
+
+<A name=10><h2>10.  Mission Functions</h2><FONT face=Verdana size=2>All mission functions should be called 
+on the server script only. If any mission functions are called from the client 
+side, they will fail. 
+<OL><BR>
+  <LI><A name=10.1></FONT><B><I><FONT face=Arial 
+  size=4>openThisMission()*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function returns a handle for the mission, if any that is 
+  calling this script code. CloseMission() should be called after you are done 
+  to free up the handle. <BR>&nbsp; 
+  <LI><A name=10.2></FONT><B><I><FONT face=Arial size=4>openShipMission( 
+  ship )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function opens 
+  the mission assigned, if any, of the specified ship. If no mission is 
+  currently assigned to the ship, then the handle will be 0. <B><I><BR>mh = 
+  openShipMission( "Cadet" ); <BR><BR>
+  <LI><A name=10.3></FONT><FONT face=Arial size=4>openMission( type, 
+  faction, objective )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Open 
+  the specified mission by type, faction, and objective. No need to call 
+  pushMission() since this mission is already on the mission stack if found. 
+  This function returns the mission handle or 0 if no mission was found. 
+<BR><BR>
+  <LI><A name=10.4></FONT><B><I><FONT face=Arial size=4>createMission( 
+  type, faction, name, description, duration, prestige, credits, [objectives 
+  ...] )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function creates 
+  a new mission. You must call closeMission() with the returned handle, 
+  otherwise a memory leak will occur. <B><I><BR>mh = createMission( 0, 1, 
+  "Scout Mycopia", "Orbit mycopia and scan for enemy ships", 300, 5, 1000, 
+  "Mycopia" ); </B></I>
+  <OL>
+    <LI><A name=10.4.1></FONT><B><FONT face=Arial size=4>Mission 
+    Types</A></B></FONT><FONT face=Verdana size=2><BR>This table 
+  contains all the currently valid mission types. Depending on the type of 
+  mission, different numbers of objectives may be required. Use 
+  AddMissionObjective() to add objectives to the current mission object. </LI></OL>
+  Note: Different types of missions can only be assigned to certain types of 
+  ships.</FONT> 
+  <TABLE BORDER CELLSPACING=0 CELLPADDING=2 WIDTH=670 style="border-collapse: collapse" bordercolor="#111111">
+<TR><TD WIDTH="11%" VALIGN="TOP"><B><FONT FACE="Verdana" SIZE=2><P>VALUE</B></FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><B><FONT FACE="Verdana" SIZE=2><P>TYPE</B></FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><B><FONT FACE="Verdana" SIZE=2><P>SHIPS</B></FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>-1</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>INVALID</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>*</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>0</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCOUT - move within 500gu of objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCOUT, FRIGATE</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>1</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>BEACON – Attach beacon to objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCOUT</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>2</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DESTROY – Destroy objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DESTROYER, CRUISER, DREAD</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>3</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ESCORT – Escort objective[0] to objective[1]</FONT></TD><TD WIDTH="36%" VALIGN="TOP">
+<FONT FACE="Verdana" SIZE=2><P>DESTROYER, CRUISER, DREAD</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>4</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>CAPTURE – Capture objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>TRANSPORT</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>5</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DEFEND – Defend objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>DESTROYER, CRUISER, DREAD</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>6</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>TRANSFER – Move objective[0] to objective[1]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>7</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>AQUIRE – Find and load objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>8</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ORBIT – Orbit objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>9</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>REPAIR – Repair objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SUPPLY</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>10</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SCRIPT</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>11</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>WAIT – Wait until objective[0] is within 100gu</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>12</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>SLEEP – Wait for duration to expire</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+<TR><TD WIDTH="11%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>13</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>GOTO – Get within 100gu of objective[0]</FONT></TD>
+<TD WIDTH="36%" VALIGN="TOP"><FONT FACE="Verdana" SIZE=2><P>ALL</FONT></TD></TR>
+</TABLE>
+  <BR>&nbsp;<LI><A name=10.5></FONT><B><I><FONT face=Arial size=4>
+  addMissionObjective( handle, objective )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Add an objective to the current mission. Different 
+  missions require different numbers of objectives, see the mission types in the 
+  CreateMission() function. <BR>Returns 1 on success, 0 on failure. <BR>&nbsp; 
+  <LI><A name=10.6></FONT><B><I><FONT face=Arial 
+  size=4>addMissionTrigger( handle, action, script )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Add a trigger to the current mission. These triggers 
+  can call additional script code, to create additional missions or react to a 
+  mission being completed, failed, aborted, or assigned.&nbsp; This function 
+  returns <i>true</i> if it succeeds, and <i>nil</i> on errors. <BR><i><b>AddTrigger( 0, 
+  "initializeMission()" );</b></i></FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>ACTION</B></FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>VALUE</B></FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>INITIALIZE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ASSIGNED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ABORTED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>COMPLETED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FAILED</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+    size=2>4</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+  <LI><A name=10.7></FONT><B><I><FONT face=Arial size=4>setNextMission( 
+  current, next )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Set the next 
+  mission, which is activated when the current mission is completed. This is 
+  useful to setup a series of missions to be accomplished by the same ship in a 
+  specific order.&nbsp; This function returns <i>true</i> if it succeeds, and <i>
+  nil</i> on errors. <BR><i><b>-- create the missions <BR>current = createMission( 0, 1, 
+  "Scout Mycopia", "Orbit mycopia and scan for enemy ships", 300, 5, 1000, 
+  "Mycopia" ); <BR>next = createMission( 1, 1, "Beacon Mycopia", "Drop beacon 
+  onto the surface of mycopia", 300, 5, 1000, "Mycopia" ); <BR>setNextMission( 
+  current, next ); <BR>pushMission( current ); -- don’t push next, since it’s 
+  attached to this mission <BR>-- release the handles, so we don’t leak memory 
+  <BR>closeAllMissions(); </b></i> <BR>&nbsp; 
+  <LI><A name=10.8></FONT><B><I><FONT face=Arial size=4>setMissionState( 
+  mission, state )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function changes the state of a mission, thus calling any assigned triggers. 
+  You can use this function to override the internal logic of the mission class 
+  if your script is used to determine the success or failure of a mission. 
+  <BR>Setting a mission active is best done using assignMission(). Setting a 
+  mission active without being attached to a ship will cause the mission to go 
+  inactive immediately.&nbsp; This function returns <i>true</i> if it succeeds, 
+  and <i>nil</i> on errors.</FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>VALUE</B></FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2><B>STATE</B></FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>INACTIVE</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>ACTIVE</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FAIL</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>COMPLETE</FONT></TD></TR>
+	</TBODY></TABLE>
+  <FONT face=Verdana size=2><B><I>-- fail the mission 
+  <BR>setMissionState( mh, 2 ); <BR>-- 
+  complete the mission <BR>setMissionState( mh, 3 );</B></I> <BR>&nbsp; 
+  <LI><A name=10.9></FONT><B><I><FONT face=Arial size=4>assignMission( 
+  mission, ship )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Assign a 
+  mission to the specific ship. If the ship already has a mission assigned, this 
+  function will fail. This function should be called from the server script 
+  only, it will send the assigned mission to the clients ship as well. <BR><BR>
+  <LI><A name=10.10></FONT><B><I><FONT face=Arial size=4>getMissionOwner( 
+  mission )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the ship key assigned to the specified mission, if any. <BR><BR>
+  <LI><A name=10.11></FONT><B><I><FONT face=Arial size=4>pushMission( 
+  handle )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Push the specified 
+  mission onto the mission stack.&nbsp; This function returns <i>true</i> if it 
+  succeeds, and <i>nil</i> on errors. <BR><BR>
+  <LI><A name=10.12></FONT><B><I><FONT face=Arial size=4>closeMission( 
+  handle )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Closes the 
+  specified mission handle, releasing any memory allocated. <BR>&nbsp; 
+  <LI><A name=10.13></FONT><B><I><FONT face=Arial 
+  size=4>closeAllMissions()*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This releases all currently open mission handles. <BR><BR>
+  <LI><A name=10.14></FONT><B><I><FONT face=Arial 
+  size=4>pushScoutMission(objective, faction )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>This function creates a scout mission to the specified 
+  objective. Returns 1 on success, 0 on failure.&nbsp; This function returns <i>
+  true</i> if it succeeds, and <i>nil</i> on errors. <BR><i><b>PushScoutMission( 
+  "Mycopia", 0 ); <BR></b></i>&nbsp; 
+  <LI><A name=10.15></FONT><B><I><FONT face=Arial 
+  size=4>pushRepairMission( objective )*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Creates and pushes a repair mission for the specified objective.&nbsp; 
+  This function returns <i>true</i> if it succeeds, and <i>nil</i> on errors. 
+  <BR>&nbsp; 
+  <LI><A name=10.16></FONT><B><I><FONT face=Arial 
+  size=4>pushDefendMission( objective, duration )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Push a defend mission for the specified objective. 
+  Defend missions can be accepted by Destroyers, Cruisers, and Dreads.&nbsp; 
+  This function returns <i>true</i> if it succeeds, and <i>nil</i> on errors. 
+  <BR>&nbsp; 
+  <LI><A name=10.17></FONT><B><I><FONT face=Arial 
+  size=4>pushEscortMission( objective, location )*</A> </B></I></FONT><FONT 
+  face=Verdana size=2><BR>Pushes a mission to escort objective to the specified 
+  location.&nbsp; This function returns <i>true</i> if it succeeds, and <i>nil</i> 
+  on errors. <BR>&nbsp; 
+  <LI><A name=10.18></FONT><B><I><FONT face=Arial 
+  size=4>pushCaptureMission( objective, faction )*</A></B></I></FONT><FONT 
+  face=Verdana size=2> <BR>Creates and pushes a capture mission for the 
+  specified objective. Capture missions can only be taken by transports.&nbsp; 
+  This function returns <i>true</i> if it succeeds, and <i>nil</i> on errors.</LI></OL>
+
+</body></html>

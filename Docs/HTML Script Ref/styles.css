@@ -1,0 +1,36 @@
+std {
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 2;
+margin: 10px;
+color: #86AECF;
+background-color: #240000;
+scrollbar-face-color: #424942;
+scrollbar-shadow-color: #000000;
+scrollbar-highlight-color: #000000;
+scrollbar-3dlight-color: #424942;
+scrollbar-darkshadow-color: #424942;
+scrollbar-track-color: #000000;
+scrollbar-arrow-color: #000000;
+}
+
+A:visited { color: #7AA6A0; }
+A:link { color: #A4C6BC; }
+A:active { color: #FF9999; }
+
+topt {
+	font-size: 14;
+	font-weight: bold;
+	font-style: italic;
+}
+
+table { 
+font-family: Verdana; font-size: 9pt
+ }
+ 
+funcName {
+font-family: Arial; font-size: 4; font-style:italic; font-weight:bold
+}
+
+emphasize {
+font-family: Verdana; font-size: 12pt; font-weight:bold;
+}

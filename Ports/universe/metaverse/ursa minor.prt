@@ -1,0 +1,98 @@
+PRT
+B768E76C674D7856
+32D9D526A348950A
+{
+[
+m_Name
+Ursa Minor
+]
+[
+m_Description
+The Ursa Minor constellation is a small pack of sparsely populated systems not far outside of Sol, which makes this cluster an ideal proving ground for new ship captains.
+]
+[
+m_Type
+3
+]
+[
+m_Script
+
+]
+[
+m_Scenery
+scenery\\metaverse scenery.prt
+]
+[
+m_Position
+7B141EC0B81E05BEAE47E13E
+]
+[
+m_Zones
+3
+1
+universe\\metaverse\\systems\\Cephid.prt
+48E13A3F000000008FC2753D
+1
+universe\\metaverse\\systems\\williams 22.prt
+5C8F42BE000000007B142EBE
+1
+universe\\metaverse\\systems\\williams 38.prt
+48E13ABF000000007B142E3E
+]
+[
+m_Teams
+5
+4
+2
+
+UGTO
+United Galactic Trade Organization, fighting for a united humanity and a strong defense against common foes. By far the oldest faction in the Metaverse, the UGTO operates with a certain heavy-handed ethnocentric attitude due to their origins on Earth.
+00FFFF00
+ships\\ugto\\ugto fleet.prt
+0
+4
+3
+
+ICC
+Interstellar Cultural Confederation, fighting for planetary rights and freedom from oppression under the UGTO. Formerly composed of outlying UGTO colony worlds, the ICC has grown from a mutual defense pact to a major player across the Metaverse.
+FFFF0000
+ships\\icc\\icc fleet.prt
+0
+4
+4
+
+K'Luth
+The alien K'Luth, refugees of an attack in their galaxy, are fighting the humans for habitable space.
+FF00FF00
+ships\\kluth\\k'luth fleet.prt
+0
+4
+7
+
+MI
+Unknown alien force.
+FFFFFF00
+ships\\mi\\mi fleet.prt
+1
+4
+6
+
+Pirates
+Lawless bands of pirates and mercenaries, money is their only love. Pirates make do with whatever ships and weapons they can steal, capture, or salvage, which often results in their ships being weaker than their ICC or UGTO counterparts.
+FFFFFF00
+ships\\pirate\\pirate fleet.prt
+1
+]
+[
+m_Conditions
+0
+]
+[
+m_TimeLimit
+0
+]
+[
+m_UniversePort
+
+]
+}

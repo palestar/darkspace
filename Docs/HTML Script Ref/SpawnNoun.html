@@ -1,0 +1,717 @@
+<HTML>
+<head><title>SpawnNoun paths</title>
+<script></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<BODY>
+
+  <A name=4><h2>4. SpawnNoun Paths</h2>
+  <OL></a>
+	<LI><B><I><FONT face=Arial size=4><A name=4.36>spawnNoun( 
+    template, location, name, [parent] )*</A> </FONT></i></b>
+	<BR>This function will create a new object in game using the supplied 
+    template (see table below). The spawn object will be created near the 
+    specified location. The object can be optionally attached to another object 
+    as a child. <BR>The server will automatically send new objects attached to 
+    the root to all clients in the area. However, when attaching the spawned 
+    object to a <B>existing</B> planet or ship, the parent object will need to 
+    be resent to the clients using updateNoun(). <BR>If using this function to 
+    create a ship instead of using spawnShip(), the ship will have no gadgets 
+    attached when created. You will need to use addition spawnNoun() calls to 
+    create the equipment for the ship. The same concept applies to structures as 
+    well, especially defense bases which must have gadgets attached to the noun.
+	<BR>If the object created is a gadget, and the gadget is not being attached 
+    to a ship or structure it is converted automatically into a cargo object 
+    containing the gadget. <BR>The following table contains all the current 
+	paths (as of 1 Jan 2006) of objects in the game.&nbsp; Updates from 
+	Shigernafy are dependent upon whether he likes you, but it never hurts to 
+	ask (unless he's contracted Bird Flu and is in a fowl mood).
+	<br>Note that most things aren't deleted, even when no longer in the game.&nbsp; 
+	As such, there is a <i>deprecated </i>section as well, which technically 
+	work but may be out of balance (generally meaning they're worthless).&nbsp; 
+	Capitalization shouldn't matter.</font><TABLE cellSpacing=0 cellPadding=5 width=800 border=1 class="table">
+		<TBODY>
+			<TR>
+				<TD vAlign=top width="22%">Misc\</TD>
+				<TD vAlign=top width="78%">Asteroid.prt 
+          		<BR>AsteroidBelt.prt
+          		<BR>Resource Container\NC_Resource.prt</TD>
+			</TR>
+			<TR>
+				<TD vAlign=top width="22%">Nebula\</TD>
+				<TD vAlign=top width="78%">Gas Cloud.prt</TD>
+			</TR>
+			<TR>
+				<TD vAlign=top width="22%"><A name=Gadgets>Gadgets\</A></TD>
+				<TD vAlign=top width="78%">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
+					<tr>
+						<td width="50%">Active Shields.PRT</td>
+						<td width="50%">AM Torpedo.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">amp coil beam.prt</td>
+						<td width="50%">AntiMatter Drive.PRT</td>
+					</tr>
+					<tr>
+						<td width="50%">AntiMatter Mine.prt</td>
+						<td width="50%">anti-ship missile.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">AR Missile.prt</td>
+						<td width="50%">ares cannon.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">armorablative.prt</td>
+						<td width="50%">armororganic.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">armorreflective.prt</td>
+						<td width="50%">armorstandard.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Auto Repair.prt</td>
+						<td width="50%">auxillary shields.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Beacon.PRT</td>
+						<td width="50%">Bio Bomb.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Build - ICC.PRT</td>
+						<td width="50%">Build - KLuth.PRT</td>
+					</tr>
+					<tr>
+						<td width="50%">Build - UGTO.PRT</td>
+						<td width="50%">building buster bomb.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">cl heavy.prt</td>
+						<td width="50%">cl standard.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">cloaking device.prt</td>
+						<td width="50%">Disruptor assault.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Disruptor.prt </td>
+						<td width="50%">Drive - AFE.prt </td>
+					</tr>
+					<tr>
+						<td width="50%">Drive - AME.prt</td>
+						<td width="50%">Drive - IE.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Drive - PFE.prt</td>
+						<td width="50%">ECCM.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">ECM.prt</td>
+						<td width="50%">Elf Beam.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">EMP Cannon.PRT </td>
+						<td width="50%">EMP Mine.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">fighter bay assault- icc.prt</td>
+						<td width="50%">fighter bay assault- kluth.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">fighter bay assault- ugto.prt</td>
+						<td width="50%">fighter bay bomber- icc.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">fighter bay bomber- kluth.prt</td>
+						<td width="50%">fighter bay bomber- ugto.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">fighter bay interceptor- icc.prt</td>
+						<td width="50%">fighter bay interceptor- kluth.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">fighter bay interceptor- ugto.prt</td>
+						<td width="50%">fighter bay recon- icc.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">fighter bay recon- ugto.prt</td>
+						<td width="50%">Fighter Bay.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Flux Cannon.prt</td>
+						<td width="50%">Flux Wave.PRT</td>
+					</tr>
+					<tr>
+						<td width="50%">Fury Bomb.prt</td>
+						<td width="50%">Fusion Drive.prt
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">Fusion Torpedo.prt </td>
+						<td width="50%">Gauss Gun.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Homing AM mine.prt</td>
+						<td width="50%">Homing emp mine.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">homing nuke mine.prt</td>
+						<td width="50%">hyper mass accelerator.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">ioncannon.prt</td>
+						<td width="50%">ionized beam cannon.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">IPS Beam.PRT </td>
+						<td width="50%">IT Missile.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Jump Disruptor.prt</td>
+						<td width="50%">mass pulse cannon.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">MiRV Bomb.prt </td>
+						<td width="50%">Neutron bomb.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Nuke Mine.prt</td>
+						<td width="50%">P Cannon.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">P Cruise Missile.prt </td>
+						<td width="50%">p siege missile.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">P Torpedo.prt</td>
+						<td width="50%">pheonix missile.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">phoenix missile.prt (yes, two)</td>
+						<td width="50%">planetary shields.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Psi Cannon.prt</td>
+						<td width="50%">Psi Missile.prt </td>
+					</tr>
+					<tr>
+						<td width="50%">psiform beam.prt</td>
+						<td width="50%">psiwave seeker.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Pulse Beam.PRT</td>
+						<td width="50%">Pulse Shield.prt 
+						</td>
+					</tr>
+					<tr>
+						<td width="50%">purifier bomb.prt</td>
+						<td width="50%">qstorpedo.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Railgun.prt</td>
+						<td width="50%">Reactive Shields.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">reactor aux.prt</td>
+						<td width="50%">Reload.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">Sabot Rocket.prt </td>
+						<td width="50%">Scanner.prt </td>
+					</tr>
+					<tr>
+						<td width="50%">shock missile.prt</td>
+						<td width="50%">shredder missile.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">stellarincinerator.prt</td>
+						<td width="50%">Tachyon Drive.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">tk bomb.prt</td>
+						<td width="50%">t-k cannon.prt </td>
+					</tr>
+					<tr>
+						<td width="50%">Tractor Beam.prt</td>
+						<td width="50%">worm hole device i.prt</td>
+					</tr>
+					<tr>
+						<td width="50%">worm hole device ii.prt</td>
+						<td width="50%">&nbsp;</td>
+					</tr>
+				</table></TD>
+			</TR>
+			<TR>
+				<TD vAlign=top width="22%">Ships\</TD>
+				<TD vAlign=top width="78%">
+				<A name=IShips>ICC\Cruiser\M230 A\NC_M230A.PRT</A> <br>
+				ICC\Cruiser\M231 B\NC_M231B.PRT<BR>ICC\Cruiser\M235 
+          I\NC_M235I.PRT <BR>ICC\Cruiser\M239 J\NC_M239J.PRT 
+          <BR>ICC\Cruiser\M245 A\NC_M245A.PRT <BR>ICC\Cruiser\M247 
+          M\NC_M247M.PRT <BR>ICC\Cruiser\M248C\NC_M248C.PRT<br>
+				ICC\Cruiser\M251 W\NC_M251W.PRT 
+          <BR>ICC\Destroyer\M190 A\NC_M190A.PRT <BR>ICC\Destroyer\M190 
+          B\NC_M190B.PRT <BR>ICC\Destroyer\M192 F\NC_M192F.PRT 
+          <BR>ICC\Destroyer\Old\M194A\NC_M194A.PRT 
+          <br>
+				ICC\Destroyer\Old\M194 E\NC_M194E.PRT<BR>ICC\Dreadnought\M400-A\NC_M400A.PRT 
+          <BR>ICC\Dreadnought\M400-B\NC_M400B.prt 
+          <BR>ICC\Dreadnought\M410-A\NC_M410A.prt 
+          <BR>ICC\Dreadnought\Old\M300\NC_M300.prt 
+          <BR>ICC\Dreadnought\Old\M310\NC_M310.prt 
+          <BR>ICC\Engineering\MR 110\NC_MR110.PRT <BR>ICC\Engineering\MR 
+				115\NC_MR115.PRT 
+          <BR>ICC\Engineering\MR 125\NC_MR125.PRT <BR>ICC\Fighter\F29 
+				Assault\NC_F29.PRT<br>
+				ICC\Fighter\FI18 Interceptor\NC_FI18.PRT<br>
+				ICC\Fighter\XB11 Bomber\NC_XB11.PRT<BR>ICC\Frigate\M40S\NC_M40S.prt <BR>ICC\Frigate\M42B\NC_M42B.prt 
+          <BR>ICC\Frigate\M44A\NC_M44A.prt <BR>ICC\Frigate\M45B\NC_M45B.prt 
+          <BR>ICC\Miner\ME 1522\NC_ME1522.prt <BR>ICC\Scout\M21 A\NC_M21A.prt 
+          <BR>ICC\Scout\M21 B\NC_M21B.prt <BR>ICC\Scout\M21 C\NC_M21C.prt 
+          <BR>ICC\Scout\M22 B\NC_M22B.prt <BR>ICC\Station\M2200 A\NC_M2200A.prt
+				<br>
+				ICC\Station\M2250\NC_M2250.prt<br>
+				ICC\Station\M2300\NC_M2300.prt<BR>ICC\Supply\M S40 A\NC_MS40A.prt <BR>ICC\Supply\M S42 
+          A\NC_MS42A.prt <BR>ICC\Transport\M2111 Transport\NC_M2111.PRT 
+          <BR>ICC\Transport\M2122 Transpoer\NC_M2122.PRT<br>
+&nbsp;<BR>
+				<a name=KShips>Kluth\Cruiser\Clavate\Clavate Ship.prt</a><br>
+				Kluth\Cruiser\Parasite\Parasite.prt<br>
+				Kluth\Cruiser\Peircer\Cruiser.prt<br>
+				Kluth\Cruiser\Scale\Cruiser.prt<br>
+				Kluth\Cruiser\Scarab\Cruiser.prt<br>
+				Kluth\Destroyer\Claw\Destroyer.prt<br>
+				Kluth\Destroyer\Drainer\Drainer.prt<br>
+				Kluth\Destroyer\Shell\Destroyer.prt<br>
+				Kluth\Destroyer\Stinger\Destroyer.prt<br>
+				Kluth\Dreadnought\Ganglia\Dreadnought.prt<br>
+				Kluth\Dreadnought\Mandible\Dreadnought.prt<br>
+				Kluth\Dreadnought\Siphon\Siphon Dread.prt<br>
+				Kluth\Engineering\Drone\nouncontext.prt<br>
+				Kluth\Fighter\Larvae Assault\NC_Larvae.prt<br>
+				Kluth\Fighter\Tarsus Interceptor\NC_Tarsus.prt<br>
+				Kluth\Fighter\Wasp Bomber\NC_Wasp.prt<br>
+				Kluth\Frigate\Beak\Frigate.prt<br>
+				Kluth\Frigate\Nymph\Frigate.prt<br>
+				Kluth\Frigate\Proboscis\NC_Proboscis.prt<br>
+				Kluth\Miner\Extractor\NC_Extractor.prt<br>
+				Kluth\Scout\Extruder\Scout.prt<br>
+				Kluth\Scout\Fang\Scout.prt<br>
+				Kluth\Scout\Talon\Scout.prt<br>
+				Kluth\Station\Colony\Colony_NC.prt<br>
+				Kluth\Station\Hive\Station.prt<br>
+				Kluth\Station\Nest\Nest_NC.prt<br>
+				Kluth\Supply\Worker\Supply.prt<br>
+				Kluth\Supply\Advanced Worker\Adv Supply.prt<br>
+				Kluth\Supply\Ultimate Worker\Ult Supply.prt<br>
+				Kluth\Transport\Carrier\Transport.prt<br>
+				Kluth\Transport\Advanced Carrier\Adv Transport.prt<br>
+          <BR><A name=UShips>UGTO\Cruiser\ST-74 Torpedo Cruiser\NC_ST74.prt</A>
+		  <BR>UGTO\Cruiser\ST-75 Interdictor\NC_ST75.PRT <BR>UGTO\Cruiser\ST-76 
+          Battle Cruiser\NC_ST76.prt <BR>UGTO\Cruiser\ST-79 Missile 
+          Cruiser\NC_ST79.prt <BR>UGTO\Cruiser\ST-80 Bomber\NC_ST80.PRT 
+          <BR>UGTO\Destroyer\ST-10 Gunboat\NC_ST10.prt <BR>UGTO\Destroyer\ST-11 
+          Missile Buster\NC_ST11.prt <BR>UGTO\Destroyer\ST-14 
+          Assault\NC_ST14.prt <br>
+				UGTO\Destroyer\ST-18 Picket\NC_ST18.prt<br>
+				UGTO\Dreadnought\Agincourt Carrier\NC_Agincourt.prt<BR>UGTO\Dreadnought\ST-101 Super 
+          Carrier\NC_ST101.prt <BR>UGTO\Dreadnought\ST-105 Battle 
+          Platform\NC_ST105.PRT <BR>UGTO\Dreadnought\ST-106 Command 
+          Center\NC_ST106.prt <BR>UGTO\Dreadnought\ST-111 Elite 
+          Assault\NC_ST111.prt <BR>UGTO\Engineering\ST-7000\NC_ST7000.PRT 
+          <BR>UGTO\Engineering\ST-7010\NC_ST7010.prt <BR>UGTO\Fighter\A-34 
+				Assault\NC_A34.prt<br>
+				UGTO\Fighter\B-27 Bomber\NC_B27.prt<br>
+				UGTO\Fighter\EWAS\NC_EWAS.prt<br>
+				UGTO\Fighter\I-19 Interceptor\NC_I19.prt<BR>UGTO\Frigate\ST-5 Bomber\NC_ST5.prt 
+          <BR>UGTO\Frigate\ST-6 Interceptor\NC_ST6.prt <BR>UGTO\Frigate\ST-7 
+          Minelayer\NC_ST7.prt <BR>UGTO\Frigate\ST-8 Harrier\NC_ST8.prt 
+          <BR>UGTO\Miner\SE-7501\NC_SE7501.prt<br>
+				UGTO\Scout\ST-1 Anti-Sensor\Scout.prt<br>
+				UGTO\Scout\ST-2 Assault\Scout.prt<br>
+				UGTO\Scout\ST-4 Long Range\Scout.prt<br>
+				UGTO\Scout\ST-5 Bomber\Scout.prt</FONT><br>
+				UGTO\Station\HT 1001A Station\Station.prt<br>
+				UGTO\Station\HT 1001B Station\Station.prt<br>
+				UGTO\Station\HT 1010C Station\Station.prt<br>
+				UGTO\Supply\ST-8005 Supply Ship\Supply Ship.prt<br>
+				UGTO\Supply\ST-8010 Supply\Large Supply Ship.prt<br>
+				UGTO\Transport\ST-201 Transport\Transport.prt<br>
+				UGTO\Transport\ST-211 Transport\Heavy Transport.prt</TD>
+			</TR>
+			<TR>
+				<TD vAlign=top width="22%"><A name=Structs>Structures\</A></TD>
+				<TD vAlign=top width="78%">
+				<table border="1" width="100%" cellspacing="0" cellpadding="0" rules="cols" frame="void">
+					<tr>
+						<td width="128">Common\</td>
+						<td>Antisensor Base.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Automated Farm.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Biosphere Condenser.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Cortex Nexus.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Deep Core Mine.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Defense Base.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Defense Base 2.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Defense Base 3.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Depot.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Dome.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Fighter Base.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Fighter Base 2.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Fighter Base 3.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Fusion Generator.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Hydro Farm.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Interdictor Base.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Mantle Extractor.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Mine.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Quantum Generator.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Research Lab.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Sensor Base.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Shipyard.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Solar Generator.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Subspace Network.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Common\</td>
+						<td>Variance Generator.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Barracks.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Colony Hub.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Defense Base i.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Defense Base 2.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Defense Base 3.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Factory.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Fighter Base.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Fighter Base 2.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Fighter Base 3.prt</td>
+					</tr>
+					<tr>
+						<td width="128">ICC\</td>
+						<td>Shield Generator.prt</td>
+					</tr>
+					<tr>
+						<td width="128" height="23">ICC\</td>
+						<td height="23">Starport.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Kluth\</td>
+						<td>Barracks.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Kluth\</td>
+						<td>Colony Hub.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Kluth\</td>
+						<td>Factory.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Kluth\</td>
+						<td>Starport.prt</td>
+					</tr>
+					<tr>
+						<td width="128">UGTO\</td>
+						<td>Barracks.prt</td>
+					</tr>
+					<tr>
+						<td width="128">UGTO\</td>
+						<td>Colony Hub.prt</td>
+					</tr>
+					<tr>
+						<td width="128">UGTO\</td>
+						<td>Factory.prt</td>
+					</tr>
+					<tr>
+						<td width="128">UGTO\</td>
+						<td>Starport.prt</td>
+					</tr>
+					</table>
+				</TD>
+			</TR>
+			<TR>
+				<TD vAlign=top width="22%">Units\</TD>
+				<TD vAlign=top width="78%">Infantry.prt 
+          		<BR>Heavy Infantry.prt</TD>
+			</TR>
+		</TBODY>
+	</TABLE><FONT face=Verdana 
+    size=2>&nbsp;<p><BR><span class="funcName"></span>Deprecated Paths</span></p>
+	<p>These are paths for other objects still in the 
+	game code but which aren't recommended (or allowed!) for general use or 
+	haven't been actively maintained and may thus be out of balance for the rest 
+	of the game (generally meaning they're unusually weak).&nbsp; Please use 
+	discretion when using these items.</p>
+	<TABLE cellSpacing=0 cellPadding=5 width=800 border=1 class="table">
+		<TBODY>
+			<TR>
+				<TD vAlign=top width="22%"><A name=Gadgets0>
+				<FONT face=Verdana size=2>Gadgets\</FONT></A></TD>
+				<TD vAlign=top width="78%">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
+					<tr>
+						<td width="50%">Aft Light Armor.prt<sup>1</sup></td>
+						<td width="50%">Aft Shields.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Auto Repair - mir.prt<sup>3</sup></td>
+						<td width="50%">Build - MI.prt<sup>3</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Build - Pirate.prt<sup>3</sup></td>
+						<td width="50%">CL 300.prt<sup>2</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">CL 500.prt<sup>2</sup></td>
+						<td width="50%">CL 550.prt<sup>2</sup></td>
+						</FONT>
+					</tr>
+					<tr>
+						<td width="50%">CL 1000.prt<sup>2</sup></td>
+						<td width="50%">CL 2000.prt<sup>2</sup></td>
+						</FONT>
+					</tr>
+					<tr>
+						<td width="50%">Death Beam.prt<sup>3</sup></td>
+						<td width="50%">Drive - SE.prt<sup>3</sup></td>
+						</FONT>
+					</tr>
+					<tr>
+						<td width="50%">ELF.prt<sup>3</sup></td>
+						<td width="50%">Fighter Bay Squid- Priate.prt<sup>3</sup></td>
+						</FONT>
+					</tr>
+					<tr>
+						<td width="50%">Fore Heavy Armor.prt<sup>1</sup></td>
+						<td width="50%">Fore Light Armor.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Fore Shields.prt<sup>1</sup></td>
+						<td width="50%">Front Heavy Armor.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Full Heavy Armor.prt<sup>1</sup></td>
+						<td width="50%">Full Light Armor.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Full Shields.prt<sup>1</sup></td>
+						<td width="50%">Fusion Reactor 1000.prt<sup>2</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Fusion Reactor 1500.prt<sup>2</sup></td>
+						<td width="50%">Fusion Reactor.prt<sup>2</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Innards.prt<sup>3</sup></td>
+						<td width="50%">IP Beam.prt<sup>2</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">IPS Beam.prt<sup>2</sup></td>
+						<td width="50%">Left Heavy Armor.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Left Light Armor.prt<sup>1</sup></td>
+						<td width="50%">Left shields.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Light Armor.prt<sup>1</sup></td>
+						<td width="50%">Mouth Beam Elf.prt<sup>3</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Mouth Beam.prt<sup>3</sup></td>
+						<td width="50%">QSB.prt<sup>2</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Reactor 1000.prt<sup>2</sup></td>
+						<td width="50%">Rear Heavy Armor.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Rear Light Armor.prt<sup>1</sup></td>
+						<td width="50%">Right Heavy Armor.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Right Light Armor.prt<sup>1</sup></td>
+						<td width="50%">Right Shields.prt<sup>1</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Script.prt<sup>3</sup></td>
+						<td width="50%">Singularity Jump Drive.prt<sup>3</sup></td>
+					</tr>
+					<tr>
+						<td width="50%">Spawn.prt<sup>3</sup></td>
+						<td width="50%">&nbsp;</td>
+					</tr>
+					</table></TD>
+			</TR>
+			<TR>
+				<TD vAlign=top width="22%"><a name=Ships0>Ships\</a></TD>
+				<TD vAlign=top width="78%">MI\Cruiser\Legion\NC_Legion.prt<br>
+				MI\Dreadnought\Longhead\NC_Dread.prt<br>
+				MI\Engineering\Assembler\NC_Assembler.prt<br>
+				MI\Supply\Forager\NC_Forager.prt<br>
+				MI\Transport\Conveyor\NC_Conveyor.prt<br>
+				Moderator\NC_ORB.PRT<br>
+				Pirate\Destroyer\C208CVM\NC_C208CVM.prt<br>
+				Pirate\Fighter\Squid\NC_Squid.prt<br>
+				Pirate\Frigate\Corvette\NC_Corvette.prt<br>
+				Pirate\Frigate\Raider\NC_Raider.prt<br>
+				Pirate\Scout\Ray A\NC_Ray_A.prt<br>
+				Pirate\Scout\Ray AS\NC_Ray_AS.prt<br>
+				Pirate\Scout\Ray E\NC_Ray_E.prt<br>
+				Pirate\Supply\Tender\NC_Tender.prt<br>
+				Pirate\Transport\Hauler\NC_Hauler.prt</TD>
+			</TR>
+			<tr>
+				<TD vAlign=top width="22%"><a name=Monsters>Monsters\</a></TD>
+				<TD vAlign=top width="78%">Crystal Entity\NC_Crystal.prt<br>
+				Energy\NC_Energy.prt<br>
+				Gaifen Energy\NC_Gaifen.prt<br>
+				Gaifen Opaque\Gaifen Monster.prt</TD>
+			</tr>
+			<tr>
+				<TD vAlign=top width="22%"><A name=Structs0>Structures\</A></TD>
+				<TD vAlign=top width="78%">
+				<table border="1" width="100%" cellspacing="0" cellpadding="0" rules="cols" frame="void" id="table1">
+					<tr>
+						<td width="128">MI\</td>
+						<td>Barracks.prt</td>
+					</tr>
+					<tr>
+						<td width="128">MI\</td>
+						<td>Colony Hub.prt</td>
+					</tr>
+					<tr>
+						<td width="128">MI\</td>
+						<td>Factory.prt</td>
+					</tr>
+					<tr>
+						<td width="128">MI\</td>
+						<td>Starport.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Pirate\</td>
+						<td>Barracks.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Pirate\</td>
+						<td>Colony Hub.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Pirate\</td>
+						<td>Factory.prt</td>
+					</tr>
+					<tr>
+						<td width="128">Pirate\</td>
+						<td>Starport.prt</td>
+					</tr>
+					</table>
+				</TD>
+			</tr>
+			<tr>
+				<TD vAlign=top width="22%">Units\</TD>
+				<TD vAlign=top width="78%">Spy.prt</TD>
+			</tr>
+		</TBODY>
+	</TABLE>
+	<p><font class="emphasize"></font>Reason codes:</font></p>
+	<p>1 The preferred method of assigning facings is with setGadgetMount().&nbsp; 
+	Using these gadgets will most likely not work in any case and will get you a 
+	front mount, which is the default.
+	<br>2 These gadgets are oudated, replaced by a different type.
+	<br>3 These gadgets are reserved for special use.</p>
+
+
+</BODY></HTML>

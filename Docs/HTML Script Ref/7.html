@@ -1,0 +1,180 @@
+<html><body>
+
+<A name=7><h2>7.  Ship Functions</h2> 
+<OL><BR>
+  <LI><A name=7.1></FONT><B><I><FONT face=Arial size=4>isShip( id )</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function, like isNoun(), 
+  returns <i>true </i>or<i> false, </i>or<i> nil </i>on error if the object is a ship. <BR><BR>
+  <LI><A name=7.2></FONT><B><I><FONT face=Arial size=4>isAIControlled( shipId )*</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>Tells whether a ship is AI controlled.
+  Returns 1 if true, <i>nil</i> if false. <BR><BR>
+  <LI><A name=7.3></FONT><B><I><FONT face=Arial size=4>isShipDestroyed( 
+  id )</A> </B></I></FONT><FONT face=Arial size=2><BR></FONT>
+  <FONT face=Verdana size=2>This function, like isNoun 
+  looks for the named object, if it is a ship that is destroyed but has not yet 
+  been removed (its still in the exploding animation stage), this function will 
+  return <i>true</i>.&nbsp; If the ship is still alive, <i>false</i> is 
+  returned.&nbsp; If the id is not a ship, or there is some other error, <i>nil</i> 
+  is returned. <BR>&nbsp; 
+  <LI><A name=7.4></FONT><B><I><FONT face=Arial size=4>shipCount()</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the total 
+  number of ships in the current system.<B><I> <BR>local ships = 
+  shipCount();</B></I> <BR>&nbsp; 
+  <LI><A name=7.5></FONT><B><I><FONT face=Arial size=4>getShip( n )</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the key of 
+  ship n in the current system, or <i>nil</i> if there is an error (no such 
+  ship, etc).<I><B> <BR>local key = getShip( 1 );</B></I> 
+  <BR>&nbsp; 
+  <LI><A name=7.6></FONT><B><I><FONT face=Arial size=4>getHull(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the hull 
+  percentage of a ship.<B><I> <BR>local h = getHull( "Cadet" );</B></I> 
+  <BR>&nbsp; 
+  <LI><A name=7.7></FONT><B><I><FONT face=Arial size=4>setHull(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function is used to set the 
+  hull of the specified ship. Returns<i> true </i>if hull is changed, returns <i>nil</i> 
+  if object not found or object is not a ship.<I><B><BR>-- set the hull to 50% 
+  <BR>SetHull( "Cadet", 50 );</B></I> <BR>&nbsp; 
+  <LI><A name=7.8></FONT><B><I><FONT face=Arial 
+  size=4>getSignature(id)</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function returns the current signature of a ship, or <i>nil</i> on error.<I><B> <BR>local s = 
+  getSignature( "Cadet" );</B></I> <BR>&nbsp; 
+  <LI><A name=7.9></FONT><B><I><FONT face=Arial size=4>getEnergy(shipId)</A> </B></I></FONT>
+  <FONT face=Verdana size=2><BR>This function returns the percentage of total energy the ship currently has. <BR>&nbsp; 
+  <LI><A name=7.10></FONT><B><I><FONT face=Arial size=4>useGadget(id, 
+  key, target, shift )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function will use a gadget on the specified ship. Returns the number of 
+  gadgets that were used, or <i>nil</i> on error. <B><I><BR>-- useGadget( ship, key, target, shift ) 
+  <BR>useGadget( "Cadet", "K", nil, 0 );</B></I> <BR>&nbsp; 
+  <LI><A name=7.11></FONT><B><I><FONT face=Arial 
+  size=4>playersShip()</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function returns the name of the players ship, if any.&nbsp; This should be 
+  used <b>clientside only</b>.<I><B> <BR>ship = 
+  playerShip(); <BR>pushChat( "Welcome to DarkSpace "..ship ); <BR><BR>
+  <LI><A name=7.12> 
+  </B></I></FONT><I><FONT face=Arial size=4><B>getShipType(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the type of 
+  ship as a number value, the chart below maps the numbers to the actual classes 
+  of ships in DarkSpace. <B><I><BR>local shipType = getShipType( "Cadet" 
+  );</B></I></FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 border=1 width=70%>
+    <TBODY>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>0</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>UNKNOWN</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>1</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>FIGHTER</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>2</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>ENGINEER</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>3</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>SUPPLY</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>4</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>TRANSPORT</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>5</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>SCOUT</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>6</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>FRIGATE</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>7</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>DESTROYER</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>8</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>CRUISER</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>9</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>DREAD</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width=20%><FONT face=Verdana size=2>10</FONT></TD>
+      <TD vAlign=top><FONT face=Verdana size=2>STATION</FONT></TD></TR>
+	</TBODY></TABLE>
+	<BR>&nbsp; 
+  <LI><A name=7.13><B><I><FONT face=Arial size=4>spawnShip( 
+  resource, where, name, team )*</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function creates a noun for the specified ship in the context. 
+  "where" can be a spawn point or a planet or other object that is currently 
+  in-game.<B><I> <BR>-- spawnShip( resource, where, name, team ) <BR>local key = 
+  SpawnShip( "ships/ICC/Engineering/MR 110/SC_MR110", "Spawn1", "Eng Alpha", 1 
+  );</B></I> <BR>&nbsp;</FONT> 
+  <LI><B><I><FONT face=Arial size=4><A name=7.14>orderShip(id, target, order )*</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function sets the order for 
+  the specified ship.&nbsp; This function returns <i>true</i> if it succeeds, 
+  and <i>nil</i> on errors.</FONT><B><I><FONT face=Arial size=2> <BR>-- orderShip( 
+  name, target, order ) <BR>orderShip( "Eng Alpha", "Mycopia", 2 
+  );</B></I></FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=70% border=1 style="border-collapse: collapse" bordercolor="#111111">
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>Order</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>Value</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>NOORDER</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>ATTACK</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>DEFEND</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>CAPTURE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>MOVE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>4</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>RELOAD</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>5</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>BEACON</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>6</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Arial size=2>HOLD</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Arial 
+  size=2>7</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana size=2><BR>&nbsp; 
+  <LI><A name=7.15></FONT><B><I><FONT face=Arial size=4>isJumping( id 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function returns <i>
+  true</i> if 
+  the ship is currently in jump, <i>false</i> if not, or <i>nil</i> on errors. <BR>&nbsp; 
+  <LI><A name=7.16></FONT><B><I><FONT face=Arial size=4>hasMission( id 
+  )</A></B></I></FONT><FONT face=Verdana size=2> <BR>This function returns a 
+  value of <i>true</i> if the ship currently has a mission. The value is <i>
+  false</i> if the ship 
+  currently does not have a mission, and <i>nil</i> on errors.<BR>&nbsp; 
+  <LI><A name=7.17></FONT><B><I><FONT face=Arial size=4>getShipOrder( shipId 
+  )</A></B></I></FONT><FONT face=Verdana size=2> <BR>Returns the mission a ship has, 
+  or <i>nil</i> on errors.
+  Numbers for mission types correspond to those used for orderShip().<BR>&nbsp;
+  <LI><A name=7.18></FONT><B><I><FONT face=Arial size=4>enableShipAI( shipId, 
+  boolean 
+  )</A></B></I></FONT><FONT face=Verdana size=2> <BR>When true, this function 
+  enables high/low level ship AI.&nbsp; If the boolean value is false, the ship 
+  is &quot;dumb.&quot;<BR>&nbsp;
+  <LI></FONT><A name=7.19><b><i><font face="Arial" size=4>controlShipAbsolute( shipId, heading, velocity 
+  )</B></I></FONT></A><FONT face=Verdana size=2> <BR>Sets a ship's absolute heading 
+  and absolute velocity.&nbsp; The ship will start to turn and accelerate to 
+  match the given numbers.<BR>&nbsp;
+  <LI></FONT><A name=7.20><b><i><font face="Arial" size=4>controlShipRelative( shipId, heading, velocity 
+  )</B></I></FONT></A><FONT face=Verdana size=2> <BR>Sets a ship's yaw 
+  and absolute velocity.&nbsp; The ship will start to turn and accelerate to 
+  match the given numbers.<BR>&nbsp;
+  <LI></FONT><A name=7.21><b><i><font face="Arial" size=4>getShipVelocity ( shipId )
+  </B></I></FONT></A><FONT face=Verdana size=2> <BR>Returns the velocity of the given ship.<BR>&nbsp;
+  <LI></FONT><A name=7.22><b><i><font face="Arial" size=4>getShipHeading ( shipId )
+  </B></I></FONT></A><FONT face=Verdana size=2> <BR>Returns the heading of the given ship.<BR>&nbsp;
+  <LI></FONT><A name=7.23><b><i><font face="Arial" size=4>getShipYaw ( shipId )
+  </B></I></FONT></A><FONT face=Verdana size=2> <BR>Returns the yaw of the given ship.<BR>&nbsp;
+  <LI></FONT><A name=7.24><b><i><font face="Arial" size=4>getAllNounsRelative ( shipId )
+  </B></I></FONT></A><FONT face=Verdana size=2> <BR>returns a table 1 .. n, containing tables
+  with the index key, x, z, vel of objects within range. Coordinates are relative to the ship and its heading,
+  vel is the relative velocity to shipId.
+  <BR><I>Example: An object has a distance of 50 gu to the ship. If its in front of it then z=50 and x=0,
+  if its behind it z=-50 and x=0, if its right of it z=0 and x=50, if its left of it z=0 and x=-50.
+  
+<BR>&nbsp;
+  
+</body></html>

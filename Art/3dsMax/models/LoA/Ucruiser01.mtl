@@ -1,0 +1,189 @@
+# Blender3D MTL File: Ucruiser01.blend
+# Material Count: 17
+newmtl Material_UGTOGRAY2.PN_metal_panel_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1.tga
+
+
+newmtl Material_UGTOOPEN.PNG_hull_1_detail_3.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1 detail 3.tga
+
+
+newmtl Material_UGTOFLAME.PN_hull_1_with_red_desig
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1 with red design.tga
+
+
+newmtl Material_UGTOSQSQ.PNG_hull_1_with_red_block
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1 with red blocks.tga
+
+
+newmtl Material_UGTOWINDOW3._d_cruis_prtls_side_1.
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd d cruis prtls side 1.tga
+
+
+newmtl Material_UGTOSTRUCT.P_support2.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd support2.tga
+
+
+newmtl Material_UGTOWINDOW3._UGTOWINDOW3.PNG
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd UGTOWINDOW3.PNG
+
+
+newmtl Material_UGTOWINDOW2._metal_panel_w_glo.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel w glo.tga
+
+
+newmtl Material_humanGRA_metal_panel_1_vent
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1 vent stripe.tga
+
+
+newmtl Material_humanGRAYSTR_metal_panel_1_vent
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1 vent stripe.tga
+
+
+newmtl Material_humanGRAYSTR_metal_panel_detai
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel detail 1.tga
+
+
+newmtl Material_UGTOSTRIPE.P_hull_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1.tga
+
+
+newmtl Material_UGTOENGINE.P_UGTOENGINE.PNG
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd engine.tga
+
+
+newmtl Material_UGTOEMBLEM.P_UGTO_logo.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd UGTO logo.tga
+
+
+newmtl Material_UGTOWINDOW.P_UGTOWINDOW.PNG
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1 w vents & windows.tga
+
+
+newmtl Material_humanGRAYOPE_metal_panel_detail_1.
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1 vent stripe.tga
+
+
+newmtl Material_humanGRAYOPE_metal_panel_detai
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.512000 0.512000 0.512000
+Ks 0.250000 0.250000 0.250000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel detail 1.tga
+
+

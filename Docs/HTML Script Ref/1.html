@@ -1,0 +1,54 @@
+<html><head><title>DS Script Ref - Section 1: Concepts</title></head><body>
+
+<A name=1><h2>1.  Concepts</h2>
+  <FONT face=Verdana size=2>Before scripting your first mission 
+  or scenario, read this section to get familiar with several basic concepts. 
+  <BR>&nbsp; 
+  <OL>
+    <LI></font>
+  <FONT face=Verdana size=2></FONT>
+  <FONT face=Verdana size=2><A name=1.1><B><I><FONT face=Arial 
+    size=4>Server/Client</A> </B></I></FONT><FONT face=Verdana 
+    size=2><BR>Scripts must be designed to run both on the server side and 
+    client side. However, many functions in this API will only execute server 
+    side for obvious reasons. Those functions have an asterisk (*) appended in 
+    this documentation. <BR>Use the isServer() and isClient() functions to 
+    determine if the script is running server side or on one of the 
+    clients.<BR></FONT><BR>
+    <LI><A name=1.2><B><I><FONT face=Arial size=4>Object ID’s</A> 
+    </B></I></FONT><FONT face=Verdana size=2><BR>Objects within the game can be 
+    identified by their key or by their name. The most reliable way to find and 
+    use an object is by it’s key, which is a 64-bit number that uniquely 
+    identifies that object. <BR>Names can be used as well, but in some cases 
+    multiple objects may have the same name (i.e. infantry on a planet are all 
+    named infantry) additionally finding by name is much slower because it 
+    requires a search. <BR>All script functions that require an id as a 
+    parameter will firstly assume the id is a key, if not found by the key, then 
+    they will search by name for the object. <BR>Any script functions that 
+    create an object will always return the key of the object. Use getName() to 
+    get the name of an object by it’s key. Use getKey() to get the key for an 
+    object by name. <BR>&nbsp; 
+    <LI><A name=1.3></FONT><B><I><FONT face=Arial size=4>Teams / 
+    Factions</A> </B></I></FONT><FONT face=Verdana size=2><BR>Any one faction 
+    can have any number of teams. This is to facilitate the clan/fleet system in 
+    game, thus when a clan member joins a game server a team for their clan is 
+    dynamically created if needed. <BR>&nbsp; 
+    <LI><A name=1.4></FONT><B><I><FONT face=Arial size=4>Mission 
+    Scripts</A></B></I></FONT><FONT face=Verdana size=2><BR>These 
+  scripts are designed to provide a story/missions for the players. They are 
+  started by a moderator, and can remain running until the server is terminated 
+  or reset. Normally, they will initiate some starting conditions then 
+  eventually run their course and end. However, mission scripts can also be 
+  designed to continuously provide missions and motivation for the players. 
+  <BR>Mission scripts can also communicate, since they are all share the same 
+  environment. This means global variables and functions can all be shared. 
+  However, this can also be a source of problems, since a function from one 
+  script might replace a needed function in another script of the same name. 
+  <BR>All mission scripts should have their title, requirements, and description 
+  at the top of the file.<B><I> <BR>-- TITLE: ICC Diplomatic Mission <BR>-- REQ: 
+  ICC planet, UGTO <BR>-- DESC: Diplomatic mission to a random friendly planet.</i></b></font><br>&nbsp;
+    </FONT>
+  <LI><I><B><FONT face=Arial size=4><a name="1.5">Reserved Variables</a></font></b></i><br>
+  <font face=Verdana size=2>The following variable names should not be used in 
+  your scripts: &quot;context&quot; and &quot;ExecutionDepth&quot;.</LI>
+</body></html>

@@ -1,0 +1,134 @@
+# Blender3D MTL File: Ucorvette01.blend
+# Material Count: 12
+newmtl Material_UGTOgray2.PN_hull_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1.tga
+
+
+newmtl Material_UGTOgray2.PN_metal_panel_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1.tga
+
+
+newmtl Material.001_ALPHASTRUCT.PNG
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd ALPHASTRUCT.PNG
+
+
+newmtl Material.001_metal_panel_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1.tga
+
+
+newmtl Material_UGTOSQSQ.PNG_hull_1_with_red_block
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1 with red blocks.tga
+
+
+newmtl Material_UGTOEMBLEM.P_metal_panel_1_vent_st
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1 vent stripe.tga
+
+
+newmtl Material_UGTOEMBLEM.P_UGTO_logo.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd UGTO logo.tga
+
+
+newmtl Material_UGTOengine.P_engine.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd engine.tga
+
+
+newmtl Material_UGTOFLAME.PN_hull_1_with_red_desig
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1 with red design.tga
+
+
+newmtl Material_UGTOSTRIPE.P_hull_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd hull 1.tga
+
+
+newmtl Material_UGTOwindow.P_dr_fr_prtls_side_1.tg
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dr fr prtls side 1.tga
+
+
+newmtl Material_UGTOgray.PNG_metal_panel_1.tga
+Ns 92.156863
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd metal panel 1.tga
+
+

@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="Server"
+	ProjectGUID="{28761F17-3B36-41F0-82B8-62EB6D5CEC8C}"
+	RootNamespace="Server"
+	Keyword="MakeFileProj"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="\\vm1\\mirrors\Alpha\GameCQS\darkspace"
+			IntermediateDirectory=".\Release"
+			ConfigurationType="10"
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC71.vsprops"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="false"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+				Description="Updating Data..."
+				CommandLine="xcopy.exe  /y  /d  ..\..\Data\*.*    &quot;$(OutDir)\Data\&quot;"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+				TypeLibraryName="M:\Alpha\GameCQS/GameCQS.tlb"
+				HeaderFileName=""
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+		<Filter
+			Name="Exe"
+			>
+			<File
+				RelativePath="..\..\Bin\DarkSpaceServer"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Scripts"
+			>
+			<File
+				RelativePath="..\..\Scripts\advspawn.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\assaultgroup.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\basic.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\build.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\capture.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\detach.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\disable.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\enable.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\escort.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\factionid.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\get_user.sh"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\getusers.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\ghorde.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\home.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\horde.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\killai.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\killplatforms.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\mbtest.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\message.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\miquest.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\mir.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\mir2.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\mirescort.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\mirfury.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\moveplayer.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\mvencounters.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\nodes.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\piratespawn.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\return.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\revolt.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\revolution.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\scout.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\shipbalance.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\SpawnComponent.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\spawngaif.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\test.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\test2.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\test3.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\wipeplanet.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\x.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Scripts\xmaslife.lua"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)\Scripts\"
+						CommandLine="copy $(InputPath) $(OutDir)\Scripts\&#x0D;&#x0A;"
+						Outputs="$(OutDir)\Scripts\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="Libs"
+			>
+			<File
+				RelativePath="..\..\Bin\libDarkSpace.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\Bin\libGadgets.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\libGCQ.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\GameCQ\Bin\libGCQDB.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\GameCQ\Bin\libGCQS.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\libMedusa.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\libNetwork.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\libRender3D.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath="..\..\..\Medusa\Bin\libWorld.so"
+				>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						Description="copy $(InputPath) $(OutDir)"
+						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+						Outputs="$(OutDir)\$(InputFileName)"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<File
+			RelativePath="..\..\ShipNameManfiest.txt"
+			>
+			<FileConfiguration
+				Name="Release|Win32"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="copy $(InputPath) $(OutDir)"
+					CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+					Outputs="$(OutDir)\$(InputFileName)"
+				/>
+			</FileConfiguration>
+		</File>
+		<File
+			RelativePath="..\..\Bin\Version.ini"
+			>
+			<FileConfiguration
+				Name="Release|Win32"
+				>
+				<Tool
+					Name="VCCustomBuildTool"
+					Description="copy $(InputPath) $(OutDir)"
+					CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
+					Outputs="$(OutDir)\$(InputFileName)"
+				/>
+			</FileConfiguration>
+		</File>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

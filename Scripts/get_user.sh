@@ -1,0 +1,3 @@
+#!/bin/bash
+echo Getting user $1 storage...
+scp -P 2200 "root@vm3:~/gamecq/user_storage/*$1.wob" ../UserStorage/

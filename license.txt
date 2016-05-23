@@ -1,0 +1,3 @@
+DarkSpace (c)2009 Palestar Inc
+
+There is no license for DarkSpace. If you have this source code, then you may use it for educational purposes when creating your own game using the Medusa Engine.

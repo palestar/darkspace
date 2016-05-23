@@ -1,0 +1,179 @@
+<html><body>
+
+<A name=6><h2>6.  Planet Functions</h2>
+<OL><br>
+  <LI><A name=6.1></FONT><I><B><FONT face=Arial size=4>planetCount()</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>This function returns the total 
+  number of planets in the current system.<B><I> <BR>local planets = 
+  planetCount();</B></I> <BR>&nbsp; 
+  <LI><A name=6.2></FONT><B><I><FONT face=Arial size=4>getPlanet( n 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function gets the key 
+  of the planet n, or returns <i>nil</i> on errors.<I><B> <BR>local key = getPlanet( 0 );</B></I> <BR>&nbsp; 
+  <LI><A name=6.3></FONT><B><I><FONT face=Arial size=4>getPlanetMorale( 
+  id )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the morale 
+  (though its written &quot;moral&quot; everywhere, the scripting is actually spelled 
+  right) of a 
+  planet, 0 – 100.<B><I> <BR>-- Usage <BR>local morale = getPlanetMoral( 
+  "Mycopia" ); <BR><BR>
+  <LI><A name=6.4></FONT><FONT face=Arial 
+  size=4>getPlanetPopulation(id)</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Returns the population of the given planet. <BR>&nbsp; 
+  <LI><A name=6.5></FONT><B><I><FONT face=Arial size=4>getPlanetValue( 
+  planet )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the value of a planet. <BR>&nbsp; 
+  <LI><A name=6.6></FONT><B><I><FONT face=Arial size=4>getPlanetFlags( 
+  planet )</A> </B></I></FONT><FONT face=Verdana size=2><BR>This function 
+  returns the flags of a planet, see the table below for planet flags.</FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>HYDROGEN</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0x01</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>OXYGEN</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0x02</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>METALS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0x04</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>HEAVY_METALS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X08</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>CYRO_METALS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X10</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>HYPER_MATTER</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X20</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>DARK_MATTER</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X40</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>URDANIAM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X80</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>PLAGUE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X100</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>REVOLUTION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X200</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>RESESSION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X400</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>STRIKE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X800</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>BOOM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X1000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>SMUGGLERS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X2000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>MINING_FIND</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X4000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>FOOD_SHORT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0X8000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>POWER_SHORT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+size=2>0X10000</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+      size=2>WORKER_SHORT</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana 
+    size=2>0X20000</FONT></TD></TR></TBODY></TABLE><FONT face=Verdana 
+  size=2><BR>&nbsp; 
+  <LI><A name=6.7></FONT><B><I><FONT face=Arial size=4>planetEvent( 
+  planet, event, active )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function generates a planet event, see the table below for available events. 
+  The "active" argument determines if your turning on the event, or turning it 
+  off.&nbsp; This function returns <i>true</i> if it succeeds, and <i>nil</i> on 
+  errors. <BR>All of these events are generated randomly by the planet code, use 
+  this function to force an event to occur.<B><I> <BR>-- Start plague on Mycopia 
+  <BR>planetEvent( "Mycopia", 0, 1 ); <BR>-- stop strike on Mycopia 
+  <BR>planetEvent( "Mycopia", 3, 0 );</B></I></FONT> 
+  <TABLE cellSpacing=0 cellPadding=2 width=590 border=1 style="border-collapse: collapse" bordercolor="#111111">
+
+    <TBODY>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>PLAGUE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>0</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>REVOLUTION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>1</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>RESESSION</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>2</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>STRIKE</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>3</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>BOOM</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>4</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>SMUGGLERS</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>5</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>MINING_FIND</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>6</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>FOOD_SHORT*</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>7</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>POWER_SHORT*</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>8</FONT></TD></TR>
+    <TR>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>WORKER_SHORT*</FONT></TD>
+      <TD vAlign=top width="50%"><FONT face=Verdana size=2>9</FONT></TD></TR>
+	</TBODY></TABLE>
+	<FONT face=Verdana size=2><I>* These events are automatically set by the internal planet logic. If you generate these events, they might be turned back off the next turn by the 
+  planet logic. <BR>&nbsp; 
+  <LI><A name=6.8></FONT><B><FONT face=Arial size=4>revoltPlanet(id, 
+  team )*</A> </B></I></FONT><FONT face=Verdana size=2><BR>Change planet to be 
+  controlled by the specified faction. The server script can only call this 
+  function.&nbsp; This function returns <i>true</i> if it succeeds, and <i>nil</i> 
+  on errors. <BR><BR>
+  <LI><A name=6.9></FONT><B><I><FONT face=Arial size=4>hexCount(id)</A> 
+  </B></I></FONT><FONT face=Verdana size=2><BR>Returns the number of hexes on 
+  the specified planet. <BR><BR>
+  <LI><A name=6.10></FONT><B><I><FONT face=Arial 
+  size=4>getHexPosition(id, hex )</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Returns the X,Y,Z position of the hex on the planet.<B><I> <BR>-- 
+  Get the XYZ of hex 1 from the planet mycopia <BR>local x,y,z = getHexPosition( 
+  "Mycopia", 1 );</B></I> <BR><BR>
+  <LI><A name=6.11></FONT><B><I><FONT face=Arial 
+  size=4>structureCount(id)</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>Returns the number of structures on a planet. <BR><BR>
+  <LI><A name=6.12></FONT><B><I><FONT face=Arial size=4>getStructure(id, 
+  n )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns structure n from 
+  the specified planet. <BR><BR>
+  <LI><A name=6.13></FONT><B><I><FONT face=Arial size=4>getStructureHex( 
+  id )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the hex 
+  currently assigned to structure n <BR>&nbsp; 
+  <LI><A name=6.14></FONT><B><I><FONT face=Arial 
+  size=4>unitCount(id)</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns 
+  the number of ground units on the specified planet. <BR>&nbsp; 
+  <LI><A name=6.15></FONT><B><I><FONT face=Arial size=4>getUnit(id, n 
+  )</A> </B></I></FONT><FONT face=Verdana size=2><BR>Returns the name of unit n 
+  on the specified planet. <BR>&nbsp; 
+  <LI><A name=6.16></FONT><B><I><FONT face=Arial 
+  size=4>getRandomPlanet()</A> </B></I></FONT><FONT face=Verdana size=2><BR>This 
+  function returns a  random planet from the current system. <BR><BR>
+  <LI><A name=6.17></FONT><B><I><FONT face=Arial 
+  size=4>getFriendlyPlanet( faction )</A> </B></I></FONT><FONT face=Verdana 
+  size=2><BR>This function returns a random planet in the current system 
+  friendly to the specified faction. <BR><BR>
+  <LI><A name=6.18></FONT><B><I><FONT face=Arial size=4>getEnemyPlanet( 
+  faction )</A></B></I></FONT><FONT face=Verdana size=2> <BR>This function 
+  returns a random enemy planet.
+
+</body></html>

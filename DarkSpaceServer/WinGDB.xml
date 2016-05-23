@@ -1,0 +1,214 @@
+<preferences>
+    <project name="DarkSpaceServer" configuration="Debug" platform="Win32" >
+        <class name="ProjectCommon" >
+        </class>
+        <class name="ProjectState" >
+        </class>
+    </project>
+
+    <project name="DarkSpaceServer" configuration="DebugLinux" platform="Win32" >
+        <class name="ProjectCommon" >
+            <values>
+                <value name="strMakefileCompilerC" >
+                gcc
+                </value>
+                <value name="strMakefileCompilerCXX" >
+                g++
+                </value>
+                <value name="strMakefileRM" >
+                rm -f
+                </value>
+                <value name="strMakefileMKDIR" >
+                mkdir -p
+                </value>
+                <value name="strMakefileIntDir" >
+                DebugLinux/obj
+                </value>
+                <value name="strMakefileDestDir" >
+                ../Bin
+                </value>
+                <value name="strMakefileCFLAGS" >
+                -g -I ../ -I ../../Medusa/
+                </value>
+                <value name="strMakefileCXXFLAGS" >
+                -g -I ../ -I ../../Medusa/
+                </value>
+                <value name="strMakefileLDFLAGS" >
+                -L ../Bin/ -L ../../Medusa/Bin/ -L ../../Medusa/ThirdParty/LuaJIT/bin/ -lMedusaD -lDarkSpaceD -lWorldD -lNetworkD -lGCQD -lRender3DD -llua51D -lpthread -lcompat
+                </value>
+                <value name="strRemoteBuildCommand" >
+                make
+                </value>
+                <value name="strRemoteRebuildCommand" >
+                make clean; make
+                </value>
+                <value name="strRemoteCleanCommand" >
+                make clean
+                </value>
+                <value name="pathRemoteBuildDirectory" >
+                /home/rlyle/work/Trunk/DarkSpace/DarkSpaceServer
+                </value>
+                <value name="strRemoteBuildVariables" >
+                BUILD_CONFIGURATION="DebugLinux"
+                </value>
+                <value name="selBuildBeforeStartDebugging" >
+                0
+                </value>
+                <value name="bDeployBeforeStartDebugging" >
+                false
+                </value>
+                <value name="selDeployAction" >
+                1
+                </value>
+                <value name="bDeployOnlyIfFileChanged" >
+                false
+                </value>
+                <value name="pathWorkingDirectory" >
+                /home/rlyle/work/Trunk/DarkSpace
+                </value>
+                <value name="strLaunchArguments" >
+                config.ini
+                </value>
+                <value name="bStopInMain" >
+                true
+                </value>
+                <value name="pathExecutable" >
+                /home/rlyle/work/Trunk/DarkSpace/Bin/DarkSpaceServerD
+                </value>
+                <value name="selByteOrder" >
+                1
+                </value>
+                <value name="bSourceSession" >
+                false
+                </value>
+                <value name="bDisableHangReporter" >
+                false
+                </value>
+                <value name="pathDebugger" >
+                gdb
+                </value>
+                <value name="bReuseStandardBuildCommand" >
+                true
+                </value>
+                <value name="selTargetType" >
+                0
+                </value>
+                <value name="strDebugHostLogin" >
+                builder:god2899@build:2200
+                </value>
+                <value name="strBuildHostLogin" >
+                builder:god2899@build:2200
+                </value>
+            </values>
+        </class>
+        <class name="ProjectState" >
+        </class>
+    </project>
+
+    <project name="DarkSpaceServer" configuration="Release" platform="Win32" >
+        <class name="ProjectCommon" >
+        </class>
+        <class name="ProjectState" >
+        </class>
+    </project>
+
+    <project name="DarkSpaceServer" configuration="ReleaseLinux" platform="Win32" >
+        <class name="ProjectCommon" >
+            <values>
+                <value name="strMakefileCompilerC" >
+                gcc
+                </value>
+                <value name="strMakefileCompilerCXX" >
+                g++
+                </value>
+                <value name="strMakefileRM" >
+                rm -f
+                </value>
+                <value name="strMakefileMKDIR" >
+                mkdir -p
+                </value>
+                <value name="strMakefileIntDir" >
+                ReleaseLinux/obj
+                </value>
+                <value name="strMakefileDestDir" >
+                ../Bin
+                </value>
+                <value name="strMakefileCFLAGS" >
+                -g -O2 -I ../ -I ../../Medusa/
+                </value>
+                <value name="strMakefileCXXFLAGS" >
+                -g -O2 -I ../ -I ../../Medusa/
+                </value>
+                <value name="strMakefileLDFLAGS" >
+                -L ../Bin/ -L ../../Medusa/Bin/ -L ../../Medusa/ThirdParty/LuaJIT/bin/ -lMedusa -lDarkSpace -lWorld -lNetwork -lGCQ -lRender3D -llua51 -lpthread -lcompat
+                </value>
+                <value name="strRemoteBuildCommand" >
+                make
+                </value>
+                <value name="strRemoteRebuildCommand" >
+                make clean; make
+                </value>
+                <value name="strRemoteCleanCommand" >
+                make clean
+                </value>
+                <value name="pathRemoteBuildDirectory" >
+                /home/rlyle/work/Trunk/DarkSpace/DarkSpaceServer
+                </value>
+                <value name="strRemoteBuildVariables" >
+                BUILD_CONFIGURATION="ReleaseLinux"
+                </value>
+                <value name="selBuildBeforeStartDebugging" >
+                0
+                </value>
+                <value name="bDeployBeforeStartDebugging" >
+                false
+                </value>
+                <value name="selDeployAction" >
+                1
+                </value>
+                <value name="bDeployOnlyIfFileChanged" >
+                false
+                </value>
+                <value name="pathWorkingDirectory" >
+                /home/rlyle/work/Trunk/DarkSpace
+                </value>
+                <value name="strLaunchArguments" >
+                config.ini
+                </value>
+                <value name="bStopInMain" >
+                true
+                </value>
+                <value name="pathExecutable" >
+                /home/rlyle/work/Trunk/DarkSpace/Bin/DarkSpaceServer
+                </value>
+                <value name="selByteOrder" >
+                1
+                </value>
+                <value name="bSourceSession" >
+                false
+                </value>
+                <value name="bDisableHangReporter" >
+                false
+                </value>
+                <value name="pathDebugger" >
+                gdb
+                </value>
+                <value name="bReuseStandardBuildCommand" >
+                true
+                </value>
+                <value name="selTargetType" >
+                0
+                </value>
+                <value name="strDebugHostLogin" >
+                builder:god2899@build:2200
+                </value>
+                <value name="strBuildHostLogin" >
+                builder:god2899@build:2200
+                </value>
+            </values>
+        </class>
+        <class name="ProjectState" >
+        </class>
+    </project>
+
+</preferences>

@@ -1,0 +1,3574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2014-05-25T18:32:43Z</created><keywords></keywords><modified>2014-05-25T18:32:43Z</modified><revision></revision><subject></subject><title></title><unit meter="1.000000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_images>
+    <image id="metal_panel_1.tga-image" name="metal_panel_1.tga"><init_from>file://metal panel 1.tga</init_from></image>
+    <image id="hull_1.tga-image" name="hull_1.tga"><init_from>file://hull 1.tga</init_from></image>
+    <image id="hull_1_with_red_block-image" name="hull_1_with_red_block"><init_from>file://hull 1 with red blocks.tga</init_from></image>
+    <image id="ALPHASTRUCT.PNG-image" name="ALPHASTRUCT.PNG"><init_from>file://ALPHASTRUCT.PNG</init_from></image>
+    <image id="hull_1_detail_2.tga-image" name="hull_1_detail_2.tga"><init_from>file://hull 1 detail 2.tga</init_from></image>
+    <image id="hull_1_detail_3.tga-image" name="hull_1_detail_3.tga"><init_from>file://hull 1 detail 3.tga</init_from></image>
+    <image id="UGTO_logo.tga-image" name="UGTO_logo.tga"><init_from>file://UGTO logo.tga</init_from></image>
+    <image id="hull_1_with_red_desig-image" name="hull_1_with_red_desig"><init_from>file://hull 1 with red design.tga</init_from></image>
+    <image id="metal_panel_1_vent_st-image" name="metal_panel_1_vent_st"><init_from>file://metal panel 1 vent stripe.tga</init_from></image>
+    <image id="engine.tga-image" name="engine.tga"><init_from>file://engine.tga</init_from></image>
+    <image id="dr_fr_prtls_side_1.tg-image" name="dr_fr_prtls_side_1.tg"><init_from>file://dr fr prtls side 1.tga</init_from></image>
+  </library_images>
+  <library_materials>
+    <material id="Material_UGTOgray.PNG__metal_panel_1.tga" name="Material_UGTOgray.PNG__metal_panel_1.tga">
+      <instance_effect url="#Material_UGTOgray.PNG__metal_panel_1.tga-fx"/>
+    </material>
+    <material id="Material_UGTOgray2.PN__metal_panel_1.tga" name="Material_UGTOgray2.PN__metal_panel_1.tga">
+      <instance_effect url="#Material_UGTOgray2.PN__metal_panel_1.tga-fx"/>
+    </material>
+    <material id="Material_UGTOFLAME.PN__hull_1_with_red_desig" name="Material_UGTOFLAME.PN__hull_1_with_red_desig">
+      <instance_effect url="#Material_UGTOFLAME.PN__hull_1_with_red_desig-fx"/>
+    </material>
+    <material id="Material_UGTOSTRIPE.P__hull_1_detail_2.tga" name="Material_UGTOSTRIPE.P__hull_1_detail_2.tga">
+      <instance_effect url="#Material_UGTOSTRIPE.P__hull_1_detail_2.tga-fx"/>
+    </material>
+    <material id="Material_UGTOgray2.PN__hull_1.tga" name="Material_UGTOgray2.PN__hull_1.tga">
+      <instance_effect url="#Material_UGTOgray2.PN__hull_1.tga-fx"/>
+    </material>
+    <material id="Material_UGTOEMBLEM.P__metal_panel_1_vent_st" name="Material_UGTOEMBLEM.P__metal_panel_1_vent_st">
+      <instance_effect url="#Material_UGTOEMBLEM.P__metal_panel_1_vent_st-fx"/>
+    </material>
+    <material id="Material_UGTOSTRIPE.P__hull_1.tga" name="Material_UGTOSTRIPE.P__hull_1.tga">
+      <instance_effect url="#Material_UGTOSTRIPE.P__hull_1.tga-fx"/>
+    </material>
+    <material id="Material_UGTOSQSQ.PNG__hull_1_with_red_block" name="Material_UGTOSQSQ.PNG__hull_1_with_red_block">
+      <instance_effect url="#Material_UGTOSQSQ.PNG__hull_1_with_red_block-fx"/>
+    </material>
+    <material id="Material_UGTOwindow.P__dr_fr_prtls_side_1.tg" name="Material_UGTOwindow.P__dr_fr_prtls_side_1.tg">
+      <instance_effect url="#Material_UGTOwindow.P__dr_fr_prtls_side_1.tg-fx"/>
+    </material>
+    <material id="Material.001__metal_panel_1.tga" name="Material.001__metal_panel_1.tga">
+      <instance_effect url="#Material.001__metal_panel_1.tga-fx"/>
+    </material>
+    <material id="Material_UGTOSTRIPE.P__hull_1_detail_3.tga" name="Material_UGTOSTRIPE.P__hull_1_detail_3.tga">
+      <instance_effect url="#Material_UGTOSTRIPE.P__hull_1_detail_3.tga-fx"/>
+    </material>
+    <material id="Material_UGTOEMBLEM.P__UGTO_logo.tga" name="Material_UGTOEMBLEM.P__UGTO_logo.tga">
+      <instance_effect url="#Material_UGTOEMBLEM.P__UGTO_logo.tga-fx"/>
+    </material>
+    <material id="Material.001__ALPHASTRUCT.PNG" name="Material.001__ALPHASTRUCT.PNG">
+      <instance_effect url="#Material.001__ALPHASTRUCT.PNG-fx"/>
+    </material>
+    <material id="Material_UGTOengine.P__engine.tga" name="Material_UGTOengine.P__engine.tga">
+      <instance_effect url="#Material_UGTOengine.P__engine.tga-fx"/>
+    </material>
+    <material id="metal_panel_1.tga-diffuse-Material" name="metal_panel_1.tga-diffuse-Material">
+      <instance_effect url="#metal_panel_1.tga-diffuse-Material-fx"/>
+    </material>
+    <material id="hull_1.tga-diffuse-Material" name="hull_1.tga-diffuse-Material">
+      <instance_effect url="#hull_1.tga-diffuse-Material-fx"/>
+    </material>
+    <material id="hull_1_with_red_block-diffuse-Material" name="hull_1_with_red_block-diffuse-Material">
+      <instance_effect url="#hull_1_with_red_block-diffuse-Material-fx"/>
+    </material>
+    <material id="ALPHASTRUCT.PNG-diffuse-Material" name="ALPHASTRUCT.PNG-diffuse-Material">
+      <instance_effect url="#ALPHASTRUCT.PNG-diffuse-Material-fx"/>
+    </material>
+    <material id="hull_1_detail_2.tga-diffuse-Material" name="hull_1_detail_2.tga-diffuse-Material">
+      <instance_effect url="#hull_1_detail_2.tga-diffuse-Material-fx"/>
+    </material>
+    <material id="hull_1_detail_3.tga-diffuse-Material" name="hull_1_detail_3.tga-diffuse-Material">
+      <instance_effect url="#hull_1_detail_3.tga-diffuse-Material-fx"/>
+    </material>
+    <material id="UGTO_logo.tga-diffuse-Material" name="UGTO_logo.tga-diffuse-Material">
+      <instance_effect url="#UGTO_logo.tga-diffuse-Material-fx"/>
+    </material>
+    <material id="hull_1_with_red_desig-diffuse-Material" name="hull_1_with_red_desig-diffuse-Material">
+      <instance_effect url="#hull_1_with_red_desig-diffuse-Material-fx"/>
+    </material>
+    <material id="metal_panel_1_vent_st-diffuse-Material" name="metal_panel_1_vent_st-diffuse-Material">
+      <instance_effect url="#metal_panel_1_vent_st-diffuse-Material-fx"/>
+    </material>
+    <material id="engine.tga-diffuse-Material" name="engine.tga-diffuse-Material">
+      <instance_effect url="#engine.tga-diffuse-Material-fx"/>
+    </material>
+    <material id="dr_fr_prtls_side_1.tg-diffuse-Material" name="dr_fr_prtls_side_1.tg-diffuse-Material">
+      <instance_effect url="#dr_fr_prtls_side_1.tg-diffuse-Material-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Material_UGTOgray.PNG__metal_panel_1.tga-fx" name="Material_UGTOgray.PNG__metal_panel_1.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOgray2.PN__metal_panel_1.tga-fx" name="Material_UGTOgray2.PN__metal_panel_1.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOFLAME.PN__hull_1_with_red_desig-fx" name="Material_UGTOFLAME.PN__hull_1_with_red_desig">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOSTRIPE.P__hull_1_detail_2.tga-fx" name="Material_UGTOSTRIPE.P__hull_1_detail_2.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOgray2.PN__hull_1.tga-fx" name="Material_UGTOgray2.PN__hull_1.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOEMBLEM.P__metal_panel_1_vent_st-fx" name="Material_UGTOEMBLEM.P__metal_panel_1_vent_st">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOSTRIPE.P__hull_1.tga-fx" name="Material_UGTOSTRIPE.P__hull_1.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOSQSQ.PNG__hull_1_with_red_block-fx" name="Material_UGTOSQSQ.PNG__hull_1_with_red_block">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOwindow.P__dr_fr_prtls_side_1.tg-fx" name="Material_UGTOwindow.P__dr_fr_prtls_side_1.tg">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material.001__metal_panel_1.tga-fx" name="Material.001__metal_panel_1.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOSTRIPE.P__hull_1_detail_3.tga-fx" name="Material_UGTOSTRIPE.P__hull_1_detail_3.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOEMBLEM.P__UGTO_logo.tga-fx" name="Material_UGTOEMBLEM.P__UGTO_logo.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material.001__ALPHASTRUCT.PNG-fx" name="Material.001__ALPHASTRUCT.PNG">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material_UGTOengine.P__engine.tga-fx" name="Material_UGTOengine.P__engine.tga">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.640000  0.640000 0.640000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">1.000000  1.000000 1.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">0.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="metal_panel_1.tga-diffuse-Material-fx" name="metal_panel_1.tga-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="metal_panel_1.tga-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hull_1.tga-diffuse-Material-fx" name="hull_1.tga-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hull_1.tga-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hull_1_with_red_block-diffuse-Material-fx" name="hull_1_with_red_block-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hull_1_with_red_block-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ALPHASTRUCT.PNG-diffuse-Material-fx" name="ALPHASTRUCT.PNG-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ALPHASTRUCT.PNG-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hull_1_detail_2.tga-diffuse-Material-fx" name="hull_1_detail_2.tga-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hull_1_detail_2.tga-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hull_1_detail_3.tga-diffuse-Material-fx" name="hull_1_detail_3.tga-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hull_1_detail_3.tga-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="UGTO_logo.tga-diffuse-Material-fx" name="UGTO_logo.tga-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="UGTO_logo.tga-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="hull_1_with_red_desig-diffuse-Material-fx" name="hull_1_with_red_desig-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="hull_1_with_red_desig-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="metal_panel_1_vent_st-diffuse-Material-fx" name="metal_panel_1_vent_st-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="metal_panel_1_vent_st-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="engine.tga-diffuse-Material-fx" name="engine.tga-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="engine.tga-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="dr_fr_prtls_side_1.tg-diffuse-Material-fx" name="dr_fr_prtls_side_1.tg-diffuse-Material">
+      <profile_COMMON>
+        <technique sid="standard">
+          <phong>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <texture texture="dr_fr_prtls_side_1.tg-image" texcoord="CHANNEL0">
+                <extra>
+                  <technique profile="MAYA">
+                    <wrapU sid="wrapU0">TRUE</wrapU>
+                    <wrapV sid="wrapV0">TRUE</wrapV>
+                    <blend_mode>ADD</blend_mode>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <specular>
+              <color sid="specular">0.000000  0.000000 0.000000 1.000000</color>
+            </specular>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="UGTOcorvette-lib" name="UGTOcorvetteMesh">
+      <mesh>
+        <source id="UGTOcorvette-POSITION">
+          <float_array id="UGTOcorvette-POSITION-array" count="1362">
+0.202517 -0.981189 0.251771
+0.412346 -2.024291 0.038439
+0.000000 -0.986470 -0.041252
+0.249733 -0.991640 0.617188
+0.375669 -2.030679 0.516586
+0.237982 -3.193922 0.122207
+0.000000 -3.393308 0.164244
+0.269819 -3.193922 -0.195839
+0.135404 0.059995 0.682801
+0.000000 0.059996 0.727340
+0.135404 0.059996 0.390937
+0.135404 1.260674 0.488103
+0.135404 1.260674 0.735871
+0.129321 2.476920 0.774617
+0.000000 2.476920 0.819155
+0.000000 2.476921 0.586522
+0.129320 2.476920 0.629810
+1.501934 3.519666 0.662622
+1.302039 3.519667 0.758713
+1.347887 3.519666 0.795210
+1.487026 3.519666 0.728325
+1.347611 2.942930 0.762677
+1.604579 2.942929 0.639151
+1.628180 2.942930 0.523268
+1.252712 2.942930 0.703758
+1.752443 2.156919 0.189918
+1.128612 2.156919 0.539564
+1.389880 2.156919 0.651120
+1.646848 2.156919 0.527595
+1.120704 -0.734923 -0.265618
+0.983707 -0.734923 -0.199763
+1.045257 -0.734923 -0.185989
+1.100779 -0.734923 -0.212679
+1.384787 1.466611 0.546395
+1.243270 0.083529 0.229352
+1.422427 0.083528 0.143231
+1.641755 1.466610 0.422870
+0.878044 0.083528 0.053884
+1.749954 1.466610 0.004940
+0.344812 -2.695317 0.335938
+0.000000 -2.627990 -0.400706
+0.395914 -2.698775 -0.135638
+0.191723 -3.463971 -0.189978
+0.168474 -3.418214 0.019865
+0.410212 -0.991639 0.348855
+0.498101 -2.027479 0.128081
+0.357377 -3.193922 -0.131266
+0.272335 0.059996 0.483941
+0.143246 1.260674 0.618256
+0.137163 2.476920 0.692801
+0.486427 -2.695951 -0.042335
+0.226346 -3.463972 -0.150842
+1.328392 0.816562 0.406431
+1.548789 0.816561 0.300485
+0.948185 0.816562 0.199796
+1.455414 1.466610 -0.209516
+1.348314 0.816562 -0.260001
+1.247341 0.083528 -0.254826
+0.923927 0.083528 -0.126680
+1.017834 0.816562 -0.111009
+1.107010 1.466611 -0.042036
+0.986062 -0.734923 -0.223076
+1.088521 -0.734923 -0.272328
+1.147918 2.156919 0.149436
+1.496323 2.156919 -0.018044
+1.258416 2.942930 0.652312
+1.528646 2.942930 0.522411
+1.344290 3.519667 0.679551
+1.410937 3.519666 0.647513
+1.316592 -0.466430 -0.306757
+0.865269 -0.466430 -0.089805
+1.293038 -0.466430 -0.048860
+1.131234 -0.466429 0.028920
+1.197713 -0.466430 -0.308463
+1.225235 -0.622156 -0.293596
+0.910918 -0.622156 -0.142503
+1.191710 -0.622156 -0.148770
+1.074682 -0.622156 -0.092514
+0.945898 -0.622156 -0.196900
+1.147559 -0.622156 -0.293839
+0.871428 -0.466430 -0.178937
+1.071523 1.466611 0.062127
+1.017834 0.816562 -0.006845
+1.022593 1.466611 0.354585
+0.000000 0.083528 -0.076157
+0.625802 0.816562 0.199796
+0.674911 1.878340 0.354585
+0.579509 0.083528 0.053884
+0.630466 0.816562 -0.006845
+0.609792 0.083528 -0.126680
+0.707205 2.097148 0.242795
+0.571078 -1.114450 -0.131143
+0.575142 -1.114450 -0.178937
+0.256579 0.816562 0.236008
+0.276714 2.220581 0.450952
+0.237599 0.083528 0.103041
+0.258491 0.816562 0.025044
+0.250015 0.083528 -0.096871
+0.325231 2.582352 0.322135
+0.234142 -1.084174 -0.131510
+0.235808 -1.084174 -0.178937
+0.694842 0.098986 0.492052
+0.694842 0.950421 0.492052
+0.694842 0.051748 0.459953
+0.694842 0.996835 0.459953
+1.028084 0.451558 0.270797
+1.028084 0.872653 0.270797
+1.042199 0.840986 0.281904
+1.042199 0.501602 0.281904
+1.096638 0.840986 0.215979
+1.096638 0.501602 0.215979
+1.082522 0.472463 0.204872
+1.082522 0.872653 0.204872
+1.595258 0.816562 -0.111254
+1.434578 0.083528 -0.213644
+2.319070 0.839416 -0.273130
+2.319192 0.646678 -0.316908
+2.333504 0.880441 -0.259023
+2.333626 1.121795 -0.307368
+1.758746 0.334659 -0.069428
+1.767587 0.223859 -0.263216
+1.843549 0.676230 0.071830
+1.870235 0.917732 -0.150488
+0.206173 -2.027232 -0.187668
+0.134909 -3.141821 -0.360185
+0.197957 -2.627990 -0.332771
+0.204896 -0.984226 0.063741
+0.137713 -0.991639 0.688663
+0.218570 -2.030679 0.599066
+0.127551 -3.308569 0.163301
+0.057547 0.059996 0.708089
+0.176373 0.059996 0.219046
+0.080637 1.536301 0.455942
+0.057547 1.260674 0.761159
+0.078051 2.476920 0.597649
+0.212726 -2.695316 0.414852
+0.058294 2.476920 0.703619
+0.076525 -1.501120 -0.158153
+0.214078 -1.536705 0.094013
+0.197120 -1.692358 -0.075924
+0.131907 0.075728 0.665738
+0.131907 1.270396 0.665738
+0.131907 0.010198 0.633639
+0.131907 1.334353 0.633639
+0.054961 2.476920 0.799904
+0.054961 3.444969 0.843311
+0.058294 3.444969 0.747028
+0.137163 3.444969 0.736208
+0.129321 3.444969 0.818025
+0.000000 -3.412035 -0.285034
+0.067455 -3.412035 -0.250226
+0.259492 -1.503969 -0.036564
+1.426564 2.640140 0.377554
+1.338497 2.640140 0.419888
+1.390623 2.193127 0.189034
+1.277079 2.193127 0.243615
+1.500331 2.416633 0.239195
+1.216050 2.416633 0.375850
+1.216050 2.676496 0.375850
+1.277079 2.676496 0.243615
+1.338497 2.676496 0.419888
+1.500331 2.676496 0.239195
+1.390623 2.676496 0.189034
+1.426564 2.676496 0.377554
+1.491373 2.528388 0.294951
+1.465368 2.304881 0.204553
+1.249348 2.528388 0.411293
+1.226674 2.304881 0.319294
+1.226674 2.676496 0.319294
+1.249348 2.676496 0.411293
+1.465368 2.676496 0.204553
+1.491373 2.676496 0.294951
+1.405263 2.631404 0.355737
+1.449882 2.631404 0.298867
+1.456049 2.631404 0.260482
+1.380519 2.631404 0.225947
+1.431978 2.631404 0.236632
+1.260332 2.631404 0.354564
+1.283256 2.631404 0.378965
+1.344632 2.631404 0.384882
+1.302348 2.631404 0.263524
+1.267646 2.631404 0.315627
+1.257731 2.676496 0.203366
+1.371275 2.676496 0.148784
+1.371275 2.193127 0.148784
+1.257731 2.193127 0.203366
+1.302053 2.821754 0.218472
+1.292965 2.821754 0.199566
+1.346300 2.821754 0.173927
+1.355389 2.821754 0.192834
+0.418740 -0.991639 0.414117
+0.274321 0.059996 0.531667
+0.176214 1.260674 0.646484
+0.170131 2.476920 0.712438
+0.057494 2.476920 0.726728
+0.212457 -3.452990 -0.101262
+0.328722 -3.193922 -0.070432
+0.447447 -2.695799 0.048450
+0.463279 -2.028247 0.221322
+0.057494 3.444969 0.770136
+0.170131 3.444969 0.755844
+0.399986 -0.991639 0.479863
+0.250906 0.059996 0.565672
+0.174873 1.260674 0.666597
+0.000000 2.476920 0.756145
+0.168790 2.476920 0.726427
+0.056925 2.476920 0.743192
+0.202561 -3.445165 -0.072071
+0.308306 -3.193922 -0.027088
+0.419676 -2.695690 0.113135
+0.438469 -2.028794 0.287757
+0.056925 3.444969 0.786600
+0.168790 3.444969 0.769835
+0.119300 -3.523803 -0.163167
+0.108954 -3.500962 -0.005928
+0.134708 -3.549624 -0.130382
+0.128527 -3.539373 -0.099266
+0.124123 -3.534149 -0.079825
+0.000000 -1.507875 -0.179051
+0.000000 3.444969 0.799551
+0.000000 2.476920 0.737850
+0.000000 -1.402028 -0.178937
+0.000000 2.582352 0.374271
+0.000000 0.816562 0.261171
+0.000000 1.740026 0.444815
+0.000000 -2.030678 0.660589
+0.000000 -2.029280 -0.248160
+0.000000 -0.991639 0.742051
+0.000000 -3.141821 -0.408466
+0.000000 -2.695316 0.473740
+0.000000 -3.567310 -0.026609
+0.000000 2.325593 0.497470
+0.000000 -1.402028 -0.160492
+0.000000 3.444969 0.862562
+0.000000 -3.608635 -0.097665
+0.000000 -3.605496 -0.086042
+-0.124123 -3.534149 -0.079825
+-0.128527 -3.539373 -0.099266
+-0.134708 -3.549624 -0.130382
+-0.108954 -3.500962 -0.005928
+-0.119300 -3.523803 -0.163167
+-0.168790 3.444969 0.769835
+-0.056925 3.444969 0.786600
+-0.438469 -2.028794 0.287757
+-0.419676 -2.695690 0.113135
+-0.308306 -3.193922 -0.027088
+-0.202561 -3.445165 -0.072071
+-0.056925 2.476920 0.743192
+-0.168790 2.476920 0.726427
+-0.174873 1.260674 0.666597
+-0.250906 0.059996 0.565672
+-0.399986 -0.991639 0.479863
+-0.170131 3.444969 0.755844
+-0.057494 3.444969 0.770136
+0.000000 3.444969 0.781258
+-0.463279 -2.028247 0.221322
+-0.447447 -2.695799 0.048450
+-0.328722 -3.193922 -0.070432
+-0.212457 -3.452990 -0.101262
+-0.057494 2.476920 0.726728
+-0.170131 2.476920 0.712438
+-0.176214 1.260674 0.646484
+-0.274321 0.059996 0.531667
+-0.418740 -0.991639 0.414117
+-1.355389 2.821754 0.192834
+-1.346300 2.821754 0.173927
+-1.292965 2.821754 0.199566
+-1.302053 2.821754 0.218472
+-1.257731 2.193127 0.203366
+-1.371275 2.193127 0.148784
+-1.371275 2.676496 0.148784
+-1.257731 2.676496 0.203366
+-1.267646 2.631404 0.315627
+-1.302348 2.631404 0.263524
+-1.344632 2.631404 0.384882
+-1.283256 2.631404 0.378965
+-1.260332 2.631404 0.354564
+-1.431978 2.631404 0.236632
+-1.380519 2.631404 0.225947
+-1.456049 2.631404 0.260482
+-1.449882 2.631404 0.298867
+-1.405263 2.631404 0.355737
+-1.491373 2.676496 0.294951
+-1.465368 2.676496 0.204553
+-1.249348 2.676496 0.411293
+-1.226674 2.676496 0.319294
+-1.226674 2.304881 0.319294
+-1.249348 2.528388 0.411293
+-1.465368 2.304881 0.204553
+-1.491373 2.528388 0.294951
+-1.426564 2.676496 0.377554
+-1.390623 2.676496 0.189034
+-1.500331 2.676496 0.239195
+-1.338497 2.676496 0.419888
+-1.277079 2.676496 0.243615
+-1.216050 2.676496 0.375850
+-1.216050 2.416633 0.375850
+-1.500331 2.416633 0.239195
+-1.277079 2.193127 0.243615
+-1.390623 2.193127 0.189034
+-1.338497 2.640140 0.419888
+-1.426564 2.640140 0.377554
+-0.259492 -1.503969 -0.036564
+-0.067455 -3.412035 -0.250226
+-0.129321 3.444969 0.818025
+-0.137163 3.444969 0.736208
+-0.058294 3.444969 0.747028
+-0.054961 3.444969 0.843311
+0.000000 3.444969 0.755582
+-0.054961 2.476920 0.799904
+-0.131907 1.334353 0.633639
+-0.131907 0.010198 0.633639
+-0.131907 1.270396 0.665738
+-0.131907 0.075728 0.665738
+-0.197120 -1.692358 -0.075924
+-0.214078 -1.536705 0.094013
+-0.076525 -1.501120 -0.158153
+-0.058294 2.476920 0.703619
+-0.212726 -2.695316 0.414852
+-0.078051 2.476920 0.597649
+-0.057547 1.260674 0.761159
+-0.080637 1.536301 0.455942
+-0.176373 0.059996 0.219046
+-0.057547 0.059996 0.708089
+-0.127551 -3.308569 0.163301
+-0.218570 -2.030679 0.599066
+-0.137713 -0.991639 0.688663
+-0.204896 -0.984226 0.063741
+-0.197957 -2.627990 -0.332771
+-0.134909 -3.141821 -0.360185
+-0.206173 -2.027232 -0.187668
+-1.870235 0.917732 -0.150488
+-1.843549 0.676230 0.071830
+-1.767587 0.223859 -0.263216
+-1.758746 0.334659 -0.069428
+-2.333626 1.121795 -0.307368
+-2.333504 0.880441 -0.259023
+-2.319192 0.646678 -0.316908
+-2.319070 0.839416 -0.273130
+-1.434578 0.083528 -0.213644
+-1.595258 0.816562 -0.111254
+-1.082522 0.872653 0.204872
+-1.082522 0.472463 0.204872
+-1.096638 0.501602 0.215979
+-1.096638 0.840986 0.215979
+-1.042199 0.501602 0.281904
+-1.042199 0.840986 0.281904
+-1.028084 0.872653 0.270797
+-1.028084 0.451558 0.270797
+-0.694842 0.996835 0.459953
+-0.694842 0.051748 0.459953
+-0.694842 0.950421 0.492052
+-0.694842 0.098986 0.492052
+-0.235808 -1.084174 -0.178937
+-0.234142 -1.084174 -0.131510
+-0.325231 2.582352 0.322135
+-0.250015 0.083528 -0.096871
+-0.258491 0.816562 0.025044
+-0.237599 0.083528 0.103041
+-0.276714 2.220581 0.450952
+-0.256579 0.816562 0.236008
+-0.575142 -1.114450 -0.178937
+-0.571078 -1.114450 -0.131143
+-0.707205 2.097148 0.242795
+-0.609792 0.083528 -0.126680
+-0.630466 0.816562 -0.006845
+-0.579509 0.083528 0.053884
+-0.674911 1.878340 0.354585
+-0.625802 0.816562 0.199796
+0.000000 0.816562 0.047204
+0.000000 0.083528 0.137202
+-1.022593 1.466611 0.354585
+-1.017834 0.816562 -0.006845
+-1.071523 1.466611 0.062127
+-0.871428 -0.466430 -0.178937
+-1.147559 -0.622156 -0.293839
+-0.945898 -0.622156 -0.196900
+-1.074682 -0.622156 -0.092514
+-1.191710 -0.622156 -0.148770
+-0.910918 -0.622156 -0.142503
+-1.225235 -0.622156 -0.293596
+-1.197713 -0.466430 -0.308463
+-1.131234 -0.466429 0.028920
+-1.293038 -0.466430 -0.048860
+-0.865269 -0.466430 -0.089805
+-1.316592 -0.466430 -0.306757
+-1.410937 3.519666 0.647513
+-1.344290 3.519667 0.679551
+-1.528646 2.942930 0.522411
+-1.258416 2.942930 0.652312
+-1.496323 2.156919 -0.018044
+-1.147918 2.156919 0.149436
+-1.088521 -0.734923 -0.272328
+-0.986062 -0.734923 -0.223076
+-1.107010 1.466611 -0.042036
+-1.017834 0.816562 -0.111009
+-0.923927 0.083528 -0.126680
+-1.247341 0.083528 -0.254826
+-1.348314 0.816562 -0.260001
+-1.455414 1.466610 -0.209516
+-0.948185 0.816562 0.199796
+-1.548789 0.816561 0.300485
+-1.328392 0.816562 0.406431
+0.000000 -3.618301 -0.113978
+-0.226346 -3.463972 -0.150842
+-0.486427 -2.695951 -0.042335
+-0.137163 2.476920 0.692801
+0.000000 2.476920 0.712175
+-0.143246 1.260674 0.618256
+-0.272335 0.059996 0.483941
+-0.357377 -3.193922 -0.131266
+-0.498101 -2.027479 0.128081
+-0.410212 -0.991639 0.348855
+-0.168474 -3.418214 0.019865
+-0.191723 -3.463971 -0.189978
+0.000000 -3.571777 -0.141670
+-0.395914 -2.698775 -0.135638
+-0.344812 -2.695317 0.335938
+-1.749954 1.466610 0.004940
+-0.878044 0.083528 0.053884
+-1.641755 1.466610 0.422870
+-1.422427 0.083528 0.143231
+-1.243270 0.083529 0.229352
+-1.384787 1.466611 0.546395
+-1.100779 -0.734923 -0.212679
+-1.045257 -0.734923 -0.185989
+-0.983707 -0.734923 -0.199763
+-1.120704 -0.734923 -0.265618
+-1.646848 2.156919 0.527595
+-1.389880 2.156919 0.651120
+-1.128612 2.156919 0.539564
+-1.752443 2.156919 0.189918
+-1.252712 2.942930 0.703758
+-1.628180 2.942930 0.523268
+-1.604579 2.942929 0.639151
+-1.347611 2.942930 0.762677
+-1.487026 3.519666 0.728325
+-1.347887 3.519666 0.795210
+-1.302039 3.519667 0.758713
+-1.501934 3.519666 0.662622
+-0.129320 2.476920 0.629810
+-0.129321 2.476920 0.774617
+0.000000 1.260674 0.780409
+-0.135404 1.260674 0.735871
+-0.135404 1.260674 0.488103
+-0.135404 0.059996 0.390937
+0.000000 0.059996 0.185422
+-0.135404 0.059995 0.682801
+-0.269819 -3.193922 -0.195839
+-0.237982 -3.193922 0.122207
+-0.375669 -2.030679 0.516586
+-0.249733 -0.991640 0.617188
+-0.412346 -2.024291 0.038439
+-0.202517 -0.981189 0.251771
+</float_array>
+          <technique_common>
+            <accessor source="#UGTOcorvette-POSITION-array" count="454" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="UGTOcorvette-Normal0">
+          <float_array id="UGTOcorvette-Normal0-array" count="1362">
+0.888516 0.148991 -0.433943
+0.618793 0.237983 -0.748589
+0.000000 0.246193 -0.969207
+0.643147 0.002045 0.765709
+0.739128 -0.103671 0.665517
+0.750389 -0.410352 0.518143
+0.000000 -0.634205 0.773156
+0.686056 -0.145787 -0.712760
+0.570177 -0.004639 0.821467
+0.000000 -0.016266 0.999847
+0.926725 0.090670 -0.364605
+0.930998 0.064608 -0.359172
+0.582965 -0.027833 0.812006
+0.587176 -0.031007 0.808832
+0.255745 -0.036836 0.966033
+0.000000 0.779656 -0.626179
+0.776482 0.511155 -0.368419
+0.383312 0.880276 -0.279550
+-0.569811 0.800531 0.185522
+-0.065432 0.465255 0.882717
+0.665456 0.529618 0.525956
+-0.035340 -0.092807 0.995025
+0.774987 0.009095 0.631886
+0.848231 0.303690 -0.433851
+-0.909085 0.040925 0.414533
+0.930174 0.190741 -0.313578
+-0.870479 0.007385 0.492080
+-0.000061 -0.146458 0.989196
+0.763695 -0.077029 0.640919
+0.252327 -0.935636 -0.246651
+-0.354198 -0.927183 0.121708
+0.039277 -0.832911 0.551988
+0.391919 -0.859890 0.327036
+-0.013581 -0.185461 0.982543
+-0.012177 -0.282113 0.959288
+0.520951 -0.485275 0.702200
+0.767846 -0.177923 0.615406
+-0.427259 -0.170415 0.887906
+0.935423 -0.027436 -0.352397
+0.757958 -0.285134 0.586657
+0.000000 0.127354 -0.991852
+0.710288 0.045503 -0.702384
+0.463790 -0.444136 -0.766533
+0.630970 -0.553972 0.543077
+0.868068 0.168645 -0.466872
+0.951567 0.097507 -0.291452
+0.923276 -0.309488 -0.227454
+0.850246 0.140385 -0.507279
+0.871487 0.075381 -0.484542
+0.550951 0.321940 -0.769921
+0.973754 -0.095096 -0.206763
+0.780114 -0.598682 -0.181524
+-0.021790 -0.217780 0.975738
+0.575121 0.020814 0.817774
+-0.261666 -0.166326 0.950682
+0.092532 0.174017 -0.980377
+0.042055 0.052461 -0.997711
+-0.057649 0.074648 -0.995514
+-0.415052 0.107913 -0.903348
+-0.764702 0.138096 -0.629383
+-0.781487 0.199011 -0.591296
+-0.585406 -0.552385 -0.593402
+-0.165197 -0.534074 -0.829096
+-0.790613 0.320322 -0.521805
+0.075777 0.414228 -0.907010
+-0.767785 0.268502 -0.581713
+-0.072146 0.365612 -0.927946
+-0.613514 0.558855 -0.557909
+-0.150395 0.578631 -0.801569
+0.704947 -0.275674 -0.653462
+-0.502548 -0.468703 0.726432
+0.713950 -0.512619 0.476913
+-0.002350 -0.470016 0.882626
+-0.158116 0.030702 -0.986938
+0.583117 -0.557756 -0.590625
+-0.782922 -0.536058 0.315653
+0.590777 -0.670461 0.448775
+0.028352 -0.614490 0.788385
+-0.714591 -0.147862 -0.683676
+-0.195441 -0.081545 -0.977294
+-0.487411 -0.121738 -0.864620
+0.939085 0.283303 -0.194494
+0.779900 0.016388 -0.625660
+-0.367351 0.047731 0.928831
+0.000000 0.117862 -0.993011
+0.028993 -0.177190 0.983734
+0.364452 0.121769 0.923185
+0.078555 -0.186529 0.979278
+-0.052034 0.167943 -0.984405
+-0.047487 0.111545 -0.992615
+0.657521 0.627430 -0.417096
+0.353496 -0.616840 0.703177
+0.292734 -0.531449 -0.794855
+0.109806 -0.166723 0.979858
+0.234352 0.085849 0.968322
+0.109836 -0.183325 0.976867
+-0.080203 0.170476 -0.982086
+-0.073550 0.114109 -0.990722
+0.470412 0.861568 -0.190710
+0.314127 -0.669973 0.672597
+0.231910 -0.578936 -0.781671
+0.487014 -0.219337 0.845363
+0.483718 0.237617 0.842311
+0.252388 -0.858058 -0.447218
+0.253639 0.888455 -0.382458
+0.241920 -0.857540 -0.453902
+-0.032868 0.961455 -0.272927
+0.657125 0.252754 0.710105
+0.715751 -0.198859 0.669424
+0.955229 0.228675 0.187658
+0.965941 -0.187902 0.177862
+0.511887 -0.364086 -0.778069
+0.460341 0.438307 -0.771966
+0.383618 0.632496 -0.672842
+0.301340 -0.194159 -0.933531
+0.804163 -0.360118 0.472854
+0.924100 -0.304453 -0.230903
+0.781610 -0.007263 0.623676
+0.866634 0.485763 -0.113681
+0.605274 -0.538316 0.586352
+0.393048 -0.628040 -0.671590
+0.470748 0.343303 0.812708
+-0.258156 0.940794 -0.219581
+0.670522 0.208991 -0.711814
+0.493851 -0.232063 -0.837977
+0.537767 0.082736 -0.838984
+0.845790 0.158757 -0.509323
+0.402936 -0.019837 0.915006
+0.388134 -0.152348 0.908902
+0.495956 -0.490951 0.716178
+0.357860 -0.016694 0.933592
+0.822138 0.124882 -0.555376
+0.657338 0.128025 -0.742637
+0.316111 -0.035676 0.948027
+0.343394 0.758171 -0.554247
+0.389721 -0.330027 0.859737
+0.244301 0.709647 -0.660817
+0.450942 0.167486 -0.876675
+0.957091 0.068209 -0.281533
+0.917997 -0.014374 -0.396252
+0.298685 -0.244606 0.922452
+0.405774 0.227119 0.885281
+-0.021332 -0.968047 -0.249763
+0.372906 0.843165 -0.387249
+0.077425 -0.037721 0.996277
+-0.129185 0.712699 0.689413
+0.244301 0.709647 -0.660817
+0.172674 0.497909 -0.849849
+0.512955 0.435286 0.739830
+0.000000 -0.556688 -0.830714
+0.243812 -0.524674 -0.815607
+0.913022 0.031648 -0.406659
+0.562395 -0.133030 0.816065
+0.258492 -0.134312 0.956603
+0.708243 -0.651051 -0.272927
+-0.650838 -0.675161 0.347209
+0.878994 -0.270394 0.392712
+-0.368786 -0.310190 0.876186
+-0.318888 0.941160 0.111820
+-0.376293 0.471389 0.797601
+0.039552 0.955229 0.293100
+0.315928 0.941313 -0.118595
+0.854366 0.485427 0.185461
+0.176641 0.960204 0.216285
+0.709311 -0.211188 0.672506
+0.912198 -0.409497 -0.013092
+-0.007111 -0.223334 0.974700
+-0.645070 -0.487228 0.588610
+-0.303964 0.945891 -0.113315
+-0.171209 0.939482 0.296640
+0.178961 0.934874 -0.306467
+0.298044 0.947905 0.112278
+-0.383557 0.789575 -0.478957
+-0.389538 0.903836 -0.176885
+-0.339061 0.934935 0.104312
+0.078738 0.820917 0.565569
+-0.177404 0.923093 0.341166
+0.343852 0.934385 -0.092898
+0.160710 0.923643 -0.347911
+-0.108463 0.808802 -0.577929
+0.392987 0.798395 0.456130
+0.395245 0.903653 0.164708
+-0.936247 0.108097 -0.334208
+0.323771 0.108097 -0.939909
+0.270211 -0.577349 -0.770470
+-0.770470 -0.577319 -0.270211
+-0.233802 0.683493 0.691458
+-0.686026 0.683493 -0.249275
+0.233802 0.683493 -0.691458
+0.686026 0.683493 0.249275
+0.978423 0.062197 0.196936
+0.991363 0.104282 0.079379
+0.975951 0.059633 -0.209540
+0.900143 0.024689 -0.434858
+-0.034791 -0.044740 0.998383
+0.759239 -0.536363 0.368542
+0.850581 -0.360332 0.382885
+0.900601 -0.209449 0.380810
+0.950468 -0.056246 0.305612
+0.000000 1.000000 0.000000
+0.569872 0.769372 -0.288614
+0.871212 0.026093 0.490158
+0.834590 0.034791 0.549730
+0.900601 -0.001434 0.434584
+1.000000 0.000000 0.000000
+0.934812 -0.013031 0.354839
+-0.999390 0.001526 -0.034547
+0.750389 -0.527726 0.397992
+0.849330 -0.365032 0.381207
+0.911924 -0.213935 0.350108
+0.926542 -0.064150 0.370586
+-0.446638 0.894559 -0.015442
+0.644551 0.716910 0.265572
+0.220618 -0.622211 -0.751091
+0.476302 -0.678396 0.559313
+0.526017 -0.830897 -0.181280
+0.572375 -0.740104 0.352916
+0.560533 -0.729179 0.392468
+0.000000 0.193945 -0.980987
+0.447188 0.894406 0.000000
+1.000000 0.000000 0.000000
+-0.411908 -0.432691 -0.801904
+0.683737 0.724113 -0.089999
+0.449385 -0.146428 0.881222
+0.000000 0.165654 -0.986175
+0.000000 -0.171361 0.985198
+0.000000 0.165777 -0.986145
+0.000000 -0.029145 0.999573
+0.000000 -0.216102 -0.976348
+0.000000 -0.339793 0.940489
+0.000000 -0.802057 0.597217
+0.253914 0.102359 0.961760
+-0.367046 -0.579791 0.727378
+0.348674 0.667837 0.657552
+0.000000 -0.922513 0.385907
+0.000000 -0.906095 0.422987
+-0.560533 -0.729179 0.392468
+-0.572375 -0.740104 0.352916
+-0.526017 -0.830897 -0.181280
+-0.476302 -0.678396 0.559313
+-0.220618 -0.622211 -0.751091
+-0.644551 0.716910 0.265572
+0.446638 0.894559 -0.015442
+-0.926542 -0.064150 0.370586
+-0.911924 -0.213935 0.350108
+-0.849330 -0.365032 0.381207
+-0.750389 -0.527726 0.397992
+0.999390 0.001526 -0.034547
+-0.934812 -0.013031 0.354839
+-0.900601 -0.001434 0.434584
+-0.834590 0.034791 0.549730
+-0.871212 0.026093 0.490158
+-0.569872 0.769372 -0.288614
+0.000000 1.000000 0.000000
+0.447188 0.894406 0.000000
+-0.950468 -0.056246 0.305612
+-0.900601 -0.209449 0.380810
+-0.850581 -0.360332 0.382885
+-0.759239 -0.536363 0.368542
+0.034791 -0.044740 0.998383
+-0.900143 0.024689 -0.434858
+-0.975951 0.059633 -0.209540
+-0.991363 0.104282 0.079379
+-0.978423 0.062197 0.196936
+-0.686026 0.683493 0.249275
+-0.233802 0.683493 -0.691458
+0.686026 0.683493 -0.249275
+0.233802 0.683493 0.691458
+0.770470 -0.577319 -0.270211
+-0.270211 -0.577349 -0.770470
+-0.323771 0.108097 -0.939909
+0.936247 0.108097 -0.334208
+-0.395245 0.903653 0.164708
+-0.392987 0.798395 0.456130
+0.108463 0.808802 -0.577929
+-0.160710 0.923643 -0.347911
+-0.343852 0.934385 -0.092898
+0.177404 0.923093 0.341166
+-0.078738 0.820917 0.565569
+0.339061 0.934935 0.104312
+0.389538 0.903836 -0.176885
+0.383557 0.789575 -0.478957
+-0.298044 0.947905 0.112278
+-0.178961 0.934874 -0.306467
+0.171209 0.939482 0.296640
+0.303964 0.945891 -0.113315
+0.645070 -0.487228 0.588610
+0.007111 -0.223334 0.974700
+-0.912198 -0.409497 -0.013092
+-0.709311 -0.211188 0.672506
+-0.176641 0.960204 0.216285
+-0.854366 0.485427 0.185461
+-0.315928 0.941313 -0.118595
+-0.039552 0.955229 0.293100
+0.376293 0.471389 0.797601
+0.318888 0.941160 0.111820
+0.368786 -0.310190 0.876186
+-0.878994 -0.270394 0.392712
+0.650838 -0.675161 0.347209
+-0.708243 -0.651051 -0.272927
+-0.258492 -0.134312 0.956603
+-0.562395 -0.133030 0.816065
+-0.913022 0.031648 -0.406659
+-0.243812 -0.524674 -0.815607
+-0.512955 0.435286 0.739830
+-0.172674 0.497909 -0.849849
+-0.244301 0.709647 -0.660817
+0.129185 0.712699 0.689413
+0.328410 0.685965 -0.649251
+-0.077425 -0.037721 0.996277
+-0.372906 0.843165 -0.387249
+0.021332 -0.968047 -0.249763
+-0.405774 0.227119 0.885281
+-0.298685 -0.244606 0.922452
+-0.917997 -0.014374 -0.396252
+-0.957091 0.068209 -0.281533
+-0.450942 0.167486 -0.876675
+-0.244301 0.709647 -0.660817
+-0.389721 -0.330027 0.859737
+-0.343394 0.758171 -0.554247
+-0.316111 -0.035676 0.948027
+-0.657338 0.128025 -0.742637
+-0.822138 0.124882 -0.555376
+-0.357860 -0.016694 0.933592
+-0.495956 -0.490951 0.716178
+-0.388134 -0.152348 0.908902
+-0.402936 -0.019837 0.915006
+-0.845790 0.158757 -0.509323
+-0.537767 0.082736 -0.838984
+-0.493851 -0.232063 -0.837977
+-0.670522 0.208991 -0.711814
+0.258156 0.940794 -0.219581
+-0.470748 0.343303 0.812708
+-0.393048 -0.628040 -0.671590
+-0.605274 -0.538316 0.586352
+-0.866634 0.485763 -0.113681
+-0.781610 -0.007263 0.623676
+-0.924100 -0.304453 -0.230903
+-0.804163 -0.360118 0.472854
+-0.301340 -0.194159 -0.933531
+-0.383618 0.632496 -0.672842
+-0.460341 0.438307 -0.771966
+-0.511887 -0.364086 -0.778069
+-0.965941 -0.187902 0.177862
+-0.955229 0.228675 0.187658
+-0.715751 -0.198859 0.669424
+-0.657125 0.252754 0.710105
+0.032868 0.961455 -0.272927
+-0.241920 -0.857540 -0.453902
+-0.253639 0.888455 -0.382458
+-0.252388 -0.858058 -0.447218
+-0.483718 0.237617 0.842311
+-0.487014 -0.219337 0.845363
+-0.231910 -0.578936 -0.781671
+-0.314127 -0.669973 0.672597
+-0.470412 0.861568 -0.190710
+0.073550 0.114109 -0.990722
+0.080203 0.170476 -0.982086
+-0.109836 -0.183325 0.976867
+-0.234352 0.085849 0.968322
+-0.109806 -0.166723 0.979858
+-0.292734 -0.531449 -0.794855
+-0.353496 -0.616840 0.703177
+-0.657521 0.627430 -0.417096
+0.047487 0.111545 -0.992615
+0.052034 0.167943 -0.984405
+-0.078555 -0.186529 0.979278
+-0.364452 0.121769 0.923185
+-0.028993 -0.177190 0.983734
+0.449202 0.152654 -0.880245
+0.000000 -0.185461 0.982635
+0.367351 0.047731 0.928831
+-0.779900 0.016388 -0.625660
+-0.939085 0.283303 -0.194494
+0.487411 -0.121738 -0.864620
+0.195441 -0.081545 -0.977294
+0.714591 -0.147862 -0.683676
+-0.028352 -0.614490 0.788385
+-0.590777 -0.670461 0.448775
+0.782922 -0.536058 0.315653
+-0.583117 -0.557756 -0.590625
+0.158116 0.030702 -0.986938
+0.002350 -0.470016 0.882626
+-0.713950 -0.512619 0.476913
+0.502548 -0.468703 0.726432
+-0.704947 -0.275674 -0.653462
+0.150395 0.578631 -0.801569
+0.613514 0.558855 -0.557909
+0.072146 0.365612 -0.927946
+0.767785 0.268502 -0.581713
+-0.075777 0.414228 -0.907010
+0.790613 0.320322 -0.521805
+0.165197 -0.534074 -0.829096
+0.585406 -0.552385 -0.593402
+0.781487 0.199011 -0.591296
+0.764702 0.138096 -0.629383
+0.415052 0.107913 -0.903348
+0.057649 0.074648 -0.995514
+-0.042055 0.052461 -0.997711
+-0.092532 0.174017 -0.980377
+0.261666 -0.166326 0.950682
+-0.575121 0.020814 0.817774
+0.021790 -0.217780 0.975738
+0.000000 -0.965972 -0.258583
+-0.780114 -0.598682 -0.181524
+-0.973754 -0.095096 -0.206763
+-0.550951 0.321940 -0.769921
+0.328410 0.685965 -0.649251
+-0.871487 0.075381 -0.484542
+-0.850246 0.140385 -0.507279
+-0.923276 -0.309488 -0.227454
+-0.951567 0.097507 -0.291452
+-0.868068 0.168645 -0.466872
+-0.630970 -0.553972 0.543077
+-0.463790 -0.444136 -0.766533
+0.000000 -0.624989 -0.780602
+-0.710288 0.045503 -0.702384
+-0.757958 -0.285134 0.586657
+-0.935423 -0.027436 -0.352397
+0.427259 -0.170415 0.887906
+-0.767846 -0.177923 0.615406
+-0.520951 -0.485275 0.702200
+0.012177 -0.282113 0.959288
+0.013581 -0.185461 0.982543
+-0.391919 -0.859890 0.327036
+-0.039277 -0.832911 0.551988
+0.354198 -0.927183 0.121708
+-0.252327 -0.935636 -0.246651
+-0.763695 -0.077029 0.640919
+0.000061 -0.146458 0.989196
+0.870479 0.007385 0.492080
+-0.930174 0.190741 -0.313578
+0.909085 0.040925 0.414533
+-0.848231 0.303690 -0.433851
+-0.774987 0.009095 0.631886
+0.035340 -0.092807 0.995025
+-0.665456 0.529618 0.525956
+0.065432 0.465255 0.882717
+0.569811 0.800531 0.185522
+-0.383312 0.880276 -0.279550
+-0.776482 0.511155 -0.368419
+-0.587176 -0.031007 0.808832
+0.000000 -0.037812 0.999268
+-0.582965 -0.027833 0.812006
+-0.930998 0.064608 -0.359172
+-0.926725 0.090670 -0.364605
+0.000000 0.174261 -0.984680
+-0.570177 -0.004639 0.821467
+-0.686056 -0.145787 -0.712760
+-0.750389 -0.410352 0.518143
+-0.739128 -0.103671 0.665517
+-0.643147 0.002045 0.765709
+-0.618793 0.237983 -0.748589
+-0.888516 0.148991 -0.433943
+</float_array>
+          <technique_common>
+            <accessor source="#UGTOcorvette-Normal0-array" count="454" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="UGTOcorvette-UV0">
+          <float_array id="UGTOcorvette-UV0-array" count="3728">
+0.292793 0.136292
+0.292792 0.107649
+0.232132 0.136808
+0.250570 0.156588
+0.490226 0.239828
+0.421295 0.251471
+0.470787 -0.018830
+0.504799 -0.020755
+0.824797 1.062849
+0.770346 1.069965
+0.790564 1.323889
+0.823637 1.319662
+0.028607 0.115298
+0.422078 0.115298
+0.422078 0.884702
+0.028607 0.884702
+-0.050441 0.115298
+1.050442 0.115298
+1.050442 0.884702
+-0.050441 0.884702
+0.843763 0.795454
+0.718953 0.817460
+0.770346 1.069965
+0.824797 1.062849
+0.502907 0.499417
+0.375210 0.522679
+0.421295 0.251471
+0.490226 0.239828
+0.500739 0.731220
+0.361379 0.757111
+0.375210 0.522679
+0.502907 0.499417
+0.835977 0.562758
+0.704986 0.588059
+0.718953 0.817460
+0.843763 0.795454
+-0.050441 0.115298
+1.050442 0.115298
+1.050442 0.884702
+-0.050441 0.884702
+0.181630 0.441587
+0.175584 0.457652
+0.158735 0.465751
+0.140057 0.461572
+0.729794 0.237436
+0.831729 0.236350
+0.797754 0.753621
+0.729797 0.754017
+0.633047 0.398672
+0.885703 0.398672
+0.885703 0.651328
+0.633047 0.651328
+0.633047 0.398672
+0.885703 0.398672
+0.885703 0.651328
+0.633047 0.651328
+0.841022 0.684732
+0.738777 0.698784
+0.738777 0.252473
+0.871574 0.237766
+0.633047 0.398672
+0.885703 0.398672
+0.885703 0.651328
+0.633047 0.651328
+0.633047 0.398672
+0.885703 0.398672
+0.885703 0.651328
+0.633047 0.651328
+0.709717 0.122494
+0.704987 0.369473
+0.839551 0.343931
+0.835883 0.099607
+0.704987 0.369473
+0.704986 0.588059
+0.835977 0.562758
+0.839551 0.343931
+0.500739 0.731220
+0.504800 0.951807
+0.377051 0.979245
+0.361379 0.757111
+-0.050441 0.884702
+-0.050441 0.115298
+1.050442 0.115298
+1.050442 0.884702
+-0.050441 0.884702
+-0.050441 0.115298
+1.050442 0.115298
+1.050442 0.884702
+0.372581 0.381674
+0.325637 0.184412
+0.250700 0.184412
+0.272432 0.381674
+0.325637 0.184412
+0.276878 -0.038033
+0.220059 -0.038033
+0.250700 0.184412
+0.599902 0.538543
+0.822347 0.582821
+0.822347 0.520114
+0.599902 0.483749
+0.215431 0.582821
+0.412693 0.629793
+0.412693 0.541044
+0.215431 0.520114
+0.181630 0.441587
+0.140057 0.461572
+0.140772 0.454497
+0.171864 0.439551
+0.412693 0.629793
+0.622173 0.685926
+0.622173 0.556004
+0.412693 0.541044
+0.381344 0.591154
+0.372581 0.381674
+0.272432 0.381674
+0.271957 0.591154
+0.622173 0.685926
+0.860694 0.749514
+0.860694 0.720140
+0.622173 0.556004
+0.370663 0.222759
+0.381344 -0.015762
+0.271957 -0.015762
+0.305423 0.222759
+0.253778 0.142599
+0.490840 0.136808
+0.490840 0.112786
+0.253778 0.113225
+0.292792 0.459821
+0.370663 0.222759
+0.305423 0.222759
+0.265178 0.459821
+0.232132 0.136808
+0.292792 0.107649
+0.265178 0.103064
+0.244953 0.112786
+0.000000 0.000000
+1.000000 0.000000
+1.000000 1.000000
+0.000000 1.000000
+0.272432 0.381674
+0.250700 0.184412
+0.150413 0.184412
+0.166706 0.381675
+0.272432 0.381674
+0.166706 0.381675
+0.166231 0.591154
+0.271957 0.591154
+0.271957 0.591154
+0.166231 0.591154
+0.223420 0.829675
+0.305423 0.829675
+0.305423 0.222759
+0.223420 0.222759
+0.244953 0.459822
+0.265178 0.459821
+0.633047 0.398672
+0.885703 0.398672
+0.885703 0.651328
+0.633047 0.651328
+0.823620 0.141804
+0.797753 0.331178
+0.714799 0.343234
+0.714799 0.158691
+0.835883 0.099607
+0.825352 -0.085155
+0.732093 -0.068110
+0.709717 0.122494
+-0.050441 0.884702
+-0.050441 0.115298
+1.050442 0.115298
+1.050442 0.884702
+0.433013 0.494939
+0.599902 0.538543
+0.599902 0.483749
+0.433013 0.467891
+0.276878 0.568883
+0.241074 0.401994
+0.204999 0.401994
+0.220059 0.568883
+0.220059 0.568883
+0.204999 0.401994
+0.105985 0.401994
+0.121916 0.568883
+0.797753 0.331178
+0.777710 0.396451
+0.729716 0.399898
+0.714799 0.343234
+0.777710 0.396451
+0.767859 0.446746
+0.749553 0.446434
+0.729716 0.399898
+0.825352 -0.085155
+0.809299 -0.138319
+0.754015 -0.131275
+0.732093 -0.068110
+0.809299 -0.138319
+0.786623 -0.180052
+0.766164 -0.178359
+0.754015 -0.131275
+-0.050441 0.884702
+-0.050441 0.115298
+1.050442 0.115298
+1.050442 0.884702
+0.113326 0.884702
+0.113326 0.115298
+0.349566 0.115298
+0.349566 0.884702
+0.351536 0.461572
+0.385756 0.478948
+0.385756 0.462440
+0.351536 0.454497
+0.385756 0.478948
+0.433013 0.494939
+0.433013 0.467891
+0.385756 0.462440
+0.241074 0.401994
+0.213351 0.354737
+0.189779 0.354737
+0.204999 0.401994
+0.213351 0.354737
+0.181630 0.320517
+0.171864 0.320517
+0.189779 0.354737
+0.204999 0.401994
+0.189779 0.354737
+0.128584 0.354738
+0.105985 0.401994
+0.189779 0.354737
+0.171864 0.320517
+0.140772 0.320517
+0.128584 0.354738
+0.026070 0.762143
+0.026070 0.644080
+0.397471 0.683486
+0.397471 0.850581
+0.749943 0.678777
+0.749943 0.575612
+1.168757 0.644080
+1.168757 0.762143
+0.433759 0.119711
+0.555853 -0.006646
+0.552502 0.343560
+0.447509 0.338503
+0.447509 0.338503
+0.552502 0.343560
+0.555854 0.587703
+0.458628 0.583020
+0.699162 0.710114
+0.618925 0.710069
+0.623981 0.520280
+0.723041 0.520248
+0.665288 0.151609
+0.901117 0.151609
+0.901117 0.399758
+0.665288 0.399758
+-0.039170 0.740794
+-0.039170 0.522878
+1.039170 0.522878
+1.039170 0.740794
+0.458628 0.583020
+0.555854 0.587703
+0.543599 0.982761
+0.453872 0.768342
+0.935714 0.266785
+0.787571 -0.057225
+0.804896 0.541764
+0.961964 0.541764
+0.453872 0.768342
+0.543599 0.982761
+0.515056 0.993353
+0.425396 0.779124
+0.398502 -0.021480
+0.570940 -0.172812
+0.578343 0.438001
+0.418735 0.440253
+0.570940 -0.172812
+0.690678 -0.220237
+0.689220 0.436340
+0.578343 0.438001
+0.547755 0.141086
+0.979589 0.141086
+0.979589 0.858914
+0.547755 0.858914
+0.578343 0.438001
+0.689220 0.436340
+0.689441 0.755940
+0.586272 0.758764
+0.618925 0.710069
+0.526732 0.709101
+0.528485 0.519136
+0.623981 0.520280
+0.541380 0.709101
+0.477256 0.708414
+0.476799 0.518364
+0.543133 0.519136
+0.665288 0.151609
+0.901117 0.151609
+0.901117 0.399758
+0.665288 0.399758
+0.665288 0.151609
+0.901117 0.151609
+0.901117 0.399758
+0.665288 0.399758
+0.776569 0.721696
+0.681073 0.720552
+0.688287 0.224983
+0.795226 0.332107
+0.528485 0.519136
+0.462151 0.518364
+0.460962 -0.004902
+0.535699 0.023567
+0.572865 0.143796
+0.993541 0.143796
+0.993541 0.856204
+0.572865 0.856204
+0.586272 0.758764
+0.689441 0.755940
+0.690678 1.407055
+0.588737 1.270865
+0.802219 0.942775
+0.632552 0.957913
+0.639655 1.541764
+0.819544 1.541764
+0.632552 0.957913
+0.514648 0.798986
+0.514648 1.541764
+0.639655 1.541764
+0.798372 0.299037
+0.797704 0.590506
+0.759500 0.592381
+0.752762 0.301040
+0.797704 0.590506
+0.794944 0.882790
+0.756738 0.884615
+0.759500 0.592381
+0.183068 0.426315
+0.814392 0.401863
+0.700661 0.694247
+0.291034 0.750881
+0.814392 0.401863
+0.865261 0.399211
+0.725562 0.705096
+0.700661 0.694247
+0.129741 0.426259
+0.183068 0.426315
+0.291034 0.750881
+0.265437 0.765693
+0.779129 0.069710
+0.782673 1.351040
+0.170038 0.746830
+0.168625 0.236090
+0.222842 0.607737
+0.119854 0.607737
+0.119854 0.587732
+0.222842 0.587732
+0.265437 0.765693
+0.291034 0.750881
+0.330349 0.862498
+0.307947 0.872062
+0.700661 0.694247
+0.725562 0.705096
+0.714698 0.805995
+0.693560 0.803214
+0.291034 0.750881
+0.700661 0.694247
+0.693560 0.803214
+0.330349 0.862498
+0.174327 0.191824
+0.174327 0.088835
+0.170043 0.087983
+0.170043 0.191824
+0.215431 0.608196
+0.215431 0.488430
+-0.007014 0.457359
+-0.007014 0.560476
+0.568461 0.729062
+0.568461 0.617973
+0.640685 0.609194
+0.674841 0.751960
+0.568461 0.617973
+0.568461 0.403256
+0.615957 0.365629
+0.640685 0.609194
+0.674841 0.751960
+0.640685 0.609194
+0.731650 0.524211
+0.841326 0.586601
+0.640685 0.609194
+0.615957 0.365629
+0.631861 0.346342
+0.731650 0.524211
+0.651436 0.580147
+0.740287 0.550716
+0.730066 0.410142
+0.636525 0.352910
+0.740287 0.550716
+0.870052 0.632992
+0.876361 0.562061
+0.730066 0.410142
+0.731650 0.524211
+0.631861 0.346342
+0.671438 0.284803
+0.759939 0.419287
+0.564207 0.507684
+0.434755 0.515389
+0.478376 0.081983
+0.628833 0.073679
+0.434755 0.515389
+0.333488 0.520222
+0.377182 0.083227
+0.478376 0.081983
+0.500272 0.825664
+0.403769 0.827396
+0.434755 0.515389
+0.564207 0.507684
+0.403769 0.827396
+0.346111 0.832513
+0.333488 0.520222
+0.434755 0.515389
+0.403769 0.827396
+0.500272 0.825664
+0.473871 0.997473
+0.222366 0.439308
+0.163878 0.426023
+0.234955 0.428918
+0.234815 0.443589
+0.841326 0.586601
+0.731650 0.524211
+0.828788 0.471179
+0.731650 0.524211
+0.759939 0.419287
+0.828788 0.471179
+0.615548 0.296015
+0.718008 0.286534
+0.677155 1.073574
+0.579063 1.080741
+0.000000 0.100392
+1.000000 0.100392
+1.000000 0.899608
+0.000000 0.899608
+-0.324398 0.575904
+-0.336943 0.476045
+0.220136 0.509153
+0.226699 0.575644
+-0.336943 0.476045
+-0.339454 0.389663
+0.223991 0.431548
+0.220136 0.509153
+0.226699 0.575644
+0.220136 0.509153
+0.852827 0.504938
+0.655136 0.566926
+0.220136 0.509153
+0.223991 0.431548
+0.997576 0.438628
+0.852827 0.504938
+0.446236 0.134836
+1.012748 0.134836
+1.012748 0.865164
+0.446236 0.865164
+0.738504 -0.518510
+0.634259 -0.512344
+0.638421 -1.321303
+0.742940 -1.326229
+0.446236 0.134836
+1.012748 0.134836
+1.012748 0.865164
+0.446236 0.865164
+0.742940 -1.326229
+0.638421 -1.321303
+0.631187 -2.132414
+0.736289 -2.138238
+0.655136 0.566926
+0.852827 0.504938
+1.446917 0.497025
+1.449394 0.575903
+0.852827 0.504938
+0.997576 0.438628
+1.446112 0.437927
+1.446917 0.497025
+0.000000 0.100392
+1.000000 0.100392
+1.000000 0.899608
+0.000000 0.899608
+0.656306 1.532959
+0.573287 1.535718
+0.579063 1.080741
+0.677155 1.073574
+0.683768 0.793037
+0.524299 0.710277
+0.517557 0.087376
+0.802877 0.087376
+0.632244 1.977357
+0.567322 1.892643
+0.573287 1.535718
+0.656306 1.532959
+0.487702 0.106396
+0.468081 0.099828
+0.469271 0.128451
+0.490082 0.125511
+0.468081 0.099828
+0.448459 0.093260
+0.448459 0.131391
+0.469271 0.128451
+0.446236 0.134836
+1.012748 0.134836
+1.012748 0.865164
+0.446236 0.865164
+0.718008 0.286534
+0.615548 0.296015
+0.634259 -0.512344
+0.738504 -0.518510
+0.825098 0.729253
+0.827096 0.844704
+0.699354 0.812774
+0.827096 0.844704
+0.828667 0.930738
+0.699354 0.812774
+0.323247 0.197415
+0.497167 0.349778
+0.323630 0.449888
+0.497167 0.349778
+0.687216 0.449884
+0.323630 0.449888
+0.499671 0.079177
+0.323247 0.197415
+0.322550 0.000000
+0.410409 0.224453
+0.323247 0.197415
+0.499671 0.079177
+0.497167 0.349778
+0.323247 0.197415
+0.410409 0.224453
+0.099800 1.023849
+0.099800 0.061125
+0.765923 -0.300673
+0.765923 1.050146
+0.183068 0.426315
+0.129741 0.426259
+0.000000 0.006403
+0.056973 0.000000
+0.865261 0.399211
+0.814392 0.401863
+0.944434 0.000000
+1.000000 0.001171
+0.814392 0.401863
+0.183068 0.426315
+0.056973 0.000000
+0.944434 0.000000
+0.467565 0.130161
+0.981653 0.130161
+0.981653 0.869839
+0.467565 0.869839
+0.469271 0.128451
+0.448459 0.131391
+0.448459 0.163854
+0.468081 0.157097
+0.490082 0.125511
+0.469271 0.128451
+0.468081 0.157097
+0.487703 0.150339
+0.736289 -2.138238
+0.631187 -2.132414
+0.616804 -2.929821
+0.721053 -2.936005
+0.410921 0.973080
+0.403769 0.827396
+0.473871 0.997473
+0.410921 0.973080
+0.418073 1.118764
+0.382092 0.975639
+0.403769 0.827396
+0.410921 0.973080
+0.382092 0.975639
+0.346111 0.832513
+-0.688828 0.475704
+-0.696110 0.408676
+-0.339454 0.389663
+-0.336943 0.476045
+-0.688828 0.475704
+-0.339454 0.389663
+-0.688828 0.475704
+-0.783179 0.476985
+-0.696110 0.408676
+-0.688828 0.475704
+-0.324398 0.575904
+-0.686392 0.539594
+-0.783179 0.476985
+-0.688828 0.475704
+-0.686392 0.539594
+-0.336943 0.476045
+-0.324398 0.575904
+-0.688828 0.475704
+0.592373 0.558713
+0.592373 0.583133
+0.489146 0.583133
+0.489146 0.558713
+0.542215 0.234425
+0.558891 0.353279
+0.359980 0.353279
+0.331484 0.234425
+0.558891 0.353279
+0.575567 0.472133
+0.388478 0.472133
+0.359980 0.353279
+0.575567 0.472133
+0.592244 0.590988
+0.416975 0.590988
+0.388478 0.472133
+0.592244 0.590988
+0.608920 0.709842
+0.445472 0.709842
+0.416975 0.590988
+0.589769 0.509160
+0.589769 0.442868
+0.340160 0.442868
+0.415222 0.509160
+0.589769 0.442868
+0.589769 0.354162
+0.265096 0.354162
+0.340160 0.442868
+0.489146 0.583133
+0.384651 0.583133
+0.384651 0.483651
+0.489146 0.558713
+0.589769 0.550704
+0.589769 0.509160
+0.415222 0.509160
+0.490286 0.550704
+0.550245 0.583133
+0.637856 0.583133
+0.637856 0.333524
+0.550245 0.258461
+0.637856 0.583133
+0.678838 0.583133
+0.678838 0.408587
+0.637856 0.333524
+0.589769 0.348981
+0.589769 0.414335
+0.490286 0.414335
+0.415222 0.348981
+0.589769 0.414335
+0.589769 0.511157
+0.565349 0.511157
+0.490286 0.414335
+0.654322 0.005494
+0.949262 0.239254
+0.801417 0.339554
+0.596379 0.195015
+0.949262 0.239254
+1.041363 0.480217
+0.857860 0.487835
+0.801417 0.339554
+0.954883 0.720315
+0.742571 0.967837
+0.657567 0.790774
+0.787598 0.638798
+1.041363 0.480217
+0.954883 0.720315
+0.787598 0.638798
+0.857860 0.487835
+-0.007604 0.508659
+0.053723 0.269990
+0.221914 0.351993
+0.175693 0.502847
+0.053723 0.269990
+0.325924 0.019361
+0.385438 0.199081
+0.221914 0.351993
+0.324346 0.984478
+0.068395 0.751200
+0.215308 0.651580
+0.387309 0.795790
+0.068395 0.751200
+-0.007604 0.508659
+0.175693 0.502847
+0.215308 0.651580
+0.325924 0.019361
+0.654322 0.005494
+0.596379 0.195015
+0.385438 0.199081
+0.742571 0.967837
+0.324346 0.984478
+0.387309 0.795790
+0.657567 0.790774
+0.215308 0.651580
+0.175693 0.502847
+0.857860 0.487835
+0.787598 0.638798
+0.387309 0.795790
+0.215308 0.651580
+0.787598 0.638798
+0.657567 0.790774
+0.221914 0.351993
+0.385438 0.199081
+0.596379 0.195015
+0.801417 0.339554
+0.175693 0.502847
+0.221914 0.351993
+0.801417 0.339554
+0.857860 0.487835
+0.589769 0.290186
+0.265096 0.290186
+0.265096 0.243007
+0.589769 0.243007
+0.265096 0.354162
+0.589769 0.354162
+0.589769 0.306984
+0.265096 0.306984
+0.331484 0.234425
+0.542215 0.234425
+0.575567 0.472133
+0.388478 0.472133
+0.394477 0.258461
+0.394477 0.583133
+0.527567 0.583133
+0.527567 0.258461
+0.331484 0.234425
+0.542215 0.234425
+0.575567 0.472133
+0.388478 0.472133
+0.331484 0.234425
+0.542215 0.234425
+0.575567 0.472133
+0.388478 0.472133
+0.331484 0.234425
+0.542215 0.234425
+0.575567 0.472133
+0.388478 0.472133
+0.331484 0.234425
+0.542215 0.234425
+0.575567 0.472133
+0.388478 0.472133
+0.331484 0.234425
+0.542215 0.234425
+0.575567 0.472133
+0.388478 0.472133
+0.411009 0.323846
+0.307658 0.341149
+0.324273 -0.468410
+0.427703 -0.485815
+0.427703 -0.485815
+0.324273 -0.468410
+0.330632 -1.286262
+0.434047 -1.299936
+0.434047 -1.299936
+0.330632 -1.286262
+0.322562 -2.099478
+0.425058 -2.111125
+0.613539 0.753658
+0.588557 0.733399
+0.828441 0.578522
+0.827697 0.614759
+0.417087 2.593376
+0.329051 2.607519
+0.243411 1.932599
+0.346156 1.914141
+0.346156 1.914141
+0.243411 1.932599
+0.248260 1.133724
+0.350988 1.115906
+0.350988 1.115906
+0.248260 1.133724
+0.307658 0.341149
+0.411009 0.323846
+0.458865 0.129921
+0.448459 0.131391
+0.448459 0.163854
+0.458270 0.160476
+0.425058 -2.111125
+0.322562 -2.099478
+0.315292 -2.897023
+0.415270 -2.907919
+0.309280 0.042498
+0.309280 0.167282
+0.464697 0.130007
+0.469271 0.019899
+0.469271 0.019899
+0.464697 0.130007
+0.620114 0.092733
+0.629262 -0.002699
+0.615548 0.296015
+0.512926 0.307599
+0.530164 -0.501391
+0.634259 -0.512344
+0.512926 0.307599
+0.411009 0.323846
+0.427703 -0.485815
+0.530164 -0.501391
+0.634259 -0.512344
+0.530164 -0.501391
+0.535825 -1.312737
+0.638421 -1.321303
+0.148866 0.352592
+0.443681 0.352592
+0.443681 0.647408
+0.148866 0.647408
+0.638421 -1.321303
+0.535825 -1.312737
+0.527879 -2.122908
+0.631187 -2.132414
+0.148866 0.352592
+0.443681 0.352592
+0.443681 0.647408
+0.148866 0.647408
+0.699354 0.812774
+0.637477 0.770400
+0.827122 0.640233
+0.825098 0.729253
+0.650862 0.490645
+0.883195 0.490645
+0.883195 0.722978
+0.650862 0.722978
+0.567322 1.892643
+0.480610 1.911952
+0.444194 1.560253
+0.573287 1.535718
+0.001024 0.854498
+0.001023 0.145502
+0.998977 0.145502
+0.998977 0.854498
+0.573287 1.535718
+0.444194 1.560253
+0.451261 1.099796
+0.579063 1.080741
+0.001024 0.854498
+0.001023 0.145502
+0.998977 0.145502
+0.998977 0.854498
+0.579063 1.080741
+0.451261 1.099796
+0.512926 0.307599
+0.615548 0.296015
+0.451261 1.099796
+0.350988 1.115906
+0.411009 0.323846
+0.512926 0.307599
+0.148866 0.352592
+0.443681 0.352592
+0.443681 0.647408
+0.148866 0.647408
+0.474474 0.127716
+0.469271 0.128451
+0.468081 0.157097
+0.472986 0.155407
+0.631187 -2.132414
+0.527879 -2.122908
+0.515643 -2.919485
+0.616804 -2.929821
+0.148866 0.352592
+0.443681 0.352592
+0.443681 0.647408
+0.148866 0.647408
+0.148866 0.352592
+0.443681 0.352592
+0.443681 0.647408
+0.148866 0.647408
+0.309280 0.229673
+0.309280 0.292065
+0.460123 0.240115
+0.462410 0.185061
+0.148866 0.352592
+0.443681 0.352592
+0.443681 0.647408
+0.148866 0.647408
+0.462410 0.185061
+0.460123 0.240115
+0.610966 0.188165
+0.615540 0.140448
+0.885703 0.398672
+0.885703 0.525000
+0.633046 0.525000
+0.633047 0.398672
+0.885703 0.525000
+0.885703 0.651328
+0.633047 0.651328
+0.633046 0.525000
+0.541725 0.953643
+0.620539 0.883208
+0.828667 0.930738
+0.620539 0.883208
+0.699354 0.812774
+0.828667 0.930738
+0.473871 0.997473
+0.445972 1.058119
+0.410921 0.973080
+0.445972 1.058119
+0.418073 1.118764
+0.410921 0.973080
+0.465516 0.917492
+0.527036 0.825445
+0.551820 0.842377
+0.490100 0.931097
+0.527036 0.825445
+0.588557 0.733399
+0.613539 0.753658
+0.551820 0.842377
+0.515066 0.942380
+0.576271 0.856390
+0.620539 0.883208
+0.541725 0.953643
+0.576271 0.856390
+0.637477 0.770400
+0.699354 0.812774
+0.620539 0.883208
+0.883195 0.490645
+0.883195 0.606811
+0.650862 0.606811
+0.650862 0.490645
+0.883195 0.606811
+0.883195 0.722978
+0.650862 0.722978
+0.650862 0.606811
+0.322550 0.000000
+0.497428 0.006287
+0.499671 0.079177
+0.355335 -0.422441
+0.333487 -0.928109
+0.421799 -0.425313
+0.453662 0.130656
+0.453365 0.162165
+0.448459 0.163854
+0.448459 0.131391
+-0.098820 0.545756
+-0.098820 0.556294
+0.749943 0.726380
+0.749943 0.604479
+0.355335 -0.422441
+0.421799 -0.425313
+0.333487 -0.928109
+0.322550 0.000000
+0.499671 0.079177
+0.497428 0.006287
+0.883195 0.606811
+0.650862 0.606811
+0.650862 0.722978
+0.883195 0.722978
+0.883195 0.490645
+0.650862 0.490645
+0.650862 0.606811
+0.883195 0.606811
+0.576271 0.856390
+0.620539 0.883208
+0.699354 0.812774
+0.637477 0.770400
+0.515066 0.942380
+0.541725 0.953643
+0.620539 0.883208
+0.576271 0.856390
+0.527036 0.825445
+0.551820 0.842377
+0.613539 0.753658
+0.588557 0.733399
+0.465516 0.917492
+0.490100 0.931097
+0.551820 0.842377
+0.527036 0.825445
+0.445972 1.058119
+0.410921 0.973080
+0.418073 1.118764
+0.473871 0.997473
+0.410921 0.973080
+0.445972 1.058119
+0.620539 0.883208
+0.828667 0.930738
+0.699354 0.812774
+0.541725 0.953643
+0.828667 0.930738
+0.620539 0.883208
+0.885703 0.525000
+0.633046 0.525000
+0.633047 0.651328
+0.885703 0.651328
+0.885703 0.398672
+0.633047 0.398672
+0.633046 0.525000
+0.885703 0.525000
+0.462410 0.185061
+0.615540 0.140448
+0.610966 0.188165
+0.460123 0.240115
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.309280 0.229673
+0.462410 0.185061
+0.460123 0.240115
+0.309280 0.292065
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.631187 -2.132414
+0.616804 -2.929821
+0.515643 -2.919485
+0.527879 -2.122908
+0.474474 0.127716
+0.472986 0.155407
+0.468081 0.157097
+0.469271 0.128451
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.451261 1.099796
+0.512926 0.307599
+0.411009 0.323846
+0.350988 1.115906
+0.579063 1.080741
+0.615548 0.296015
+0.512926 0.307599
+0.451261 1.099796
+0.001024 0.854498
+0.998977 0.854498
+0.998977 0.145502
+0.001023 0.145502
+0.573287 1.535718
+0.579063 1.080741
+0.451261 1.099796
+0.444194 1.560253
+0.001024 0.854498
+0.998977 0.854498
+0.998977 0.145502
+0.001023 0.145502
+0.567322 1.892643
+0.573287 1.535718
+0.444194 1.560253
+0.480610 1.911952
+0.650862 0.490645
+0.650862 0.722978
+0.883195 0.722978
+0.883195 0.490645
+0.699354 0.812774
+0.825098 0.729253
+0.827122 0.640233
+0.637477 0.770400
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.638421 -1.321303
+0.631187 -2.132414
+0.527879 -2.122908
+0.535825 -1.312737
+0.148866 0.352592
+0.148866 0.647408
+0.443681 0.647408
+0.443681 0.352592
+0.634259 -0.512344
+0.638421 -1.321303
+0.535825 -1.312737
+0.530164 -0.501391
+0.512926 0.307599
+0.530164 -0.501391
+0.427703 -0.485815
+0.411009 0.323846
+0.615548 0.296015
+0.634259 -0.512344
+0.530164 -0.501391
+0.512926 0.307599
+0.469271 0.019899
+0.629262 -0.002699
+0.620114 0.092733
+0.464697 0.130007
+0.309280 0.042498
+0.469271 0.019899
+0.464697 0.130007
+0.309280 0.167282
+0.425058 -2.111125
+0.415270 -2.907919
+0.315292 -2.897023
+0.322562 -2.099478
+0.458865 0.129921
+0.458270 0.160476
+0.448459 0.163854
+0.448459 0.131391
+0.469271 0.128451
+0.468081 0.157097
+0.458270 0.160476
+0.458865 0.129921
+0.350988 1.115906
+0.411009 0.323846
+0.307658 0.341149
+0.248260 1.133724
+0.346156 1.914141
+0.350988 1.115906
+0.248260 1.133724
+0.243411 1.932599
+0.417087 2.593376
+0.346156 1.914141
+0.243411 1.932599
+0.329051 2.607519
+0.613539 0.753658
+0.827697 0.614759
+0.828441 0.578522
+0.588557 0.733399
+0.434047 -1.299936
+0.425058 -2.111125
+0.322562 -2.099478
+0.330632 -1.286262
+0.427703 -0.485815
+0.434047 -1.299936
+0.330632 -1.286262
+0.324273 -0.468410
+0.411009 0.323846
+0.427703 -0.485815
+0.324273 -0.468410
+0.307658 0.341149
+0.331484 0.234425
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.331484 0.234425
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.331484 0.234425
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.331484 0.234425
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.331484 0.234425
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.394477 0.258461
+0.527567 0.258461
+0.527567 0.583133
+0.394477 0.583133
+0.331484 0.234425
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.265096 0.354162
+0.265096 0.306984
+0.589769 0.306984
+0.589769 0.354162
+0.589769 0.290186
+0.589769 0.243007
+0.265096 0.243007
+0.265096 0.290186
+0.175693 0.502847
+0.857860 0.487835
+0.801417 0.339554
+0.221914 0.351993
+0.221914 0.351993
+0.801417 0.339554
+0.596379 0.195015
+0.385438 0.199081
+0.387309 0.795790
+0.657567 0.790774
+0.787598 0.638798
+0.215308 0.651580
+0.215308 0.651580
+0.787598 0.638798
+0.857860 0.487835
+0.175693 0.502847
+0.742571 0.967837
+0.657567 0.790774
+0.387309 0.795790
+0.324346 0.984478
+0.325924 0.019361
+0.385438 0.199081
+0.596379 0.195015
+0.654322 0.005494
+0.068395 0.751200
+0.215308 0.651580
+0.175693 0.502847
+-0.007604 0.508659
+0.324346 0.984478
+0.387309 0.795790
+0.215308 0.651580
+0.068395 0.751200
+0.053723 0.269990
+0.221914 0.351993
+0.385438 0.199081
+0.325924 0.019361
+-0.007604 0.508659
+0.175693 0.502847
+0.221914 0.351993
+0.053723 0.269990
+1.041363 0.480217
+0.857860 0.487835
+0.787598 0.638798
+0.954883 0.720315
+0.954883 0.720315
+0.787598 0.638798
+0.657567 0.790774
+0.742571 0.967837
+0.949262 0.239254
+0.801417 0.339554
+0.857860 0.487835
+1.041363 0.480217
+0.654322 0.005494
+0.596379 0.195015
+0.801417 0.339554
+0.949262 0.239254
+0.589769 0.414335
+0.490286 0.414335
+0.565349 0.511157
+0.589769 0.511157
+0.589769 0.348981
+0.415222 0.348981
+0.490286 0.414335
+0.589769 0.414335
+0.637856 0.583133
+0.637856 0.333524
+0.678838 0.408587
+0.678838 0.583133
+0.550245 0.583133
+0.550245 0.258461
+0.637856 0.333524
+0.637856 0.583133
+0.589769 0.550704
+0.490286 0.550704
+0.415222 0.509160
+0.589769 0.509160
+0.489146 0.583133
+0.489146 0.558713
+0.384651 0.483651
+0.384651 0.583133
+0.589769 0.442868
+0.340160 0.442868
+0.265096 0.354162
+0.589769 0.354162
+0.589769 0.509160
+0.415222 0.509160
+0.340160 0.442868
+0.589769 0.442868
+0.592244 0.590988
+0.416975 0.590988
+0.445472 0.709842
+0.608920 0.709842
+0.575567 0.472133
+0.388478 0.472133
+0.416975 0.590988
+0.592244 0.590988
+0.558891 0.353279
+0.359980 0.353279
+0.388478 0.472133
+0.575567 0.472133
+0.542215 0.234425
+0.331484 0.234425
+0.359980 0.353279
+0.558891 0.353279
+0.592373 0.558713
+0.489146 0.558713
+0.489146 0.583133
+0.592373 0.583133
+-0.336943 0.476045
+-0.688828 0.475704
+-0.324398 0.575904
+-0.783179 0.476985
+-0.686392 0.539594
+-0.688828 0.475704
+-0.688828 0.475704
+-0.686392 0.539594
+-0.324398 0.575904
+-0.688828 0.475704
+-0.696110 0.408676
+-0.783179 0.476985
+-0.336943 0.476045
+-0.339454 0.389663
+-0.688828 0.475704
+-0.688828 0.475704
+-0.339454 0.389663
+-0.696110 0.408676
+0.403769 0.827396
+0.346111 0.832513
+0.382092 0.975639
+0.410921 0.973080
+0.410921 0.973080
+0.382092 0.975639
+0.418073 1.118764
+0.410921 0.973080
+0.473871 0.997473
+0.403769 0.827396
+0.736289 -2.138238
+0.721053 -2.936005
+0.616804 -2.929821
+0.631187 -2.132414
+0.490082 0.125511
+0.487703 0.150339
+0.468081 0.157097
+0.469271 0.128451
+0.469271 0.128451
+0.468081 0.157097
+0.448459 0.163854
+0.448459 0.131391
+0.467565 0.130161
+0.467565 0.869839
+0.981653 0.869839
+0.981653 0.130161
+0.814392 0.401863
+0.944434 0.000000
+0.056973 0.000000
+0.183068 0.426315
+0.865261 0.399211
+1.000000 0.001171
+0.944434 0.000000
+0.814392 0.401863
+0.183068 0.426315
+0.056973 0.000000
+0.000000 0.006403
+0.129741 0.426259
+0.099800 1.023849
+0.765923 1.050146
+0.765923 -0.300673
+0.099800 0.061125
+0.497167 0.349778
+0.410409 0.224453
+0.323247 0.197415
+0.410409 0.224453
+0.499671 0.079177
+0.323247 0.197415
+0.499671 0.079177
+0.322550 0.000000
+0.323247 0.197415
+0.497167 0.349778
+0.323630 0.449888
+0.687216 0.449884
+0.323247 0.197415
+0.323630 0.449888
+0.497167 0.349778
+0.827096 0.844704
+0.699354 0.812774
+0.828667 0.930738
+0.825098 0.729253
+0.699354 0.812774
+0.827096 0.844704
+0.718008 0.286534
+0.738504 -0.518510
+0.634259 -0.512344
+0.615548 0.296015
+0.446236 0.134836
+0.446236 0.865164
+1.012748 0.865164
+1.012748 0.134836
+0.468081 0.099828
+0.469271 0.128451
+0.448459 0.131391
+0.448459 0.093260
+0.487702 0.106396
+0.490082 0.125511
+0.469271 0.128451
+0.468081 0.099828
+0.632244 1.977357
+0.656306 1.532959
+0.573287 1.535718
+0.567322 1.892643
+0.683768 0.793037
+0.802877 0.087376
+0.517557 0.087376
+0.524299 0.710277
+0.656306 1.532959
+0.677155 1.073574
+0.579063 1.080741
+0.573287 1.535718
+0.000000 0.100392
+0.000000 0.899608
+1.000000 0.899608
+1.000000 0.100392
+0.852827 0.504938
+1.446917 0.497025
+1.446112 0.437927
+0.997576 0.438628
+0.655136 0.566926
+1.449394 0.575903
+1.446917 0.497025
+0.852827 0.504938
+0.742940 -1.326229
+0.736289 -2.138238
+0.631187 -2.132414
+0.638421 -1.321303
+0.446236 0.134836
+0.446236 0.865164
+1.012748 0.865164
+1.012748 0.134836
+0.738504 -0.518510
+0.742940 -1.326229
+0.638421 -1.321303
+0.634259 -0.512344
+0.446236 0.134836
+0.446236 0.865164
+1.012748 0.865164
+1.012748 0.134836
+0.220136 0.509153
+0.852827 0.504938
+0.997576 0.438628
+0.223991 0.431548
+0.226699 0.575644
+0.655136 0.566926
+0.852827 0.504938
+0.220136 0.509153
+-0.336943 0.476045
+0.220136 0.509153
+0.223991 0.431548
+-0.339454 0.389663
+-0.324398 0.575904
+0.226699 0.575644
+0.220136 0.509153
+-0.336943 0.476045
+0.000000 0.100392
+0.000000 0.899608
+1.000000 0.899608
+1.000000 0.100392
+0.615548 0.296015
+0.579063 1.080741
+0.677155 1.073574
+0.718008 0.286534
+0.731650 0.524211
+0.828788 0.471179
+0.759939 0.419287
+0.841326 0.586601
+0.828788 0.471179
+0.731650 0.524211
+0.222366 0.439308
+0.234815 0.443589
+0.234955 0.428918
+0.163878 0.426023
+0.403769 0.827396
+0.473871 0.997473
+0.500272 0.825664
+0.403769 0.827396
+0.434755 0.515389
+0.333488 0.520222
+0.346111 0.832513
+0.500272 0.825664
+0.564207 0.507684
+0.434755 0.515389
+0.403769 0.827396
+0.434755 0.515389
+0.478376 0.081983
+0.377182 0.083227
+0.333488 0.520222
+0.564207 0.507684
+0.628833 0.073679
+0.478376 0.081983
+0.434755 0.515389
+0.731650 0.524211
+0.759939 0.419287
+0.671438 0.284803
+0.631861 0.346342
+0.740287 0.550716
+0.730066 0.410142
+0.876361 0.562061
+0.870052 0.632992
+0.651436 0.580147
+0.636525 0.352910
+0.730066 0.410142
+0.740287 0.550716
+0.640685 0.609194
+0.731650 0.524211
+0.631861 0.346342
+0.615957 0.365629
+0.674841 0.751960
+0.841326 0.586601
+0.731650 0.524211
+0.640685 0.609194
+0.568461 0.617973
+0.640685 0.609194
+0.615957 0.365629
+0.568461 0.403256
+0.568461 0.729062
+0.674841 0.751960
+0.640685 0.609194
+0.568461 0.617973
+0.215431 0.608196
+-0.007014 0.560476
+-0.007014 0.457359
+0.215431 0.488430
+0.174327 0.191824
+0.170043 0.191824
+0.170043 0.087983
+0.174327 0.088835
+0.291034 0.750881
+0.330349 0.862498
+0.693560 0.803214
+0.700661 0.694247
+0.700661 0.694247
+0.693560 0.803214
+0.714698 0.805995
+0.725562 0.705096
+0.265437 0.765693
+0.307947 0.872062
+0.330349 0.862498
+0.291034 0.750881
+0.222842 0.607737
+0.222842 0.587732
+0.119854 0.587732
+0.119854 0.607737
+0.779129 0.069710
+0.168625 0.236090
+0.170038 0.746830
+0.782673 1.351040
+0.129741 0.426259
+0.265437 0.765693
+0.291034 0.750881
+0.183068 0.426315
+0.814392 0.401863
+0.700661 0.694247
+0.725562 0.705096
+0.865261 0.399211
+0.183068 0.426315
+0.291034 0.750881
+0.700661 0.694247
+0.814392 0.401863
+0.797704 0.590506
+0.759500 0.592381
+0.756738 0.884615
+0.794944 0.882790
+0.798372 0.299037
+0.752762 0.301040
+0.759500 0.592381
+0.797704 0.590506
+0.632552 0.957913
+0.639655 1.541764
+0.514648 1.541764
+0.514648 0.798986
+0.802219 0.942775
+0.819544 1.541764
+0.639655 1.541764
+0.632552 0.957913
+0.586272 0.758764
+0.588737 1.270865
+0.690678 1.407055
+0.689441 0.755940
+0.572865 0.143796
+0.572865 0.856204
+0.993541 0.856204
+0.993541 0.143796
+0.528485 0.519136
+0.535699 0.023567
+0.460962 -0.004902
+0.462151 0.518364
+0.782672 0.727800
+0.801329 0.338211
+0.694390 0.231087
+0.687176 0.726656
+0.665288 0.151609
+0.665288 0.399758
+0.901117 0.399758
+0.901117 0.151609
+0.665288 0.151609
+0.665288 0.399758
+0.901117 0.399758
+0.901117 0.151609
+0.541380 0.709101
+0.543133 0.519136
+0.476799 0.518364
+0.477256 0.708414
+0.618925 0.710069
+0.623981 0.520280
+0.528485 0.519136
+0.526732 0.709101
+0.578343 0.438001
+0.586272 0.758764
+0.689441 0.755940
+0.689220 0.436340
+0.547755 0.141086
+0.547755 0.858914
+0.979589 0.858914
+0.979589 0.141086
+0.570940 -0.172812
+0.578343 0.438001
+0.689220 0.436340
+0.690678 -0.220237
+0.398502 -0.021480
+0.418735 0.440253
+0.578343 0.438001
+0.570940 -0.172812
+0.453872 0.768342
+0.425396 0.779124
+0.515056 0.993353
+0.543599 0.982761
+0.935714 0.266785
+0.961964 0.541764
+0.804896 0.541764
+0.787571 -0.057225
+0.458628 0.583020
+0.453872 0.768342
+0.543599 0.982761
+0.555854 0.587703
+-0.039170 0.740794
+1.039170 0.740794
+1.039170 0.522878
+-0.039170 0.522878
+0.665288 0.151609
+0.665288 0.399758
+0.901117 0.399758
+0.901117 0.151609
+0.699162 0.710114
+0.723041 0.520248
+0.623981 0.520280
+0.618925 0.710069
+0.447509 0.338503
+0.458628 0.583020
+0.555854 0.587703
+0.552502 0.343560
+0.433759 0.119711
+0.447509 0.338503
+0.552502 0.343560
+0.555853 -0.006646
+0.026070 0.674960
+1.180203 0.861828
+0.888245 0.932217
+0.026070 0.797209
+0.749943 0.604479
+1.168757 0.674960
+1.168757 0.797209
+0.749943 0.726380
+0.749943 0.678777
+1.168757 0.762143
+1.168757 0.644080
+0.749943 0.575612
+0.026070 0.762143
+0.397471 0.850581
+0.397471 0.683486
+0.026070 0.644080
+0.189779 0.354737
+0.128584 0.354738
+0.140772 0.320517
+0.171864 0.320517
+0.204999 0.401994
+0.105985 0.401994
+0.128584 0.354738
+0.189779 0.354737
+0.213351 0.354737
+0.189779 0.354737
+0.171864 0.320517
+0.181630 0.320517
+0.241074 0.401994
+0.204999 0.401994
+0.189779 0.354737
+0.213351 0.354737
+0.385756 0.478948
+0.385756 0.462440
+0.433013 0.467891
+0.433013 0.494939
+0.351536 0.461572
+0.351536 0.454497
+0.385756 0.462440
+0.385756 0.478948
+0.113326 0.884702
+0.349566 0.884702
+0.349566 0.115298
+0.113326 0.115298
+-0.050441 0.884702
+1.050442 0.884702
+1.050442 0.115298
+-0.050441 0.115298
+0.809299 -0.138319
+0.754015 -0.131275
+0.766164 -0.178359
+0.786623 -0.180052
+0.825352 -0.085155
+0.732093 -0.068110
+0.754015 -0.131275
+0.809299 -0.138319
+0.777710 0.396451
+0.729716 0.399898
+0.749553 0.446434
+0.767859 0.446746
+0.797753 0.331178
+0.714799 0.343234
+0.729716 0.399898
+0.777710 0.396451
+0.220059 0.568883
+0.121916 0.568883
+0.105985 0.401994
+0.204999 0.401994
+0.276878 0.568883
+0.220059 0.568883
+0.204999 0.401994
+0.241074 0.401994
+0.433013 0.494939
+0.433013 0.467891
+0.599902 0.483749
+0.599902 0.538543
+-0.050441 0.884702
+1.050442 0.884702
+1.050442 0.115298
+-0.050441 0.115298
+0.835883 0.099607
+0.709717 0.122494
+0.732093 -0.068110
+0.825352 -0.085155
+0.823620 0.141804
+0.714799 0.158691
+0.714799 0.343234
+0.797753 0.331178
+0.633047 0.398672
+0.633047 0.651328
+0.885703 0.651328
+0.885703 0.398672
+0.305423 0.222759
+0.265178 0.459821
+0.244953 0.459822
+0.223420 0.222759
+0.271957 0.591154
+0.305423 0.829675
+0.223420 0.829675
+0.166231 0.591154
+0.272432 0.381674
+0.271957 0.591154
+0.166231 0.591154
+0.166706 0.381675
+0.272432 0.381674
+0.166706 0.381675
+0.150413 0.184412
+0.250700 0.184412
+0.000000 0.000000
+0.000000 1.000000
+1.000000 1.000000
+1.000000 0.000000
+0.232132 0.136808
+0.244953 0.112786
+0.265178 0.103064
+0.292792 0.107649
+0.292792 0.459821
+0.265178 0.459821
+0.305423 0.222759
+0.370663 0.222759
+0.253778 0.142599
+0.253778 0.113225
+0.490840 0.112786
+0.490840 0.136808
+0.370663 0.222759
+0.305423 0.222759
+0.271957 -0.015762
+0.381344 -0.015762
+0.622173 0.685926
+0.622173 0.556004
+0.860694 0.720140
+0.860694 0.749514
+0.381344 0.591154
+0.271957 0.591154
+0.272432 0.381674
+0.372581 0.381674
+0.412693 0.629793
+0.412693 0.541044
+0.622173 0.556004
+0.622173 0.685926
+0.181630 0.441587
+0.171864 0.439551
+0.140772 0.454497
+0.140057 0.461572
+0.215431 0.582821
+0.215431 0.520114
+0.412693 0.541044
+0.412693 0.629793
+0.599902 0.538543
+0.599902 0.483749
+0.822347 0.520114
+0.822347 0.582821
+0.325637 0.184412
+0.250700 0.184412
+0.220059 -0.038033
+0.276878 -0.038033
+0.372581 0.381674
+0.272432 0.381674
+0.250700 0.184412
+0.325637 0.184412
+-0.050441 0.884702
+1.050442 0.884702
+1.050442 0.115298
+-0.050441 0.115298
+-0.050441 0.884702
+1.050442 0.884702
+1.050442 0.115298
+-0.050441 0.115298
+0.500739 0.731220
+0.361379 0.757111
+0.377051 0.979245
+0.504800 0.951807
+0.704987 0.369473
+0.839551 0.343931
+0.835977 0.562758
+0.704986 0.588059
+0.709717 0.122494
+0.835883 0.099607
+0.839551 0.343931
+0.704987 0.369473
+0.633047 0.398672
+0.633047 0.651328
+0.885703 0.651328
+0.885703 0.398672
+0.633047 0.398672
+0.633047 0.651328
+0.885703 0.651328
+0.885703 0.398672
+0.841022 0.684732
+0.871574 0.237766
+0.738777 0.252473
+0.738777 0.698784
+0.633047 0.398672
+0.633047 0.651328
+0.885703 0.651328
+0.885703 0.398672
+0.633047 0.398672
+0.633047 0.651328
+0.885703 0.651328
+0.885703 0.398672
+0.729794 0.237436
+0.729797 0.754017
+0.797754 0.753621
+0.831729 0.236350
+0.181630 0.441587
+0.140057 0.461572
+0.158735 0.465751
+0.175584 0.457652
+-0.050441 0.115298
+-0.050441 0.884702
+1.050442 0.884702
+1.050442 0.115298
+0.835977 0.562758
+0.843763 0.795454
+0.718953 0.817460
+0.704986 0.588059
+0.500739 0.731220
+0.502907 0.499417
+0.375210 0.522679
+0.361379 0.757111
+0.502907 0.499417
+0.490226 0.239828
+0.421295 0.251471
+0.375210 0.522679
+0.843763 0.795454
+0.824797 1.062849
+0.770346 1.069965
+0.718953 0.817460
+-0.050441 0.115298
+-0.050441 0.884702
+1.050442 0.884702
+1.050442 0.115298
+0.028607 0.115298
+0.028607 0.884702
+0.422078 0.884702
+0.422078 0.115298
+0.824797 1.062849
+0.823637 1.319662
+0.790564 1.323889
+0.770346 1.069965
+0.490226 0.239828
+0.504799 -0.020755
+0.470787 -0.018830
+0.421295 0.251471
+0.292793 0.136292
+0.250570 0.156588
+0.232132 0.136808
+0.292792 0.107649
+</float_array>
+          <technique_common>
+            <accessor source="#UGTOcorvette-UV0-array" count="1864" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="UGTOcorvette-VERTEX">
+          <input semantic="POSITION" source="#UGTOcorvette-POSITION"/>
+          <input semantic="NORMAL" source="#UGTOcorvette-Normal0"/>
+        </vertices>
+        <triangles count="8" material="metal_panel_1.tga-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="hull_1.tga-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="hull_1_with_red_block-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="ALPHASTRUCT.PNG-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="hull_1_detail_2.tga-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="hull_1_detail_3.tga-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="UGTO_logo.tga-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="hull_1_with_red_desig-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="metal_panel_1_vent_st-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="engine.tga-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="dr_fr_prtls_side_1.tg-diffuse-Material"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="8" material="Material_UGTOgray.PNG__metal_panel_1.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 352 108 353 110 354 107 352 110 354 109 355 106 365 111 367 105 364 111 367 106 365 112 366 342 1489 347 1491 348 1488 347 1491 342 1489 341 1490 344 1501 343 1502 346 1500 345 1503 346 1500 343 1502</p></triangles>
+        <triangles count="240" material="Material_UGTOgray2.PN__metal_panel_1.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 17 1 18 2 20 0 20 0 18 2 19 3 31 42 29 40 32 41 30 43 29 40 31 42 55 91 113 89 56 90 113 89 55 91 38 88 56 95 114 93 57 94 114 93 56 95 113 92 37 96 54 97 59 98 37 96 59 98 58 99 54 100 83 101 60 102 54 100 60 102 59 103 30 105 62 107 29 104 62 107 30 105 61 106 83 108 26 109 63 110 83 108 63 110 60 111 38 113 64 115 25 112 64 115 38 113 55 114 65 118 63 119 26 116 26 116 24 117 65 118 64 122 23 120 25 121 23 120 64 122 66 123 24 124 18 125 67 126 24 124 67 126 65 127 66 130 17 128 23 129 17 128 66 130 68 131 18 132 17 133 68 134 18 132 68 134 67 135 59 139 57 137 58 138 57 137 59 139 56 136 60 143 56 141 59 142 56 141 60 143 55 140 60 145 63 146 55 144 55 144 63 146 64 147 63 149 65 150 64 148 64 148 65 150 66 151 65 153 68 155 66 152 68 155 65 153 67 154 57 179 69 177 73 178 69 177 57 179 114 176 73 181 58 183 57 180 58 183 73 181 80 182 78 210 61 211 30 208 30 208 75 209 78 210 75 212 70 213 80 214 75 212 80 214 78 215 73 219 74 217 79 218 74 217 73 219 69 216 79 223 29 221 62 222 29 221 79 223 74 220 73 224 78 226 80 227 78 226 73 224 79 225 78 231 62 229 61 230 62 229 78 231 79 228 104 337 105 339 103 336 105 339 104 337 106 338 102 341 106 343 104 340 106 343 102 341 107 342 108 347 101 344 105 346 101 344 103 345 105 346 105 357 110 359 108 356 110 359 105 357 111 358 125 405 123 406 41 404 1 407 41 404 123 406 40 409 226 410 125 408 125 408 226 410 123 411 124 413 41 415 7 412 41 415 124 413 125 414 228 417 40 418 124 416 124 416 40 418 125 419 124 420 7 421 42 422 126 442 131 443 0 441 10 444 0 441 131 443 2 446 131 448 126 445 131 448 2 446 446 447 131 450 11 452 10 449 11 452 131 450 132 451 446 454 132 456 131 453 446 454 224 455 132 456 16 476 11 473 132 474 132 474 134 475 16 476 134 480 132 477 224 478 224 478 15 479 134 480 136 499 16 497 134 498 136 499 49 500 16 497 136 504 15 502 407 503 15 502 136 504 134 501 140 540 103 538 101 539 103 538 140 540 142 541 104 543 141 545 102 542 141 545 104 543 143 544 142 548 104 546 103 547 142 548 143 549 104 546 407 555 308 556 136 554 136 554 308 556 146 557 136 559 146 560 49 558 49 558 146 560 147 561 150 566 124 567 42 568 150 569 415 570 149 571 228 575 150 573 149 574 150 573 228 575 124 572 151 576 137 577 2 578 126 579 151 580 2 581 151 582 139 583 137 584 151 585 0 586 138 587 139 588 151 589 138 590 126 591 0 592 151 593 186 720 182 718 159 719 182 718 186 720 187 721 187 724 183 722 182 723 183 722 187 724 188 725 183 727 188 728 162 726 189 729 162 726 188 728 186 733 159 730 189 732 159 730 162 731 189 732 188 736 186 734 189 735 186 734 188 736 187 737 42 884 213 885 150 886 213 887 415 888 150 889 218 917 2 918 137 919 218 928 316 929 2 930 240 958 303 959 415 960 414 961 303 962 240 963 264 1121 267 1118 265 1120 267 1118 266 1119 265 1120 294 1122 264 1124 291 1125 264 1124 294 1122 267 1123 291 1126 264 1127 265 1128 291 1126 265 1128 270 1129 266 1132 271 1133 270 1130 270 1130 265 1131 266 1132 267 1136 294 1137 271 1134 267 1136 271 1134 266 1135 327 1262 302 1263 453 1264 314 1265 315 1266 302 1267 302 1268 315 1269 453 1270 302 1271 316 1272 314 1273 327 1274 2 1275 302 1276 302 1277 2 1278 316 1279 303 1283 228 1281 149 1282 228 1281 303 1283 329 1280 303 1284 149 1285 415 1286 303 1287 414 1288 329 1289 306 1296 317 1297 406 1294 406 1294 305 1295 306 1296 308 1300 407 1301 317 1298 317 1298 306 1299 308 1300 311 1308 349 1306 310 1307 311 1308 350 1309 349 1306 349 1313 312 1311 310 1312 312 1311 349 1313 351 1310 313 1316 352 1317 350 1314 313 1316 350 1314 311 1315 15 1354 317 1352 407 1353 317 1352 15 1354 319 1351 317 1357 440 1355 406 1356 317 1357 319 1358 440 1355 319 1376 224 1378 321 1375 224 1378 319 1376 15 1377 444 1379 440 1380 321 1382 321 1382 440 1380 319 1381 321 1400 446 1402 322 1399 224 1401 446 1402 321 1400 444 1404 322 1406 445 1403 321 1405 322 1406 444 1404 2 1410 322 1408 446 1409 322 1408 2 1410 327 1407 453 1411 445 1412 322 1413 453 1411 322 1413 327 1414 329 1433 414 1434 448 1435 40 1438 228 1439 329 1436 329 1436 328 1437 40 1438 416 1441 329 1443 448 1440 329 1443 416 1441 328 1442 226 1446 40 1447 328 1444 328 1444 330 1445 226 1446 416 1448 452 1449 330 1450 416 1448 330 1450 328 1451 348 1499 343 1497 342 1498 343 1497 348 1499 345 1496 348 1510 350 1511 352 1508 352 1508 345 1509 348 1510 347 1513 351 1515 349 1512 351 1515 347 1513 346 1514 348 1517 349 1519 350 1516 349 1519 348 1517 347 1518 376 1633 392 1635 375 1632 392 1635 376 1633 393 1634 381 1636 374 1637 376 1638 381 1636 376 1638 375 1639 427 1643 375 1641 392 1642 375 1641 427 1643 380 1640 380 1647 381 1645 375 1646 381 1645 380 1647 385 1644 376 1649 374 1650 379 1648 384 1651 379 1648 374 1650 393 1653 376 1654 426 1652 379 1655 426 1652 376 1654 381 1683 396 1681 374 1682 396 1681 381 1683 397 1680 385 1687 397 1685 381 1686 397 1685 385 1687 339 1684 389 1711 386 1709 387 1710 386 1709 389 1711 388 1708 389 1714 391 1715 390 1712 390 1712 388 1713 389 1714 391 1718 394 1719 399 1716 399 1716 390 1717 391 1718 398 1723 394 1721 395 1722 394 1721 398 1723 399 1720 397 1727 395 1725 396 1726 395 1725 397 1727 398 1724 439 1731 438 1728 386 1730 386 1730 438 1728 387 1729 386 1733 388 1734 439 1732 433 1735 439 1732 388 1734 389 1737 387 1738 432 1736 438 1739 432 1736 387 1738 431 1743 433 1740 390 1742 390 1742 433 1740 388 1741 391 1745 389 1746 430 1744 432 1747 430 1744 389 1746 418 1751 390 1749 399 1750 390 1749 418 1751 431 1748 394 1753 391 1754 371 1752 430 1755 371 1752 391 1754 392 1757 426 1759 427 1756 426 1759 392 1757 393 1758 395 1761 394 1762 400 1760 371 1763 400 1760 394 1762 396 1765 395 1766 419 1764 400 1767 419 1764 395 1766 339 1771 398 1769 397 1770 398 1769 339 1771 340 1768 340 1775 399 1773 398 1774 399 1773 340 1775 418 1772 427 1820 426 1821 425 1822 427 1820 425 1822 424 1823 438 1862 439 1863 436 1860 438 1862 436 1860 437 1861</p></triangles>
+        <triangles count="4" material="Material_UGTOFLAME.PN__hull_1_with_red_desig"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 229 492 129 490 135 491 129 490 229 492 6 489 229 1364 324 1366 6 1363 324 1366 229 1364 318 1365</p></triangles>
+        <triangles count="12" material="Material_UGTOSTRIPE.P__hull_1_detail_2.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 84 293 369 294 97 292 97 292 369 294 96 295 100 321 89 323 92 320 89 323 100 321 97 322 221 325 84 326 100 324 100 324 84 326 97 327 84 1530 221 1531 353 1528 353 1528 356 1529 84 1530 353 1535 364 1533 356 1534 364 1533 353 1535 361 1532 369 1562 84 1563 356 1560 356 1560 357 1561 369 1562</p></triangles>
+        <triangles count="48" material="Material_UGTOgray2.PN__hull_1.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 160 596 152 594 163 595 152 594 160 596 153 597 168 615 157 617 158 614 157 617 168 615 167 616 159 619 167 621 168 618 167 621 159 619 155 620 169 623 153 625 160 622 153 625 169 623 166 624 158 627 166 629 169 626 166 629 158 627 157 628 154 633 162 630 165 632 165 632 162 630 170 631 165 637 170 634 156 636 156 636 170 634 161 635 164 640 161 638 171 639 156 641 161 638 164 640 152 644 171 642 163 643 171 642 152 644 164 645 162 702 154 703 184 704 162 702 184 704 183 705 182 708 155 706 159 707 155 706 182 708 185 709 183 716 184 717 185 714 185 714 182 715 183 716 270 1140 268 1138 269 1139 268 1138 270 1140 271 1141 268 1147 271 1148 298 1146 294 1149 298 1146 271 1148 270 1151 269 1152 291 1150 299 1153 291 1150 269 1152 290 1213 282 1210 301 1212 282 1210 289 1211 301 1212 289 1216 282 1217 292 1214 292 1214 297 1215 289 1216 283 1218 288 1219 297 1220 283 1218 297 1220 292 1221 291 1222 299 1223 288 1224 291 1222 288 1224 283 1225 296 1228 295 1229 287 1227 284 1226 287 1227 295 1229 284 1233 300 1231 287 1232 300 1231 284 1233 293 1230 294 1237 286 1235 298 1236 286 1235 294 1237 285 1234 285 1241 296 1239 286 1240 296 1239 285 1241 295 1238 293 1260 290 1261 301 1258 293 1260 301 1258 300 1259</p></triangles>
+        <triangles count="12" material="Material_UGTOEMBLEM.P__metal_panel_1_vent_st"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 123 519 138 520 1 521 138 522 0 523 1 524 137 525 123 526 226 527 139 528 123 529 137 530 138 531 123 532 139 533 226 914 218 915 137 916 226 931 316 932 218 933 315 1322 314 1323 330 1324 314 1325 316 1326 330 1327 316 1328 226 1329 330 1330 315 1331 452 1332 453 1333 330 1334 452 1335 315 1336</p></triangles>
+        <triangles count="282" material="Material_UGTOSTRIPE.P__hull_1.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 23 5 17 6 22 4 20 7 22 4 17 6 18 11 21 9 19 10 21 9 18 11 24 8 24 23 27 21 21 22 27 21 24 23 26 20 25 25 23 26 28 24 22 27 28 24 23 26 38 29 25 30 36 28 28 31 36 28 25 30 26 35 33 33 27 34 33 33 26 35 83 32 54 70 34 68 52 69 34 68 54 70 37 71 83 74 52 72 33 73 52 72 83 74 54 75 53 77 38 79 36 76 38 79 53 77 113 78 71 161 114 163 35 160 114 163 71 161 69 162 72 166 34 167 37 164 37 164 70 165 72 166 76 185 69 187 71 184 69 187 76 185 74 186 32 189 74 191 76 188 74 191 32 189 29 190 72 195 70 192 77 194 70 192 75 193 77 194 30 197 77 199 75 196 77 199 30 197 31 198 82 233 81 234 54 232 83 235 54 232 81 234 58 237 82 238 37 236 54 239 37 236 82 238 86 241 85 242 83 240 83 240 85 242 54 243 85 245 37 247 54 244 37 247 85 245 87 246 89 249 88 250 58 248 58 248 88 250 82 251 88 257 81 259 82 256 81 259 88 257 90 258 87 261 70 263 37 260 70 263 87 261 91 262 92 265 89 266 80 264 80 264 89 266 58 267 91 269 80 271 70 268 80 271 91 269 92 270 94 273 93 274 86 272 86 272 93 274 85 275 231 277 223 278 94 276 94 276 223 278 93 279 223 285 95 287 93 284 95 287 223 285 370 286 97 289 96 290 89 288 89 288 96 290 88 291 369 309 222 310 96 308 96 308 222 310 98 311 370 317 99 319 95 316 99 319 370 317 232 318 91 328 99 329 100 330 91 328 100 330 92 331 232 333 100 335 99 332 100 335 232 333 221 334 127 434 128 435 3 433 3 433 128 435 4 436 133 464 130 461 12 463 12 463 130 461 8 462 144 472 133 469 13 471 13 471 133 469 12 470 128 488 39 486 4 487 39 486 128 488 135 485 135 496 5 494 39 495 5 494 135 496 129 493 3 510 8 511 127 509 130 512 127 509 8 511 5 513 129 514 43 515 129 516 6 517 43 518 102 535 140 537 101 534 140 537 102 535 141 536 233 553 14 550 145 552 145 552 14 550 144 551 145 565 144 562 148 564 148 564 144 562 13 563 44 739 47 740 190 738 191 741 190 738 47 740 47 743 48 744 191 742 192 745 191 742 48 744 48 747 193 749 192 746 193 749 48 747 49 748 51 751 46 752 195 750 196 753 195 750 46 752 46 755 50 756 196 754 197 757 196 754 50 756 50 759 45 760 197 758 198 761 197 758 45 760 45 763 44 764 198 762 190 765 198 762 44 764 49 771 147 772 193 770 193 770 147 772 200 773 199 776 308 774 254 775 308 774 199 776 146 777 199 779 147 781 146 778 147 781 199 779 200 780 201 783 202 784 3 782 8 785 3 782 202 784 190 787 191 788 201 786 202 789 201 786 191 788 202 791 203 792 8 790 12 793 8 790 203 792 203 799 205 800 12 798 13 801 12 798 205 800 207 807 208 808 43 806 5 809 43 806 208 808 208 815 209 816 5 814 39 817 5 814 209 816 209 823 210 824 39 822 4 825 39 822 210 824 210 831 201 832 4 830 3 833 4 830 201 832 198 835 190 836 210 834 201 837 210 834 190 836 205 847 212 848 13 846 148 849 13 846 212 848 145 860 219 858 233 859 219 858 145 860 211 861 148 868 211 866 145 867 211 866 148 868 212 869 230 878 214 879 6 880 214 881 43 882 6 883 216 892 234 893 403 890 216 892 403 890 215 891 216 897 51 895 195 896 51 895 216 897 215 894 230 901 217 899 214 900 217 899 230 901 235 898 214 905 207 903 43 904 207 903 214 905 217 902 232 925 84 927 221 924 84 927 232 925 370 926 246 945 239 943 413 944 239 943 246 945 236 942 230 947 236 949 235 946 236 949 230 947 239 948 404 953 237 951 258 952 237 951 404 953 238 950 237 956 403 954 234 955 403 954 237 956 238 957 239 964 6 965 413 966 230 967 6 968 239 969 304 980 307 981 242 978 242 978 241 979 304 980 307 988 233 989 219 986 307 988 219 986 242 987 441 998 304 999 241 1000 441 998 241 1000 248 1001 263 1016 255 1017 243 1014 243 1014 251 1015 263 1016 450 1018 451 1019 251 1020 450 1018 251 1020 243 1021 417 1026 450 1027 243 1028 417 1026 243 1028 244 1029 449 1034 417 1035 244 1036 449 1034 244 1036 245 1037 413 1042 449 1043 245 1044 413 1042 245 1044 246 1045 443 1050 441 1051 248 1052 443 1050 248 1052 249 1053 447 1058 443 1059 249 1060 447 1058 249 1060 250 1061 262 1064 263 1065 251 1062 251 1062 250 1063 262 1064 250 1068 451 1066 447 1067 451 1066 250 1068 251 1069 253 1073 305 1071 252 1072 305 1071 253 1073 306 1070 253 1076 254 1077 308 1074 253 1076 308 1074 306 1075 305 1080 406 1081 260 1078 260 1078 252 1079 305 1080 412 1092 411 1093 255 1090 255 1090 263 1091 412 1092 411 1096 405 1097 256 1094 256 1094 255 1095 411 1096 405 1100 410 1101 257 1098 257 1098 256 1099 405 1100 258 1102 257 1103 410 1104 258 1102 410 1104 404 1105 408 1109 260 1107 406 1108 260 1107 408 1109 261 1106 408 1112 409 1113 262 1110 262 1110 261 1111 408 1112 409 1116 412 1117 263 1114 263 1114 262 1115 409 1116 304 1292 309 1290 307 1291 309 1290 304 1292 441 1293 307 1304 14 1302 233 1303 14 1302 307 1304 309 1305 351 1321 313 1319 312 1320 313 1319 351 1321 352 1318 324 1337 413 1338 6 1339 449 1340 413 1341 324 1342 447 1345 326 1343 323 1344 326 1343 447 1345 451 1346 449 1362 318 1360 417 1361 318 1360 449 1362 324 1359 325 1368 417 1370 318 1367 417 1370 325 1368 450 1369 441 1385 320 1383 309 1384 320 1383 441 1385 443 1386 443 1393 323 1391 320 1392 323 1391 443 1393 447 1394 325 1421 326 1422 451 1419 451 1419 450 1420 325 1421 353 1521 232 1523 354 1520 232 1523 353 1521 221 1522 361 1525 353 1526 362 1524 354 1527 362 1524 353 1526 370 1539 354 1537 232 1538 354 1537 370 1539 358 1536 222 1546 369 1547 357 1544 357 1544 355 1545 222 1546 357 1566 356 1567 364 1564 364 1564 365 1565 357 1566 223 1571 358 1569 370 1570 358 1569 223 1571 360 1568 223 1578 231 1579 359 1576 359 1576 360 1577 223 1578 360 1582 359 1583 367 1580 367 1580 368 1581 360 1582 374 1585 362 1587 384 1584 362 1587 374 1585 361 1586 364 1590 361 1591 374 1588 374 1588 396 1589 364 1590 366 1595 384 1593 362 1594 384 1593 366 1595 419 1592 365 1599 373 1597 363 1598 373 1597 365 1599 372 1596 365 1606 364 1607 396 1604 396 1604 372 1605 365 1606 368 1611 419 1609 366 1610 419 1609 368 1611 400 1608 368 1614 367 1615 371 1612 371 1612 400 1613 368 1614 231 1618 223 1619 369 1616 369 1616 222 1617 231 1618 370 1623 369 1621 223 1622 369 1621 370 1623 84 1620 419 1624 400 1625 372 1626 419 1624 372 1626 396 1627 400 1628 371 1629 373 1630 400 1628 373 1630 372 1631 377 1665 426 1667 379 1664 426 1667 377 1665 425 1666 382 1669 377 1670 384 1668 384 1668 377 1670 379 1671 424 1675 380 1673 427 1674 380 1673 424 1675 378 1672 378 1679 385 1677 380 1678 385 1677 378 1679 383 1676 422 1697 382 1698 419 1696 419 1696 382 1698 384 1699 383 1703 339 1701 385 1702 339 1701 383 1703 421 1700 401 1787 418 1785 340 1786 418 1785 401 1787 420 1784 423 1791 402 1788 371 1790 371 1790 402 1788 400 1789 402 1795 422 1792 400 1794 400 1794 422 1792 419 1793 423 1831 430 1829 429 1830 430 1829 423 1831 371 1828 420 1832 428 1833 431 1834 420 1832 431 1834 418 1835 428 1836 434 1837 433 1838 428 1836 433 1838 431 1839 429 1843 432 1841 435 1842 432 1841 429 1843 430 1840 435 1855 438 1853 437 1854 438 1853 435 1855 432 1852 439 1858 433 1859 434 1856 434 1856 436 1857 439 1858</p></triangles>
+        <triangles count="182" material="Material_UGTOSQSQ.PNG__hull_1_with_red_block"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 19 15 21 12 20 14 21 12 22 13 20 14 21 19 27 16 22 18 22 18 27 16 28 17 27 39 36 37 28 38 36 37 27 39 33 36 1 47 44 45 45 46 44 45 1 47 0 44 0 49 47 51 44 48 47 51 0 49 10 50 10 53 11 54 47 52 48 55 47 52 11 54 41 57 1 58 50 56 45 59 50 56 1 58 7 61 41 62 46 60 46 60 41 62 50 63 46 65 51 66 7 64 42 67 7 64 51 66 53 82 36 83 33 80 33 80 52 81 53 82 35 86 53 87 52 84 52 84 34 85 35 86 48 159 16 157 49 158 16 157 48 159 11 156 71 170 35 171 34 168 34 168 72 169 71 170 76 202 71 203 72 200 72 200 77 201 76 202 32 206 76 207 77 204 77 204 31 205 32 206 86 254 83 255 81 252 81 252 90 253 86 254 93 281 87 283 85 280 87 283 93 281 95 282 94 298 86 299 90 296 90 296 98 297 94 298 231 302 98 300 222 301 98 300 231 302 94 303 99 314 87 312 95 313 87 312 99 314 91 315 119 378 35 379 114 376 119 378 114 376 120 377 119 383 116 381 115 382 116 381 119 383 120 380 53 387 119 385 121 386 119 385 53 387 35 384 121 391 115 389 117 390 115 389 121 391 119 388 114 395 113 392 120 394 113 392 122 393 120 394 116 398 122 396 118 397 116 398 120 399 122 396 122 403 117 401 118 402 117 401 122 403 121 400 116 424 118 425 115 423 115 423 118 425 117 426 53 427 121 428 113 429 121 430 122 431 113 432 227 438 225 439 127 437 127 437 225 439 128 440 442 460 9 457 133 459 133 459 9 457 130 458 14 468 442 465 144 467 144 467 442 465 133 466 225 484 135 482 128 483 135 482 225 484 229 481 9 508 227 505 130 507 227 505 127 506 130 507 191 795 192 796 202 794 203 797 202 794 192 796 192 803 193 804 203 802 205 805 203 802 193 804 195 811 196 812 207 810 208 813 207 810 196 812 206 839 199 841 194 838 199 841 206 839 211 840 193 851 200 852 205 850 212 853 205 850 200 852 211 856 254 854 219 855 254 854 211 856 199 857 212 864 199 862 211 863 200 865 199 862 212 864 215 871 42 873 51 870 42 873 215 871 213 872 415 876 213 877 215 874 215 874 403 875 415 876 217 908 235 909 234 906 217 908 234 906 216 907 217 913 195 911 207 912 195 911 217 913 216 910 258 937 236 935 246 936 236 935 258 937 237 934 236 940 234 938 235 939 234 938 236 940 237 941 415 972 238 970 240 971 403 973 238 970 415 972 414 975 238 977 404 974 238 977 414 975 240 976 241 984 242 985 253 982 241 984 253 982 252 983 242 992 219 993 254 990 242 992 254 990 253 991 252 996 260 997 248 994 248 994 241 995 252 996 247 1009 253 1007 242 1008 253 1007 247 1009 259 1006 204 1013 254 1011 219 1012 254 1011 204 1013 220 1010 257 1040 258 1041 246 1038 246 1038 245 1039 257 1040 260 1048 261 1049 249 1046 249 1046 248 1047 260 1048 261 1056 262 1057 250 1054 250 1054 249 1055 261 1056 323 1349 227 1347 9 1348 227 1347 323 1349 326 1350 225 1372 318 1374 229 1371 318 1374 225 1372 325 1373 309 1389 442 1387 14 1388 442 1387 309 1389 320 1390 320 1397 9 1395 442 1396 9 1395 320 1397 323 1398 225 1417 227 1418 326 1415 326 1415 325 1416 225 1417 332 1423 340 1424 331 1425 401 1426 340 1427 332 1428 335 1431 337 1432 338 1429 335 1431 338 1429 336 1430 331 1453 336 1455 332 1452 336 1455 331 1453 335 1454 337 1458 335 1459 331 1456 331 1456 333 1457 337 1458 333 1462 340 1460 339 1461 340 1460 333 1462 331 1463 338 1467 332 1465 336 1466 332 1465 338 1467 334 1464 334 1471 401 1469 332 1470 401 1469 334 1471 421 1468 334 1473 337 1475 333 1472 337 1475 334 1473 338 1474 334 1478 339 1476 421 1477 339 1476 334 1478 333 1479 354 1542 358 1543 366 1540 366 1540 362 1541 354 1542 222 1555 355 1552 231 1554 355 1552 359 1553 231 1554 367 1557 359 1558 363 1556 363 1556 359 1558 355 1559 360 1575 366 1573 358 1574 366 1573 360 1575 368 1572 367 1602 373 1600 371 1601 363 1603 373 1600 367 1602 378 1657 424 1658 377 1656 377 1656 424 1658 425 1659 383 1661 378 1662 382 1660 382 1660 378 1662 377 1663 421 1693 383 1694 422 1692 422 1692 383 1694 382 1695 408 1705 440 1707 444 1704 440 1707 408 1705 406 1706 401 1777 421 1778 402 1776 402 1776 421 1778 422 1779 420 1781 401 1782 423 1780 423 1780 401 1782 402 1783 404 1798 448 1796 414 1797 448 1796 404 1798 410 1799 416 1802 448 1803 410 1800 410 1800 405 1801 416 1802 452 1806 416 1807 405 1804 405 1804 411 1805 452 1806 444 1810 445 1811 409 1808 409 1808 408 1809 444 1810 453 1815 409 1813 445 1814 409 1813 453 1815 412 1812 412 1819 452 1817 411 1818 452 1817 412 1819 453 1816 429 1825 420 1827 423 1824 420 1827 429 1825 428 1826 434 1846 429 1844 435 1845 429 1844 434 1846 428 1847 436 1850 435 1848 437 1849 435 1848 436 1850 434 1851</p></triangles>
+        <triangles count="8" material="Material_UGTOwindow.P__dr_fr_prtls_side_1.tg"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 196 819 197 820 208 818 209 821 208 818 197 820 197 827 198 828 209 826 210 829 209 826 198 828 255 1024 256 1025 244 1022 244 1022 243 1023 255 1024 256 1032 257 1033 245 1030 245 1030 244 1031 256 1032</p></triangles>
+        <triangles count="4" material="Material.001__metal_panel_1.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 361 109 362 106 360 112 363 106 360 109 362 346 1495 347 1492 344 1494 347 1492 341 1493 344 1494</p></triangles>
+        <triangles count="4" material="Material_UGTOSTRIPE.P__hull_1_detail_3.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 96 305 90 307 88 304 90 307 96 305 98 306 357 1551 363 1549 355 1550 363 1549 357 1551 365 1548</p></triangles>
+        <triangles count="4" material="Material_UGTOEMBLEM.P__UGTO_logo.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 107 351 102 348 108 350 102 348 101 349 108 350 345 1506 351 1504 346 1505 352 1507 351 1504 345 1506</p></triangles>
+        <triangles count="44" material="Material.001__ALPHASTRUCT.PNG"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 70 172 37 173 58 174 70 172 58 174 80 175 111 370 109 368 110 369 111 370 112 371 109 368 35 375 113 373 114 374 113 373 35 375 53 372 165 599 167 600 154 598 154 598 167 600 155 601 157 604 165 602 156 603 165 602 157 604 167 605 166 608 156 606 164 607 156 606 166 608 157 609 164 610 153 612 166 613 153 612 164 610 152 611 185 712 184 713 154 710 154 710 155 711 185 712 136 767 146 768 194 766 199 769 194 766 146 768 144 843 211 845 206 842 211 845 144 843 145 844 14 923 219 921 233 922 219 921 14 923 204 920 309 1005 242 1003 307 1004 242 1003 309 1005 247 1002 306 1084 317 1085 259 1082 259 1082 253 1083 306 1084 220 1089 308 1087 254 1088 308 1087 220 1089 407 1086 269 1143 268 1144 299 1142 299 1142 268 1144 298 1145 289 1242 287 1243 300 1244 289 1242 300 1244 301 1245 287 1248 289 1249 297 1246 297 1246 296 1247 287 1248 296 1252 297 1253 288 1250 296 1252 288 1250 286 1251 286 1256 288 1257 299 1254 286 1256 299 1254 298 1255 421 1481 340 1483 401 1480 340 1483 421 1481 339 1482 341 1485 342 1486 344 1484 344 1484 342 1486 343 1487 374 1689 396 1690 384 1688 419 1691 384 1688 396 1690</p></triangles>
+        <triangles count="56" material="Material_UGTOengine.P__engine.tga"><input semantic="VERTEX" offset="0" source="#UGTOcorvette-VERTEX"/><input semantic="TEXCOORD" offset="1" set="0" source="#UGTOcorvette-UV0"/><p> 172 649 171 647 173 648 171 647 172 649 163 646 173 653 171 650 174 652 171 650 161 651 174 652 162 655 176 657 170 654 176 657 162 655 175 656 170 659 174 661 161 658 174 661 170 659 176 660 177 665 169 663 178 664 169 663 177 665 158 662 178 669 160 667 179 668 160 667 178 669 169 666 168 671 180 673 159 670 180 673 168 671 181 672 177 676 168 674 158 675 168 674 177 676 181 677 172 680 179 681 160 678 160 678 163 679 172 680 162 682 159 683 180 684 162 682 180 684 175 685 174 688 181 686 177 687 176 689 181 686 174 688 181 691 176 692 180 690 180 690 176 692 175 693 173 697 178 694 172 696 172 696 178 694 179 695 174 701 177 698 173 700 173 700 177 698 178 699 276 1154 280 1156 275 1157 280 1156 276 1154 279 1155 275 1158 280 1159 281 1160 275 1158 281 1160 274 1161 277 1164 272 1165 273 1162 277 1164 273 1162 278 1163 279 1168 276 1169 272 1166 279 1168 272 1166 277 1167 278 1171 273 1172 291 1170 294 1173 291 1170 273 1172 281 1176 293 1174 274 1175 293 1174 281 1176 290 1177 276 1180 295 1181 285 1178 276 1180 285 1178 272 1179 285 1185 273 1183 272 1184 273 1183 285 1185 294 1182 293 1189 275 1187 274 1188 275 1187 293 1189 284 1186 276 1191 284 1193 295 1190 284 1193 276 1191 275 1192 283 1197 279 1195 277 1196 279 1195 283 1197 292 1194 277 1199 291 1201 283 1198 291 1201 277 1199 278 1200 280 1203 279 1204 282 1202 292 1205 282 1202 279 1204 281 1207 282 1209 290 1206 282 1209 281 1207 280 1208</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="" name="">
+      <node name="blend_root" id="blend_root" sid="blend_root"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="UGTOcorvette" id="UGTOcorvette" sid="UGTOcorvette"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 -1.000000 0.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#UGTOcorvette-lib"><bind_material><technique_common><instance_material symbol="metal_panel_1.tga-diffuse-Material" target="#metal_panel_1.tga-diffuse-Material"/><instance_material symbol="hull_1.tga-diffuse-Material" target="#hull_1.tga-diffuse-Material"/><instance_material symbol="hull_1_with_red_block-diffuse-Material" target="#hull_1_with_red_block-diffuse-Material"/><instance_material symbol="ALPHASTRUCT.PNG-diffuse-Material" target="#ALPHASTRUCT.PNG-diffuse-Material"/><instance_material symbol="hull_1_detail_2.tga-diffuse-Material" target="#hull_1_detail_2.tga-diffuse-Material"/><instance_material symbol="hull_1_detail_3.tga-diffuse-Material" target="#hull_1_detail_3.tga-diffuse-Material"/><instance_material symbol="UGTO_logo.tga-diffuse-Material" target="#UGTO_logo.tga-diffuse-Material"/><instance_material symbol="hull_1_with_red_desig-diffuse-Material" target="#hull_1_with_red_desig-diffuse-Material"/><instance_material symbol="metal_panel_1_vent_st-diffuse-Material" target="#metal_panel_1_vent_st-diffuse-Material"/><instance_material symbol="engine.tga-diffuse-Material" target="#engine.tga-diffuse-Material"/><instance_material symbol="dr_fr_prtls_side_1.tg-diffuse-Material" target="#dr_fr_prtls_side_1.tg-diffuse-Material"/><instance_material symbol="Material_UGTOgray.PNG__metal_panel_1.tga" target="#Material_UGTOgray.PNG__metal_panel_1.tga"/><instance_material symbol="Material_UGTOgray2.PN__metal_panel_1.tga" target="#Material_UGTOgray2.PN__metal_panel_1.tga"/><instance_material symbol="Material_UGTOFLAME.PN__hull_1_with_red_desig" target="#Material_UGTOFLAME.PN__hull_1_with_red_desig"/><instance_material symbol="Material_UGTOSTRIPE.P__hull_1_detail_2.tga" target="#Material_UGTOSTRIPE.P__hull_1_detail_2.tga"/><instance_material symbol="Material_UGTOgray2.PN__hull_1.tga" target="#Material_UGTOgray2.PN__hull_1.tga"/><instance_material symbol="Material_UGTOEMBLEM.P__metal_panel_1_vent_st" target="#Material_UGTOEMBLEM.P__metal_panel_1_vent_st"/><instance_material symbol="Material_UGTOSTRIPE.P__hull_1.tga" target="#Material_UGTOSTRIPE.P__hull_1.tga"/><instance_material symbol="Material_UGTOSQSQ.PNG__hull_1_with_red_block" target="#Material_UGTOSQSQ.PNG__hull_1_with_red_block"/><instance_material symbol="Material_UGTOwindow.P__dr_fr_prtls_side_1.tg" target="#Material_UGTOwindow.P__dr_fr_prtls_side_1.tg"/><instance_material symbol="Material.001__metal_panel_1.tga" target="#Material.001__metal_panel_1.tga"/><instance_material symbol="Material_UGTOSTRIPE.P__hull_1_detail_3.tga" target="#Material_UGTOSTRIPE.P__hull_1_detail_3.tga"/><instance_material symbol="Material_UGTOEMBLEM.P__UGTO_logo.tga" target="#Material_UGTOEMBLEM.P__UGTO_logo.tga"/><instance_material symbol="Material.001__ALPHASTRUCT.PNG" target="#Material.001__ALPHASTRUCT.PNG"/><instance_material symbol="Material_UGTOengine.P__engine.tga" target="#Material_UGTOengine.P__engine.tga"/><instance_material symbol="metal_panel_1.tga-diffuse-Material" target="#metal_panel_1.tga-diffuse-Material"/><instance_material symbol="hull_1.tga-diffuse-Material" target="#hull_1.tga-diffuse-Material"/><instance_material symbol="hull_1_with_red_block-diffuse-Material" target="#hull_1_with_red_block-diffuse-Material"/><instance_material symbol="ALPHASTRUCT.PNG-diffuse-Material" target="#ALPHASTRUCT.PNG-diffuse-Material"/><instance_material symbol="hull_1_detail_2.tga-diffuse-Material" target="#hull_1_detail_2.tga-diffuse-Material"/><instance_material symbol="hull_1_detail_3.tga-diffuse-Material" target="#hull_1_detail_3.tga-diffuse-Material"/><instance_material symbol="UGTO_logo.tga-diffuse-Material" target="#UGTO_logo.tga-diffuse-Material"/><instance_material symbol="hull_1_with_red_desig-diffuse-Material" target="#hull_1_with_red_desig-diffuse-Material"/><instance_material symbol="metal_panel_1_vent_st-diffuse-Material" target="#metal_panel_1_vent_st-diffuse-Material"/><instance_material symbol="engine.tga-diffuse-Material" target="#engine.tga-diffuse-Material"/><instance_material symbol="dr_fr_prtls_side_1.tg-diffuse-Material" target="#dr_fr_prtls_side_1.tg-diffuse-Material"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node></node>
+      <extra><technique profile="MAX3D"><frame_rate>25.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.000000</start_time><end_time>9.960000</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#"></instance_visual_scene>
+  </scene>
+</COLLADA>
