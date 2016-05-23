@@ -12,3 +12,5 @@ BuildLog.htm
 *.dep
 *.pch
 *.rsp
+*.suo
+*.log
