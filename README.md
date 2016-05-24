@@ -6,10 +6,10 @@ A Tactical starship combat MMO
 * Visual Studio 2005
 
 # Cloning:
-* Clone the following git repositories into your local drive in the following directory structure:
-* /DarkSpace (https://github.com/palestar/darkspace.git)
-* /Medusa (https://github.com/palestar/medusa.git)
-* /GameCQ (https://github.com/palestar/gamecq.git)
+* Clone the following git repositories into the same directory, the directory names should be named as below since the projects/solutions span accross all 3 directories.
+* /DarkSpace/ should be cloned from https://github.com/palestar/darkspace.git
+* /Medusa/ should be cloned from https://github.com/palestar/medusa.git
+* /GameCQ/ should be cloned from https://github.com/palestar/gamecq.git
 
 # Running the Client:
 * Open the solution, DarkSpace/DarkSpace.sln, compile the solution.
