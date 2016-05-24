@@ -15,6 +15,7 @@ if errorlevel 1 goto :Error
 git reset --hard origin/develop
 
 :Done
+cd C:\Work\Trunk\DarkSpace\Build\
 echo Done...
 exit /B 0
 
