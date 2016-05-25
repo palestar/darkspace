@@ -1,5 +1,6 @@
 # Darkspace
-A Tactical starship combat MMO
+* A Tactical starship combat MMO
+* Visit http://www.darkspace.net for more information about the game.
 
 # Requirements:
 * Windows 7/8/10
