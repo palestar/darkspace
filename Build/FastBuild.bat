@@ -5,10 +5,10 @@ IF "%DEVENV%"=="" SET DEVENV=devenv.exe
 cd C:\Work\Trunk\DarkSpace\Build\
 del /Q Logs\*.log
 
-call GitLatest.bat
+call GitLatest.bat | tee Logs/git.log
 if errorlevel 1 goto :Error
 
-call DarkSpaceBuildRelease.bat
+call DarkSpaceBuildRelease.bat | tee Logs/build.log
 if errorlevel 1 goto :Error
 
 echo Alpha Distribution...
