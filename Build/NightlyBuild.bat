@@ -4,6 +4,7 @@ IF "%DEVENV%"=="" SET DEVENV=devenv.exe
 
 cd C:\Work\Trunk\DarkSpace\Build\
 del /Q Logs\*.log
+echo Nightly Build Started > Logs\build.log
 
 call GitLatest.bat
 if errorlevel 1 goto :Error
