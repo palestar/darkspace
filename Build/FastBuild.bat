@@ -22,10 +22,6 @@ if errorlevel 1 goto :Error
 :BuildSuccess
 sendmail -ini -sub "Build Success!" -body "No errors occurred during the build." -attdir Logs
 
-echo Commiting binary updates
-svn --username builder --password god2899 commit ..\..\. -m "Nightly Build" | tee Logs/svn.log
-if errorlevel 1 goto :Error
-
 :Done
 echo Done...
 exit /B 0
