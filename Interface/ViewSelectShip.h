@@ -7,7 +7,7 @@
 #define VIEWSELECTSHIP_H
 
 #include "System/Messages.h"
-#include "Render3d/NodeSpin.h"
+#include "Render3D/NodeSpin.h"
 #include "Gui3d/WindowView.h"
 #include "World/NounTemplate.h"
 #include "DarkSpace/NounShip.h"

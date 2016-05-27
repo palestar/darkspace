@@ -10,7 +10,7 @@
 #include "Display/PrimitiveWindow.h"
 #include "Display/PrimitiveSetFill.h"
 #include "Display/PrimitiveLineStrip.h"
-#include "Render3d/NodeComplexMesh.h"
+#include "Render3D/NodeComplexMesh.h"
 #include "Game/VerbRepairGadget.h"
 #include "Game/VerbRefitGadget.h"
 #include "Interface/GameDocument.h"
