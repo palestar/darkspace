@@ -5,7 +5,7 @@
 	@author Richard Lyle @date 6/21/2013 7:31:30 PM
 */
 
-#include "GameCLient.h"
+#include "GameClient.h"
 #include "Standard/CommandLine.h"
 
 //---------------------------------------------------------------------------------------------------
