@@ -49,7 +49,11 @@ BadgeRequirement BADGE_REQUIREMENTS[] =
 	{ REPAIR, 50, BRONZE_SUPPORT },
 	{ REPAIR, 500, SILVER_SUPPORT  },
 	{ REPAIR, 1000, GOLD_SUPPORT  },
-	{ REPAIR, 5000, PLATINUM_SUPPORT  }
+	{ REPAIR, 5000, PLATINUM_SUPPORT  },
+	{ SCOUT, 50, BRONZE_SCOUT },
+	{ SCOUT, 500, SILVER_SCOUT },
+	{ SCOUT, 1000, GOLD_SCOUT },
+	{ SCOUT, 5000, PLATINUM_SCOUT }
 };
 
 //---------------------------------------------------------------------------------------------------
@@ -205,6 +209,9 @@ dword GameProfile::calculateMedals( dword badges ) const
 	if ( BitTestAll<dword>( badges, (1<<GOLD_NAVIGATOR)|(1<<GOLD_ENGINEER)|(1<<GOLD_COMBAT)|
 		(1<<GOLD_TRANSPORT)|(1<<GOLD_BOMBER)|(1<<GOLD_SUPPORT) ) )
 		medals |= GOLD_STAR;
+	if ( BitTestAll<dword>( badges, (1<<PLATINUM_NAVIGATOR)|(1<<PLATINUM_ENGINEER)|(1<<PLATINUM_COMBAT)|
+		(1<<PLATINUM_TRANSPORT)|(1<<PLATINUM_BOMBER)|(1<<PLATINUM_SUPPORT) ) )
+		medals |= PLATINUM_STAR;
 	if ( BitTestAll<dword>( badges, (1<<SILVER_COMBAT)|(1<<SILVER_BOMBER)|(1<<SILVER_TRANSPORT) ) )
 		medals |= BRAVERY;
 	if ( BitTestAll<dword>( badges, (1<<GOLD_COMBAT)|(1<<GOLD_BOMBER)|(1<<GOLD_TRANSPORT) ) )
@@ -328,6 +335,10 @@ const char * GameProfile::badgeText( int badge )
 		"Platinum Bomber",		// PLATINUM_BOMBER,
 		"Platinum Privateer",	// PLATINUM_PRIVATEER,
 		"Platinum Support",		// PLATINUM_SUPPORT,
+		"Bronze Scout",			// BRONZE_SCOUT,
+		"Silver Scout",			// SILVER_SCOUT,
+		"Gold Scout",			// GOLD_SCOUT,
+		"Platinum Scout",		// PLATINUM_SCOUT,
 	};
 	return BADGE_TEXT[ badge ];
 }
@@ -347,6 +358,7 @@ const char * GameProfile::medalText( int medal )
 		"Defense Medal",		// DEFENSE,
 		"Star Fury Medal",		// STAR_FURY,
 		"Medal of Conquest",	// CONQUEROR,
+		"Platinum Star",		// PLATINUM_STAR,
 	};
 	return MEDAL_TEXT[ medal ];
 }
