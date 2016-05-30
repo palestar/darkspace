@@ -14,7 +14,7 @@
 
 #include "File/FileDisk.h"
 #include "Resource/Collection.h"
-#include "Render3d/NodeParticleField.h"
+#include "Render3D/NodeParticleField.h"
 
 #include "DarkSpace/NounJumpGate.h"
 #include "DarkSpace/NounSpawnShip.h"

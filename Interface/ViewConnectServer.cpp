@@ -5,8 +5,8 @@
 
 #include "Debug/Assert.h"
 #include "Gui3d/InterfaceContext.h"
-#include "Render3d/NodeSound.h"
-#include "Render3d/NodeLight.h"
+#include "Render3D/NodeSound.h"
+#include "Render3D/NodeLight.h"
 #include "DarkSpace/NounStar.h"
 #include "Interface/GameDocument.h"
 #include "Interface/ViewConnectServer.h"

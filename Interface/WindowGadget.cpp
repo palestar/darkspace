@@ -4,8 +4,8 @@
 */
 
 #include "Debug/Assert.h"
-#include "Render3d/NodeLight.h"
-#include "Render3d/NodeSound.h"
+#include "Render3D/NodeLight.h"
+#include "Render3D/NodeSound.h"
 #include "Interface/WindowGadget.h"
 #include "Interface/GameDocument.h"
 

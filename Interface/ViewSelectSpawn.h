@@ -7,7 +7,7 @@
 #define VIEWSELECTSPAWN_H
 
 #include "System/Messages.h"
-#include "Render3d/Material.h"
+#include "Render3D/Material.h"
 #include "Gui3d/WindowView.h"
 #include "Game/Noun.h"
 
