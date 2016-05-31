@@ -440,18 +440,19 @@ void NounPlanet::inflictDamage( dword nWhen, Noun * pFrom, int damage, dword typ
 
 	//TRACE( CharString().format("NounPlanet::inflictDamage, position = %.1f,%.1f,%.1f", P.x,P.y,P.z) );
 
-	float damageRadius = Clamp<float>( 1.0f + (PLANET_DAMAGE_RADIUS * damage), 1.0f, PLANET_MAX_DAMAGE_RADIUS );
-	
 	// cause damage to units on the surface
 	for(int i=0;i<childCount();i++)
 	{
-		NounGame * pNoun = WidgetCast<NounGame>( child(i) );
-		if (!pNoun || !pNoun->canDamage( type ) )
+		NounUnit * pUnit = WidgetCast<NounUnit>( child(i) );
+		if (!pUnit || !pUnit->canDamage( type ) )
 			continue;		// can't damage this noun with this type of damage
 
-		float distance = (pNoun->position() - P).magnitude();
-		if ( distance < damageRadius )
-			pNoun->inflictDamage( nWhen, pFrom, (1.0f - (distance / damageRadius)) * damage, type, direction );
+		// get hex position due to the fact unit stacking effects vertical distance from damage location
+		float fDistance = (hex(pUnit->hex()).position - P).magnitude();
+		float fDamageRadius = Clamp<float>( 1.0f + (PLANET_DAMAGE_RADIUS * damage), 1.0f, PLANET_MAX_DAMAGE_RADIUS );
+			
+		if ( fDistance < fDamageRadius )
+			pUnit->inflictDamage( nWhen, pFrom, (1.0f - (fDistance / fDamageRadius)) * damage, type, direction );
 	}
 }
 
