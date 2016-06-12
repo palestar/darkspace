@@ -13,3 +13,4 @@ BuildLog.htm
 *.rsp
 *.suo
 *.log
+Config/Debug.ini
