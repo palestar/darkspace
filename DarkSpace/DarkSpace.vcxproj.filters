@@ -1,0 +1,1111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{df8a5719-2cf9-417b-822a-e811c50c70cc}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Gadgets">
+      <UniqueIdentifier>{ce48c15b-ad5d-41c1-8a67-236e7900e767}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verbs">
+      <UniqueIdentifier>{0c204572-9757-41d8-92ec-f678cd2aad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nouns">
+      <UniqueIdentifier>{51fd5331-09ae-47d6-982d-dad1417cbe78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{b8e7b076-2e01-48dc-93b4-bff7ba073513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Traits">
+      <UniqueIdentifier>{76733e38-c306-4ab6-b50c-2336d829ff5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enhancements">
+      <UniqueIdentifier>{2f9191a7-41fa-4f53-82e7-b2fbfb1ed071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Structures">
+      <UniqueIdentifier>{0a3b6685-72d5-4862-89ff-e05b55caa3c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{c92c174f-df39-4e5e-aae5-730cf1665a80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetAreaReload.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetAreaWeapon.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetArmor.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetAura.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetAutoRepair.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetBeacon.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetBeamWeapon.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetBuild.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetCloak.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetDrive.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetDropPod.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetECCM.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetECM.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetELF.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetEMP.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetFighterBay.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetJD.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetJumpDrive.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetJumpGate.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetMiningBeam.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetPulseShield.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetReactor.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetReload.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetScanner.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetScript.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetShield.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetSlot.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetSpawn.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetSpreadWeapon.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetTECCM.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetTECM.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetTractorBeam.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="GadgetWeapon.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbApplyEnhancement.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbBreakOrbit.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbBuildPlatform.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbBuildStructure.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbBuildUnit.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbCapturePlanet.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbCaptureShip.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbCommandShip.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDestroyGadget.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDestroyShip.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDestroyStructure.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDestroyUnit.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDisband.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbDistress.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbEnterOrbit.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbExplodeProjectiles.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbGadgetOff.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbImportExport.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbJump.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbJumpAbort.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbJumpBegin.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbLoad.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbLockPlanet.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbMoveUnit.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbOrderShip.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbOrderUnit.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbPlanetEvent.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbQueue.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbRefitGadget.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbRemoveEnhancement.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbRepairGadget.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbRevolt.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbScrap.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbSelfDestruct.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbSetDetectionFlags.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbSetFlags.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbSetGadgetGroup.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbSetStructureActive.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbSpawn.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbTradeRoute.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbTransferCredits.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbTransferResource.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbUnload.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbUseGadget.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbUseJumpGate.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbUseMode.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbUseSingleGadget.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="VerbUseStructure.h">
+      <Filter>Verbs</Filter>
+    </ClInclude>
+    <ClInclude Include="CargoEnhancement.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="CargoGadget.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="CargoResource.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterCrystal.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterEnergy.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterGafin.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterTeros.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterTerosScout.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounAsteroid.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounAsteroidBelt.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounBeacon.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounBody.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounCargo.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounComet.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounDrone.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounDropTarget.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounField.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounFighter.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounGadget.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounGame.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounJumpGate.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounJumpTarget.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounNebula.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounPlanet.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounPod.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounProjectile.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounQueue.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounScenery.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounShip.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounSmartProjectile.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounSpawn.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounSpawnShip.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounStar.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounStructure.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounTrail.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="NounUnit.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="ProxyShip.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneryDebris.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneryEffect.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipFighter.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipPlatform.h">
+      <Filter>Nouns</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldDamage.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldEnhancement.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldInterdictor.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldSafeZone.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameClient.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameContext.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDll.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProfile.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameServer.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameZone.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="PathMapPlanet.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Trail.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitBuildable.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitCargo.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitCargoHold.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitDamageable.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitDisplayName.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitEnergyBank.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitFleetId.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitOrbit.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitOrbitable.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitRepairable.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitSignature.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="TraitUserId.h">
+      <Filter>Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminEnhancements.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="BeamEnhancements.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultLootTables.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="EnhancementModifier.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="NounEnhancement.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="ShipEnhancements.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecialEnhancements.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponEnhancements.h">
+      <Filter>Enhancements</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureBarracks.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefense.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefenseMix1.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefenseMix2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefensePD1.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefensePD2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefenseShip1.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDefenseShip2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDepot.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureDome.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureFactory.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureFarm.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureFarm2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureFarm3.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureHub.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureInterdictor.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureLab.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureLab2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureLab3.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureMine.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureMine2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureMine3.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructurePort.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructurePower.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructurePower2.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructurePower3.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureSensor.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureShield.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureShipyard.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="StructureSolar.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="DropData.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="FactionInfo.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="TierInfo.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Universe.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\Universe.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\Constants.ini" />
+    <None Include="makefile" />
+    <None Include="..\Bin\Version.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GadgetAreaReload.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetAreaWeapon.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetArmor.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetAura.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetAutoRepair.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetBeacon.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetBeamWeapon.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetBuild.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetCloak.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetDrive.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetDropPod.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetECCM.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetECM.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetELF.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetEMP.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetFighterBay.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetJD.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetJumpDrive.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetJumpGate.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetMiningBeam.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetPulseShield.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetReactor.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetReload.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetScanner.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetScript.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetShield.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetSlot.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetSpawn.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetSpreadWeapon.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetTECCM.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetTECM.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetTractorBeam.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetWeapon.cpp">
+      <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbApplyEnhancement.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbBreakOrbit.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbBuildPlatform.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbBuildStructure.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbBuildUnit.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbCapturePlanet.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbCaptureShip.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbCommandShip.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDestroyGadget.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDestroyShip.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDestroyStructure.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDestroyUnit.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDisband.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbDistress.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbEnterOrbit.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbExplodeProjectiles.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbGadgetOff.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbImportExport.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbJump.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbJumpAbort.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbJumpBegin.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbLoad.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbLockPlanet.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbMoveUnit.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbOrderShip.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbOrderUnit.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbPlanetEvent.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbQueue.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbRefitGadget.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbRemoveEnhancement.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbRepairGadget.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbRevolt.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbScrap.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbSelfDestruct.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbSetDetectionFlags.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbSetFlags.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbSetGadgetGroup.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbSetStructureActive.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbSpawn.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbTradeRoute.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbTransferCredits.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbTransferResource.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbUnload.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbUseGadget.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbUseJumpGate.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbUseMode.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbUseSingleGadget.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="VerbUseStructure.cpp">
+      <Filter>Verbs</Filter>
+    </ClCompile>
+    <ClCompile Include="CargoEnhancement.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="CargoGadget.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="CargoResource.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterCrystal.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterEnergy.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterGafin.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterTeros.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterTerosScout.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounAsteroid.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounAsteroidBelt.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounBeacon.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounBody.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounCargo.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounComet.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounDrone.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounDropTarget.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounField.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounFighter.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounGadget.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounGame.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounJumpGate.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounJumpTarget.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounNebula.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounPlanet.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounPod.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounProjectile.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounQueue.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounScenery.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounShip.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounShipCargo.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounShipControl.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounShipEnhancement.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounShipLogic.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounSmartProjectile.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounSpawn.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounSpawnShip.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounStar.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounStructure.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounTrail.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="NounUnit.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneryDebris.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneryEffect.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipPlatform.cpp">
+      <Filter>Nouns</Filter>
+    </ClCompile>
+    <ClCompile Include="Constants.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldDamage.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldEnhancement.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldInterdictor.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FieldSafeZone.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClient.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameClientCommand.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameContext.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameContextScript.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDll.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameProfile.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServer.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameServerCommand.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameZone.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="PathMapPlanet.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Trail.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TraitDisplayName.cpp">
+      <Filter>Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="TraitOrbit.cpp">
+      <Filter>Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="TraitSignature.cpp">
+      <Filter>Traits</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminEnhancements.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="BeamEnhancements.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="DefaultLootTables.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="EnhancementModifier.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="NounEnhancement.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="ShipEnhancements.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecialEnhancements.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponEnhancements.cpp">
+      <Filter>Enhancements</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureBarracks.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureDefense.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureFactory.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureHub.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureMine.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructurePort.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Structures.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureShipyard.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureSolar.cpp">
+      <Filter>Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="DropData.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="FactionInfo.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="TierInfo.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

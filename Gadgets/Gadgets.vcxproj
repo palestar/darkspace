@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugLinux|Win32">
+      <Configuration>DebugLinux</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLinux|Win32">
+      <Configuration>ReleaseLinux</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{34CE6C9A-C82E-42D0-9801-880587FE5A01}</ProjectGuid>
+    <RootNamespace>Gadgets</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2010</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/Gadgets.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_USRDLL;WIN32;_WINDOWS;GADGETS_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Debug/Gadgets.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)D.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/Gadgets.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_USRDLL;WIN32;_WINDOWS;GADGETS_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/Gadgets.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/Gadgets.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_USRDLL;WIN32;_WINDOWS;GADGETS_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Debug/Gadgets.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)D.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/Gadgets.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_USRDLL;WIN32;_WINDOWS;GADGETS_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/Gadgets.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Gadgets.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">_DEBUG;_USRDLL;WIN32;_WINDOWS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;_USRDLL;WIN32;_WINDOWS</PreprocessorDefinitions>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">NDEBUG;_USRDLL;WIN32;_WINDOWS</PreprocessorDefinitions>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;_USRDLL;WIN32;_WINDOWS</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="Ships.cpp" />
+    <ClCompile Include="Weapons.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Armor10000.h" />
+    <ClInclude Include="Armor5000.h" />
+    <ClInclude Include="ArmorAblative.h" />
+    <ClInclude Include="ArmorChitin.h" />
+    <ClInclude Include="ArmorComposite.h" />
+    <ClInclude Include="ArmorDusk.h" />
+    <ClInclude Include="ArmorFighter.h" />
+    <ClInclude Include="ArmorMolecular.h" />
+    <ClInclude Include="ArmorOrganic.h" />
+    <ClInclude Include="ArmorReflective.h" />
+    <ClInclude Include="ArmorStandard.h" />
+    <ClInclude Include="ArmorStealth.h" />
+    <ClInclude Include="AutoRepair.h" />
+    <ClInclude Include="Beacon100.h" />
+    <ClInclude Include="Cloak100.h" />
+    <ClInclude Include="DamageControl.h" />
+    <ClInclude Include="DriveAFE.h" />
+    <ClInclude Include="DriveAME.h" />
+    <ClInclude Include="DriveHVAFE.h" />
+    <ClInclude Include="DriveHVAME.h" />
+    <ClInclude Include="DriveHVIE.h" />
+    <ClInclude Include="DriveHVPFE.h" />
+    <ClInclude Include="DriveHVPIE.h" />
+    <ClInclude Include="DriveHVSE.h" />
+    <ClInclude Include="DriveIE.h" />
+    <ClInclude Include="DrivePFE.h" />
+    <ClInclude Include="DrivePIE.h" />
+    <ClInclude Include="DriveSE.h" />
+    <ClInclude Include="DropPod.h" />
+    <ClInclude Include="DropPodMI.h" />
+    <ClInclude Include="ECCM.h" />
+    <ClInclude Include="ECCM1.h" />
+    <ClInclude Include="ECCM2.h" />
+    <ClInclude Include="ECM.h" />
+    <ClInclude Include="ECM1.h" />
+    <ClInclude Include="ECM2.h" />
+    <ClInclude Include="ELF750.h" />
+    <ClInclude Include="EMP500.h" />
+    <ClInclude Include="FighterBay.h" />
+    <ClInclude Include="FighterBayAssault.h" />
+    <ClInclude Include="FighterBayBomber.h" />
+    <ClInclude Include="FighterBayInterceptor.h" />
+    <ClInclude Include="FighterBayScout.h" />
+    <ClInclude Include="FighterBayTorpedo.h" />
+    <ClInclude Include="FocusedTECCM.h" />
+    <ClInclude Include="FocusedTECM.h" />
+    <ClInclude Include="GadgetsDll.h" />
+    <ClInclude Include="Innards.h" />
+    <ClInclude Include="JD1000.h" />
+    <ClInclude Include="JD2K.h" />
+    <ClInclude Include="JumpDriveAntiMatter.h" />
+    <ClInclude Include="JumpDriveEnergy.h" />
+    <ClInclude Include="JumpDriveHMA.h" />
+    <ClInclude Include="JumpDriveOverdrive.h" />
+    <ClInclude Include="JumpDriveSE.h" />
+    <ClInclude Include="JumpDriveTachyon.h" />
+    <ClInclude Include="JumpGate1.h" />
+    <ClInclude Include="JumpGate2.h" />
+    <ClInclude Include="LocalECM.h" />
+    <ClInclude Include="LongWaveECCM.h" />
+    <ClInclude Include="LongWaveECM.h" />
+    <ClInclude Include="MiningBeam.h" />
+    <ClInclude Include="MouthBeam.h" />
+    <ClInclude Include="NaniteInjector.h" />
+    <ClInclude Include="NarrowBandTECCM.h" />
+    <ClInclude Include="NarrowBandTECM.h" />
+    <ClInclude Include="PlanetArid.h" />
+    <ClInclude Include="PlanetBarren.h" />
+    <ClInclude Include="PlanetGas.h" />
+    <ClInclude Include="PlanetHome.h" />
+    <ClInclude Include="PlanetIce.h" />
+    <ClInclude Include="PlanetInferno.h" />
+    <ClInclude Include="PlanetMoon.h" />
+    <ClInclude Include="PlanetOcean.h" />
+    <ClInclude Include="PlanetTerran.h" />
+    <ClInclude Include="PlatformDefense.h" />
+    <ClInclude Include="PlatformSensor.h" />
+    <ClInclude Include="PlatformSupply.h" />
+    <ClInclude Include="PulseShield.h" />
+    <ClInclude Include="Reactor1000.h" />
+    <ClInclude Include="Reactor1500.h" />
+    <ClInclude Include="Reactor500.h" />
+    <ClInclude Include="ReactorAux.h" />
+    <ClInclude Include="RF250.h" />
+    <ClInclude Include="Scanner.h" />
+    <ClInclude Include="Scanner1.h" />
+    <ClInclude Include="Scanner2.h" />
+    <ClInclude Include="ScannerDetectCloak.h" />
+    <ClInclude Include="ShieldActive.h" />
+    <ClInclude Include="ShieldAuxillary.h" />
+    <ClInclude Include="ShieldGhost.h" />
+    <ClInclude Include="ShieldKluthPT.h" />
+    <ClInclude Include="ShieldPlanetary.h" />
+    <ClInclude Include="ShieldReactive.h" />
+    <ClInclude Include="ShieldSkirmish.h" />
+    <ClInclude Include="ShipCruiser.h" />
+    <ClInclude Include="ShipDestroyer.h" />
+    <ClInclude Include="ShipDread.h" />
+    <ClInclude Include="ShipDread2.h" />
+    <ClInclude Include="ShipEngineer.h" />
+    <ClInclude Include="ShipFrigate.h" />
+    <ClInclude Include="ShipNode.h" />
+    <ClInclude Include="ShipOrb.h" />
+    <ClInclude Include="ShipScout.h" />
+    <ClInclude Include="ShipStation.h" />
+    <ClInclude Include="ShipSupply.h" />
+    <ClInclude Include="ShipTransport.h" />
+    <ClInclude Include="SupplyDrones.h" />
+    <ClInclude Include="SupplyDronesLight.h" />
+    <ClInclude Include="SupplyDronesPlanetary.h" />
+    <ClInclude Include="SupplyDronesStation.h" />
+    <ClInclude Include="TacticalECCM.h" />
+    <ClInclude Include="TacticalECM.h" />
+    <ClInclude Include="TractorBeam300.h" />
+    <ClInclude Include="UnitArmor.h" />
+    <ClInclude Include="UnitAutomaton.h" />
+    <ClInclude Include="UnitHeavyInfantry.h" />
+    <ClInclude Include="UnitInfantry.h" />
+    <ClInclude Include="UnitRaidingParty.h" />
+    <ClInclude Include="UnitSpy.h" />
+    <ClInclude Include="WeaponAMmine.h" />
+    <ClInclude Include="WeaponAmplifiedCoilBeam.h" />
+    <ClInclude Include="WeaponAmplifiedPulseBeam.h" />
+    <ClInclude Include="WeaponAMtorpedo.h" />
+    <ClInclude Include="WeaponAMtorpedoFighter.h" />
+    <ClInclude Include="WeaponAntiRadarMissile.h" />
+    <ClInclude Include="WeaponAntiShipMissile.h" />
+    <ClInclude Include="WeaponAresCannon.h" />
+    <ClInclude Include="WeaponARmissile.h" />
+    <ClInclude Include="WeaponARMissile2.h" />
+    <ClInclude Include="WeaponASMissile.h" />
+    <ClInclude Include="WeaponBBBomb.h" />
+    <ClInclude Include="WeaponBPCbomb.h" />
+    <ClInclude Include="WeaponCL.h" />
+    <ClInclude Include="WeaponCL1000.h" />
+    <ClInclude Include="WeaponCL2000.h" />
+    <ClInclude Include="WeaponCL300.h" />
+    <ClInclude Include="WeaponCL500.h" />
+    <ClInclude Include="WeaponCLER.h" />
+    <ClInclude Include="WeaponCLH.h" />
+    <ClInclude Include="WeaponCLHICC.h" />
+    <ClInclude Include="WeaponCLICC.h" />
+    <ClInclude Include="WeaponCLPlanet.h" />
+    <ClInclude Include="WeaponDeathBeam.h" />
+    <ClInclude Include="WeaponDisruptor.h" />
+    <ClInclude Include="WeaponDisruptorA.h" />
+    <ClInclude Include="WeaponDMC.h" />
+    <ClInclude Include="WeaponDSbeam.h" />
+    <ClInclude Include="WeaponELF.h" />
+    <ClInclude Include="WeaponElfTorpedo.h" />
+    <ClInclude Include="WeaponEMPCannon.h" />
+    <ClInclude Include="WeaponEMPCannonHV.h" />
+    <ClInclude Include="WeaponEMPmine.h" />
+    <ClInclude Include="WeaponEMPMissile.h" />
+    <ClInclude Include="WeaponEMPMissileHV.h" />
+    <ClInclude Include="WeaponEmpTorpedo.h" />
+    <ClInclude Include="WeaponEtorpedo.h" />
+    <ClInclude Include="WeaponFEP.h" />
+    <ClInclude Include="WeaponFEPO.h" />
+    <ClInclude Include="WeaponFighterBeam.h" />
+    <ClInclude Include="WeaponFLUXbeam.h" />
+    <ClInclude Include="WeaponFluxWave.h" />
+    <ClInclude Include="WeaponFurybomb.h" />
+    <ClInclude Include="WeaponFusionTorpedo.h" />
+    <ClInclude Include="WeaponGauss.h" />
+    <ClInclude Include="WeaponGaussHV.h" />
+    <ClInclude Include="WeaponGuardianMissile.h" />
+    <ClInclude Include="WeaponHAMmine.h" />
+    <ClInclude Include="WeaponHarpexMissile.h" />
+    <ClInclude Include="WeaponHeavyMassDriver.h" />
+    <ClInclude Include="WeaponHEMPmine.h" />
+    <ClInclude Include="WeaponHTNmine.h" />
+    <ClInclude Include="WeaponIEmissile.h" />
+    <ClInclude Include="WeaponIEMissile2.h" />
+    <ClInclude Include="WeaponIonCannon.h" />
+    <ClInclude Include="WeaponIonizedBeamCannon.h" />
+    <ClInclude Include="WeaponIonTorpedo.h" />
+    <ClInclude Include="WeaponIonTrackerMissile.h" />
+    <ClInclude Include="WeaponIPbeam.h" />
+    <ClInclude Include="WeaponIPSbeam.h" />
+    <ClInclude Include="WeaponLinearDriveMissile.h" />
+    <ClInclude Include="WeaponLonginusDefenseBeam.h" />
+    <ClInclude Include="WeaponMassPulseCannon.h" />
+    <ClInclude Include="WeaponMiRVbomb.h" />
+    <ClInclude Include="WeaponMPA.h" />
+    <ClInclude Include="WeaponNeutronbomb.h" />
+    <ClInclude Include="WeaponNeutroniumSiegeTorpedo.h" />
+    <ClInclude Include="WeaponNeutroniumTorpedo.h" />
+    <ClInclude Include="WeaponParticleCannon.h" />
+    <ClInclude Include="WeaponParticleCannonFighter.h" />
+    <ClInclude Include="WeaponParticleCannonHV.h" />
+    <ClInclude Include="WeaponPasseridaeMissileLauncher.h" />
+    <ClInclude Include="WeaponPCmissile.h" />
+    <ClInclude Include="WeaponPeregrineMissile.h" />
+    <ClInclude Include="WeaponPhoenixMissile.h" />
+    <ClInclude Include="WeaponPlasmaCannon.h" />
+    <ClInclude Include="WeaponPlasmaCannonHV.h" />
+    <ClInclude Include="WeaponProtonCruiseMissile.h" />
+    <ClInclude Include="WeaponProtonTorpedo.h" />
+    <ClInclude Include="WeaponProtonTorpedoFighter.h" />
+    <ClInclude Include="WeaponPSGmissile.h" />
+    <ClInclude Include="WeaponPSGMissile2.h" />
+    <ClInclude Include="WeaponPSIBeam.h" />
+    <ClInclude Include="WeaponPsiCannon.h" />
+    <ClInclude Include="WeaponPsiCannonFighter.h" />
+    <ClInclude Include="WeaponPsiCannonHV.h" />
+    <ClInclude Include="WeaponPsiFocusedDisruptor.h" />
+    <ClInclude Include="WeaponPsionicMissile.h" />
+    <ClInclude Include="WeaponPsiwaveSeekerMissile.h" />
+    <ClInclude Include="WeaponPSMissile.h" />
+    <ClInclude Include="WeaponPulseBeam.h" />
+    <ClInclude Include="WeaponPurifierBomb.h" />
+    <ClInclude Include="WeaponQSbomb.h" />
+    <ClInclude Include="WeaponQSST.h" />
+    <ClInclude Include="WeaponQST.h" />
+    <ClInclude Include="WeaponRailgun.h" />
+    <ClInclude Include="WeaponRailgunFighter.h" />
+    <ClInclude Include="WeaponRailgunHV.h" />
+    <ClInclude Include="WeaponRapidCycleDisruptor.h" />
+    <ClInclude Include="WeaponRaptorMissile.h" />
+    <ClInclude Include="WeaponSABOT.h" />
+    <ClInclude Include="WeaponSABOT2.h" />
+    <ClInclude Include="WeaponShockMissile.h" />
+    <ClInclude Include="WeaponShredderMissile.h" />
+    <ClInclude Include="WeaponShredderMissile2.h" />
+    <ClInclude Include="WeaponShroudMissile.h" />
+    <ClInclude Include="WeaponSparrowMissile.h" />
+    <ClInclude Include="WeaponSpreadShot.h" />
+    <ClInclude Include="WeaponStellarIncinerator.h" />
+    <ClInclude Include="WeaponTKBomb.h" />
+    <ClInclude Include="WeaponTKCannon.h" />
+    <ClInclude Include="WeaponTKTorpedo.h" />
+    <ClInclude Include="WeaponTNmine.h" />
+    <ClInclude Include="WeaponTrebuchetSiegeMissile.h" />
+    <ClInclude Include="WeaponValenceAutocannon.h" />
+    <ClInclude Include="WeaponValenceAutocannonHV.h" />
+    <ClInclude Include="WeaponVarianceSiegeTorpedo.h" />
+    <ClInclude Include="WeaponVarianceTorpedo.h" />
+    <ClInclude Include="WeaponWibbleCannon.h" />
+    <ClInclude Include="WeaponWibbleCannonHV.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Medusa\Medusa\Medusa.vcxproj">
+      <Project>{93ad8e65-fb3a-414d-ba0b-6e8ffddb6cab}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\medusa\World\World.vcxproj">
+      <Project>{74ef8552-8c85-4859-b8f0-5f056c17d3a5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\DarkSpace\DarkSpace.vcxproj">
+      <Project>{04d9c4b4-b762-4074-a2f7-e5fa29e55c01}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_selTargetType="0" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strDebugHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCFLAGS="-g -O2 -I ../ -I ../../Medusa/" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCompilerC="gcc" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCompilerC="gcc" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileIntDir="ReleaseLinux/obj" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_bDisableHangReporter="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_bReuseStandardBuildCommand="true" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_pathDebugger="gdb" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_selBuildBeforeStartDebugging="0" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strBuildHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_bReuseStandardBuildCommand="true" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteBuildVariables="BUILD_CONFIGURATION=&quot;ReleaseLinux&quot;" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteBuildCommand="make" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strBuildHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_selTargetType="0" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteRebuildCommand="make clean; make" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileRM="rm -f" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileLDFLAGS="-shared" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteCleanCommand="make clean" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileDestDir="../Bin" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileMKDIR="mkdir -p" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteBuildVariables="BUILD_CONFIGURATION=&quot;DebugLinux&quot;" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteCleanCommand="make clean" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_pathRemoteBuildDirectory="/home/builder/work/Trunk/DarkSpace/Gadgets" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteRebuildCommand="make clean; make" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_pathRemoteBuildDirectory="/home/builder/work/Trunk/DarkSpace/Gadgets" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strDebugHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_pathDebugger="gdb" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCXXFLAGS="-g -O2 -I ../ -I ../../Medusa/" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCompilerCXX="g++" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteBuildCommand="make" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCXXFLAGS="-g -I ../ -I ../../Medusa/" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_bDisableHangReporter="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileMKDIR="mkdir -p" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_bSourceSession="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileDestDir="../Bin" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileLDFLAGS="-shared" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_bSourceSession="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileIntDir="DebugLinux/obj" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_selBuildBeforeStartDebugging="0" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCompilerCXX="g++" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileRM="rm -f" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCFLAGS="-g -I ../ -I ../../Medusa/" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
