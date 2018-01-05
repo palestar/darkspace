@@ -18,3 +18,5 @@ Config/
 .vs/
 unsuccessfulbuild
 UpgradeLog.htm
+server/
+keyboard.map

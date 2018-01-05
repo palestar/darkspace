@@ -53,6 +53,9 @@ const int MAX_SUB_SHIPS_IN_STORAGE = 12;
 const int MAX_SPAWN_ATTEMPTS = 10;
 const dword LOG_SHIP_STATS_INTERVAL = 300;
 
+//! Enable prestige loss on death
+#define ENABLE_PRESTIGE_LOSS_ON_DEATH			0
+
 //---------------------------------------------------------------------------------------------------
 
 static bool GetKeyValue( const char * a_pData, const char * a_pKey, CharString & a_sValue )
@@ -1429,6 +1432,7 @@ void GameServer::onDetachNoun( Noun * pNoun )
 				// clear the players ship, so they can select a new ship
 				setClientSelf( 0, nClientId, NULL_WIDGET );
 
+#if ENABLE_PRESTIGE_LOSS_ON_DEATH
 				// if ship is destroyed, add resources lost..
 				if ( pSelf->isDestroyed()  )
 				{
@@ -1438,6 +1442,7 @@ void GameServer::onDetachNoun( Noun * pNoun )
 
 					addProfile( nUserId, RESOURCES_LOST, fResourcesLost );
 				}
+#endif
 
 				bool bStorageFull = false;
 
