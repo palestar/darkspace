@@ -134,13 +134,6 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\..\Medusa\Bin\GCQ.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\Medusa.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\Network.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\Render3D.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\World.dll" "$(ProjectDir)..\Bin\"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -188,13 +181,6 @@ xcopy "$(ProjectDir)..\..\Medusa\Bin\World.dll" "$(ProjectDir)..\Bin\"</Command>
       <TargetMachine>MachineX86</TargetMachine>
       <ProfileGuidedDatabase>$(OutDir)$(TargetName)D.pgd</ProfileGuidedDatabase>
     </Link>
-    <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)..\..\Medusa\Bin\GCQD.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\MedusaD.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\NetworkD.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\Render3DD.dll" "$(ProjectDir)..\Bin\"
-xcopy "$(ProjectDir)..\..\Medusa\Bin\WorldD.dll" "$(ProjectDir)..\Bin\"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
     <Midl>
