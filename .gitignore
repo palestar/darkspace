@@ -14,3 +14,5 @@ BuildLog.htm
 *.suo
 *.log
 Config/Debug.ini
+*.tlog
+.vs/
