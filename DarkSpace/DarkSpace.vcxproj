@@ -646,6 +646,10 @@
       <Project>{93ad8e65-fb3a-414d-ba0b-6e8ffddb6cab}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\..\medusa\Network\Network.vcxproj">
+      <Project>{1e5779fc-265e-4331-aaad-79aafd688da4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\..\medusa\Render3D\Render3D.vcxproj">
       <Project>{18b80ecb-53ae-47e1-af11-0c994cac2c1d}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>

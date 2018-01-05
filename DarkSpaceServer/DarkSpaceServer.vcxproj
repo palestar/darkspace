@@ -134,6 +134,13 @@
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\..\Medusa\Bin\GCQ.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\Medusa.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\Network.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\Render3D.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\World.dll" "$(ProjectDir)..\Bin\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Midl>
@@ -181,6 +188,13 @@
       <TargetMachine>MachineX86</TargetMachine>
       <ProfileGuidedDatabase>$(OutDir)$(TargetName)D.pgd</ProfileGuidedDatabase>
     </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)..\..\Medusa\Bin\GCQD.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\MedusaD.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\NetworkD.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\Render3DD.dll" "$(ProjectDir)..\Bin\"
+xcopy "$(ProjectDir)..\..\Medusa\Bin\WorldD.dll" "$(ProjectDir)..\Bin\"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
     <Midl>
@@ -293,6 +307,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Medusa\Medusa\Medusa.vcxproj">
       <Project>{93ad8e65-fb3a-414d-ba0b-6e8ffddb6cab}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\medusa\Network\Network.vcxproj">
+      <Project>{1e5779fc-265e-4331-aaad-79aafd688da4}</Project>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
     <ProjectReference Include="..\..\medusa\World\World.vcxproj">
