@@ -22,10 +22,10 @@ Command			$(TargetDir)\$(TargetName).exe
 Command Arguments	-connect ip port -login username password
 Working Directory	..
 ```
-Notes:
-If you're running under Debug profile, Command should be changed to $(TargetDir)\$(TargetName)D.exe
-If you're running the server locally, the default ip should be localhost and port 9020.
-The username and password required are the same used to login to the GCQL client or DarkSpace website.
+Notes:  
+If you're running under Debug profile, Command should be changed to $(TargetDir)\$(TargetName)D.exe  
+If you're running the server locally, the default ip should be localhost and port 9020.  
+The username and password required are the same used to login to the GCQL client or DarkSpace website.  
 
 # Running a Server:
 * Open the solution, DarkSpace/Server.sln, compile the solution if needed.
@@ -37,10 +37,10 @@ Command			$(TargetDir)\$(TargetName).exe
 Command Arguments	Config\Debug.ini
 Working Directory	..
 ```
-Notes:
-If you're running under Debug profile, Command should be changed to $(TargetDir)\$(TargetName)D.exe
-It's a good idea to make a copy the Debug config file and use that one so if something goes wrong you can swap out easily.
-Do not populate the user and password fields in the config file for the server, these are reserved for persistant prestige enabled servers and enabling them will result in the meta-server refusing your server to communicate.
+Notes:  
+If you're running under Debug profile, Command should be changed to $(TargetDir)\$(TargetName)D.exe  
+It's a good idea to make a copy the Debug config file and use that one so if something goes wrong you can swap out easily.  
+Do not populate the user and password fields in the config file for the server, these are reserved for persistant prestige enabled servers and enabling them will result in the meta-server refusing your server to communicate.  
 
 # Contributing:
 * master is the main release branch, only HOTFIX's will be pushed into this branch directly.
