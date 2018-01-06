@@ -18,7 +18,7 @@
 * Open the properties for DarkSpaceClient and go to Configuration Properties > Debugging.
 * The following entries should be populated:
 ```
-Command				$(TargetDir)\$(TargetName).exe
+Command			$(TargetDir)\$(TargetName).exe
 Command Arguments	-connect ip port -login username password
 Working Directory	..
 ```
@@ -33,7 +33,7 @@ The username and password required are the same used to login to the GCQL client
 * Open the properties for DarkSpaceServer and go to Configuration Properties > Debugging.
 * The following entries should be populated:
 ```
-Command				$(TargetDir)\$(TargetName).exe
+Command			$(TargetDir)\$(TargetName).exe
 Command Arguments	Config\Debug.ini
 Working Directory	..
 ```
