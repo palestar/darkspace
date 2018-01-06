@@ -22,7 +22,7 @@ Command			$(TargetDir)\$(TargetName).exe
 Command Arguments	-connect ip port -login username password
 Working Directory	..
 ```
-####Notes:  
+#### Notes:  
 1. If you're running under Debug profile, Command should be changed to $(TargetDir)\$(TargetName)D.exe  
 2. If you're running the server locally, the default ip should be localhost and port 9020.  
 3. The username and password required are the same used to login to the GCQL client or DarkSpace website.  
