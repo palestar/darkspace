@@ -26,7 +26,7 @@ CPageGeneral::CPageGeneral() : CPropertyPage(CPageGeneral::IDD)
 , m_bEnableUDP(FALSE)
 , m_bInvertButtons(FALSE)
 , m_bDisableRightActions(FALSE)
-, m_bForceMultCore(FALSE)
+, m_bForceMultCore(TRUE)
 {
 	//{{AFX_DATA_INIT(CPageGeneral)
 	m_BPSText = _T("");
@@ -90,7 +90,7 @@ BOOL CPageGeneral::OnInitDialog()
 	m_bShowContacts = settings.get("ShowContacts", 1 );
 	m_bInvertButtons = settings.get( "invertButtons", (dword)0 );
 	m_bDisableRightActions = settings.get( "disableRightActions", (dword)0 );
-	m_bForceMultCore = settings.get( "ForceMultiCore", (dword)0 );
+	m_bForceMultCore = settings.get( "ForceMultiCore", (dword)1 );
 
 	dword nFPSLimit = settings.get("FPSLimit", (dword)0 );
 	if ( nFPSLimit > 0 )
