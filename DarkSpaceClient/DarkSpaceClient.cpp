@@ -274,20 +274,6 @@ int CClientApp::StartGame()
 	}
 #endif
 
-#if 0
-	progress.SetStatus( _T("Checking for DX8...") );
-
-	// Verify that DirectX 8.0 is installed
-	HINSTANCE hD3D8DLL = LoadLibrary( _T("D3D8.DLL") );
-	if( hD3D8DLL == NULL )
-	{
-		MessageBox( NULL, _T("DirectX 8.0 is required to play DarkSpace!"), _T("DX8 not installed"), MB_OK );
-		return FALSE;
-	}
-	// DX8 is installed
-	FreeLibrary( hD3D8DLL );
-#endif
-
 	// make sure the settings are valid, run ClientSetup.exe if necessary
 	if ( settings.get( "setup", (dword)0 ) != 3 )
 	{
