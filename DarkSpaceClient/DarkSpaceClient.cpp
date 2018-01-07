@@ -169,8 +169,48 @@ int CClientApp::StartGame()
 	// to be loaded from disk.
 	LocalizedString::locale();
 
+
+	int CPUInfo[4] = { -1 };
+	unsigned   nExIds, i = 0;
+	char CPUBrandString[0x40];
+	// Get the information associated with each extended ID.
+	__cpuid(CPUInfo, 0x80000000);
+	nExIds = CPUInfo[0];
+	for (i = 0x80000000; i <= nExIds; ++i)
+	{
+		__cpuid(CPUInfo, i);
+		// Interpret CPU brand string
+		if (i == 0x80000002)
+			memcpy(CPUBrandString, CPUInfo, sizeof(CPUInfo));
+		else if (i == 0x80000003)
+			memcpy(CPUBrandString + 16, CPUInfo, sizeof(CPUInfo));
+		else if (i == 0x80000004)
+			memcpy(CPUBrandString + 32, CPUInfo, sizeof(CPUInfo));
+	}
+	//string includes manufacturer, model and clockspeed
+	TRACE(CharString().format("CPU Type: %s", (CharString)CPUBrandString));
+
+	SYSTEM_INFO sysInfo;
+	GetSystemInfo(&sysInfo);
+	TRACE(CharString().format("Number of Cores: %d", sysInfo.dwNumberOfProcessors));
+
+	MEMORYSTATUSEX statex;
+	statex.dwLength = sizeof(statex);
+	GlobalMemoryStatusEx(&statex);
+	TRACE(CharString().format("Total System Memory: %d MB", (statex.ullTotalPhys / 1024) / 1024));
+
+	bool bCPUFail = true;
+
+	if (strstr(CPUBrandString, "AMD Ryzen"))
+		bCPUFail = false;
+	if (strstr(CPUBrandString, "Intel i"))
+		bCPUFail = false;
+
+	if ( !bCPUFail )
+		TRACE(CharString().format("Multicore supported..."));
+
 	// default to a single core unless someone forces multi-core support on..
-	if ( settings.get( "ForceMultiCore", (dword)0) == 0 )
+	if ( settings.get( "ForceMultiCore", (dword)0) == 0 || bCPUFail )
 	{
 		// Force ALL threads to run on the first core found..
 		DWORD nProcessAffMask = 0, nSystemAffMask = 0;
