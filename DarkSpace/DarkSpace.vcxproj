@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugLinux|Win32">
+      <Configuration>DebugLinux</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLinux|Win32">
+      <Configuration>ReleaseLinux</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{04D9C4B4-B762-4074-A2F7-E5FA29E55C01}</ProjectGuid>
+    <RootNamespace>DarkSpace</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.27130.2010</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/DarkSpace.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_USRDLL;GAME_DLL;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debug/DarkSpace.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)D.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)D.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName)D.map</MapFileName>
+      <MapExports>true</MapExports>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ProfileGuidedDatabase>$(OutDir)$(TargetName)D.pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)$(TargetName)D.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/DarkSpace.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_USRDLL;WIN32;_WINDOWS;GAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/DarkSpace.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLinux|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/DarkSpace.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_USRDLL;GAME_DLL;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debug/DarkSpace.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName)D.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../Bin/DarkSpace.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>../../Medusa;../../GameCQ;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_USRDLL;WIN32;_WINDOWS;GAME_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderOutputFile>.\Release/DarkSpace.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../Medusa/Bin;../../GameCQ/Bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MapExports>true</MapExports>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdminEnhancements.h" />
+    <ClInclude Include="BeamEnhancements.h" />
+    <ClInclude Include="CargoEnhancement.h" />
+    <ClInclude Include="CargoGadget.h" />
+    <ClInclude Include="CargoResource.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="DefaultLootTables.h" />
+    <ClInclude Include="DropData.h" />
+    <ClInclude Include="EnhancementModifier.h" />
+    <ClInclude Include="FactionInfo.h" />
+    <ClInclude Include="FieldDamage.h" />
+    <ClInclude Include="FieldEnhancement.h" />
+    <ClInclude Include="FieldInterdictor.h" />
+    <ClInclude Include="FieldSafeZone.h" />
+    <ClInclude Include="GadgetAreaReload.h" />
+    <ClInclude Include="GadgetAreaWeapon.h" />
+    <ClInclude Include="GadgetArmor.h" />
+    <ClInclude Include="GadgetAura.h" />
+    <ClInclude Include="GadgetAutoRepair.h" />
+    <ClInclude Include="GadgetBeacon.h" />
+    <ClInclude Include="GadgetBeamWeapon.h" />
+    <ClInclude Include="GadgetBuild.h" />
+    <ClInclude Include="GadgetCloak.h" />
+    <ClInclude Include="GadgetDrive.h" />
+    <ClInclude Include="GadgetDropPod.h" />
+    <ClInclude Include="GadgetECCM.h" />
+    <ClInclude Include="GadgetECM.h" />
+    <ClInclude Include="GadgetELF.h" />
+    <ClInclude Include="GadgetEMP.h" />
+    <ClInclude Include="GadgetFighterBay.h" />
+    <ClInclude Include="GadgetJD.h" />
+    <ClInclude Include="GadgetJumpDrive.h" />
+    <ClInclude Include="GadgetJumpGate.h" />
+    <ClInclude Include="GadgetMiningBeam.h" />
+    <ClInclude Include="GadgetPulseShield.h" />
+    <ClInclude Include="GadgetReactor.h" />
+    <ClInclude Include="GadgetReload.h" />
+    <ClInclude Include="GadgetScanner.h" />
+    <ClInclude Include="GadgetScript.h" />
+    <ClInclude Include="GadgetShield.h" />
+    <ClInclude Include="GadgetSlot.h" />
+    <ClInclude Include="GadgetSpawn.h" />
+    <ClInclude Include="GadgetSpreadWeapon.h" />
+    <ClInclude Include="GadgetTECCM.h" />
+    <ClInclude Include="GadgetTECM.h" />
+    <ClInclude Include="GadgetTractorBeam.h" />
+    <ClInclude Include="GadgetWeapon.h" />
+    <ClInclude Include="GameClient.h" />
+    <ClInclude Include="GameContext.h" />
+    <ClInclude Include="GameDll.h" />
+    <ClInclude Include="GameProfile.h" />
+    <ClInclude Include="GameServer.h" />
+    <ClInclude Include="GameZone.h" />
+    <ClInclude Include="MonsterCrystal.h" />
+    <ClInclude Include="MonsterEnergy.h" />
+    <ClInclude Include="MonsterGafin.h" />
+    <ClInclude Include="MonsterTeros.h" />
+    <ClInclude Include="MonsterTerosScout.h" />
+    <ClInclude Include="NounAsteroid.h" />
+    <ClInclude Include="NounAsteroidBelt.h" />
+    <ClInclude Include="NounBeacon.h" />
+    <ClInclude Include="NounBody.h" />
+    <ClInclude Include="NounCargo.h" />
+    <ClInclude Include="NounComet.h" />
+    <ClInclude Include="NounDrone.h" />
+    <ClInclude Include="NounDropTarget.h" />
+    <ClInclude Include="NounEnhancement.h" />
+    <ClInclude Include="NounField.h" />
+    <ClInclude Include="NounFighter.h" />
+    <ClInclude Include="NounGadget.h" />
+    <ClInclude Include="NounGame.h" />
+    <ClInclude Include="NounJumpGate.h" />
+    <ClInclude Include="NounJumpTarget.h" />
+    <ClInclude Include="NounNebula.h" />
+    <ClInclude Include="NounPlanet.h" />
+    <ClInclude Include="NounPod.h" />
+    <ClInclude Include="NounProjectile.h" />
+    <ClInclude Include="NounQueue.h" />
+    <ClInclude Include="NounScenery.h" />
+    <ClInclude Include="NounShip.h" />
+    <ClInclude Include="NounSmartProjectile.h" />
+    <ClInclude Include="NounSpawn.h" />
+    <ClInclude Include="NounSpawnShip.h" />
+    <ClInclude Include="NounStar.h" />
+    <ClInclude Include="NounStructure.h" />
+    <ClInclude Include="NounTrail.h" />
+    <ClInclude Include="NounUnit.h" />
+    <ClInclude Include="PathMapPlanet.h" />
+    <ClInclude Include="ProxyShip.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SceneryDebris.h" />
+    <ClInclude Include="SceneryEffect.h" />
+    <ClInclude Include="ShipEnhancements.h" />
+    <ClInclude Include="ShipFighter.h" />
+    <ClInclude Include="ShipPlatform.h" />
+    <ClInclude Include="SpecialEnhancements.h" />
+    <ClInclude Include="StructureBarracks.h" />
+    <ClInclude Include="StructureDefense.h" />
+    <ClInclude Include="StructureDefenseMix1.h" />
+    <ClInclude Include="StructureDefenseMix2.h" />
+    <ClInclude Include="StructureDefensePD1.h" />
+    <ClInclude Include="StructureDefensePD2.h" />
+    <ClInclude Include="StructureDefenseShip1.h" />
+    <ClInclude Include="StructureDefenseShip2.h" />
+    <ClInclude Include="StructureDepot.h" />
+    <ClInclude Include="StructureDome.h" />
+    <ClInclude Include="StructureFactory.h" />
+    <ClInclude Include="StructureFarm.h" />
+    <ClInclude Include="StructureFarm2.h" />
+    <ClInclude Include="StructureFarm3.h" />
+    <ClInclude Include="StructureHub.h" />
+    <ClInclude Include="StructureInterdictor.h" />
+    <ClInclude Include="StructureLab.h" />
+    <ClInclude Include="StructureLab2.h" />
+    <ClInclude Include="StructureLab3.h" />
+    <ClInclude Include="StructureMine.h" />
+    <ClInclude Include="StructureMine2.h" />
+    <ClInclude Include="StructureMine3.h" />
+    <ClInclude Include="StructurePort.h" />
+    <ClInclude Include="StructurePower.h" />
+    <ClInclude Include="StructurePower2.h" />
+    <ClInclude Include="StructurePower3.h" />
+    <ClInclude Include="StructureSensor.h" />
+    <ClInclude Include="StructureShield.h" />
+    <ClInclude Include="StructureShipyard.h" />
+    <ClInclude Include="StructureSolar.h" />
+    <ClInclude Include="TierInfo.h" />
+    <ClInclude Include="Trail.h" />
+    <ClInclude Include="TraitBuildable.h" />
+    <ClInclude Include="TraitCargo.h" />
+    <ClInclude Include="TraitCargoHold.h" />
+    <ClInclude Include="TraitDamageable.h" />
+    <ClInclude Include="TraitDisplayName.h" />
+    <ClInclude Include="TraitEnergyBank.h" />
+    <ClInclude Include="TraitFleetId.h" />
+    <ClInclude Include="TraitOrbit.h" />
+    <ClInclude Include="TraitOrbitable.h" />
+    <ClInclude Include="TraitRepairable.h" />
+    <ClInclude Include="TraitSignature.h" />
+    <ClInclude Include="TraitUserId.h" />
+    <ClInclude Include="VerbApplyEnhancement.h" />
+    <ClInclude Include="VerbBreakOrbit.h" />
+    <ClInclude Include="VerbBuildPlatform.h" />
+    <ClInclude Include="VerbBuildStructure.h" />
+    <ClInclude Include="VerbBuildUnit.h" />
+    <ClInclude Include="VerbCapturePlanet.h" />
+    <ClInclude Include="VerbCaptureShip.h" />
+    <ClInclude Include="VerbCommandShip.h" />
+    <ClInclude Include="VerbDestroyGadget.h" />
+    <ClInclude Include="VerbDestroyShip.h" />
+    <ClInclude Include="VerbDestroyStructure.h" />
+    <ClInclude Include="VerbDestroyUnit.h" />
+    <ClInclude Include="VerbDisband.h" />
+    <ClInclude Include="VerbDistress.h" />
+    <ClInclude Include="VerbEnterOrbit.h" />
+    <ClInclude Include="VerbExplodeProjectiles.h" />
+    <ClInclude Include="VerbGadgetOff.h" />
+    <ClInclude Include="VerbImportExport.h" />
+    <ClInclude Include="VerbJump.h" />
+    <ClInclude Include="VerbJumpAbort.h" />
+    <ClInclude Include="VerbJumpBegin.h" />
+    <ClInclude Include="VerbLoad.h" />
+    <ClInclude Include="VerbLockPlanet.h" />
+    <ClInclude Include="VerbMoveUnit.h" />
+    <ClInclude Include="VerbOrderShip.h" />
+    <ClInclude Include="VerbOrderUnit.h" />
+    <ClInclude Include="VerbPlanetEvent.h" />
+    <ClInclude Include="VerbQueue.h" />
+    <ClInclude Include="VerbRefitGadget.h" />
+    <ClInclude Include="VerbRemoveEnhancement.h" />
+    <ClInclude Include="VerbRepairGadget.h" />
+    <ClInclude Include="VerbRevolt.h" />
+    <ClInclude Include="VerbScrap.h" />
+    <ClInclude Include="VerbSelfDestruct.h" />
+    <ClInclude Include="VerbSetDetectionFlags.h" />
+    <ClInclude Include="VerbSetFlags.h" />
+    <ClInclude Include="VerbSetGadgetGroup.h" />
+    <ClInclude Include="VerbSetStructureActive.h" />
+    <ClInclude Include="VerbSpawn.h" />
+    <ClInclude Include="VerbTradeRoute.h" />
+    <ClInclude Include="VerbTransferCredits.h" />
+    <ClInclude Include="VerbTransferResource.h" />
+    <ClInclude Include="VerbUnload.h" />
+    <ClInclude Include="VerbUseGadget.h" />
+    <ClInclude Include="VerbUseJumpGate.h" />
+    <ClInclude Include="VerbUseMode.h" />
+    <ClInclude Include="VerbUseSingleGadget.h" />
+    <ClInclude Include="VerbUseStructure.h" />
+    <ClInclude Include="WeaponEnhancements.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Universe.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Bin\Version.ini" />
+    <None Include="..\Constants.ini" />
+    <None Include="makefile" />
+    <None Include="res\Universe.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AdminEnhancements.cpp" />
+    <ClCompile Include="BeamEnhancements.cpp" />
+    <ClCompile Include="CargoEnhancement.cpp" />
+    <ClCompile Include="CargoGadget.cpp" />
+    <ClCompile Include="CargoResource.cpp" />
+    <ClCompile Include="Constants.cpp" />
+    <ClCompile Include="DefaultLootTables.cpp" />
+    <ClCompile Include="DropData.cpp" />
+    <ClCompile Include="EnhancementModifier.cpp" />
+    <ClCompile Include="FactionInfo.cpp" />
+    <ClCompile Include="FieldDamage.cpp" />
+    <ClCompile Include="FieldEnhancement.cpp" />
+    <ClCompile Include="FieldInterdictor.cpp" />
+    <ClCompile Include="FieldSafeZone.cpp" />
+    <ClCompile Include="GadgetAreaReload.cpp" />
+    <ClCompile Include="GadgetAreaWeapon.cpp" />
+    <ClCompile Include="GadgetArmor.cpp" />
+    <ClCompile Include="GadgetAura.cpp" />
+    <ClCompile Include="GadgetAutoRepair.cpp" />
+    <ClCompile Include="GadgetBeacon.cpp" />
+    <ClCompile Include="GadgetBeamWeapon.cpp" />
+    <ClCompile Include="GadgetBuild.cpp" />
+    <ClCompile Include="GadgetCloak.cpp" />
+    <ClCompile Include="GadgetDrive.cpp" />
+    <ClCompile Include="GadgetDropPod.cpp" />
+    <ClCompile Include="GadgetECCM.cpp" />
+    <ClCompile Include="GadgetECM.cpp" />
+    <ClCompile Include="GadgetELF.cpp" />
+    <ClCompile Include="GadgetEMP.cpp" />
+    <ClCompile Include="GadgetFighterBay.cpp" />
+    <ClCompile Include="GadgetJD.cpp" />
+    <ClCompile Include="GadgetJumpDrive.cpp" />
+    <ClCompile Include="GadgetJumpGate.cpp" />
+    <ClCompile Include="GadgetMiningBeam.cpp" />
+    <ClCompile Include="GadgetPulseShield.cpp" />
+    <ClCompile Include="GadgetReactor.cpp" />
+    <ClCompile Include="GadgetReload.cpp" />
+    <ClCompile Include="GadgetScanner.cpp" />
+    <ClCompile Include="GadgetScript.cpp" />
+    <ClCompile Include="GadgetShield.cpp" />
+    <ClCompile Include="GadgetSlot.cpp" />
+    <ClCompile Include="GadgetSpawn.cpp" />
+    <ClCompile Include="GadgetSpreadWeapon.cpp" />
+    <ClCompile Include="GadgetTECCM.cpp" />
+    <ClCompile Include="GadgetTECM.cpp" />
+    <ClCompile Include="GadgetTractorBeam.cpp" />
+    <ClCompile Include="GadgetWeapon.cpp" />
+    <ClCompile Include="GameClient.cpp" />
+    <ClCompile Include="GameClientCommand.cpp" />
+    <ClCompile Include="GameContext.cpp" />
+    <ClCompile Include="GameContextScript.cpp" />
+    <ClCompile Include="GameDll.cpp" />
+    <ClCompile Include="GameProfile.cpp" />
+    <ClCompile Include="GameServer.cpp" />
+    <ClCompile Include="GameServerCommand.cpp" />
+    <ClCompile Include="GameZone.cpp" />
+    <ClCompile Include="MonsterCrystal.cpp" />
+    <ClCompile Include="MonsterEnergy.cpp" />
+    <ClCompile Include="MonsterGafin.cpp" />
+    <ClCompile Include="MonsterTeros.cpp" />
+    <ClCompile Include="MonsterTerosScout.cpp" />
+    <ClCompile Include="NounAsteroid.cpp" />
+    <ClCompile Include="NounAsteroidBelt.cpp" />
+    <ClCompile Include="NounBeacon.cpp" />
+    <ClCompile Include="NounBody.cpp" />
+    <ClCompile Include="NounCargo.cpp" />
+    <ClCompile Include="NounComet.cpp" />
+    <ClCompile Include="NounDrone.cpp" />
+    <ClCompile Include="NounDropTarget.cpp" />
+    <ClCompile Include="NounEnhancement.cpp" />
+    <ClCompile Include="NounField.cpp" />
+    <ClCompile Include="NounFighter.cpp" />
+    <ClCompile Include="NounGadget.cpp" />
+    <ClCompile Include="NounGame.cpp" />
+    <ClCompile Include="NounJumpGate.cpp" />
+    <ClCompile Include="NounJumpTarget.cpp" />
+    <ClCompile Include="NounNebula.cpp" />
+    <ClCompile Include="NounPlanet.cpp" />
+    <ClCompile Include="NounPod.cpp" />
+    <ClCompile Include="NounProjectile.cpp" />
+    <ClCompile Include="NounQueue.cpp" />
+    <ClCompile Include="NounScenery.cpp" />
+    <ClCompile Include="NounShip.cpp" />
+    <ClCompile Include="NounShipCargo.cpp" />
+    <ClCompile Include="NounShipControl.cpp" />
+    <ClCompile Include="NounShipEnhancement.cpp" />
+    <ClCompile Include="NounShipLogic.cpp" />
+    <ClCompile Include="NounSmartProjectile.cpp" />
+    <ClCompile Include="NounSpawn.cpp" />
+    <ClCompile Include="NounSpawnShip.cpp" />
+    <ClCompile Include="NounStar.cpp" />
+    <ClCompile Include="NounStructure.cpp" />
+    <ClCompile Include="NounTrail.cpp" />
+    <ClCompile Include="NounUnit.cpp" />
+    <ClCompile Include="PathMapPlanet.cpp" />
+    <ClCompile Include="SceneryDebris.cpp" />
+    <ClCompile Include="SceneryEffect.cpp" />
+    <ClCompile Include="ShipEnhancements.cpp" />
+    <ClCompile Include="ShipPlatform.cpp" />
+    <ClCompile Include="SpecialEnhancements.cpp" />
+    <ClCompile Include="StructureBarracks.cpp" />
+    <ClCompile Include="StructureDefense.cpp" />
+    <ClCompile Include="StructureFactory.cpp" />
+    <ClCompile Include="StructureHub.cpp" />
+    <ClCompile Include="StructureMine.cpp" />
+    <ClCompile Include="StructurePort.cpp" />
+    <ClCompile Include="Structures.cpp" />
+    <ClCompile Include="StructureShipyard.cpp" />
+    <ClCompile Include="StructureSolar.cpp" />
+    <ClCompile Include="TierInfo.cpp" />
+    <ClCompile Include="Trail.cpp" />
+    <ClCompile Include="TraitDisplayName.cpp" />
+    <ClCompile Include="TraitOrbit.cpp" />
+    <ClCompile Include="TraitSignature.cpp" />
+    <ClCompile Include="VerbApplyEnhancement.cpp" />
+    <ClCompile Include="VerbBreakOrbit.cpp" />
+    <ClCompile Include="VerbBuildPlatform.cpp" />
+    <ClCompile Include="VerbBuildStructure.cpp" />
+    <ClCompile Include="VerbBuildUnit.cpp" />
+    <ClCompile Include="VerbCapturePlanet.cpp" />
+    <ClCompile Include="VerbCaptureShip.cpp" />
+    <ClCompile Include="VerbCommandShip.cpp" />
+    <ClCompile Include="VerbDestroyGadget.cpp" />
+    <ClCompile Include="VerbDestroyShip.cpp" />
+    <ClCompile Include="VerbDestroyStructure.cpp" />
+    <ClCompile Include="VerbDestroyUnit.cpp" />
+    <ClCompile Include="VerbDisband.cpp" />
+    <ClCompile Include="VerbDistress.cpp" />
+    <ClCompile Include="VerbEnterOrbit.cpp" />
+    <ClCompile Include="VerbExplodeProjectiles.cpp" />
+    <ClCompile Include="VerbGadgetOff.cpp" />
+    <ClCompile Include="VerbImportExport.cpp" />
+    <ClCompile Include="VerbJump.cpp" />
+    <ClCompile Include="VerbJumpAbort.cpp" />
+    <ClCompile Include="VerbJumpBegin.cpp" />
+    <ClCompile Include="VerbLoad.cpp" />
+    <ClCompile Include="VerbLockPlanet.cpp" />
+    <ClCompile Include="VerbMoveUnit.cpp" />
+    <ClCompile Include="VerbOrderShip.cpp" />
+    <ClCompile Include="VerbOrderUnit.cpp" />
+    <ClCompile Include="VerbPlanetEvent.cpp" />
+    <ClCompile Include="VerbQueue.cpp" />
+    <ClCompile Include="VerbRefitGadget.cpp" />
+    <ClCompile Include="VerbRemoveEnhancement.cpp" />
+    <ClCompile Include="VerbRepairGadget.cpp" />
+    <ClCompile Include="VerbRevolt.cpp" />
+    <ClCompile Include="VerbScrap.cpp" />
+    <ClCompile Include="VerbSelfDestruct.cpp" />
+    <ClCompile Include="VerbSetDetectionFlags.cpp" />
+    <ClCompile Include="VerbSetFlags.cpp" />
+    <ClCompile Include="VerbSetGadgetGroup.cpp" />
+    <ClCompile Include="VerbSetStructureActive.cpp" />
+    <ClCompile Include="VerbSpawn.cpp" />
+    <ClCompile Include="VerbTradeRoute.cpp" />
+    <ClCompile Include="VerbTransferCredits.cpp" />
+    <ClCompile Include="VerbTransferResource.cpp" />
+    <ClCompile Include="VerbUnload.cpp" />
+    <ClCompile Include="VerbUseGadget.cpp" />
+    <ClCompile Include="VerbUseJumpGate.cpp" />
+    <ClCompile Include="VerbUseMode.cpp" />
+    <ClCompile Include="VerbUseSingleGadget.cpp" />
+    <ClCompile Include="VerbUseStructure.cpp" />
+    <ClCompile Include="WeaponEnhancements.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\medusa\Gui3d\Gui3d.vcxproj">
+      <Project>{cd91e4f5-1aff-476d-94be-c9770acfaf98}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Medusa\Medusa\Medusa.vcxproj">
+      <Project>{93ad8e65-fb3a-414d-ba0b-6e8ffddb6cab}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\medusa\Network\Network.vcxproj">
+      <Project>{1e5779fc-265e-4331-aaad-79aafd688da4}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\medusa\Render3D\Render3D.vcxproj">
+      <Project>{18b80ecb-53ae-47e1-af11-0c994cac2c1d}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\medusa\World\World.vcxproj">
+      <Project>{74ef8552-8c85-4859-b8f0-5f056c17d3a5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_selTargetType="0" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strDebugHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCFLAGS="-g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCompilerC="gcc" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCompilerC="gcc" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileIntDir="ReleaseLinux/obj" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_bDisableHangReporter="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_bReuseStandardBuildCommand="true" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_pathDebugger="gdb" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_selBuildBeforeStartDebugging="0" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strBuildHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_bReuseStandardBuildCommand="true" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteBuildVariables="BUILD_CONFIGURATION=&quot;ReleaseLinux&quot;" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteBuildCommand="make" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strBuildHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_selTargetType="0" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteRebuildCommand="make clean; make" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileRM="rm -f" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileLDFLAGS="-shared" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteCleanCommand="make clean" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileDestDir="../Bin" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileMKDIR="mkdir -p" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteBuildVariables="BUILD_CONFIGURATION=&quot;DebugLinux&quot;" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strRemoteCleanCommand="make clean" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_pathRemoteBuildDirectory="/home/builder/work/Trunk/DarkSpace/DarkSpace" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteRebuildCommand="make clean; make" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_pathRemoteBuildDirectory="/home/builder/work/Trunk/DarkSpace/DarkSpace" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strDebugHostLogin="builder:god2899@build:2200" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_pathDebugger="gdb" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCXXFLAGS="-g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileCompilerCXX="g++" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strRemoteBuildCommand="make" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCXXFLAGS="-g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_bDisableHangReporter="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileMKDIR="mkdir -p" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_bSourceSession="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileDestDir="../Bin" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileLDFLAGS="-shared" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_bSourceSession="false" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileIntDir="DebugLinux/obj" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_selBuildBeforeStartDebugging="0" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCompilerCXX="g++" WinGDB_y5ae2_7c6uwsyqFE-lN4Bg_strMakefileRM="rm -f" WinGDB_Q2OnqQD6oGCRz0_kaDwI0w_strMakefileCFLAGS="-g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

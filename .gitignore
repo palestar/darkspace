@@ -13,4 +13,10 @@ BuildLog.htm
 *.rsp
 *.suo
 *.log
-Config/Debug.ini
+Config/
+*.tlog
+.vs/
+unsuccessfulbuild
+UpgradeLog.htm
+server/
+keyboard.map

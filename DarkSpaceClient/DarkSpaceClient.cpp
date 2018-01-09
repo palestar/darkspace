@@ -169,8 +169,50 @@ int CClientApp::StartGame()
 	// to be loaded from disk.
 	LocalizedString::locale();
 
+
+	int CPUInfo[4] = { -1 };
+	unsigned   nExIds, i = 0;
+	char CPUBrandString[0x40];
+	// Get the information associated with each extended ID.
+	__cpuid(CPUInfo, 0x80000000);
+	nExIds = CPUInfo[0];
+	for (i = 0x80000000; i <= nExIds; ++i)
+	{
+		__cpuid(CPUInfo, i);
+		// Interpret CPU brand string
+		if (i == 0x80000002)
+			memcpy(CPUBrandString, CPUInfo, sizeof(CPUInfo));
+		else if (i == 0x80000003)
+			memcpy(CPUBrandString + 16, CPUInfo, sizeof(CPUInfo));
+		else if (i == 0x80000004)
+			memcpy(CPUBrandString + 32, CPUInfo, sizeof(CPUInfo));
+	}
+	//string includes manufacturer, model and clockspeed
+	TRACE(CharString().format("CPU Type: %s", (CharString)CPUBrandString));
+
+	SYSTEM_INFO sysInfo;
+	GetSystemInfo(&sysInfo);
+	TRACE(CharString().format("Number of Cores: %d", sysInfo.dwNumberOfProcessors));
+
+	MEMORYSTATUSEX statex;
+	statex.dwLength = sizeof(statex);
+	GlobalMemoryStatusEx(&statex);
+	TRACE(CharString().format("Total System Memory: %d MB", (statex.ullTotalPhys / 1024) / 1024));
+
+	bool bCPUFail = true;
+
+	if (strstr(CPUBrandString, "AMD Ryzen"))
+		bCPUFail = false;
+	if (strstr(CPUBrandString, "Intel") && strstr(CPUBrandString, "Core"))
+		bCPUFail = false;
+
+	if ( !bCPUFail )
+		TRACE(CharString().format("Multicore supported..."))
+	else
+		TRACE(CharString().format("Multicore not supported on this platform..."));
+
 	// default to a single core unless someone forces multi-core support on..
-	if ( settings.get( "ForceMultiCore", (dword)0) == 0 )
+	if ( settings.get( "ForceMultiCore", (dword)0) == 0 || bCPUFail )
 	{
 		// Force ALL threads to run on the first core found..
 		DWORD nProcessAffMask = 0, nSystemAffMask = 0;
@@ -232,20 +274,6 @@ int CClientApp::StartGame()
 		if ( value.length() > 0 )
 			(*pConstant) = strtod( value, NULL );
 	}
-#endif
-
-#if 0
-	progress.SetStatus( _T("Checking for DX8...") );
-
-	// Verify that DirectX 8.0 is installed
-	HINSTANCE hD3D8DLL = LoadLibrary( _T("D3D8.DLL") );
-	if( hD3D8DLL == NULL )
-	{
-		MessageBox( NULL, _T("DirectX 8.0 is required to play DarkSpace!"), _T("DX8 not installed"), MB_OK );
-		return FALSE;
-	}
-	// DX8 is installed
-	FreeLibrary( hD3D8DLL );
 #endif
 
 	// make sure the settings are valid, run ClientSetup.exe if necessary

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{52758355-3e6a-4908-9507-326bd10accdd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Resource Files">
+      <UniqueIdentifier>{dc144b87-a6a3-4694-a2f4-237f37660606}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{16dac064-4c03-449e-b43e-0dba602210e4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{7c018ba0-3b86-47a0-8854-eca9ad689fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration\Asia">
+      <UniqueIdentifier>{00c562cb-d8e8-458a-b0ab-fb25617bd369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration\Beta">
+      <UniqueIdentifier>{b6ade888-b104-4307-a9c7-2b4b4b16a395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{bf4c743a-c720-4ea5-a404-27855044a1da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{aa8083ee-5080-4988-8da6-251570ba1352}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DarkSpaceClient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectTutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DarkSpaceClient.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DarkSpaceClient.ico">
+      <Filter>Source Files\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DarkSpaceClient.rc2">
+      <Filter>Source Files\Resource Files</Filter>
+    </None>
+    <None Include="asia\config.ini">
+      <Filter>Configuration\Asia</Filter>
+    </None>
+    <None Include="beta\config.ini">
+      <Filter>Configuration\Beta</Filter>
+    </None>
+    <None Include="DarkSpaceClient.clw" />
+    <None Include="..\Shaders\Default.fx" />
+    <None Include="..\Shaders\PS_Blur.fx" />
+    <None Include="..\Shaders\PS_BrightPass.fx" />
+    <None Include="..\Shaders\PS_ColorEdgeDetect.fx" />
+    <None Include="..\Shaders\PS_Combine.fx" />
+    <None Include="..\Shaders\PS_HorzBlur.fx" />
+    <None Include="..\Shaders\PS_PassThrough.fx" />
+    <None Include="..\Shaders\PS_Scale.fx" />
+    <None Include="..\Shaders\PS_VertBlur.fx" />
+    <None Include="..\Shaders\ShadowMap.fx" />
+    <None Include="..\Shaders\ShadowScene.fx" />
+    <None Include="..\Shaders\VS_PassThrough.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DarkSpaceClient.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectTutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\Medusa\Bin\AudioDS.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\AudioDSD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\DisplayD3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\DisplayD3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GCQ.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GCQD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GUI3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GUI3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\ijl15.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Medusa.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\MedusaD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Network.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\NetworkD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Render3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Render3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\SystemWin.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\SystemWinD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\World.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\WorldD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

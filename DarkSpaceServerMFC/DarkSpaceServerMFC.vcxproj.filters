@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{320f1b2f-b7d8-4415-b111-e5b8001a5199}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3edda7b0-c94f-42e9-910e-255655bbf4f7}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{600bb0a6-2eb3-426d-9c1e-1d7301b00d5c}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{a656d47f-85b8-4e98-b6a0-6f8a7b9b61c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DarkSpaceServerMFC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DarkSpaceServerMFC.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DarkSpaceServerMFC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DarkSpaceServerMFC.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DarkSpaceServerMFC.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="DarkSpaceServerMFC.clw" />
+    <None Include="DarkSpaceServerMFC.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\Medusa\Bin\GCQ.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GCQD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GUI3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\GUI3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\ijl15.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Medusa.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\MedusaD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Network.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\NetworkD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Render3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\Render3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\SelfUpdate.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\SelfUpdateD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\SystemWin.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\SystemWinD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\World.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Medusa\Bin\WorldD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
