@@ -203,11 +203,13 @@ int CClientApp::StartGame()
 
 	if (strstr(CPUBrandString, "AMD Ryzen"))
 		bCPUFail = false;
-	if (strstr(CPUBrandString, "Intel i"))
+	if (strstr(CPUBrandString, "Intel") && strstr(CPUBrandString, "Core"))
 		bCPUFail = false;
 
 	if ( !bCPUFail )
-		TRACE(CharString().format("Multicore supported..."));
+		TRACE(CharString().format("Multicore supported..."))
+	else
+		TRACE(CharString().format("Multicore not supported on this platform..."));
 
 	// default to a single core unless someone forces multi-core support on..
 	if ( settings.get( "ForceMultiCore", (dword)0) == 0 || bCPUFail )
