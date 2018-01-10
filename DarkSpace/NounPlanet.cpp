@@ -444,16 +444,18 @@ void NounPlanet::inflictDamage( dword nWhen, Noun * pFrom, int damage, dword typ
 	
 	// cause damage to units on the surface
 	for(int i=0;i<childCount();i++)
-	{
-		NounUnit * pUnit = WidgetCast<NounUnit>( child(i) );
-		if (!pUnit || !pUnit->canDamage( type ) )
+	{		
+		NounGame * pNoun = WidgetCast<NounGame>( child(i) );
+		if (!pNoun || !pNoun->canDamage( type ) )
 			continue;		// can't damage this noun with this type of damage
 
-		// get hex position due to the fact unit stacking effects vertical distance from damage location
-		float fDistance = (hex(pUnit->hex()).position - P).magnitude();
+		float fDistance;
+		if ( NounUnit * pUnit = WidgetCast<NounUnit>( pNoun ) )		// get hex position if it's a unit otherwise bomb radial damage may not penetrate stacking height
+			float fDistance = (hex(pUnit->hex()).position - P).magnitude();
+		else
+			float fDistance = (pNoun->position() - P).magnitude();
 
-		if ( fDistance < fDamageRadius )
-			pUnit->inflictDamage( nWhen, pFrom, (1.0f - (fDistance / fDamageRadius)) * damage, type, direction );
+		pNoun->inflictDamage(nWhen, pFrom, (1.0f - (fDistance / fDamageRadius)) * damage, type, direction);
 	}
 }
 
