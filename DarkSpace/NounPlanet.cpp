@@ -451,9 +451,9 @@ void NounPlanet::inflictDamage( dword nWhen, Noun * pFrom, int damage, dword typ
 
 		float fDistance;
 		if ( NounUnit * pUnit = WidgetCast<NounUnit>( pNoun ) )		// get hex position if it's a unit otherwise bomb radial damage may not penetrate stacking height
-			float fDistance = (hex(pUnit->hex()).position - P).magnitude();
+			fDistance = (hex(pUnit->hex()).position - P).magnitude();
 		else
-			float fDistance = (pNoun->position() - P).magnitude();
+			fDistance = (pNoun->position() - P).magnitude();
 
 		pNoun->inflictDamage(nWhen, pFrom, (1.0f - (fDistance / fDamageRadius)) * damage, type, direction);
 	}
