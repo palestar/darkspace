@@ -206,8 +206,8 @@ int CClientApp::StartGame()
 	if (strstr(CPUBrandString, "Intel") && strstr(CPUBrandString, "Core"))
 		bCPUFail = false;
 
-	if ( !bCPUFail )
-		TRACE(CharString().format("Multicore supported..."))
+	if (!bCPUFail)
+		TRACE(CharString().format("Multicore supported..."));
 	else
 		TRACE(CharString().format("Multicore not supported on this platform..."));
 
