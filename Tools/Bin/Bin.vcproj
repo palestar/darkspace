@@ -693,56 +693,6 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\Medusa\Tools\Bin\ImportFBX.dll"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="copy $(InputPath) $(OutDir)"
-						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
-						Outputs="$(OutDir)\$(InputFileName)"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="copy $(InputPath) $(OutDir)"
-						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
-						Outputs="$(OutDir)\$(InputFileName)"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\..\..\Medusa\Tools\Bin\ImportFBXD.dll"
-				>
-				<FileConfiguration
-					Name="Release|Win32"
-					ExcludedFromBuild="true"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="copy $(InputPath) $(OutDir)"
-						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
-						Outputs="$(OutDir)\$(InputFileName)"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug|Win32"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						Description="copy $(InputPath) $(OutDir)"
-						CommandLine="copy $(InputPath) $(OutDir)&#x0D;&#x0A;"
-						Outputs="$(OutDir)\$(InputFileName)"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
 				RelativePath="..\..\Bin\Interface.dll"
 				>
 				<FileConfiguration

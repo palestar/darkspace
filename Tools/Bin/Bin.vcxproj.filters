@@ -87,12 +87,12 @@
     <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImagePortD.dll">
       <Filter>Libs</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBX.dll">
-      <Filter>Libs</Filter>
-    </CustomBuild>
-    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBXD.dll">
-      <Filter>Libs</Filter>
-    </CustomBuild>
+    <!-- <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBX.dll"> -->
+      <!-- <Filter>Libs</Filter> -->
+    <!-- </CustomBuild> -->
+    <!-- <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBXD.dll"> -->
+      <!-- <Filter>Libs</Filter> -->
+    <!-- </CustomBuild> -->
     <CustomBuild Include="..\..\Bin\Interface.dll">
       <Filter>Libs</Filter>
     </CustomBuild>

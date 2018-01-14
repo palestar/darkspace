@@ -455,28 +455,6 @@
 </Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBX.dll">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-    </CustomBuild>
-    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBXD.dll">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">copy %(FullPath) $(OutDir)
-</Command>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(OutDir)%(Filename)%(Extension);%(Outputs)</Outputs>
-    </CustomBuild>
     <CustomBuild Include="..\..\..\Medusa\Tools\Bin\InterfaceContextPort.dll">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">copy %(FullPath) $(OutDir)</Message>
