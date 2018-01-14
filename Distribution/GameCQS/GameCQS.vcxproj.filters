@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Exe">
+      <UniqueIdentifier>{1741efda-feb2-49f5-a9f0-5ba16c6f4394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{3759242d-ef7e-4eaf-a6e1-2094cc33c88e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{a9f9b5e2-3c13-483b-817f-b24a1833f5a5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\ChronDemon">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\LogServer">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\MetaServer">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\MirrorServer">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\ProcessServer">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\RotateLogs">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libGCQ.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\libGCQDB.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\libGCQS.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libMedusa.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libNetwork.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Scripts\BackupCron.sh">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Scripts\CoreCommands">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Scripts\CoreWatchCron.sh">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Scripts\ProcessServerCron.sh">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

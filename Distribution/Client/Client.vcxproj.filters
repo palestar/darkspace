@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="EXE">
+      <UniqueIdentifier>{ca5c5072-ed96-4449-87f4-5ccdd8229529}</UniqueIdentifier>
+      <Extensions>*.exe</Extensions>
+    </Filter>
+    <Filter Include="DLL">
+      <UniqueIdentifier>{a9ee736d-2b55-4fe1-8702-78d3d8e17235}</UniqueIdentifier>
+      <Extensions>*.dll</Extensions>
+    </Filter>
+    <Filter Include="BMP">
+      <UniqueIdentifier>{ca11e81f-5f8f-48e0-8df6-0869aa5f7e03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="INI">
+      <UniqueIdentifier>{a4ae86b4-b216-4e60-885e-c3330a664eb0}</UniqueIdentifier>
+      <Extensions>*.ini</Extensions>
+    </Filter>
+    <Filter Include="FX">
+      <UniqueIdentifier>{34d0f3a0-0ebd-4e7a-aff7-5fb8e350ec69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\Tools\Bin\BugReport.exe">
+      <Filter>EXE</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpaceClient.exe">
+      <Filter>EXE</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpaceSetup.exe">
+      <Filter>EXE</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\LocalServer.exe">
+      <Filter>EXE</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\AudioDS.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpace.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\dbghelp.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\DisplayD3D.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\Gadgets.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\GCQ.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Gui3d.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\ijl15.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\Interface.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Medusa.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Network.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Render3D.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\SelfUpdate.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\SystemWin.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\World.dll">
+      <Filter>DLL</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\DarkSpace\DS.bmp">
+      <Filter>BMP</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Constants.ini">
+      <Filter>INI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\Version.ini">
+      <Filter>INI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\Default.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_BrightPass.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_ColorEdgeDetect.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_Combine.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_HorzBlur.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_PassThrough.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_VertBlur.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\ShadowMap.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\ShadowScene.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\VS_PassThrough.fx">
+      <Filter>FX</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\WordFilter.txt" />
+  </ItemGroup>
+</Project>

@@ -1,22 +1,18 @@
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcproj", "{A06C7575-E090-442C-BF8A-5D3A4C3AF873}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{A06C7575-E090-442C-BF8A-5D3A4C3AF873}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Distribute", "Distribute\Distribute.vcproj", "{3C1058D9-49BE-45F4-B08D-8DAF75312653}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8542BB01-3EE5-4064-A6CC-FEB5223F0DE9} = {8542BB01-3EE5-4064-A6CC-FEB5223F0DE9}
-		{42B4251D-C89F-4B06-B3B3-3FA10911B668} = {42B4251D-C89F-4B06-B3B3-3FA10911B668}
-		{A06C7575-E090-442C-BF8A-5D3A4C3AF873} = {A06C7575-E090-442C-BF8A-5D3A4C3AF873}
-		{5DC5B9D3-809C-4DDB-A2E5-8F254A596160} = {5DC5B9D3-809C-4DDB-A2E5-8F254A596160}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Distribute", "Distribute\Distribute.vcxproj", "{3C1058D9-49BE-45F4-B08D-8DAF75312653}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameCQ", "GameCQ\GameCQ.vcproj", "{8542BB01-3EE5-4064-A6CC-FEB5223F0DE9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameCQ", "GameCQ\GameCQ.vcxproj", "{8542BB01-3EE5-4064-A6CC-FEB5223F0DE9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameCQS", "GameCQS\GameCQS.vcproj", "{42B4251D-C89F-4B06-B3B3-3FA10911B668}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameCQS", "GameCQS\GameCQS.vcxproj", "{42B4251D-C89F-4B06-B3B3-3FA10911B668}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Resourcer", "Resourcer\Resourcer.vcproj", "{5DC5B9D3-809C-4DDB-A2E5-8F254A596160}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Resourcer", "Resourcer\Resourcer.vcxproj", "{5DC5B9D3-809C-4DDB-A2E5-8F254A596160}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Server\Server.vcproj", "{28761F17-3B36-41F0-82B8-62EB6D5CEC8C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Server\Server.vcxproj", "{28761F17-3B36-41F0-82B8-62EB6D5CEC8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,5 +34,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {282DBE41-B83A-4808-83B5-6EBE39516561}
 	EndGlobalSection
 EndGlobal

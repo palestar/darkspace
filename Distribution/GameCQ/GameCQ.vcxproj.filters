@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Bin">
+      <UniqueIdentifier>{53196fdd-97cc-4ea0-9bdf-4fe0adf58c71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{b2b4d512-13f2-4a06-ac8b-3748de0b0112}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\BCGCB70080.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpace.exe">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\dbghelp.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\GCQ.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\GCQL.exe">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\ijl15.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Medusa.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Network.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\SelfUpdate.dll">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\SmartUpdate.exe">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\vcredist_x86.exe">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\Version.ini">
+      <Filter>Bin</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\Skins\Blue.skn">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Gcql\Xml\CacheConfig.xml">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\Skins\Default.skn">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\Skins\Green.skn">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\install.ini">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\Skins\Red.skn">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\Skins\Steel.skn">
+      <Filter>Data</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\GCQL\WordFilter.txt">
+      <Filter>Data</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
