@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{16fdcb14-d427-4fd8-96a6-260f5fb8e54f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Executables">
+      <UniqueIdentifier>{79628faf-dbe8-4860-9cb1-e6f243d2ee37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{b3b5cf2c-73a7-47f8-bbf7-3693abd6baf7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\AimlBot.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\AudioDS.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\AudioDSD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\CollectionPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\CollectionPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpace.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpaceD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\DisplayD3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\DisplayD3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\FontPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\FontPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\FreeImage.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\Gadgets.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\GadgetsD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\GCQ.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\GCQD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\GCQDB.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\GCQDBD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\GCQS.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\GCQSD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\GUI3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\GUI3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\ijl15.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImagePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImagePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBX.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImportFBXD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\Interface.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\InterfaceContextPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\InterfaceContextPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\InterfaceD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\MaterialPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\MaterialPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Medusa.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\MedusaD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\MovieDS.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\MovieDSD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\MusicPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\MusicPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Network.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\NetworkD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeBlurPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeBlurPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeBooleanPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeBooleanPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeBooleanTimePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeBooleanTimePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeComplexMeshPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeComplexMeshPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeDecalPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeDecalPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeDetailPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeDetailPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeFlarePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeFlarePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeGlarePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeGlarePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeLightPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeLightPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeMeshPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeMeshPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeParticleFieldPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeParticleFieldPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeParticleSystem2Port.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeParticleSystem2PortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeParticleSystemPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeParticleSystemPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodePathPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodePathPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeScalePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeScalePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeScenePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeScenePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeSoundPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeSoundPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeSpinPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeSpinPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeSpritePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeSpritePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeWindowPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeWindowPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\pdh.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Render3D.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\Render3DD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ResourcerDoc.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ResourcerDocD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ScenePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ScenePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\SelfUpdate.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\SelfUpdateD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\SoundPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\SoundPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\SystemWin.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\SystemWinD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\TextPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\TextPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowButtonPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowButtonPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowStylePort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowStylePortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowTextPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowTextPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowViewPort.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\WindowViewPortD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\World.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\WorldD.dll">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpaceServer.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\DarkSpaceServerD.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\MakeUN.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\MakeUND.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ProfilerClient.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ProfilerClientD.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\Resourcer.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ResourcerD.exe">
+      <Filter>Executables</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\Default.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_Blur.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_BrightPass.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_ColorEdgeDetect.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_Combine.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_HorzBlur.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_PassThrough.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_Scale.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\PS_VertBlur.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\ShadowMap.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\ShadowScene.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Shaders\VS_PassThrough.fx">
+      <Filter>Shaders</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
