@@ -16,7 +16,7 @@ call DarkSpaceBuildRelease.bat
 if errorlevel 1 goto :Error
 
 echo Alpha Distribution...
-"%DEVENV%" ..\Distribution\Distribution.sln /build Release
+"%DEVENV%" ..\Distribution\Distribution.sln /build Release /out Logs\Distribution.log
 if errorlevel 1 goto :Error
 
 echo Promoting Alpha to Beta...
