@@ -79,9 +79,6 @@
     <CustomBuild Include="..\..\..\Medusa\Tools\Bin\ImagePort.dll">
       <Filter>Dll</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\Tools\Bin\ImportFBX.dll">
-      <Filter>Dll</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\..\Bin\Interface.dll">
       <Filter>Dll</Filter>
     </CustomBuild>
