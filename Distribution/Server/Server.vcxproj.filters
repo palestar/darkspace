@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Exe">
+      <UniqueIdentifier>{6282e4d9-d5df-4797-b1a1-41c7fef24d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripts">
+      <UniqueIdentifier>{9b3bb551-7dee-4a3f-9467-c22947ea71b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{2e5c0ced-05a1-46ce-b011-78922806d73e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\Bin\DarkSpaceServer">
+      <Filter>Exe</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\advspawn.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\assaultgroup.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\basic.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\build.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\capture.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\detach.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\disable.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\enable.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\escort.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\factionid.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\get_user.sh">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\getusers.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\ghorde.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\home.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\horde.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\killai.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\killplatforms.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\mbtest.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\message.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\miquest.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\mir.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\mir2.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\mirescort.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\mirfury.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\moveplayer.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\mvencounters.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\nodes.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\piratespawn.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\return.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\revolt.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\revolution.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\scout.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\shipbalance.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\SpawnComponent.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\spawngaif.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\test.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\test2.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\test3.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\wipeplanet.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\x.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Scripts\xmaslife.lua">
+      <Filter>Scripts</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\libDarkSpace.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\Bin\libGadgets.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libGCQ.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\libGCQDB.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\GameCQ\Bin\libGCQS.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libMedusa.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libNetwork.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libRender3D.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\Medusa\Bin\libWorld.so">
+      <Filter>Libs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\ShipNameManfiest.txt" />
+    <CustomBuild Include="..\..\Bin\Version.ini" />
+  </ItemGroup>
+</Project>
