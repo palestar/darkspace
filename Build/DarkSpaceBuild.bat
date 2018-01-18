@@ -74,11 +74,6 @@ echo DarkSpace Tools %ACTION%/%CONFIG%...
 "%DEVENV%" ..\Tools\Tools.sln /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
 if errorlevel 1 goto :Error
 
-IF "%ACTION%"=="Clean" goto :Done
-echo Updating Build Version...
-..\..\Medusa\Tools\Bin\UpdateBuildVersion.exe ..\ ..\Bin\Version.ini
-if errorlevel 1 goto :Error
-
 :Done
 echo Done...
 exit /B 0
