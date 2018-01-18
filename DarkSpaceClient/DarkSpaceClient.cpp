@@ -131,35 +131,35 @@ int CClientApp::StartGame()
 {
 #ifdef _DEBUG
 	// this stops the massive memory dumps on program exit..
-	_CrtSetReportMode( _CRT_WARN, 0 );
+	_CrtSetReportMode(_CRT_WARN, 0);
 #endif
 
 	m_Error = false;
-	SetProcessErrorMode( EM_DIALOG );
+	SetProcessErrorMode(EM_DIALOG);
 
 #ifdef _DEBUG
-	Settings settings( "ClientD" );
+	Settings settings("ClientD");
 #else
-	Settings settings( "Client" );
+	Settings settings("Client");
 #endif
 
 #if !defined(_DEBUG)
 	// BEFORE we initialize the loggin, check if we need to send a bug report before the client log gets cleared
-	if ( settings.get( "exit", (dword)0 ) != 0 )
+	if (settings.get("exit", (dword)0) != 0)
 	{
 		// program did not exit properly, display dialog so the user can submit a bug report
-		Process::wait( Process::start( BUG_REPORT_EXE ) );
-		settings.put( "exit", (dword)0 );
+		Process::wait(Process::start(BUG_REPORT_EXE));
+		settings.put("exit", (dword)0);
 	}
 #endif
 
 	// initialize logging first thing...
-	std::string sLogFile( settings.get( "logFile", "Client.log" ) );
-	std::string sLogExclude( settings.get( "logExclude", "" ) );
-	unsigned int nLogLevel = settings.get( "logLevel", LL_DEBUG_HIGH );
+	std::string sLogFile(settings.get("logFile", "Client.log"));
+	std::string sLogExclude(settings.get("logExclude", ""));
+	unsigned int nLogLevel = settings.get("logLevel", LL_DEBUG_HIGH);
 
-	FileReactor fileReactor( sLogFile, nLogLevel, sLogExclude, 
-		FileReactor::O_DEFAULTS|FileReactor::O_RESET );
+	FileReactor fileReactor(sLogFile, nLogLevel, sLogExclude,
+		FileReactor::O_DEFAULTS | FileReactor::O_RESET);
 
 #ifdef _DEBUG
 	//DebugReactor debugReactor;
@@ -188,16 +188,16 @@ int CClientApp::StartGame()
 			memcpy(CPUBrandString + 32, CPUInfo, sizeof(CPUInfo));
 	}
 	//string includes manufacturer, model and clockspeed
-	TRACE(CharString().format("CPU Type: %s", (CharString)CPUBrandString));
+	LOG_STATUS("SysInfo", CharString().format("CPU Type: %s", (CharString)CPUBrandString));
 
 	SYSTEM_INFO sysInfo;
 	GetSystemInfo(&sysInfo);
-	TRACE(CharString().format("Number of Cores: %d", sysInfo.dwNumberOfProcessors));
+	LOG_STATUS("SysInfo", CharString().format("Number of Cores: %d", sysInfo.dwNumberOfProcessors));
 
 	MEMORYSTATUSEX statex;
 	statex.dwLength = sizeof(statex);
 	GlobalMemoryStatusEx(&statex);
-	TRACE(CharString().format("Total System Memory: %d MB", (statex.ullTotalPhys / 1024) / 1024));
+	LOG_STATUS("SysInfo", CharString().format("Total System Memory: %d MB", (statex.ullTotalPhys / 1024) / 1024));
 
 	bool bCPUFail = true;
 
@@ -207,9 +207,9 @@ int CClientApp::StartGame()
 		bCPUFail = false;
 
 	if (!bCPUFail)
-		TRACE(CharString().format("Multicore supported..."));
+		LOG_STATUS("SysInfo", "Multicore supported...");
 	else
-		TRACE(CharString().format("Multicore not supported on this platform..."));
+		LOG_STATUS("SysInfo", "Multicore not supported on this platform...");
 
 	// default to a single core unless someone forces multi-core support on..
 	if ( settings.get( "ForceMultiCore", (dword)0) == 0 || bCPUFail )
