@@ -12,9 +12,6 @@
     <CustomBuild Include="..\..\..\GameCQ\Bin\BCGCB70080.dll">
       <Filter>Bin</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\Bin\DarkSpace.exe">
-      <Filter>Bin</Filter>
-    </CustomBuild>
     <CustomBuild Include="..\..\Bin\dbghelp.dll">
       <Filter>Bin</Filter>
     </CustomBuild>
