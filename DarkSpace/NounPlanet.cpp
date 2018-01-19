@@ -454,8 +454,9 @@ void NounPlanet::inflictDamage( dword nWhen, Noun * pFrom, int damage, dword typ
 			fDistance = (hex(pUnit->hex()).position - P).magnitude();
 		else
 			fDistance = (pNoun->position() - P).magnitude();
-
-		pNoun->inflictDamage(nWhen, pFrom, (1.0f - (fDistance / fDamageRadius)) * damage, type, direction);
+		
+		if ( fDistance < fDamageRadius )
+			pNoun->inflictDamage(nWhen, pFrom, (1.0f - (fDistance / fDamageRadius)) * damage, type, direction);
 	}
 }
 
