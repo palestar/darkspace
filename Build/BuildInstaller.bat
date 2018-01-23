@@ -2,16 +2,12 @@
 
 cd C:\Work\Trunk\DarkSpace\Build\
 
-echo Getting latest from SVN...
-svn --username builder --password god2899 --non-interactive update ..\..\.
+call GitLatest.bat
 if errorlevel 1 goto :Error
 
 echo Building DarkSpace Installer...
-..\Tools\NSIS\makensis.exe ..\DarkSpaceInstall.nsi
+..\Tools\NSIS\makensis.exe /X"SetCompressor /SOLID /FINAL lzma" ..\DarkSpaceInstall.nsi
 if errorlevel 1 goto :Error
-
-echo Commiting binary updates
-svn --username builder --password god2899 commit ..\..\. -m "Installer Build"
 
 goto :Done
 
