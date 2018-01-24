@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "DarkSpace"
-!define PRODUCT_VERSION "1.704"
+!define PRODUCT_VERSION "1.710"
 !define PRODUCT_PUBLISHER "Palestar Inc"
 !define PRODUCT_WEB_SITE "http://www.darkspace.net"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\DarkSpace.exe"
@@ -38,7 +38,7 @@
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "..\Web\darkspace\downloads\DarkSpaceBeta.exe"
+OutFile "..\Web\darkspace\downloads\DarkSpace.exe"
 InstallDir "C:\GameCQ\"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
