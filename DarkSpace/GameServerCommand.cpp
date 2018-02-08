@@ -9,6 +9,7 @@
 #include "Standard/CommandLine.h"
 #include "Standard/StringHelpers.h"
 #include "VerbCaptureShip.h"
+#include "VerbCapturePlanet.h"
 #include "GameProfile.h"
 #include "DarkSpace/VerbLockPlanet.h"
 #include "DarkSpace/TraitDisplayName.h"
@@ -99,18 +100,31 @@ bool GameServer::processCommand( ClientContext & context, const char * pChat )
 		break;
 	case CMD_CAP:
 		{
-			NounShip * pShip = WidgetCast<NounShip>( context.pTarget );
-			if ( pShip == NULL )
-				pShip = WidgetCast<NounShip>( context.pSelf );
-				
+			// get our teamId (use first argument if given)
 			int nTeam = 0;
-			if ( arguments.argumentCount() > 1 )
-				nTeam = arguments.argumentInt( 1 );
+			if (arguments.argumentCount() > 1)
+				nTeam = arguments.argumentInt(1);
 			else
 				nTeam = context.nTeamId;
 
-			if ( pShip != NULL )
-				Verb::Ref( new VerbCaptureShip( pShip, nTeam, context.pSelf ) );
+			// capture ship if ship is target
+			NounShip * pShip = WidgetCast<NounShip>( context.pTarget );
+			if (pShip != NULL)
+			{
+				Verb::Ref(new VerbCaptureShip(pShip, nTeam, context.pSelf));
+				return true;
+			}
+			
+			// capture planet if planet is target
+			NounPlanet * pPlanet = WidgetCast<NounPlanet>(context.pTarget);
+			if (pPlanet != NULL)
+			{
+				Verb::Ref(new VerbCapturePlanet( pPlanet, nTeam ));
+				return true;
+			}
+
+			// else capture ourselves
+			Verb::Ref(new VerbCaptureShip(pShip, nTeam, context.pSelf));
 				
 			return true;
 		}

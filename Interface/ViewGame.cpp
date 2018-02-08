@@ -535,6 +535,11 @@ void ViewGame::onUpdate( float t )
 		sShipStatus += CharString().format("\nCredits: %s", FormatNumber<char,int>( pShip->credits() ) );
 		if ( pShip->command() != NounShip::NOCOMMAND )
 			sShipStatus += CharString().format("\nOrder: %s", pShip->commandString() );		// display the current helm command
+
+		// reset camera if targetting enemies as most of the logic is currently tied to onButtonDown
+		if (m_pDoc->focus()->factionId() != pShip->factionId())
+			m_pDoc->setFocus(pShip);
+		
 	}
 	m_pShipStatusText->setText( sShipStatus );
 
@@ -607,6 +612,18 @@ void ViewGame::onUpdate( float t )
 		m_pMessageBox->showWindow();
 		m_pActiveDialog->onDispayed();
 	}
+
+	// we need to reset our focus if a planet has been captured whilst in engineering screen
+	if (m_Mode == PLANET)
+	{
+		NounPlanet * pPlanet = WidgetCast<NounPlanet>(m_pDoc->planetTarget());
+		if (pPlanet != NULL)
+		{
+			if (pPlanet->factionId() != pShip->factionId())
+				changeMode(TACTICAL);
+		}
+	}
+
 }
 
 bool ViewGame::onMessage( const Message & msg )
