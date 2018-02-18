@@ -47,7 +47,7 @@ if errorlevel 1 goto :Error
 %SSH% %LINUXBUILDER%  "cd %BRANCH%GameCQ/ProcessClientCLI; %MAKECMD%"
 if errorlevel 1 goto :Error
 
-echo Medusa %ACTION%/%CONFIG%...
+echo "%DEVENV%" ..\..\Medusa\Medusa.sln /%ACTION% %CONFIG% /out Logs\Medusa.log
 "%DEVENV%" ..\..\Medusa\Medusa.sln /%ACTION% %CONFIG% /out Logs\Medusa.log
 if errorlevel 1 goto :Error
 
@@ -58,19 +58,19 @@ if NOT errorlevel 0 goto :Error
 del ..\..\Medusa\Bin\UnitTest*.dmp
 :SkipUnitTest
 
-echo Medusa Tools %ACTION%/%CONFIG%...
+echo "%DEVENV%" ..\..\Medusa\Tools\Tools.sln /%ACTION% %CONFIG% /out Logs\MedusaTools.log
 "%DEVENV%" ..\..\Medusa\Tools\Tools.sln /%ACTION% %CONFIG% /out Logs\MedusaTools.log
 if errorlevel 1 goto :Error
 
-echo GameCQ %ACTION%/%CONFIG%...
+echo "%DEVENV%" ..\..\GameCQ\GameCQ.sln /%ACTION% %CONFIG% /out Logs\GameCQ.log
 "%DEVENV%" ..\..\GameCQ\GameCQ.sln /%ACTION% %CONFIG% /out Logs\GameCQ.log
 if errorlevel 1 goto :Error
 
-echo DarkSpace %ACTION%/%CONFIG%...
+echo "%DEVENV%" ..\DarkSpace.sln /%ACTION% %CONFIG% /out Logs\DarkSpace.log
 "%DEVENV%" ..\DarkSpace.sln /%ACTION% %CONFIG% /out Logs\DarkSpace.log
 if errorlevel 1 goto :Error
 
-echo DarkSpace Tools %ACTION%/%CONFIG%...
+echo "%DEVENV%" ..\Tools\Tools.sln /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
 "%DEVENV%" ..\Tools\Tools.sln /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
 if errorlevel 1 goto :Error
 
