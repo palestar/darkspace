@@ -36,7 +36,7 @@
     <CustomBuild Include="..\..\..\GameCQ\Bin\SmartUpdate.exe">
       <Filter>Bin</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\GameCQ\Bin\vcredist_x86.exe">
+    <CustomBuild Include="..\..\..\GameCQ\Bin\VC_redist.x86.exe">
       <Filter>Bin</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\Bin\Version.ini">
