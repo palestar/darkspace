@@ -67,6 +67,7 @@ public:
 	bool				onButtonZoomInBegin(const Message & msg);
 	bool				onButtonGrid(const Message & msg);
 	bool				onButtonOrbits(const Message & msg);
+	bool				onButtonCameraAngleReset(const Message & msg);
 	// END_MSG}}
 
 private:
