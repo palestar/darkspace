@@ -14,15 +14,11 @@
 
 //----------------------------------------------------------------------------
 
-const dword GADGETJD_STEP_RATE = TICKS_PER_SECOND * 3;
-
-//----------------------------------------------------------------------------
-
 IMPLEMENT_ABSTRACT_FACTORY( GadgetJD, NounGadget ); 
 REGISTER_FACTORY_KEY( GadgetJD, 4346018582041573986LL );
 
 BEGIN_ABSTRACT_PROPERTY_LIST( GadgetJD, NounGadget );
-	//ADD_TRANSMIT_UPDATE_PROPERTY( m_Children );
+	ADD_TRANSMIT_UPDATE_PROPERTY( m_pField );
 END_PROPERTY_LIST();
 
 GadgetJD::GadgetJD() : m_nLastFleetId( -1 ), m_fFieldScale( 1.0f )
