@@ -427,7 +427,7 @@ void NounPlanet::inflictDamage( dword nWhen, Noun * pFrom, int damage, dword typ
 		if ( m_fPopulation > 0.0f )
 		{
 			// decimate the population, the higher the population the faster and easier it's killed
-			float fDP = Max( 100000.0f / m_fPopulation, 1000.0f );
+			float fDP = Max( 1000000.0f / m_fPopulation, 10000.0f );
 			float fKilled = (float)damage / fDP;
 
 			killPopulation( fKilled );
@@ -669,7 +669,7 @@ float NounPlanet::killPopulation( float fKill )
 			if ( isServer() )
 				globalChat( CharString().format( "<color;ffffff>Comms: %s: colony has been destroyed!", name() ) );
 			setTeamId( 0 );
-			setControl( CAPTURE_CONTROL_POINTS);
+			//setControl( CAPTURE_CONTROL_POINTS);
 		}
 	}
 

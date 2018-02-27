@@ -117,11 +117,9 @@ int GadgetJD::useEnergy( dword nTick, int energy )
 			if ( WidgetCast<StructureDefense>( parent() ) )
 			{
 				NounPlanet * pPlanet = ((StructureDefense *)parent())->planet();
-				m_fFieldScale = ( range() + pPlanet->radius() ) / range();
-				m_pField->setFieldRadius( fRange * m_fFieldScale );			
-				
-				attachNode( m_pField );
-				m_pField->setWorldPosition( pPlanet->worldPosition() );
+				m_fFieldScale = ( range() + ( pPlanet->radius() * 2 ) ) / range();
+				m_pField->setFieldRadius( fRange * m_fFieldScale );
+				attachNode(m_pField);
 			}
 			else
 			{
