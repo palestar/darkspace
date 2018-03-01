@@ -1,6 +1,6 @@
-/*	
-	WeaponEtorpedo.h
-	(c)2009 Palestar, Richard Lyle
+/*
+WeaponEtorpedo.h
+(c)2009 Palestar, Richard Lyle
 */
 
 #ifndef WEAPON_E_TORPEDO_H
@@ -25,7 +25,7 @@ public:
 	}
 	int maxDamage() const
 	{
-		return (4500 + (level() * 1200));
+		return (5000 + (level() * 500));
 	}
 	int addValue() const
 	{
@@ -49,11 +49,11 @@ public:
 	}
 
 	// GadgetWeapon interface
-	int energyCost() const	
+	int energyCost() const
 	{
-		return (700 + (140 * level()));
+		return (750 + (250 * level()));
 	}
-	int energyCharge() const	
+	int energyCharge() const
 	{
 		return 9;
 	}
@@ -95,7 +95,7 @@ public:
 	}
 	bool inheritVelocity() const
 	{
-		return true;
+		return false;
 	}
 	bool turret() const
 	{
@@ -103,15 +103,15 @@ public:
 	}
 	int	maxProjectiles() const
 	{
-		return 10;
+		return 4;
 	}
 	int projectileCount() const
 	{
-		return 1;
+		return 4;
 	}
 	int projectileDelay() const
 	{
-		return 0;
+		return 2;
 	}
 	bool projectileSmart() const
 	{
@@ -123,13 +123,7 @@ public:
 	}
 	float projectileVelocity() const
 	{
-		switch (level()) 
-		{
-			case 10:
-				return 195.0f;
-			default:
-				return 650.0f - (level() * 65.0f);
-		}
+		return 450.0f;
 	}
 	float projectileLife() const
 	{
@@ -137,7 +131,7 @@ public:
 	}
 	float projectileSig() const
 	{
-		return 5.0f;
+		return 8.5f;
 	}
 	bool projectileCollidable() const
 	{
@@ -165,11 +159,11 @@ public:
 	}
 	int damage() const
 	{
-		return (level() * 350);
+		return (5250 * (1 + (level() / 3)));
 	}
 	int damageRandom() const
 	{
-		return (level() * 700);
+		return 0;
 	}
 	bool reverseFalloff() const
 	{
@@ -177,7 +171,7 @@ public:
 	}
 	float damageFalloff() const
 	{
-		return 1;
+		return 0;
 	}
 	int repairRate() const
 	{
@@ -185,19 +179,19 @@ public:
 	}
 	int areaDamage() const
 	{
-		return 1750;
+		return 0;
 	}
 	int areaDamageRandom() const
 	{
-		return 3500;
+		return (7500 * (1 + (level() / 2)));
 	}
 	float areaDamageRadius() const
 	{
-		return (35.0f * (1 + (level() / 5)));
+		return (15.0f * (1 + level()));
 	}
 	float armTime() const
 	{
-		return 0;
+		return 300.0f / projectileVelocity();
 	}
 };
 
