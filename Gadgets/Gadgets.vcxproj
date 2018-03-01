@@ -372,6 +372,7 @@
     <ClInclude Include="Reactor1500.h" />
     <ClInclude Include="Reactor500.h" />
     <ClInclude Include="ReactorAux.h" />
+    <ClInclude Include="ReduceWeaponRange.h" />
     <ClInclude Include="RF250.h" />
     <ClInclude Include="Scanner.h" />
     <ClInclude Include="Scanner1.h" />

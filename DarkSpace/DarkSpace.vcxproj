@@ -309,6 +309,7 @@
     <ClInclude Include="GadgetMiningBeam.h" />
     <ClInclude Include="GadgetPulseShield.h" />
     <ClInclude Include="GadgetReactor.h" />
+    <ClInclude Include="GadgetModifierEW.h" />
     <ClInclude Include="GadgetReload.h" />
     <ClInclude Include="GadgetScanner.h" />
     <ClInclude Include="GadgetScript.h" />
@@ -509,6 +510,7 @@
     <ClCompile Include="GadgetMiningBeam.cpp" />
     <ClCompile Include="GadgetPulseShield.cpp" />
     <ClCompile Include="GadgetReactor.cpp" />
+    <ClCompile Include="GadgetModifierEW.cpp" />
     <ClCompile Include="GadgetReload.cpp" />
     <ClCompile Include="GadgetScanner.cpp" />
     <ClCompile Include="GadgetScript.cpp" />

@@ -603,6 +603,9 @@
     <ClInclude Include="TierInfo.h">
       <Filter>Data</Filter>
     </ClInclude>
+    <ClInclude Include="GadgetModifierEW.h">
+      <Filter>Gadgets</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Universe.rc">
@@ -1106,6 +1109,9 @@
     </ClCompile>
     <ClCompile Include="TierInfo.cpp">
       <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="GadgetModifierEW.cpp">
+      <Filter>Gadgets</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
