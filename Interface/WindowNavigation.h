@@ -77,6 +77,7 @@ public:
 	void				flipShowFlag( dword nFlag );
 
 	void				onCenter();							// centers the map on the current target, if none then the players ship
+	void				onCameraAngleReset();
 
 	void				beginZoom( bool bZoomIn );			// begin zooming in or out
 	void				endZoom();

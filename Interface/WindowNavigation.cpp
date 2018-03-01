@@ -33,6 +33,8 @@ const float				MAX_CAMERA_ZOOM = 1.0f;
 const Vector3			ZERO_N( 0, 0, 0 );
 const float				FRONT_PLANE = 1.0f;
 const float				BACK_PLANE = 5000000.0f;
+const float				CAMERA_PITCH = PI / 4;
+const float				CAMERA_YAW = PI / 4;
 
 static Constant			LEFT_TARGET_TIME( "LEFT_TARGET_TIME", 0.5f );
 static Constant			NAVIGATION_DOLLY_RATE( "NAVIGATION_DOLLY_RATE", 500.0f );
@@ -79,8 +81,8 @@ WindowNavigation::WindowNavigation() : m_nSelectMode( SELECT_ALL ),
 	m_bRightDown( false ), 
 	m_fRightDownTime( 0.0f ),
 	m_vCameraZoom( MAX_CAMERA_ZOOM / 2, 0, 0 ), 
-	m_fCameraYaw( PI / 4 ), 
-	m_fCameraPitch( PI / 4),
+	m_fCameraYaw( CAMERA_YAW ),
+	m_fCameraPitch( CAMERA_PITCH ),
 	m_vCursorPosition( 0, 0, 0 ), 
 	m_pCursorPosition( 256, 256 ), 
 	m_fTargetTime( 0.0f ), 
@@ -938,6 +940,12 @@ void  WindowNavigation::onCenter()
 		sm_vCameraTarget = m_pDoc->ship()->worldPosition();
 	else
 		sm_vCameraTarget = Vector3(0,0,0);		// no target, no ship, center of the universe then...
+}
+
+void WindowNavigation::onCameraAngleReset()
+{
+	m_fCameraPitch = CAMERA_PITCH;
+	m_fCameraYaw = CAMERA_YAW;
 }
 
 void WindowNavigation::beginZoom( bool bZoomIn )
