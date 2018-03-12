@@ -32,7 +32,7 @@ public:
 	bool					active() const;
 
 protected:
-	NounShip::wRef m_Target = NULL;
+	NounShip::wRef			m_Target;
 };
 
 inline bool GadgetModifierEW::active() const {
