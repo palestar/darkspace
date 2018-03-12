@@ -117,6 +117,7 @@ bool ViewNavigation::onMessage( const Message & msg )
 	MESSAGE_MAP( WB_BUTTONDOWN, 286089378, onButtonZoomInBegin);
 	MESSAGE_MAP( WB_BUTTONDOWN, 1499126323, onButtonGrid);
 	MESSAGE_MAP( WB_BUTTONDOWN, 1809782535, onButtonOrbits);
+	MESSAGE_MAP( WB_BUTTONDOWN, 1354953777, onButtonCameraAngleReset);
 	//END_MSG_MAP}}
 
 	return false;
@@ -229,3 +230,8 @@ bool ViewNavigation::onButtonAI(const Message & msg)
 	return true;
 }
 
+bool ViewNavigation::onButtonCameraAngleReset(const Message & msg)
+{
+	m_pNavigationWindow->onCameraAngleReset();
+	return true;
+}

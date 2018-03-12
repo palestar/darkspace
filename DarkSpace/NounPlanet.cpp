@@ -427,7 +427,7 @@ void NounPlanet::inflictDamage( dword nWhen, Noun * pFrom, int damage, dword typ
 		if ( m_fPopulation > 0.0f )
 		{
 			// decimate the population, the higher the population the faster and easier it's killed
-			float fDP = Max( 100000.0f / m_fPopulation, 1000.0f );
+			float fDP = Max( 1000000.0f / m_fPopulation, 10000.0f );
 			float fKilled = (float)damage / fDP;
 
 			killPopulation( fKilled );
@@ -669,7 +669,7 @@ float NounPlanet::killPopulation( float fKill )
 			if ( isServer() )
 				globalChat( CharString().format( "<color;ffffff>Comms: %s: colony has been destroyed!", name() ) );
 			setTeamId( 0 );
-			setControl( CAPTURE_CONTROL_POINTS);
+			//setControl( CAPTURE_CONTROL_POINTS);
 		}
 	}
 
@@ -1427,15 +1427,16 @@ void NounPlanet::updateControl( dword nTick )
 			for(int i=0;i<m_Cappers.size();++i)
 				if ( m_Cappers[i]->factionId() == nHighestFaction && m_Cappers[i]->userId() != 0 )
 				{
+					int nPrestigeAward = 0;
 					NounShip * pShip = WidgetCast<NounShip>( m_Cappers[i] );
 					if ( pShip != NULL && ( value() * AWARD_SCALAR ) >= 1 )
 					{
-						int nPrestigeAward = ( value() * AWARD_SCALAR ) * pShip->rank();
+						nPrestigeAward = ( value() * AWARD_SCALAR ) * pShip->rank();
 						gameContext()->gameUser()->onBonusPrestige( m_Cappers[i], nPrestigeAward );
 					}
 					
 					gameContext()->gameUser()->onPlanetsCaptured( m_Cappers[i], 1.0f );
-					sPlayers += CharString().format( "@%d ", m_Cappers[i]->userId() );
+					sPlayers += CharString().format( "@%d (+%d bp) ", m_Cappers[i]->userId(), nPrestigeAward );
 				}
 
 			setTeamId( nHighestTeam );

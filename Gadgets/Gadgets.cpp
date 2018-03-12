@@ -92,6 +92,7 @@
 #include "Gadgets/JD2K.h"
 #include "Gadgets/DropPod.h"
 #include "Gadgets/DropPodMI.h"
+#include "Gadgets/ReduceWeaponRange.h"
 
 // fighters
 #include "Gadgets/FighterBay.h"
@@ -198,6 +199,7 @@ IMPLEMENT_LIGHT_FACTORY( FocusedTECCM, GadgetTECCM );
 IMPLEMENT_LIGHT_FACTORY( LocalECM, GadgetECM );
 IMPLEMENT_LIGHT_FACTORY( TacticalECCM, GadgetECCM );
 IMPLEMENT_LIGHT_FACTORY( TacticalECM, GadgetECM );
+IMPLEMENT_LIGHT_FACTORY( ReduceWeaponRange, GadgetModifierEW );
 
 IMPLEMENT_LIGHT_FACTORY( ReactorAux, GadgetReactor  );
 IMPLEMENT_LIGHT_FACTORY( Reactor500, GadgetReactor  );
