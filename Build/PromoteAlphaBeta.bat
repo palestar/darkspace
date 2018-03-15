@@ -13,14 +13,14 @@ if errorlevel 1 goto :Error
 
 :Done
 echo Promoted Alpha to Beta...
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9102:MirrorServer - DarkSpace (Beta)" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9201:MirrorServer - GCQS (Beta)" 1
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9102:MirrorServer - DarkSpace (Beta)" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9201:MirrorServer - GCQS (Beta)" 0
 exit /B 0
 
 :Error
 echo Error occured while promoting Alpha to Beta...
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9102:MirrorServer - DarkSpace (Beta)" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9201:MirrorServer - GCQS (Beta)" 1
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9102:MirrorServer - DarkSpace (Beta)" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9201:MirrorServer - GCQS (Beta)" 0
 exit /B 1
 
 rem pause

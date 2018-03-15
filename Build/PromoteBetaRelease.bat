@@ -15,18 +15,18 @@ if errorlevel 1 goto :Error
 
 :Done
 echo Promoted Beta to Relase...
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9100:MirrorServer - GCQ" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9101:MirrorServer - DarkSpace" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9103:MirrorServer - Tools" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9200:MirrorServer - GCQS" 1
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9100:MirrorServer - GCQ" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9101:MirrorServer - DarkSpace" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9103:MirrorServer - Tools" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9200:MirrorServer - GCQS" 0
 exit /B 0
 
 :Error
 echo Error occured while promoting Beta to Release...
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9100:MirrorServer - GCQ" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9101:MirrorServer - DarkSpace" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9103:MirrorServer - Tools" 1
-..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9200:MirrorServer - GCQS" 1
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9100:MirrorServer - GCQ" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9101:MirrorServer - DarkSpace" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9103:MirrorServer - Tools" 0
+..\..\GameCQ\Bin\ProcessClientCLI vm3.palestar.com.ini START "9200:MirrorServer - GCQS" 0
 exit /B 1
 
 rem pause
