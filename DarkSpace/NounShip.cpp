@@ -60,7 +60,7 @@ static Constant DAMAGE_POINTS_DIV( "DAMAGE_POINTS_DIV", 20000.0f );
 static Constant NOHULL_DAMAGE_POINTS_SCALE( "NOHULL_DAMAGE_POINTS_SCALE", 0.1f );
 static Constant CHECK_FIRE_INTERVAL( "CHECK_FIRE_INTERVAL", 2.5f );
 static Constant CLIENT_SIDE_DAMAGE( "CLIENT_SIDE_DAMAGE", 0.5f );
-static Constant OUT_OF_COMBAT_TIME( "OUT_OF_COMBAT_TIME", TICKS_PER_SECOND * 30 ); // combat timer for ships that inflict damage
+static Constant OUT_OF_COMBAT_TIME( "OUT_OF_COMBAT_TIME", TICKS_PER_SECOND * 30 ); // 30s base + 30s per ship level in the setOutOfCombat() function
 
 const int		SHIP_UPDATE_RATE	= TICKS_PER_SECOND;					// ship is updated every SHIP_UPDATE_RATE ticks
 const int		DEFAULT_REPAIR_RATE = TICKS_PER_SECOND * 5;				// when orbiting a friendly planet, how often to repair/resupply ship
@@ -1780,7 +1780,8 @@ dword NounShip::buildFlags( NounShip * pShip )
 
 void NounShip::setOutOfCombat( dword timer )
 {
-	m_nCombatTick = timer > 0 ? timer : OUT_OF_COMBAT_TIME;	
+	int nCombatTime = OUT_OF_COMBAT_TIME + (TICKS_PER_SECOND * (30 * gadgetLevel()));
+	m_nCombatTick = timer > 0 ? timer : nCombatTime;	
 }
 
 //----------------------------------------------------------------------------
