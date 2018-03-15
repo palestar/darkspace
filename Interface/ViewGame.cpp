@@ -300,6 +300,8 @@ void ViewGame::onUpdate( float t )
 			
 			bool bIsFriend = pShip->isFriend( pTarget );
 
+			// engineering screen is only allowed on friendly planets
+			m_pButtonPlanet->setEnable(pShip->isFriend(pTarget) && pTarget->isRootNoun());
 			// enable disable ship command buttons
 			m_pButtonShadow->updateButton( pShip->canCommand( NounShip::SHADOW, pTarget ), 
 				!pShip->isCommand( NounShip::SHADOW, pTarget ) );
