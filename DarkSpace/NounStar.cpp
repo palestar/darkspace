@@ -93,7 +93,7 @@ CharString NounStar::displayName(bool a_bAllowTags) const
 	// can select whether we want this display scheme for singular servers
 	CharString sName = name();
 	if (serverName() != "")
-		sName += CharString().format("\n%s sector ", serverName());
+		sName += CharString().format("\n%s", serverName());
 
 	return sName;
 }
