@@ -87,6 +87,17 @@ void NounStar::render( RenderContext & context, const Matrix33 & frame, const Ve
 
 //----------------------------------------------------------------------------
 
+CharString NounStar::displayName(bool a_bAllowTags) const
+{
+	// TODO: we may want to incorporate some sort of config.ini flag so we
+	// can select whether we want this display scheme for singular servers
+	CharString sName = name();
+	if (serverName() != "")
+		sName += CharString().format("\n%s sector ", serverName());
+
+	return sName;
+}
+
 NounType NounStar::nounType() const
 {
 	return TYPE_LANDMARK;

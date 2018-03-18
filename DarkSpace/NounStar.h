@@ -36,6 +36,7 @@ public:
 								const Vector3 & position );
 
 	// Noun interface
+	virtual CharString		displayName(bool a_bAllowTags) const;
 	virtual NounType		nounType() const;
 	virtual bool			collidable() const;
 	virtual float			baseSignature() const;
