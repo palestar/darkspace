@@ -301,7 +301,7 @@ void ViewGame::onUpdate( float t )
 			bool bIsFriend = pShip->isFriend( pTarget );
 
 			// engineering screen is only allowed on friendly planets
-			if (( WidgetCast<NounPlanet>(pTarget) && pTarget->isRootNoun() && pShip->isFriend(pTarget) ) || m_pViewPlanet->visible() )
+			if (( WidgetCast<NounPlanet>(pTarget) && pShip->isFriend(pTarget) ) || m_pViewPlanet->visible() || pShip->orbiting() == WidgetCast<NounPlanet>(pTarget) )
 				m_pButtonPlanet->setEnable(true);
 			else
 				m_pButtonPlanet->setEnable(false);
@@ -543,9 +543,12 @@ void ViewGame::onUpdate( float t )
 			sShipStatus += CharString().format("\nOrder: %s", pShip->commandString() );		// display the current helm command
 
 		// reset camera if targetting enemies as most of the logic is currently tied to onButtonDown
-		if (m_pDoc->focus()->factionId() != pShip->factionId())
-			m_pDoc->setFocus(pShip);
-		
+		if (WidgetCast<NounPlanet>(myTarget()) != NULL)
+		{
+			NounPlanet * pPlanet = WidgetCast<NounPlanet>(myTarget());
+			if (pPlanet->factionId() != pShip->factionId() && pShip->orbiting() != pPlanet)
+				m_pDoc->setFocus(pShip);
+		}
 	}
 	m_pShipStatusText->setText( sShipStatus );
 
@@ -619,13 +622,13 @@ void ViewGame::onUpdate( float t )
 		m_pActiveDialog->onDispayed();
 	}
 
-	// we need to reset our focus if a planet has been captured whilst in engineering screen
+	// we need to reset our focus if a planet has been captured whilst in engineering screen and we're not orbitting
 	if (m_Mode == PLANET)
 	{
 		NounPlanet * pPlanet = WidgetCast<NounPlanet>(m_pDoc->planetTarget());
 		if (pPlanet != NULL)
 		{
-			if (pPlanet->factionId() != pShip->factionId())
+			if (pPlanet->factionId() != pShip->factionId() && pShip->orbiting() != pPlanet)
 				changeMode(TACTICAL);
 		}
 	}

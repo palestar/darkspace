@@ -74,7 +74,7 @@ void LayoutPlanets::onUpdate( float t )
 					for(int i=0;i<nouns.size();i++)
 					{
 						NounPlanet * pPlanet = WidgetCast<NounPlanet>( nouns[i].pNoun );
-						if ( pPlanet != NULL && pPlanet->isFriend(pShip) && pPlanet->maxStructures() > 0 )
+						if ( pPlanet != NULL && (pPlanet->isFriend(pShip) || pPlanet == pShip->orbiting()) && pPlanet->maxStructures() > 0 )
 							planets.push( pPlanet );
 					}
 				}
