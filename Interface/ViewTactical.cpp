@@ -639,8 +639,8 @@ void ViewTactical::onUpdate( float t )
 	}
 }
 
-const float CAMERA_PITCH_RATE = PI / 512;
-const float CAMERA_YAW_RATE = PI / 256;
+const float CAMERA_PITCH_RATE = PI / 1024;
+const float CAMERA_YAW_RATE = PI / 1024;
 const float CAMERA_ZOOM_RATE = 250.0f;
 const float ORBIT_MASS = 100.0f;			// a body must be atleast this mass for a ship to orbit
 
