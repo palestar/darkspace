@@ -20,6 +20,8 @@
 
 //! How much does the ships velocity affect how close we jump to our target...
 static Constant JUMP_DISTANCE_VELOCITY( "JUMP_DISTANCE_VELOCITY", 30.0f );
+//! How much faster does the jump drive recharge when out of combat... default 20% @ 1.2 x
+static Constant OUT_OF_COMBAT_JUMP_DRIVE_BONUS( "OUT_OF_COMBAT_JUMP_DRIVE_BONUS", 1.2f );
 
 //----------------------------------------------------------------------------
 
@@ -287,7 +289,9 @@ CharString GadgetJumpDrive::useTip( Noun * pTarget, bool shift ) const
 	// usage information
 	float fMod = calculateModifier( MT_JUMPSPEED );
 	tip += CharString().format("\nMax Distance:<X;100>%.0fgu @ %.0fgu/s", maxRange(), velocity() * fMod );
-	tip += CharString().format("\nRecharge Time:<X;100>%.1fs", energyCostMass() / ( ( ( energyCharge() * TICKS_PER_SECOND ) * damageRatioInv() ) * calculateModifier( MT_JUMPCOOLDOWN ) ) );
+	float fCharge = ( ( energyCharge() * TICKS_PER_SECOND ) * damageRatioInv() ) * calculateModifier( MT_JUMPCOOLDOWN );
+	float fOOCCharge = fCharge * OUT_OF_COMBAT_JUMP_DRIVE_BONUS;
+	tip += CharString().format("\nRecharge Time:<X;100>%.1fs (Out of Combat: %.1fs)", energyCostMass() / fCharge, energyCostMass() / fOOCCharge );
 	tip += CharString().format("\nEnergy Usage:<X;100>%.1f", energyCostMass() / 1000.0f );		
 	
 	return tip;
@@ -374,7 +378,7 @@ int GadgetJumpDrive::useEnergy( dword nTick, int energy )
 			int charge = Min( Min( maxCharge, energyCostMass() - m_Energy), energy );
 
 			energy -= charge;
-			m_Energy +=  Max( (int)(charge * calculateModifier( MT_JUMPCOOLDOWN )), 1 );
+			m_Energy += Max( (int)(charge * calculateModifier( MT_JUMPCOOLDOWN )), 1 ) * OUT_OF_COMBAT_JUMP_DRIVE_BONUS;
 		}
 	}
 
