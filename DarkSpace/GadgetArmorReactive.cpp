@@ -21,6 +21,18 @@ void GadgetArmorReactive::setup()
 	NounGadget::setup();
 	// start out at full strength
 	m_Armor = maxArmor();
+	m_nIncDamage = 0;
+	m_nKineticDamage = 0;
+	m_fKineticResist = 0;
+	m_nEnergyDamage = 0;
+	m_fEnergyResist = 0;
+	m_nPSIDamage = 0;
+	m_fPSIResist = 0;
+	m_nEMPDamage = 0;
+	m_fEMPResist = 0;
+	m_nELFDamage = 0;
+	m_fELFResist = 0;
+
 }
 
 void GadgetArmorReactive::simulate( dword nTick )

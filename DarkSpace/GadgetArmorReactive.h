@@ -58,18 +58,18 @@ private:
 	dword					m_nArmorTick;
 	dword					m_nReflectTick;
 	float					m_fModifier;
-	int						m_nDamageRepaired = 0;
-	int						m_nIncDamage = 0;
-	int						m_nKineticDamage = 0;
-	float					m_fKineticResist = 0;
-	int						m_nEnergyDamage = 0;
-	float					m_fEnergyResist = 0;
-	int						m_nPSIDamage = 0;
-	float					m_fPSIResist = 0;
-	int						m_nEMPDamage = 0;
-	float					m_fEMPResist = 0;
-	int						m_nELFDamage = 0;
-	float					m_fELFResist = 0;
+	int						m_nDamageRepaired;
+	int						m_nIncDamage;
+	int						m_nKineticDamage;
+	float					m_fKineticResist;
+	int						m_nEnergyDamage;
+	float					m_fEnergyResist;
+	int						m_nPSIDamage;
+	float					m_fPSIResist;
+	int						m_nEMPDamage;
+	float					m_fEMPResist;
+	int						m_nELFDamage;
+	float					m_fELFResist;
 };
 
 //----------------------------------------------------------------------------
