@@ -749,6 +749,9 @@
     <ClInclude Include="ReduceWeaponRange.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ArmorReactive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="makefile" />

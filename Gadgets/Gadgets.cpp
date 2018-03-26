@@ -51,6 +51,7 @@
 #include "Gadgets/ArmorComposite.h"
 #include "Gadgets/ArmorDusk.h"
 #include "Gadgets/ArmorStealth.h"
+#include "Gadgets/ArmorReactive.h"
 
 
 // special

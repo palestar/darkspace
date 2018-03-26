@@ -298,6 +298,7 @@
     <ClInclude Include="ArmorFighter.h" />
     <ClInclude Include="ArmorMolecular.h" />
     <ClInclude Include="ArmorOrganic.h" />
+    <ClInclude Include="ArmorReactive.h" />
     <ClInclude Include="ArmorReflective.h" />
     <ClInclude Include="ArmorStandard.h" />
     <ClInclude Include="ArmorStealth.h" />
