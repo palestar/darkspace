@@ -290,7 +290,6 @@
     <ClInclude Include="GadgetAreaReload.h" />
     <ClInclude Include="GadgetAreaWeapon.h" />
     <ClInclude Include="GadgetArmor.h" />
-    <ClInclude Include="GadgetArmorReactive.h" />
     <ClInclude Include="GadgetAura.h" />
     <ClInclude Include="GadgetAutoRepair.h" />
     <ClInclude Include="GadgetBeacon.h" />
@@ -492,7 +491,6 @@
     <ClCompile Include="GadgetAreaReload.cpp" />
     <ClCompile Include="GadgetAreaWeapon.cpp" />
     <ClCompile Include="GadgetArmor.cpp" />
-    <ClCompile Include="GadgetArmorReactive.cpp" />
     <ClCompile Include="GadgetAura.cpp" />
     <ClCompile Include="GadgetAutoRepair.cpp" />
     <ClCompile Include="GadgetBeacon.cpp" />

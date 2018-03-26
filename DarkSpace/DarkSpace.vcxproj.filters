@@ -606,9 +606,6 @@
     <ClInclude Include="GadgetModifierEW.h">
       <Filter>Gadgets</Filter>
     </ClInclude>
-    <ClInclude Include="GadgetArmorReactive.h">
-      <Filter>Gadgets</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Universe.rc">
@@ -1114,9 +1111,6 @@
       <Filter>Data</Filter>
     </ClCompile>
     <ClCompile Include="GadgetModifierEW.cpp">
-      <Filter>Gadgets</Filter>
-    </ClCompile>
-    <ClCompile Include="GadgetArmorReactive.cpp">
       <Filter>Gadgets</Filter>
     </ClCompile>
   </ItemGroup>
