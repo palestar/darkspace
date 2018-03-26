@@ -182,6 +182,7 @@ IMPLEMENT_LIGHT_FACTORY( ArmorMolecular, GadgetArmor );
 IMPLEMENT_LIGHT_FACTORY( ArmorComposite, GadgetArmor );
 IMPLEMENT_LIGHT_FACTORY( ArmorDusk, GadgetArmor );
 IMPLEMENT_LIGHT_FACTORY( ArmorStealth, GadgetArmor );
+IMPLEMENT_LIGHT_FACTORY(ArmorReactive, GadgetArmorReactive);
 
 // special
 IMPLEMENT_LIGHT_FACTORY( TractorBeam300, GadgetTractorBeam  );

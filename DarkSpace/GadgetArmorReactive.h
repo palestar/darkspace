@@ -37,7 +37,6 @@ public:
 	// Accessors
 	virtual bool			canDeflect( dword nType ) const = 0;
 	virtual int				maxArmor() const = 0;			// strength of the armor
-	virtual int				repairRate() const = 0;			// repair rate of the armor
 
 	int						armor() const;					// current armor level
 	float					modifier() const;				// armor modifier, set by the parent of this armor (i.e. ship)
