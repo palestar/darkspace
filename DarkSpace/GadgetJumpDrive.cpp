@@ -20,8 +20,8 @@
 
 //! How much does the ships velocity affect how close we jump to our target...
 static Constant JUMP_DISTANCE_VELOCITY( "JUMP_DISTANCE_VELOCITY", 30.0f );
-//! How much faster does the jump drive recharge when out of combat... default 20% @ 1.2 x
-static Constant OUT_OF_COMBAT_JUMP_DRIVE_BONUS( "OUT_OF_COMBAT_JUMP_DRIVE_BONUS", 1.2f );
+//! How much faster does the jump drive recharge when out of combat... default 30% @ 1.3 x
+static Constant OUT_OF_COMBAT_JUMP_DRIVE_BONUS( "OUT_OF_COMBAT_JUMP_DRIVE_BONUS", 1.3f );
 
 //----------------------------------------------------------------------------
 
