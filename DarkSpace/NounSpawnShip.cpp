@@ -12,7 +12,7 @@
 #include "VerbPlanetEvent.h"
 #include "GameContext.h"
 #include <algorithm>
-#include <iterator>
+#include <vector>
 
 //! Define to non-zero to enable despawning.
 #define EANBLE_DESPAWNING			0
@@ -49,7 +49,7 @@ static const RomanDigit ROMAN_DIGITS[]=
 
 const bool checkAllowedShips(dword shipType)
 {
-	static const dword aNounShipTypeArray[]=
+	static const dword aNounShipTypeArray[]
 	{
 		// list of allowed ship type spawners
 		NounShip::ENGINEER,
