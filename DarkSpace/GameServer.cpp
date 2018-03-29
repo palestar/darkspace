@@ -1651,7 +1651,7 @@ int GameServer::spawnedScore(int a_nFactionId )
 	{
 		NounShip * pShip = (NounShip *)ships[i].pointer();
 		if ( pShip->rank() <= LAST_RANK )
-			nSpawnedScore += pShip->rank() + 1;		// CADET is -1, so let that be zero
+			nSpawnedScore += ( pShip->rank() + 1 + pShip->gadgetLevel());		// CADET is -1, so let that be zero
 	}
 
 	return nSpawnedScore;

@@ -512,9 +512,10 @@ NounSpawnShip::Ref NounSpawnShip::makeTeamSpawner( GameContext * a_pContext, int
 		//if ( a_bGateSpawner && !pShip->enableGateSpawn() )
 		//	continue;		// ship can't be spawned at gate
 
-		int nRank = pTemplate->rank() + 1;
-		if ( nRank < 1 )
-			nRank = 1;		// prevent a divide by zero
+		// We used to use ship rank to determine score, but with the tier
+		// changes, a single Engineer could equal one high ranked player in
+		// the event it got picked to spawn
+		int nRank = pShip->gadgetLevel();
 
 		NounSpawnShip::Spawner * pSpawner = new NounSpawnShip::Spawner();
 		pSpawner->setNounTemplate( pTemplate );
