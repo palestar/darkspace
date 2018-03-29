@@ -117,6 +117,7 @@
 #include "Gadgets/PlanetOcean.h"
 #include "Gadgets/PlanetTerran.h"
 #include "Gadgets/PlanetHome.h"
+#include "Gadgets/PlanetArena.h"
 
 // units
 #include "Gadgets/UnitInfantry.h"
@@ -246,6 +247,7 @@ IMPLEMENT_LIGHT_FACTORY( PlanetMoon, NounPlanet  );
 IMPLEMENT_LIGHT_FACTORY( PlanetOcean, NounPlanet  );
 IMPLEMENT_LIGHT_FACTORY( PlanetTerran, NounPlanet  );
 IMPLEMENT_LIGHT_FACTORY( PlanetHome, NounPlanet  );
+IMPLEMENT_LIGHT_FACTORY( PlanetArena, NounPlanet );
 
 // units
 IMPLEMENT_LIGHT_FACTORY( UnitInfantry, NounUnit  );

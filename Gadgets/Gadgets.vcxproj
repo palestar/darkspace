@@ -355,6 +355,7 @@
     <ClInclude Include="NaniteInjector.h" />
     <ClInclude Include="NarrowBandTECCM.h" />
     <ClInclude Include="NarrowBandTECM.h" />
+    <ClInclude Include="PlanetArena.h" />
     <ClInclude Include="PlanetArid.h" />
     <ClInclude Include="PlanetBarren.h" />
     <ClInclude Include="PlanetGas.h" />

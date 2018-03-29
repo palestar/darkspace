@@ -274,6 +274,13 @@ void NounPlanet::initialize()
 	m_pDefenseProjectile.load( false );
 
 	updateStatusLines();
+
+	// if this is an arena planet we want to set it to non_capturable
+	if (this->description() == "Arena" && !this->testFlags(FLAG_NOT_CAPTURABLE))
+	{
+		setAllegiance(20);
+		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
+	}
 }
 
 bool NounPlanet::postInitialize()
