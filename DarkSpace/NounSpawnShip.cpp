@@ -11,8 +11,6 @@
 #include "VerbRevolt.h"
 #include "VerbPlanetEvent.h"
 #include "GameContext.h"
-#include <algorithm>
-#include <vector>
 
 //! Define to non-zero to enable despawning.
 #define EANBLE_DESPAWNING			0
@@ -47,19 +45,27 @@ static const RomanDigit ROMAN_DIGITS[]=
 	{"I",     1},
 };
 
-const bool checkAllowedShips(dword shipType)
+static const bool checkAllowedShips(NounShip::Type type)
 {
-	static const dword aNounShipTypeArray[]
+	static const bool ALLOWED_SHIPS[] =
 	{
 		// list of allowed ship type spawners
-		NounShip::ENGINEER,
-		NounShip::SUPPLY,
-		NounShip::DESTROYER,
-		NounShip::CRUISER,
-		NounShip::DREAD,
+		false,	// UNKNOWN,
+		false,	// FIGHTER,
+		true,	// ENGINEER,
+		true,	// SUPPLY,
+		false,	// TRANSPORT,
+		false,	// SCOUT,
+		false,	// FRIGATE,
+		true,	// DESTROYER,
+		true,	// CRUISER,
+		true,	// DREAD,
+		false,	// STATION,
+		false,	// PLATFORM,
+		false,	// PLATFORM_SUPPLY
 	};
 
-	return std::find(std::begin(aNounShipTypeArray), std::end(aNounShipTypeArray), shipType) != std::end(aNounShipTypeArray);
+	return ALLOWED_SHIPS[type];
 }
 
 static CharString GenerateRomanNumerals( unsigned int a_nNumber )
