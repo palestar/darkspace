@@ -22,6 +22,13 @@ class ViewGame;
 
 //----------------------------------------------------------------------------
 
+enum YawStatePressed {
+	None,
+	Left,
+	Right,
+	Both
+};
+
 class ViewTactical : public WindowView::View
 {
 public:
@@ -149,6 +156,7 @@ private:
 	bool				m_UpdateControl;	// ship manual controls
 	float				m_fYaw;
 	float				m_fYawV;
+	YawStatePressed		        m_yawState;
 	float				m_SetHeading;
 	float				m_SetHeadingV;
 	float				m_SetVelocity;		// desired ship velocity
