@@ -1,11 +1,11 @@
 @echo off
 :start
 cls
-set /p DEBUG=Start debug executable [y/n]?: 
+SET /p DEBUG=Start debug executable [y/n]?: 
 SET EXENAME=DarkSpaceServer
-IF NOT %DEBUG%==y IF NOT %DEBUG%==n	GOTO start
-IF %DEBUG%==n	SET EXENAME=%EXENAME%.exe
-IF %DEBUG%==y	SET EXENAME=%EXENAME%D.exe
+IF NOT "%DEBUG%"=="y" IF NOT "%DEBUG%"=="n" GOTO start
+IF "%DEBUG%"=="n" SET EXENAME=%EXENAME%.exe
+IF "%DEBUG%"=="y" SET EXENAME=%EXENAME%D.exe
 
 
 SET CONFIGLOC=.\multiverse\configs
@@ -13,11 +13,11 @@ SET CONFIGLOC=.\multiverse\configs
 cd ..
 
 :: Deleting old logs first...
-del /F /Q .\multiverse\logs\*
+del /F /Q .\multiverse\logs\*.log
 
 
 :: Loop through config files and start them
-FOR %%i in (%CONFIGLOC%\*) DO (
+FOR %%i in (%CONFIGLOC%\*.ini) DO (
 	echo Starting .\Bin\%EXENAME% "%%i"
 	start /min .\Bin\%EXENAME% "%%i"
 )
