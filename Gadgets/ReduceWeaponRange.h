@@ -43,7 +43,7 @@ public:
 	}
 	float range() const
 	{
-		return 500.0f;
+		return 300.0f;
 	}
 	int cooldown() const
 	{
