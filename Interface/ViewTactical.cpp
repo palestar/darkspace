@@ -101,6 +101,7 @@ ViewTactical::ViewTactical() :
 	m_CameraZoomLevel = 3;
 
 	m_fYaw = m_fYawV = 0.0f;
+	YawStatePressed m_yawState = YawStatePressed::None;
 	m_SetHeading = m_SetHeadingV = 0.0f;
 	m_SetVelocity = m_SetVelocityV = 0.0f;
 	m_BeginControl = false;
@@ -780,8 +781,13 @@ bool ViewTactical::onMessage( const Message & msg )
 		case HK_LEFT:
 			if ( m_bYawControl )
 			{
-				if ( m_fYaw > -1.0f )
+				if ( m_yawState != YawStatePressed::Left && m_yawState != YawStatePressed::Both )
 				{
+					if (m_yawState == YawStatePressed::Right)
+						m_yawState = YawStatePressed::Both;
+					else
+						m_yawState = YawStatePressed::Left;
+
 					m_BeginControl = true;
 					m_UpdateControl = true;
 					m_fYaw = -1.0f;
@@ -796,9 +802,13 @@ bool ViewTactical::onMessage( const Message & msg )
 		case 'A':
 			if ( m_bYawControl )
 			{
-				if ( m_fYaw > -1.0f )
+				if ( m_yawState != YawStatePressed::Left && m_yawState != YawStatePressed::Both )
 				{
 					m_BeginControl = true;
+					if (m_yawState == YawStatePressed::Right)
+						m_yawState = YawStatePressed::Both;
+					else
+						m_yawState = YawStatePressed::Left;
 
 					m_fYawV = -SET_YAW_RATE;
 					if ( m_fYaw > 0.0f )
@@ -814,8 +824,13 @@ bool ViewTactical::onMessage( const Message & msg )
 		case HK_RIGHT:
 			if ( m_bYawControl )
 			{
-				if ( m_fYaw < 1.0f )
+				if ( m_yawState != YawStatePressed::Right && m_yawState != YawStatePressed::Both )
 				{
+					if (m_yawState == YawStatePressed::Left)
+						m_yawState = YawStatePressed::Both;
+					else
+						m_yawState = YawStatePressed::Right;
+
 					m_BeginControl = true;
 					m_UpdateControl = true;
 					m_fYaw = 1.0f;
@@ -830,9 +845,13 @@ bool ViewTactical::onMessage( const Message & msg )
 		case 'D':
 			if ( m_bYawControl )
 			{
-				if ( m_fYaw < 1.0f )
+				if ( m_yawState != YawStatePressed::Right && m_yawState != YawStatePressed::Both )
 				{
 					m_BeginControl = true;
+					if (m_yawState == YawStatePressed::Left)
+						m_yawState = YawStatePressed::Both;
+					else
+						m_yawState = YawStatePressed::Right;
 
 					m_fYawV = SET_YAW_RATE;
 					if ( m_fYaw < 0.0f )
@@ -880,19 +899,61 @@ bool ViewTactical::onMessage( const Message & msg )
 			}
 			return true;
 		case HK_LEFT:
+			if (m_yawState == YawStatePressed::Both) {
+				m_yawState = YawStatePressed::Right;
+				m_fYaw = 1.0f;
+				m_UpdateControl = true;
+			}
+			else if (m_yawState == YawStatePressed::Left) {
+				m_yawState = YawStatePressed::None;
+				m_fYaw = m_fYawV = 0.0f;
+				m_UpdateControl = true;
+			}
+			return true;
 		case HK_RIGHT:
-			if ( m_fYaw != 0.0f )
-			{
+			if (m_yawState == YawStatePressed::Both) {
+				m_yawState = YawStatePressed::Left;
+				m_fYaw = -1.0f;
+				m_UpdateControl = true;
+			}
+			else if (m_yawState == YawStatePressed::Right) {
+				m_yawState = YawStatePressed::None;
 				m_fYaw = m_fYawV = 0.0f;
 				m_UpdateControl = true;
 			}
 			return true;
 		case 'A':	
+			if (m_bYawControl) {
+				if (m_yawState == YawStatePressed::Both) {
+					m_yawState = YawStatePressed::Right;
+					m_fYawV = 1.0f;
+					m_UpdateControl = true;
+				}
+				else if (m_yawState == YawStatePressed::Left) {
+					m_yawState = YawStatePressed::None;
+					m_fYawV = 0.0f;
+					m_UpdateControl = true;
+				}
+			}
+			else
+			{
+				if ( m_SetHeadingV != 0.0f )
+				{
+					m_SetHeadingV = 0.0f;
+					m_UpdateControl = true;
+				}
+			}
+			return true;
 		case 'D':
 			if ( m_bYawControl )
 			{
-				if ( m_fYawV != 0.0f )
-				{
+				if (m_yawState == YawStatePressed::Both) {
+					m_yawState = YawStatePressed::Left;
+					m_fYawV = -1.0f;
+					m_UpdateControl = true;
+				}
+				else if (m_yawState == YawStatePressed::Right) {
+					m_yawState = YawStatePressed::None;
 					m_fYawV = 0.0f;
 					m_UpdateControl = true;
 				}
