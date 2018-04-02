@@ -25,7 +25,7 @@ dword GadgetModifierEW::hotkey() const
 CharString GadgetModifierEW::useTip(Noun * pTarget, bool shift) const
 {
 	CharString tip;
-	tip += CharString().format("\nRange:<X;100>%.0fgu", range() * calculateModifier(modifierType()));
+	tip += CharString().format("\nRange:<X;100>%.0fgu", range() * calculateModifier( MT_EWAR_RANGE ));
 	tip += CharString().format("\nEnergy Cost:<X;100>%.1f", energyCost() * calculateModifier( MT_EWAR_ENERGY, true));
 	if (active() && m_Target.valid())
 		tip += CharString().format("\nTarget:<X;100>%s", m_Target->displayName(false));
@@ -57,7 +57,7 @@ bool GadgetModifierEW::usable(Noun * pTarget, bool shift) const
 		return false;
 
 	float distance = (worldPosition() - pTarget->worldPosition()).magnitude();
-	if (distance > range() * calculateModifier(modifierType()))
+	if (distance > range() * calculateModifier(MT_EWAR_RANGE))
 		return false;        // target out of range
 
 	return true;
@@ -106,7 +106,7 @@ int GadgetModifierEW::useEnergy( dword nTick, int energy )
 		{
 			int nCost = energyCost() * calculateModifier( MT_EWAR_ENERGY, true);
 			float fDistance = (worldPosition() - m_Target->worldPosition()).magnitude();
-			float fRange = range() * calculateModifier( modifierType() );
+			float fRange = range() * calculateModifier( MT_EWAR_RANGE );
 
 			if ( fDistance <= fRange && energy >= nCost )
 			{
