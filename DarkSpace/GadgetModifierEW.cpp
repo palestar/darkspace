@@ -73,7 +73,10 @@ void GadgetModifierEW::use(dword when, Noun * pTarget, bool shift)
 	if (active() && m_Target.valid())
 	{
 		NounGadget::use(when, pTarget, shift);
-		m_Target->addModifier(modifierType(), strength());
+
+		for(ModifierType modifier : modifiersType())
+			m_Target->addModifier(modifier, strength());
+
 		if (isServer())
 		{
 			setFlags(FLAG_ACTIVE, false);
@@ -87,7 +90,10 @@ void GadgetModifierEW::use(dword when, Noun * pTarget, bool shift)
 		if (!shift && pShipTarget != NULL)
 		{
 			m_Target = pShipTarget;
-			m_Target->subtractModifier(modifierType(), strength());
+
+			for (ModifierType modifier : modifiersType())
+				m_Target->subtractModifier(modifier, strength());
+
 			if (isServer())
 			{
 				setFlags(FLAG_ACTIVE, true);
@@ -131,7 +137,9 @@ void GadgetModifierEW::release()
 
 	if(m_Target.valid())
 	{
-		m_Target->addModifier(modifierType(), strength());
+		for (ModifierType modifier : modifiersType())
+			m_Target->addModifier(modifier, strength());
+
 		m_Target = NULL;
 	}
 }
