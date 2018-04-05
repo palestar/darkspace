@@ -114,8 +114,34 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 #ifndef _DEBUG
 	__try {
 #endif
+		float fSVolume, fMVolume = 0.0f;
+		HWND hwnd = NULL;
 		// THE MAIN GAME LOOP 
-		while( pInterface->render() ) {};
+		while (pInterface->render())
+		{
+			if (hwnd == NULL )
+				hwnd = GetForegroundWindow();
+
+			// track any changes in volume so we can return back to them
+			if (fSVolume != pInterface->audio()->volume() && pInterface->audio()->volume() > 0.0)
+				fSVolume = pInterface->audio()->volume();
+
+			GameDocument * pDoc = WidgetCast<GameDocument>(pInterface->document());
+			if (fMVolume != pDoc->jukeBox()->volume() && pDoc->jukeBox()->volume() > 0.0)
+				fMVolume = pDoc->jukeBox()->volume();
+
+			// mute our device if we lose focus
+			if (hwnd != GetForegroundWindow())
+			{
+				pInterface->audio()->setVolume(0.0f);
+				pDoc->jukeBox()->setVolume(0.0f);
+			}
+			else
+			{
+				pInterface->audio()->setVolume(fSVolume);
+				pDoc->jukeBox()->setVolume(fMVolume);
+			}
+		};
 
 #ifndef _DEBUG
 	}

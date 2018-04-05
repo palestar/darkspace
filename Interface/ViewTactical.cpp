@@ -1030,7 +1030,7 @@ inline T sqr( T number )
 }
 
 const float UPDATE_CHATTER_RATE = 2.0f;
-const float CHATTER_VOLUME = 0.35f;
+const float CHATTER_VOLUME = 0.25f;
 const int	CHATTER_COUNT = 10;
 const float TARGET_LOCK_RATE = 0.75f;
 const float CAMERA_TARGET_YAW = PI;
