@@ -224,8 +224,12 @@ void GadgetBuild::use( dword when, Noun * pTarget, bool shift )
 	else if ( WidgetCast<NounStructure>( pTarget ) )
 	{
 		NounStructure * pStructure = (NounStructure *)pTarget;
-		if ( pStructure->isBuilding() )
+		if (pStructure->isBuilding()) {
+			if(isLocal())
+				WidgetCast<NounShip>(parent())->setBuildTarget(pStructure);
+
 			message( CharString().format( "<color;ffffff>Comms: Building %s.", pStructure->name()) );
+		}
 		else
 			message( CharString().format( "<color;ffffff>Comms: Repairing %s.", pStructure->name()) );
 		m_Building = pStructure;

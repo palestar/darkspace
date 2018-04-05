@@ -393,8 +393,16 @@ void ViewPlanet::onRender( RenderContext & context, const RectInt & w )
 		}
 	}
 
-	// set the best target
-	pDoc->setCursorTarget( bestTarget );
+	NounStructure * buildTarget = pShip->getBuildTarget();
+	if (buildTarget != NULL) {
+		pDoc->setCursorTarget(buildTarget);
+		pDoc->setTarget(buildTarget);
+		pShip->setBuildTarget(NULL);
+	}
+	else {
+		// set the best target
+		pDoc->setCursorTarget(bestTarget);
+	}
 
 	// if a enemy object is near, render a red box along the edge of the window..
 	if ( ViewGame::sm_pViewGame != NULL )

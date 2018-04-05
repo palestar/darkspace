@@ -469,6 +469,9 @@ public:
 	static int		buildCost( NounShip * pShip );				// calculate the build costs including the costs of the gagdets
 	static dword	buildFlags( NounShip * pShip );				// get the required build flags for this ship
 
+	void			setBuildTarget(NounStructure * structure);  // Set the build structure to target when we receive it from the server
+	NounStructure * getBuildTarget();							// get the build structure to target
+
 protected:
 	// Types
 	struct CollisionInfo {
@@ -593,6 +596,8 @@ protected:
 
 	GadgetJumpDrive::wRef
 					m_JumpDrive;			// our jump drive
+
+	NounStructure * m_BuildTarget;			// A structure being built we want to target once we receive it from the server
 
 	// AI state variables
 	int				m_nOrderState;			// internal variable used by orders to control execution of an order
