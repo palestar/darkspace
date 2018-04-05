@@ -73,9 +73,8 @@ void GadgetModifierEW::use(dword when, Noun * pTarget, bool shift)
 	if (active() && m_Target.valid())
 	{
 		NounGadget::use(when, pTarget, shift);
-
-		for(ModifierType modifier : modifiersType())
-			m_Target->addModifier(modifier, strength());
+		for (std::vector<ModifierType>::iterator iList = modifiersType().begin(); iList != modifiersType().end(); ++iList)
+			m_Target->addModifier(*iList, strength());
 
 		if (isServer())
 		{
@@ -91,8 +90,8 @@ void GadgetModifierEW::use(dword when, Noun * pTarget, bool shift)
 		{
 			m_Target = pShipTarget;
 
-			for (ModifierType modifier : modifiersType())
-				m_Target->subtractModifier(modifier, strength());
+			for (std::vector<ModifierType>::iterator iList = modifiersType().begin(); iList != modifiersType().end(); ++iList)
+				m_Target->subtractModifier(*iList, strength());
 
 			if (isServer())
 			{
@@ -137,8 +136,8 @@ void GadgetModifierEW::release()
 
 	if(m_Target.valid())
 	{
-		for (ModifierType modifier : modifiersType())
-			m_Target->addModifier(modifier, strength());
+		for (std::vector<ModifierType>::iterator iList = modifiersType().begin(); iList != modifiersType().end(); ++iList)
+			m_Target->addModifier(*iList, strength());
 
 		m_Target = NULL;
 	}
