@@ -1784,6 +1784,14 @@ void NounShip::setOutOfCombat( dword timer )
 	m_nCombatTick = timer > 0 ? timer : nCombatTime;	
 }
 
+void NounShip::setBuildTarget(NounStructure * structure) {
+	m_BuildTarget = structure;
+}
+
+NounStructure * NounShip::getBuildTarget() {
+	return m_BuildTarget;
+}
+
 //----------------------------------------------------------------------------
 // EOF
 

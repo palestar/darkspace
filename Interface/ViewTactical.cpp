@@ -1299,7 +1299,13 @@ void ViewTactical::onRender( RenderContext & context, const RectInt & w )
 			}
 		}
 
-		if (! Keyboard::ctrlDown() )
+		NounStructure * buildTarget = pShip->getBuildTarget();
+		if (buildTarget != NULL) {
+			m_pDoc->setCursorTarget(buildTarget);
+			m_pDoc->setTarget(buildTarget);
+			pShip->setBuildTarget(NULL);
+		}
+		else if (! Keyboard::ctrlDown() )
 			m_pDoc->setCursorTarget( bestTarget );
 	}
 
