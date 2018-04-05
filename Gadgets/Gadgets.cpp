@@ -93,6 +93,7 @@
 #include "Gadgets/DropPod.h"
 #include "Gadgets/DropPodMI.h"
 #include "Gadgets/ReduceWeaponRange.h"
+#include "Gadgets/QuantumHiggsNet.h"
 
 // fighters
 #include "Gadgets/FighterBay.h"
