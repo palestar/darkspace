@@ -49,9 +49,10 @@ public:
 	{
 		return TICKS_PER_SECOND * 30;
 	}
-	ModifierType modifierType() const
+	std::vector<ModifierType> modifiersType() const
 	{
-		return MT_WEAPON_RANGE;
+		std::vector<ModifierType> modifiers = { MT_WEAPON_RANGE, MT_BEAM_RANGE };
+		return modifiers;
 	}
 };
 
