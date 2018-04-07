@@ -36,7 +36,7 @@ CC= gcc
 CXX= g++
 AR= ar
 CFLAGS= -g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG
-CXXFLAGS= -g -std=c++0x -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG
+CXXFLAGS= -g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG
 ARFLAGS= cru
 LDFLAGS= -shared
 RESULT=libDarkSpaceD.so
@@ -61,7 +61,7 @@ CC= gcc
 CXX= g++
 AR= ar
 CFLAGS= -g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/
-CXXFLAGS= -g -std=c++0x -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/
+CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/
 ARFLAGS= cru
 LDFLAGS= -shared
 RESULT=libDarkSpace.so

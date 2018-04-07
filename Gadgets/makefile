@@ -36,7 +36,7 @@ CC= gcc
 CXX= g++
 AR= ar
 CFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG
-CXXFLAGS= -g -std=c++0x -I ../ -I ../../Medusa/ -D_DEBUG
+CXXFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG
 ARFLAGS= cru
 LDFLAGS= -shared
 RESULT=libGadgetsD.so
@@ -61,7 +61,7 @@ CC= gcc
 CXX= g++
 AR= ar
 CFLAGS= -g -O2 -I ../ -I ../../Medusa/
-CXXFLAGS= -g -std=c++0x -O2 -I ../ -I ../../Medusa/
+CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/
 ARFLAGS= cru
 LDFLAGS= -shared
 RESULT=libGadgets.so
