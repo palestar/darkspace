@@ -35,8 +35,8 @@ ifeq ("$(BUILD_CONFIGURATION)","DebugLinux")
 CC= gcc
 CXX= g++
 AR= ar
-CFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG
-CXXFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG
+CFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG -std=c0x
+CXXFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG -std=c++0x
 ARFLAGS= cru
 LDFLAGS= -L ../Bin/ -L ../../Medusa/Bin/ -L ../../Medusa/ThirdParty/LuaJIT/bin/ -lMedusaD -lDarkSpaceD -lWorldD -lNetworkD -lGCQD -lRender3DD -llua51D -lpthread -ldl
 RESULT=DarkSpaceServerD
@@ -60,8 +60,8 @@ ifeq ("$(BUILD_CONFIGURATION)","ReleaseLinux")
 CC= gcc
 CXX= g++
 AR= ar
-CFLAGS= -g -O2 -I ../ -I ../../Medusa/
-CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/
+CFLAGS= -g -O2 -I ../ -I ../../Medusa/ -std=c0x
+CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/ -std=c++0x
 ARFLAGS= cru
 LDFLAGS= -L ../Bin/ -L ../../Medusa/Bin/ -L ../../Medusa/ThirdParty/LuaJIT/bin/ -lMedusa -lDarkSpace -lWorld -lNetwork -lGCQ -lRender3D -llua51 -lpthread -ldl
 RESULT=DarkSpaceServer
