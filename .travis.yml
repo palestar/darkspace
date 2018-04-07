@@ -1,0 +1,28 @@
+language: cpp
+
+git:
+  depth: 1
+
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.4
+      env:
+        - MATRIX_EVAL="CC=gcc-4.4 && CXX=g++-4.4"
+
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - export WORK="${TRAVIS_BUILD_DIR}/../palestar"
+  - mkdir -p "${WORK}"
+
+install:
+  - mv "$TRAVIS_BUILD_DIR/../darkspace" "${WORK}/darkspace"
+  - git clone --branch=linux-build --depth=1 https://github.com/blackyoup/medusa.git "${WORK}/Medusa"
+  - git clone --branch=develop --depth=1 https://github.com/palestar/gamecq.git "${WORK}/GameCQ"
+
+script: ./Build/BuildLinuxServer.sh
