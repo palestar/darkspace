@@ -36,7 +36,7 @@ CC= gcc
 CXX= g++
 AR= ar
 CFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG
-CXXFLAGS= -g -I ../ -I ../../Medusa/ -D_DEBUG
+CXXFLAGS= -g -std=c++11 -I ../ -I ../../Medusa/ -D_DEBUG
 ARFLAGS= cru
 LDFLAGS= -L ../Bin/ -L ../../Medusa/Bin/ -L ../../Medusa/ThirdParty/LuaJIT/bin/ -lMedusaD -lDarkSpaceD -lWorldD -lNetworkD -lGCQD -lRender3DD -llua51D -lpthread -ldl
 RESULT=DarkSpaceServerD
@@ -61,7 +61,7 @@ CC= gcc
 CXX= g++
 AR= ar
 CFLAGS= -g -O2 -I ../ -I ../../Medusa/
-CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/
+CXXFLAGS= -g -std=c++11 -O2 -I ../ -I ../../Medusa/
 ARFLAGS= cru
 LDFLAGS= -L ../Bin/ -L ../../Medusa/Bin/ -L ../../Medusa/ThirdParty/LuaJIT/bin/ -lMedusa -lDarkSpace -lWorld -lNetwork -lGCQ -lRender3D -llua51 -lpthread -ldl
 RESULT=DarkSpaceServer
