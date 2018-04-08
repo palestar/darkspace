@@ -9,6 +9,11 @@ class ReduceWeaponRange : public GadgetModifierEW
 {
 public:
 	DECLARE_WIDGET_CLASS();
+	ReduceWeaponRange()
+	{
+		m_Modifiers.push(MT_WEAPON_RANGE);
+		m_Modifiers.push(MT_BEAM_RANGE);
+	}
 	Type type() const
 	{
 		return SPECIAL_OFFENSIVE;
@@ -39,7 +44,7 @@ public:
 	}
 	float strength() const
 	{
-		return 10.0f;
+		return -10.0f;
 	}
 	float range() const
 	{
@@ -48,11 +53,6 @@ public:
 	int cooldown() const
 	{
 		return TICKS_PER_SECOND * 30;
-	}
-	std::vector<ModifierType> modifiersType() const
-	{
-		std::vector<ModifierType> modifiers = { MT_WEAPON_RANGE, MT_BEAM_RANGE };
-		return modifiers;
 	}
 };
 
