@@ -28,7 +28,7 @@ CharString GadgetModifierEW::useTip(Noun * pTarget, bool shift) const
 	tip += CharString().format("\nRange:<X;100>%.0fgu", range() * calculateModifier( MT_EWAR_RANGE ));
 	tip += CharString().format("\nEnergy Cost:<X;100>%.1f", energyCost() * calculateModifier( MT_EWAR_ENERGY, true));
 	if (active() && m_Target.valid())
-		tip += CharString().format("\nTarget:<X;100>%s", m_Target->displayName(false));
+		tip += CharString().format("\nTarget:<X;100>%s", m_Target->displayName(false).cstr());
 	return tip;
 }
 
