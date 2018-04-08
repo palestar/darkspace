@@ -35,8 +35,8 @@ ifeq ("$(BUILD_CONFIGURATION)","DebugLinux")
 CC= gcc
 CXX= g++
 AR= ar
-CFLAGS= -g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG
-CXXFLAGS= -g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG
+CFLAGS= -g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG -std=c0x
+CXXFLAGS= -g -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -D_DEBUG -std=c++0x
 ARFLAGS= cru
 LDFLAGS= -shared
 RESULT=libDarkSpaceD.so
@@ -60,8 +60,8 @@ ifeq ("$(BUILD_CONFIGURATION)","ReleaseLinux")
 CC= gcc
 CXX= g++
 AR= ar
-CFLAGS= -g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/
-CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/
+CFLAGS= -g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -std=c0x
+CXXFLAGS= -g -O2 -I ../ -I ../../Medusa/ -I ../../Medusa/ThirdParty/LuaJIT/src/ -std=c++0x
 ARFLAGS= cru
 LDFLAGS= -shared
 RESULT=libDarkSpace.so
