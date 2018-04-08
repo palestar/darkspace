@@ -15,7 +15,7 @@ build() {
   for build in "${builds[@]}"; do
     echo "Building ${directory}/${build}..."
     pushd "${build}"
-    make -j2 BUILD_CONFIGURATION="ReleaseLinux" CC=$CC CXX=$CXX INTERMEDIATE_DIR="ReleaseLinux/obj" DESTINATION_DIR="../Bin"
+    make -j2 BUILD_CONFIGURATION="ReleaseLinux" CC=$CC CXX=$CXX INTERMEDIATE_DIR="./ReleaseLinux/obj" DESTINATION_DIR="../Bin"
     popd
   done
 
