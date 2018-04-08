@@ -4,11 +4,12 @@ set -euo pipefail
 
 medusa_builds=( "Medusa" "Network" "GCQ" "Render3D" "World" )
 darkspace_builds=( "DarkSpace" "Gadgets" "DarkSpaceServer" )
-gamecq_builds=( "ChronDemon" "GCQB" "GCQDB" "GCQS" "LogServer" "MetaServer" "MirrorServer" "ProcessServer" "RotateLogs" "ProcessClientCLI" )
+gamecq_builds=( "ChronDemon" "GCQDB" "Gcqs" "LogServer" "MetaServer" "MirrorServer" "ProcessServer" "RotateLogs" "ProcessClientCLI" )
 
 build() {
   local directory="${1}"
-  local builds="$2"
+  shift
+  local builds=( "$@" )
 
   pushd "${directory}"
 
