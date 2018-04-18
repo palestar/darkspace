@@ -28,7 +28,7 @@ CharString GadgetModifierEW::useTip(Noun * pTarget, bool shift) const
 	tip += CharString().format("\nRange:<X;100>%.0fgu", range() * calculateModifier( MT_EWAR_RANGE ));
 	tip += CharString().format("\nEnergy Cost:<X;100>%.1f", energyCost() * calculateModifier( MT_EWAR_ENERGY, true));
 	if (active() && m_Target.valid())
-		tip += CharString().format("\nTarget:<X;100>%s", m_Target->displayName(false));
+		tip += CharString().format("\nTarget:<X;100>%s", m_Target->displayName(false).cstr());
 	return tip;
 }
 
@@ -45,9 +45,6 @@ bool GadgetModifierEW::usable(Noun * pTarget, bool shift) const
 		return false;
 
 	if (((NounShip *)pTarget)->isDestroyed())
-		return false;
-
-	if (!isEnemy(pTargetShip))
 		return false;
 
 	if (pTargetShip->testFlags( NounShip::FLAG_CLOAKED|NounShip::FLAG_IN_SAFE_ZONE ) )
@@ -73,8 +70,8 @@ void GadgetModifierEW::use(dword when, Noun * pTarget, bool shift)
 	if (active() && m_Target.valid())
 	{
 		NounGadget::use(when, pTarget, shift);
-		for (std::vector<ModifierType>::iterator iList = modifiersType().begin(); iList != modifiersType().end(); ++iList)
-			m_Target->addModifier(*iList, strength());
+		for (int i=0; i<m_Modifiers.size(); ++i)
+			m_Target->subtractModifier(m_Modifiers[i], strength());
 
 		if (isServer())
 		{
@@ -90,8 +87,8 @@ void GadgetModifierEW::use(dword when, Noun * pTarget, bool shift)
 		{
 			m_Target = pShipTarget;
 
-			for (std::vector<ModifierType>::iterator iList = modifiersType().begin(); iList != modifiersType().end(); ++iList)
-				m_Target->subtractModifier(*iList, strength());
+			for (int i = 0; i<m_Modifiers.size(); ++i)
+				m_Target->addModifier(m_Modifiers[i], strength());
 
 			if (isServer())
 			{
@@ -136,8 +133,8 @@ void GadgetModifierEW::release()
 
 	if(m_Target.valid())
 	{
-		for (std::vector<ModifierType>::iterator iList = modifiersType().begin(); iList != modifiersType().end(); ++iList)
-			m_Target->addModifier(*iList, strength());
+		for (int i = 0; i<m_Modifiers.size(); ++i)
+			m_Target->subtractModifier(m_Modifiers[i], strength());
 
 		m_Target = NULL;
 	}

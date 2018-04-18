@@ -9,6 +9,10 @@ class QuantumHiggsNet : public GadgetModifierEW
 {
 public:
 	DECLARE_WIDGET_CLASS();
+	QuantumHiggsNet()
+	{
+		m_Modifiers.push(MT_MASS);
+	}
 	Type type() const
 	{
 		return SPECIAL_OFFENSIVE;
@@ -39,7 +43,7 @@ public:
 	}
 	float strength() const
 	{
-		return 100.0f;
+		return -100.0f;
 	}
 	float range() const
 	{
@@ -48,10 +52,6 @@ public:
 	int cooldown() const
 	{
 		return TICKS_PER_SECOND * 30;
-	}
-	ModifierType modifierType() const
-	{
-		return MT_MASS;
 	}
 };
 

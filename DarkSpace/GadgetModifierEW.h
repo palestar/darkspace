@@ -26,13 +26,13 @@ public:
 	virtual int							energyCost() const = 0;
 	virtual float						strength() const = 0;
 	virtual float						range() const = 0;
-	virtual std::vector<ModifierType>	modifiersType() const = 0;
 
 	void								release();
 	bool								active() const;
 
 protected:
 	NounShip::wRef						m_Target;
+	Array< ModifierType >				m_Modifiers;
 };
 
 inline bool GadgetModifierEW::active() const {

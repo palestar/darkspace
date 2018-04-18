@@ -369,6 +369,7 @@
     <ClInclude Include="PlatformSensor.h" />
     <ClInclude Include="PlatformSupply.h" />
     <ClInclude Include="PulseShield.h" />
+    <ClInclude Include="QuantumHiggsNet.h" />
     <ClInclude Include="Reactor1000.h" />
     <ClInclude Include="Reactor1500.h" />
     <ClInclude Include="Reactor500.h" />

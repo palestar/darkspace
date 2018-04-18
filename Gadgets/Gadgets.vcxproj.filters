@@ -752,6 +752,9 @@
     <ClInclude Include="PlanetArena.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="QuantumHiggsNet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="makefile" />

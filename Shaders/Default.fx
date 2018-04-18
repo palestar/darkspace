@@ -247,7 +247,7 @@ float4 ps_main30( in VS_OUTPUT input ) : COLOR0
 		
 	float4 vPixel = applyDiffuseSpecular( fLightAmount, input );
 	if ( bEnableLightMap )
-		vPixel.xyz += tex2D( sLightMap, input.vUV ).xyz * 2.0f;
+		vPixel.xyz += tex2D( sLightMap, input.vUV ).xyz;
 	
 	return saturate( vPixel );
 }
