@@ -107,7 +107,7 @@
 2,7,UWS Merlin
 2,7,UWS Kestrel
 2,7,UWS Peregrine
-2,7,UWS Gyrfalcon2,7,UWS 
+2,7,UWS Gyrfalcon
 2,7,UWS Saker
 2,7,UWS Sparrowhawk
 2,7,UWS Kite
@@ -195,7 +195,7 @@
 2,3,UWS Slate
 2,3,UWS Marble
 2,3,UWS Pyrolite
-2,3,UWS Pumice2,3,UWS 
+2,3,UWS Pumice
 2,3,UWS Pumice
 2,3,UWS Sandstone
 2,3,UWS Ural
@@ -485,7 +485,7 @@
 3,3,ICS Sodium
 3,3,ICS Platinum
 3,3,ICS Gallium
-3,3,ICS Cobalt3,3,ICS 
+3,3,ICS Cobalt
 3,3,ICS Bullion
 3,3,ICS Urdanium
 3,3,ICS Darkmatter
@@ -813,7 +813,7 @@
 0,0,Heraclitus
 0,0,Herodotus
 0,0,Hill
-0,0,Holy Grace0,0,
+0,0,Holy Grace
 0,0,Holy
 0,0,Homer
 0,0,Honor of Ages
