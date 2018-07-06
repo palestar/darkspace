@@ -1,7 +1,7 @@
 @echo off
 
 IF "%DEVENV%"=="" SET DEVENV=devenv.exe
-IF "%LINUXBUILDER%"=="" SET LINUXBUILDER=builder@vm1.palestar.com 
+IF "%LINUXBUILDER%"=="" SET LINUXBUILDER=builder@192.168.1.5
 IF "%BRANCH%"=="" SET BRANCH=work/Trunk/
 IF "%CONFIG%"=="" SET CONFIG=Release
 IF "%ACTION%"=="" SET ACTION=Build
