@@ -39,8 +39,8 @@ float		fBumpDepth = 1.20f;
 // shadow map
 bool		bEnableShadowMap = false;
 sampler2D 	sShadowMap : register(s7);
-float2		szShadowMap = float2( 2048, 2048 );
-float		fShadowDistance = 850.0f;
+float2		szShadowMap = float2( 4096, 4096 );
+float		fShadowDistance = 1500.0f;
 
 // Material properties
 float4		vMatDiffuse =		// modulated with the diffuse light
@@ -143,12 +143,10 @@ float calculateLightAmount( in VS_OUTPUT input )
 	vShadowUV.y = 1.0f - vShadowUV.y;
 
 	float2 vTexel = 1.0f / szShadowMap;
-	
-	float y = -0.5f;
-	while( y <= 0.5f )
+	float fSampleSize = 1.0f;
+	for(int x=-fSampleSize; x<=fSampleSize; x++ )
 	{
-		float x = -0.5f;
-		while( x <= 0.5f )
+		for(int y=-fSampleSize; y<=fSampleSize; y++)
 		{
 			float fSMZ = tex2D( sShadowMap, vShadowUV + (float2(x,y) * vTexel) );
 			if ( fSMZ > 1.0f )
@@ -162,10 +160,7 @@ float calculateLightAmount( in VS_OUTPUT input )
 						fLightAmount -= fDistanceScale;
 				}
 			}
-			
-			x += 1.0f;
 		}
-		y += 1.0f;
 	}
 	
 	fLightAmount /= 4.0f;
@@ -207,7 +202,7 @@ float4 applyDiffuseSpecular( in float fLightAmount, in VS_OUTPUT input )
 	
 	if ( bEnableAmbient )
 	{
-		float fDiffuseLightInv = (1.0f - fDiffuseLight) * 0.5f;
+		float fDiffuseLightInv = (1.0f - fDiffuseLight) * 0.25f;
 		vPixel.xyz += vGlobalAmbient * fDiffuseLightInv;
 	}
 	
