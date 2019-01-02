@@ -200,7 +200,7 @@ float4 applyDiffuseSpecular( in float fLightAmount, in VS_OUTPUT input )
 		vPixel.w = vMatDiffuse.w;
 	}
 	
-	if ( bEnableAmbient )
+	if ( false )
 	{
 		float fDiffuseLightInv = (1.0f - fDiffuseLight) * 0.25f;
 		vPixel.xyz += vGlobalAmbient * fDiffuseLightInv;
