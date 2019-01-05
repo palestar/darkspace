@@ -172,7 +172,7 @@ END_PROPERTY_LIST();
 NounSpawnShip::NounSpawnShip() :
 	m_nSpawnType( ST_NORMAL ),
 	m_nSpawnTick( 0 ),
-	m_nSpawnDelay( TICKS_PER_SECOND * 30 ),
+	m_nSpawnDelay( TICKS_PER_SECOND * 60 ),
 	m_fSpawnArea( 0.0f ),
 	m_nMinSpawn( 0 ),
 	m_nMaxSpawn( 1 ),
