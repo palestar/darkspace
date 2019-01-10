@@ -172,7 +172,7 @@ END_PROPERTY_LIST();
 NounSpawnShip::NounSpawnShip() :
 	m_nSpawnType( ST_NORMAL ),
 	m_nSpawnTick( 0 ),
-	m_nSpawnDelay( TICKS_PER_SECOND * 60 ),
+	m_nSpawnDelay( TICKS_PER_SECOND * 30 ),
 	m_fSpawnArea( 0.0f ),
 	m_nMinSpawn( 0 ),
 	m_nMaxSpawn( 1 ),
@@ -274,9 +274,52 @@ void NounSpawnShip::simulate( dword nTick )
 		{
 			// update all current spawner objects and tally the total chance & spawn score ...
 			int nTotalChance = 0, nTotalSpawnScore = 0;
-			for(int i=0;i<m_Spawners.size();++i)
+			int nMaxSpawn = m_nMaxSpawn;
+			
+			switch( m_nSpawnType )
 			{
-				Spawner * pSpawner = m_Spawners[ i ];
+				case ST_NORMAL:
+				case ST_ONE_SHOT:
+					break;
+				case ST_POPULATION:
+					{
+						// max spawn increases as player populations increase.. 
+						int nPlayers = context()->user()->playerCount();
+						int nMaxPlayers = context()->user()->maxPlayers();
+						float fSpawnScale = 0.0f;
+						if ( nMaxPlayers > 0 )
+							fSpawnScale = ((float)nPlayers) / ((float)nMaxPlayers);
+						nMaxSpawn = (int)ceilf( fSpawnScale * nMaxSpawn );
+					}
+					break;
+				case ST_FACTION:
+					{
+						int nMyFactionScore = 0, nMaxScore = 0;
+
+						for( int f=0;f<FACTION_COUNT;++f)
+						{
+							int nScore = context()->user()->spawnedScore( f );
+							if ( nScore > nMaxScore )
+								nMaxScore = nScore;
+
+							if (f == factionId())
+							{
+								nMyFactionScore = nScore;
+								LOG_STATUS("NounSpawnShip", "%s AI player weight: %d...", teamName(), nMyFactionScore);
+							}
+						}
+
+						// the max spawn is the difference between the number of spawned ships on this faction
+						// and the faction with the most spawned ships. (including our own faction)
+						nMaxSpawn = nMaxScore;
+						nTotalSpawnScore = nMyFactionScore;
+					}
+					break;
+			}
+
+			for (int i = 0; i < m_Spawners.size(); ++i)
+			{
+				Spawner * pSpawner = m_Spawners[i];
 				// update the spawner first, so it will remove any dead ships that might affect it's score..
 				pSpawner->update();
 
@@ -285,45 +328,6 @@ void NounSpawnShip::simulate( dword nTick )
 				if ( pSpawner->limit() > 0 && pSpawner->spawnedCount() >= pSpawner->limit() )
 					continue;		// at limit, skip this spawner..
 				nTotalChance += pSpawner->chance();
-			}
-
-			int nMaxSpawn = m_nMaxSpawn;
-			switch( m_nSpawnType )
-			{
-			case ST_NORMAL:
-			case ST_ONE_SHOT:
-				break;
-			case ST_POPULATION:
-				{
-					// max spawn increases as player populations increase.. 
-					int nPlayers = context()->user()->playerCount();
-					int nMaxPlayers = context()->user()->maxPlayers();
-					float fSpawnScale = 0.0f;
-					if ( nMaxPlayers > 0 )
-						fSpawnScale = ((float)nPlayers) / ((float)nMaxPlayers);
-					nMaxSpawn = (int)ceilf( fSpawnScale * nMaxSpawn );
-				}
-				break;
-			case ST_FACTION:
-				{
-					int nMyFactionScore = 0;
-					int nMaxScore = 0;
-
-					for( int f=0;f<FACTION_COUNT;++f)
-					{
-						int nScore = context()->user()->spawnedScore( f );
-						if ( nScore > nMaxScore )
-							nMaxScore = nScore;
-						if ( f == factionId() )
-							nMyFactionScore = nScore;
-					}
-
-					// the max spawn is the difference between the number of spawned ships on this faction
-					// and the faction with the most spawned ships. (including our own faction)
-					nMaxSpawn = nMaxScore - nMyFactionScore;
-					nTotalSpawnScore = nMyFactionScore;
-				}
-				break;
 			}
 
 			if ( nMaxSpawn > m_nMaxSpawn )
