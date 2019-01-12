@@ -1659,10 +1659,10 @@ void NounPlanet::updateEngineers(dword nTick)
 				&& m_pEngineers.size() < ENGINEER_LIMIT &&
 				lockRank() == 0)
 			{
-				//if (flags() & NounPlanet::FLAG_BLOCKADE)
-				//	return;
-				//if (flags() & NounPlanet::FLAG_STRIKE)
-				//	return;
+				if (flags() & NounPlanet::FLAG_BLOCKADE)
+					return;
+				if (flags() & NounPlanet::FLAG_STRIKE)
+					return;
 
 				NounTemplate * pBuild = ((GameContext *)context())->pickShipTemplate(teamId(), NounShip::ENGINEER);
 				if (!pBuild)
