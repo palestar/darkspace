@@ -19,6 +19,8 @@
 static Constant		SPAWN_AI_LOAD( "SPAWN_AI_LOAD", 0.75f );
 //! what is the max spawn per player
 static Constant		MAX_SPAWN_PER_PLAYER( "MAX_SPAWN_PER_PLAYER", 8.0f );
+//! a base number of faction AI to spawn
+static Constant		BASE_FACTION_AI( "BASE_FACTION_AI", 5 );
 
 //---------------------------------------------------------------------------------------------------
 
@@ -172,7 +174,7 @@ END_PROPERTY_LIST();
 NounSpawnShip::NounSpawnShip() :
 	m_nSpawnType( ST_NORMAL ),
 	m_nSpawnTick( 0 ),
-	m_nSpawnDelay( TICKS_PER_SECOND * 30 ),
+	m_nSpawnDelay( TICKS_PER_SECOND * 60 ),
 	m_fSpawnArea( 0.0f ),
 	m_nMinSpawn( 0 ),
 	m_nMaxSpawn( 1 ),
@@ -294,25 +296,21 @@ void NounSpawnShip::simulate( dword nTick )
 					break;
 				case ST_FACTION:
 					{
-						int nMyFactionScore = 0, nMaxScore = 0;
-
+						// the max spawn is the difference between the number of spawned ships on this faction
+						// and the faction with the most spawned ships. (including our own faction)
+						
 						for( int f=0;f<FACTION_COUNT;++f)
 						{
 							int nScore = context()->user()->spawnedScore( f );
-							if ( nScore > nMaxScore )
-								nMaxScore = nScore;
+							if ( nScore > nMaxSpawn)
+								nMaxSpawn = nScore;
 
 							if (f == factionId())
-							{
-								nMyFactionScore = nScore;
-								LOG_STATUS("NounSpawnShip", "%s AI player weight: %d...", teamName(), nMyFactionScore);
-							}
+								nTotalSpawnScore = nScore;
 						}
 
-						// the max spawn is the difference between the number of spawned ships on this faction
-						// and the faction with the most spawned ships. (including our own faction)
-						nMaxSpawn = nMaxScore;
-						nTotalSpawnScore = nMyFactionScore;
+						// add base amount of AI score to spawn with
+						nMaxSpawn += BASE_FACTION_AI;
 					}
 					break;
 			}
