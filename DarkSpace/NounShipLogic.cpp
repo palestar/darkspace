@@ -1212,8 +1212,24 @@ bool NounShip::updateBuildOrder()
 	if ( pBuild == NULL && CountChildren<StructureShield>( pPlanet ) < 1 )
 		pBuild = FindChild<StructureShield>( pBuildRoot );
 	// lastly, build defense bases until full..
-	if ( pBuild == NULL )
-		pBuild = FindChild<StructureDefense>( pBuildRoot );
+	// defense bases are tricky, manual logic required:
+
+	if (pBuild == NULL)
+	{
+		Array<StructureDefense * > m_pDefenseBases;
+		for (int i = 0; i < pBuildRoot->childCount(); i++)
+		{
+			if (WidgetCast<StructureDefense>(pBuildRoot->child(i)))
+			{
+				NounStructure * pTemp = WidgetCast<StructureDefense>(pBuildRoot->child(i));
+				CharString sName = pTemp->name();
+				if (pTemp->buildTechnology() <= nResearch && sName.find("Defense") != std::string::npos)
+					pBuild = pTemp;
+			}
+		}
+
+
+	}
 
 	// TODO: Upgrade structures...
 
