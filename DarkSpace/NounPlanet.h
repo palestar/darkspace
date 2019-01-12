@@ -220,6 +220,7 @@ protected:
 	int						m_nAllegianceXPRequired;	// amount of allegiance required to level
 	bool					m_bImportStatus;			// is planet allowed to import
 	bool					m_bExportStatus;			// is planet allowed to export
+	Array< Noun::wRef >		m_pEngineers;				// planetary engineers
 
 	// non-serialized
 	float					m_fResourceDemand;			// demand for resources, affects the price
@@ -235,6 +236,7 @@ protected:
 	Array< Noun::wRef >		m_Attackers;				// ships currently in attack range of planet
 	dword					m_nProductionTick;
 	dword					m_nEconomyTick;
+	dword					m_nEngineerTick;
 	dword					m_nDistressTick;
 	dword					m_nAllegianceTick;
 
@@ -252,6 +254,7 @@ protected:
 	void					updateControl( dword nTick );
 	void					updateProduction( dword nTick );
 	void					updateEconomy( dword nTick );
+	void					updateEngineers( dword nTick );
 	void					updateAllegiance( dword nTick );
 
 	void					clearCappers();

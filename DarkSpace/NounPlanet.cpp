@@ -50,6 +50,7 @@ const qword		DEFENSE_PROJECTILE	= StringHash64( "misc/planet_defenses/projectile
 
 const int		PRODUCTION_UPDATE	= TICKS_PER_SECOND * 10;
 const int		ENCONOMY_UPDATE		= TICKS_PER_SECOND * 60;
+const int		ENGINEER_UPDATE	    = TICKS_PER_SECOND * 60;
 const int		ALLEGIANCE_UPDATE	= TICKS_PER_SECOND * 300;
 const int		EVENT_UPDATE		= TICKS_PER_SECOND * 300;
 const float		CONTROL_UPDATE		= 5.0f;
@@ -59,6 +60,7 @@ const float		HEX_HALF			= HEX_SIZE * 0.5f;
 const int		DISTRESS_MESSAGE_DELAY = TICKS_PER_SECOND * 60;		// how often to send distress messages
 const dword		MAX_NOUNS_PER_HEX	= 4;
 const int		MIN_DAMAGE_SPLIT	= 5;		// damage is split between cappers no higher than this amount
+const int		ENGINEER_LIMIT		= 1;		// maximum number of planetary engineers
 
 static Constant PLANET_STATUS_LINE_DURATION( "PLANET_STATUS_LINE_DURATION", 2.0f );
 static Constant	PLANET_SCANNER_RANGE( "PLANET_SCANNER_RANGE", 2000.0f );
@@ -269,6 +271,7 @@ void NounPlanet::initialize()
 	m_nControlTick = tick() + seed( CONTROL_UPDATE * TICKS_PER_SECOND );
 	m_nProductionTick = tick() + seed( PRODUCTION_UPDATE );
 	m_nEconomyTick = tick() + seed( ENCONOMY_UPDATE );
+	m_nEngineerTick = tick() + seed(ENGINEER_UPDATE);
 	m_nAllegianceTick = tick() + seed( ALLEGIANCE_UPDATE );
 	m_nDistressTick = tick() + seed( DISTRESS_MESSAGE_DELAY );
 	m_pDefenseProjectile.load( false );
@@ -338,6 +341,7 @@ void NounPlanet::release()
 	m_Attackers.release();
 	m_Contacts.release();
 	m_TradeRoutes.release();
+	m_pEngineers.release();
 	m_pTerrain = NULL;
 	m_pMap = NULL;
 
@@ -350,6 +354,7 @@ void NounPlanet::simulate( dword nTick )
 	updateControl( nTick );
 	updateProduction( nTick );
 	updateEconomy( nTick );
+	updateEngineers( nTick );
 	updateAllegiance( nTick );
 
 	NounBody::simulate( nTick );
@@ -1616,6 +1621,81 @@ void NounPlanet::updateAllegiance( dword nTick )
 			// we may have more than the required XP to level the planet, put that back into the pool
 			m_nAllegianceXP = m_nAllegianceXP - m_nAllegianceXPRequired;
 			m_nAllegiance++;
+		}
+	}
+}
+
+void NounPlanet::updateEngineers(dword nTick)
+{
+	// server-side logic...
+	if (isServer())
+	{
+		if (nTick < m_nEngineerTick)
+			return;
+
+		m_nEngineerTick = nTick + ENGINEER_UPDATE;
+
+		if (flags() & NounPlanet::FLAG_HAS_HUB)
+		{
+			if (m_pEngineers.size() > 0)
+			{
+				// check to see if engineers have been lost and remove them
+				for (int i = m_pEngineers.size() - 1; i >= 0; i--)
+				{
+					NounShip * pShip = WidgetCast<NounShip>(m_pEngineers[i]);
+					if (pShip == NULL
+						|| pShip->isDestroyed()
+						|| pShip->zone() == NULL
+						|| pShip->teamId() != teamId())
+					{
+						m_pEngineers.remove(i);
+					}
+				}
+			}
+
+			// check if we can spawn an engineer
+			if (flags() & NounPlanet::FLAG_HAS_HUB
+				&& structureCount() < maxStructures()
+				&& m_pEngineers.size() < ENGINEER_LIMIT &&
+				lockRank() == 0)
+			{
+				//if (flags() & NounPlanet::FLAG_BLOCKADE)
+				//	return;
+				//if (flags() & NounPlanet::FLAG_STRIKE)
+				//	return;
+
+				NounTemplate * pBuild = ((GameContext *)context())->pickShipTemplate(teamId(), NounShip::ENGINEER);
+				if (!pBuild)
+					return;
+				NounShip * pSpawn = WidgetCast<NounShip>(pBuild->spawn());
+				if (!pSpawn)
+					return;
+
+				pSpawn->setName(CharString().format("%s Engineer", name()));
+				pSpawn->setTeamId(teamId());
+				pSpawn->setVelocity(5.0f);
+				pSpawn->addFlags(NounShip::FLAG_NO_BEST_ORDER);			// don't look for new orders
+				pSpawn->addFlags(NounShip::FLAG_NO_EXPIRE_ORDER);		// order never expires due to time limit
+				pSpawn->setOrder(NounShip::BUILD, this, pSpawn);
+				pSpawn->setRank(255);									// important, make it so this ship will not get orders/missions from players
+				pSpawn->setup();
+
+				Matrix33 mFrame(worldFrame());
+				Vector3 vPosition(worldPosition());
+				vPosition += mFrame.k * (radius() + pSpawn->radius() + 15.0f);
+
+				pSpawn->setPosition(vPosition);
+				pSpawn->setHeading(atan2(mFrame.k.x, mFrame.k.z));
+				pSpawn->setFrame(Matrix33(0, pSpawn->heading(), 0));
+
+				context()->attachNoun(pSpawn);
+
+				// track the objects that we spawn
+				m_pEngineers.push(pSpawn);
+
+				// notify faction we have an engineer on-site
+				factionChat(CharString().format("<color;ffffff>%s Engineer: Planetary engineering team online.", name()));
+			}
 		}
 	}
 }

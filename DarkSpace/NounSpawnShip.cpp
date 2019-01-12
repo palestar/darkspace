@@ -54,7 +54,7 @@ static const bool checkAllowedShips(NounShip::Type type)
 		// list of allowed ship type spawners
 		false,	// UNKNOWN,
 		false,	// FIGHTER,
-		true,	// ENGINEER,
+		false,	// ENGINEER,
 		true,	// SUPPLY,
 		false,	// TRANSPORT,
 		false,	// SCOUT,
