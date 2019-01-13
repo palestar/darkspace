@@ -503,7 +503,6 @@ NounSpawnShip::Ref NounSpawnShip::makeTeamSpawner( GameContext * a_pContext, int
 	pShipSpawner->setSpawnType( NounSpawnShip::ST_FACTION );
 	pShipSpawner->setSpawnArea( 1000.0f );
 	pShipSpawner->setMaxSpawn( (int)(a_pContext->user()->maxPlayers() * MAX_SPAWN_PER_PLAYER) );
-	pShipSpawner->setMinSpawn( BASE_FACTION_AI );
 
 	for(int i=0;i<team.pTemplates->resourceCount();i++)
 	{
