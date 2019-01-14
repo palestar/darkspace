@@ -1173,17 +1173,17 @@ void NounPlanet::updateDefense( dword nTick )
 
 		m_nLastDefenseTarget = nContact;
 
-		// pick a random gadget on the ship to target
-		Noun::tRef nSubTarget = pTarget->randomGadget(nTick, (int)worldPosition().magnitude2());
+		//// pick a random gadget on the ship to target
+		//Noun::tRef nSubTarget = pTarget->randomGadget(nTick, (int)worldPosition().magnitude2());
 
 		Vector3 vProjOrigin( worldPosition() );
-		Vector3 vTarget( nSubTarget->worldPosition() );
+		Vector3 vTarget(pTarget->worldPosition() );
 		Vector3 vProjDirection( vTarget - vProjOrigin );
 		float fProjDistance = vProjDirection.magnitude();
 		vProjDirection *= 1.0f / fProjDistance;
 
 		// try to predict the position of the ship into the future..
-		vTarget += nSubTarget->worldVelocity() * (fProjDistance / DEFENSE_PROJ_VELOCITY);
+		vTarget += pTarget->worldVelocity() * (fProjDistance / DEFENSE_PROJ_VELOCITY);
 		// recalculate values now
 		vProjDirection = vTarget - vProjOrigin;
 		fProjDistance = vProjDirection.magnitude();
@@ -1226,7 +1226,7 @@ void NounPlanet::updateDefense( dword nTick )
 		pProjectile->setTick( nTick );
 		pProjectile->setNounContext( m_pDefenseProjectile );
 		pProjectile->setName( m_pDefenseProjectile->name() );
-		pProjectile->setTarget(nSubTarget);
+		pProjectile->setTarget(pTarget);
 		pProjectile->setVelocity( vProjDirection * DEFENSE_PROJ_VELOCITY );
 		pProjectile->setLife( (fProjDistance / DEFENSE_PROJ_VELOCITY) * TICKS_PER_SECOND );
 		pProjectile->setOwner( this );
