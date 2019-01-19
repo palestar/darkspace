@@ -9,7 +9,7 @@ IF "%ACTION%"=="" SET ACTION=Build
 SET LINUX_CONFIG=%CONFIG%Linux
 IF "%ACTION%"=="Build" SET MAKECMD="export BUILD_CONFIGURATION=%LINUX_CONFIG%; mkdir -p %LINUX_CONFIG%/obj; make;"
 IF "%ACTION%"=="Clean" SET MAKECMD="export BUILD_CONFIGURATION=%LINUX_CONFIG%; mkdir -p %LINUX_CONFIG%/obj; make clean;"
-SET SSH=ssh -oHostKeyAlgorithms=+ssh-dss -p 2200
+SET SSH=ssh -p 2200
 
 echo Linux %ACTION%/%CONFIG%Linux...
 %SSH% %LINUXBUILDER%  "cd %BRANCH%Medusa/Medusa; %MAKECMD%" 
