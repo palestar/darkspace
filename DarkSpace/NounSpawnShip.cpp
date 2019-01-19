@@ -19,8 +19,6 @@
 static Constant		SPAWN_AI_LOAD( "SPAWN_AI_LOAD", 0.75f );
 //! what is the max spawn per player
 static Constant		MAX_SPAWN_PER_PLAYER( "MAX_SPAWN_PER_PLAYER", 8.0f );
-//! a base number of faction AI to spawn
-static Constant		BASE_FACTION_AI( "BASE_FACTION_AI", 5 );
 
 //---------------------------------------------------------------------------------------------------
 
@@ -86,7 +84,7 @@ static CharString GenerateRomanNumerals( unsigned int a_nNumber )
 }
 
 //---------------------------------------------------------------------------------------------------
-
+const int BASE_FACTION_AI = 5;
 const int MIN_SPAWN_DELAY = TICKS_PER_SECOND * 5;
 const int MAX_ATTEMPTS = 10;
 const int MAX_PLACEMENT_ATTEMPTS = 10;
@@ -174,7 +172,7 @@ END_PROPERTY_LIST();
 NounSpawnShip::NounSpawnShip() :
 	m_nSpawnType( ST_NORMAL ),
 	m_nSpawnTick( 0 ),
-	m_nSpawnDelay( TICKS_PER_SECOND * 60 ),
+	m_nSpawnDelay( TICKS_PER_SECOND * 90 ),
 	m_fSpawnArea( 0.0f ),
 	m_nMinSpawn( 0 ),
 	m_nMaxSpawn( 1 ),
@@ -276,49 +274,6 @@ void NounSpawnShip::simulate( dword nTick )
 		{
 			// update all current spawner objects and tally the total chance & spawn score ...
 			int nTotalChance = 0, nTotalSpawnScore = 0;
-			int nMaxSpawn = m_nMaxSpawn;
-			
-			switch( m_nSpawnType )
-			{
-				case ST_NORMAL:
-				case ST_ONE_SHOT:
-					break;
-				case ST_POPULATION:
-					{
-						// max spawn increases as player populations increase.. 
-						int nPlayers = context()->user()->playerCount();
-						int nMaxPlayers = context()->user()->maxPlayers();
-						float fSpawnScale = 0.0f;
-						if ( nMaxPlayers > 0 )
-							fSpawnScale = ((float)nPlayers) / ((float)nMaxPlayers);
-						nMaxSpawn = (int)ceilf( fSpawnScale * nMaxSpawn );
-					}
-					break;
-				case ST_FACTION:
-					{
-						int nMyFactionScore = 0, nMaxScore = 0;
-
-						for( int f=0;f<FACTION_COUNT;++f)
-						{
-							int nScore = context()->user()->spawnedScore( f );
-							if ( nScore > nMaxScore )
-								nMaxScore = nScore;
-
-							if (f == factionId())
-							{
-								nMyFactionScore = nScore;
-								//LOG_STATUS("NounSpawnShip", "%s AI player weight: %d...", teamName(), nMyFactionScore);
-							}
-						}
-
-						// the max spawn is the difference between the number of spawned ships on this faction
-						// and the faction with the most spawned ships. (including our own faction)
-						nMaxSpawn = nMaxScore + BASE_FACTION_AI;
-						nTotalSpawnScore = nMyFactionScore;
-					}
-					break;
-			}
-
 			for (int i = 0; i < m_Spawners.size(); ++i)
 			{
 				Spawner * pSpawner = m_Spawners[i];
@@ -327,83 +282,110 @@ void NounSpawnShip::simulate( dword nTick )
 
 				// tally up some values..
 				nTotalSpawnScore += pSpawner->spawnedScore();
-				if ( pSpawner->limit() > 0 && pSpawner->spawnedCount() >= pSpawner->limit() )
+				if (pSpawner->limit() > 0 && pSpawner->spawnedCount() >= pSpawner->limit())
 					continue;		// at limit, skip this spawner..
 				nTotalChance += pSpawner->chance();
 			}
 
-			if ( nMaxSpawn > m_nMaxSpawn )
+			int nMaxSpawn = m_nMaxSpawn;
+			switch (m_nSpawnType)
+			{
+			case ST_NORMAL:
+			case ST_ONE_SHOT:
+				break;
+			case ST_POPULATION:
+			{
+				// max spawn increases as player populations increase.. 
+				int nPlayers = context()->user()->playerCount();
+				int nMaxPlayers = context()->user()->maxPlayers();
+				float fSpawnScale = 0.0f;
+				if (nMaxPlayers > 0)
+					fSpawnScale = ((float)nPlayers) / ((float)nMaxPlayers);
+				nMaxSpawn = (int)ceilf(fSpawnScale * nMaxSpawn);
+			}
+			break;
+			case ST_FACTION:
+			{
+				// the max spawn is the difference between the number of spawned ships on this faction
+				// and the faction with the most spawned ships. (including our own faction)
+				nMaxSpawn = context()->user()->maxPlayerScoreAI() + BASE_FACTION_AI;
+				nTotalSpawnScore = context()->user()->spawnedScore(factionId());
+			}
+			break;
+			}
+
+			if (nMaxSpawn > m_nMaxSpawn)
 				nMaxSpawn = m_nMaxSpawn;
-			if ( nMaxSpawn < m_nMinSpawn )
+			if (nMaxSpawn < m_nMinSpawn)
 				nMaxSpawn = m_nMinSpawn;
 
-			if  ( nTotalSpawnScore < nMaxSpawn )
+			if (nTotalSpawnScore < nMaxSpawn)
 			{
 				// spawn ships... 
 				int nAttempts = 0;
-				while( nTotalChance > 0 && nTotalSpawnScore < nMaxSpawn )
+				while (nTotalChance > 0 && nTotalSpawnScore < nMaxSpawn)
 				{
 					// increment the number of attempts..
-					if ( ++nAttempts > MAX_ATTEMPTS )
+					if (++nAttempts > MAX_ATTEMPTS)
 						break;
 
 					// select a random spawner
 					int nPick = rand() % nTotalChance;
 
 					Spawner * pSpawner = NULL;
-					for(int i=0;i<m_Spawners.size() && nPick >= 0;++i)
+					for (int i = 0; i < m_Spawners.size() && nPick >= 0; ++i)
 					{
-						pSpawner = m_Spawners[ i ];
-						if ( pSpawner->limit() > 0 && pSpawner->spawnedCount() >= pSpawner->limit() )
+						pSpawner = m_Spawners[i];
+						if (pSpawner->limit() > 0 && pSpawner->spawnedCount() >= pSpawner->limit())
 							continue;		// at limit, skip this spawner..
 						nPick -= pSpawner->chance();
 					}
 
-					if (! pSpawner )
+					if (!pSpawner)
 						continue;
-					NounShip::Ref pSpawn = pSpawner->spawn( context() );
-					if (! pSpawn )
+					NounShip::Ref pSpawn = pSpawner->spawn(context());
+					if (!pSpawn)
 						continue;
 
 					int nPlaceAttempts = 0;
-					while( nPlaceAttempts < MAX_PLACEMENT_ATTEMPTS )
+					while (nPlaceAttempts < MAX_PLACEMENT_ATTEMPTS)
 					{
-						Vector3 vOffset( RandomFloat(-m_fSpawnArea,m_fSpawnArea), 0.0f, RandomFloat(-m_fSpawnArea,m_fSpawnArea) );
-						Vector3 vPosition( worldPosition() + vOffset );
+						Vector3 vOffset(RandomFloat(-m_fSpawnArea, m_fSpawnArea), 0.0f, RandomFloat(-m_fSpawnArea, m_fSpawnArea));
+						Vector3 vPosition(worldPosition() + vOffset);
 
 						Array< GameContext::NounCollision > collisions;
-						context()->proximityCheck( vPosition, pSpawn->radius() * 1.5f, collisions );
+						context()->proximityCheck(vPosition, pSpawn->radius() * 1.5f, collisions);
 
 						bool bSpawnClear = true;
-						for(int i=0;i<collisions.size() && bSpawnClear;++i)
+						for (int i = 0; i < collisions.size() && bSpawnClear; ++i)
 						{
-							if ( WidgetCast<NounBody>( collisions[i].pNoun ) != NULL )
+							if (WidgetCast<NounBody>(collisions[i].pNoun) != NULL)
 								bSpawnClear = false;
 						}
 
-						if ( bSpawnClear )
+						if (bSpawnClear)
 						{
-							pSpawn->setPosition( vPosition );
+							pSpawn->setPosition(vPosition);
 							break;
 						}
 
 						++nPlaceAttempts;
 					}
 
-					if ( nPlaceAttempts >= MAX_PLACEMENT_ATTEMPTS )
+					if (nPlaceAttempts >= MAX_PLACEMENT_ATTEMPTS)
 						break;
 
-					Matrix33 vFrame( worldFrame() );
-					pSpawn->setFrame( vFrame );
-					pSpawn->setTeamId( teamId() );
-					pSpawn->setHeading( atan2( vFrame.k.x, vFrame.k.z ) );
+					Matrix33 vFrame(worldFrame());
+					pSpawn->setFrame(vFrame);
+					pSpawn->setTeamId(teamId());
+					pSpawn->setHeading(atan2(vFrame.k.x, vFrame.k.z));
 					pSpawn->setup();
-					
-					context()->attachNoun( pSpawn );
+
+					context()->attachNoun(pSpawn);
 
 					nTotalSpawnScore += pSpawner->score();
-					LOG_STATUS( "NounSpawnShip", "Spawning Ship, Type: %s, Name: %s, Rank: %d, Faction: %s, Spawn Score: %d/%d", 
-						NounShip::typeText( pSpawn->type() ), pSpawn->name(), pSpawn->rank(), factionText( pSpawn->factionId() ), nTotalSpawnScore, nMaxSpawn );
+					LOG_STATUS( "NounSpawnShip", "Spawning Ship, Type: %s, Name: %s, Weight: %d, Faction: %s, Spawn Score: %d/%d", 
+						NounShip::typeText( pSpawn->type() ), pSpawn->name(), pSpawn->gadgetLevel(), factionText( pSpawn->factionId() ), nTotalSpawnScore, nMaxSpawn );
 
 					// set the order after the object is attached on purpose
 					if ( pSpawner->order() != NounShip::NOORDER )

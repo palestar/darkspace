@@ -1650,11 +1650,42 @@ int GameServer::spawnedScore(int a_nFactionId )
 	for(int i=0;i<ships.size();++i)
 	{
 		NounShip * pShip = (NounShip *)ships[i].pointer();
-		if ( pShip->rank() <= LAST_RANK && pShip->userId() != 0 )
-			nSpawnedScore += ( pShip->rank() + 1 + pShip->gadgetLevel());		// CADET is -1, so let that be zero
+
+		if (pShip->type() == NounShip::TRANSPORT
+			|| pShip->type() == NounShip::ENGINEER)
+			continue;
+
+		if (pShip->userId() != 0)
+			nSpawnedScore += pShip->rank() + 1;
+		else
+			nSpawnedScore += pShip->gadgetLevel();
 	}
 
 	return nSpawnedScore;
+}
+
+int GameServer::maxPlayerScoreAI()
+{
+	int nPlayerScore = 0;
+	for (int f = 0; f < FACTION_COUNT; ++f)
+	{
+		int nPlayerScoreForFac = 0;
+		Array< Noun::Ref > ships;
+		gameContext()->findNouns(ships, CLASS_KEY(NounShip), -1, f);
+
+		for (int i = 0; i < ships.size(); ++i)
+		{
+			NounShip * pShip = (NounShip *)ships[i].pointer();
+
+			if (pShip->userId() != 0)
+				nPlayerScoreForFac += pShip->rank() + 1;
+
+			if (nPlayerScoreForFac > nPlayerScore)
+				nPlayerScore = nPlayerScoreForFac;
+		}
+	}
+
+	return nPlayerScore;
 }
 
 

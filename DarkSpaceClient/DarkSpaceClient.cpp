@@ -121,25 +121,29 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 		// THE MAIN GAME LOOP 
 		while (pInterface->render())
 		{	
-			// get our main window
-			hWnd = FindWindowA("DarkSpace",NULL);
-
 			// update our saved values if the volume is changed
-			if (pInterface->audio()->volume() > 0)
-				fSVolume = pInterface->audio()->volume();
-			if (pDoc->jukeBox()->volume() > 0)
-				fMVolume = pDoc->jukeBox()->volume();
+			if (pInterface->audio() != NULL && pDoc->jukeBox() != NULL)
+			{
+				// get our main window
+				hWnd = FindWindowA("DarkSpace", NULL);
 
-			// mute our device if we lose focus
-			if (hWnd != GetForegroundWindow())
-			{
-				pInterface->audio()->setVolume(0.0f);
-				pDoc->jukeBox()->setVolume(0.0f);
-			}
-			else
-			{
-				pInterface->audio()->setVolume(fSVolume);
-				pDoc->jukeBox()->setVolume(fMVolume);
+				if (pInterface->audio()->volume() > 0)
+					fSVolume = pInterface->audio()->volume();
+
+				if (pDoc->jukeBox()->volume() > 0)
+					fMVolume = pDoc->jukeBox()->volume();
+
+				// mute our device if we lose focus
+				if (hWnd != GetForegroundWindow())
+				{
+					pInterface->audio()->setVolume(0.0f);
+					pDoc->jukeBox()->setVolume(0.0f);
+				}
+				else
+				{
+					pInterface->audio()->setVolume(fSVolume);
+					pDoc->jukeBox()->setVolume(fMVolume);
+				}
 			}
 		};
 

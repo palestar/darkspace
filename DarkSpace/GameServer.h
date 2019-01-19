@@ -62,6 +62,7 @@ public:
 	virtual void		onCondition( int conditionId );					// called when a condition is true
 	virtual bool		saveStorage( Noun * a_pSelf );
 	virtual int			spawnedScore( int a_nFactionId );
+	virtual int			maxPlayerScoreAI();
 
 	// GameContext::GameUser interface
 	virtual void		onKill( Noun * pWho, Noun *pDead );
