@@ -1,9 +1,8 @@
 // Client.cpp : Defines the class behaviors for the application.
 //
 
-#define MEDUSA_TRACE_ON
-
 #include "stdafx.h"
+#define MEDUSA_TRACE_ON
 #include "DarkSpaceClient.h"
 #include "ClientUpdate.h"
 #include "SelectTutorial.h"

@@ -91,6 +91,9 @@ void VerbUseJumpGate::onExecute()
 			
 			// clear interdictor flag, we don't want the ship to become stuck
 			pShip->clearFlags( NounShip::FLAG_JUMP_DISABLED );
+
+			// clear safe zone flag, we don't want weapons to be stuck either
+			pShip->clearFlags(NounShip::FLAG_IN_SAFE_ZONE);
 			
 			// clear command, if it was to follow into this jumpgate
 			if ( pShip->command() == NounShip::FOLLOW && pShip->commandTarget() == m_pGate )
