@@ -255,7 +255,7 @@
     <CustomBuild Include="..\..\..\Medusa\Tools\Bin\NodeWindowPortD.dll">
       <Filter>Libs</Filter>
     </CustomBuild>
-    <CustomBuild Include="..\..\..\GameCQ\Bin\pdh.dll">
+    <CustomBuild Include="C:\Windows\System32\pdh.dll">
       <Filter>Libs</Filter>
     </CustomBuild>
     <CustomBuild Include="..\..\..\Medusa\Bin\Render3D.dll">

@@ -2043,7 +2043,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="..\..\..\GameCQ\Bin\pdh.dll"
+				RelativePath="C:\Windows\System32\pdh.dll"
 				>
 				<FileConfiguration
 					Name="Release|Win32"
