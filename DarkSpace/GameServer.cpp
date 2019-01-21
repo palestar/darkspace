@@ -145,13 +145,20 @@ bool GameServer::update()
 				NounShip * pShip = (NounShip *)ships[j].pointer();
 				if ( pShip->factionId() == f )
 				{
-					if ( pShip->rank() <= LAST_RANK )
-						nSpawnScore += pShip->rank() + 1;
-
 					++nFactionShipCount;
-					++nShipsTypes[ pShip->type() ];
-					if ( pShip->userId() == 0 )
-						++nShipTypesAI[ pShip->type() ];
+					++nShipsTypes[pShip->type()];
+
+					if (pShip->userId() == 0)
+						++nShipTypesAI[pShip->type()];
+
+					if (pShip->userId() > 0)
+						nSpawnScore += pShip->rank() + 1;
+					else if (pShip->type() == NounShip::TRANSPORT
+						|| pShip->type() == NounShip::ENGINEER
+						|| pShip->type() == NounShip::PLATFORM)
+						continue;
+					else
+						nSpawnScore += pShip->gadgetLevel();
 				}
 			}
 
@@ -159,10 +166,10 @@ bool GameServer::update()
 			for(int i=0;i<NounShip::TYPE_COUNT;++i)
 			{
 				if ( nShipsTypes[i] > 0 )
-					sShipTypes += CharString().format( ",%s,%d,%d", NounShip::typeText( (NounShip::Type)i ), nShipsTypes[i], nShipTypesAI[i] );
+					sShipTypes += CharString().format( " %s:%d,%d,", NounShip::typeText( (NounShip::Type)i ), nShipsTypes[i], nShipTypesAI[i] );
 			}
 
-			LOG_STATUS( "GameServer", "[STAT] %s,%d,%d%s", factionText( f ), nFactionShipCount, nSpawnScore, sShipTypes.cstr() );
+			LOG_STATUS("GameServer", "[STAT] %s: Total Ships:%d | Spawn Score:%d | Ships:%s", factionText(f), nFactionShipCount, nSpawnScore, sShipTypes.cstr());
 		}
 		m_nNextShipStatLog = Time::seconds() + LOG_SHIP_STATS_INTERVAL;
 	}
@@ -1651,12 +1658,12 @@ int GameServer::spawnedScore(int a_nFactionId )
 	{
 		NounShip * pShip = (NounShip *)ships[i].pointer();
 
-		if (pShip->type() == NounShip::TRANSPORT
-			|| pShip->type() == NounShip::ENGINEER)
-			continue;
-
-		if (pShip->userId() != 0)
+		if (pShip->userId() > 0)
 			nSpawnedScore += pShip->rank() + 1;
+		else if (pShip->type() == NounShip::TRANSPORT
+			|| pShip->type() == NounShip::ENGINEER
+			|| pShip->type() == NounShip::PLATFORM)
+			continue;
 		else
 			nSpawnedScore += pShip->gadgetLevel();
 	}
@@ -1670,19 +1677,20 @@ int GameServer::maxPlayerScoreAI()
 	for (int f = 0; f < FACTION_COUNT; ++f)
 	{
 		int nPlayerScoreForFac = 0;
-		Array< Noun::Ref > ships;
-		gameContext()->findNouns(ships, CLASS_KEY(NounShip), -1, f);
 
-		for (int i = 0; i < ships.size(); ++i)
+		for (int i = 0; i < clientCount(); ++i)
 		{
-			NounShip * pShip = (NounShip *)ships[i].pointer();
-
-			if (pShip->userId() != 0)
-				nPlayerScoreForFac += pShip->rank() + 1;
-
-			if (nPlayerScoreForFac > nPlayerScore)
-				nPlayerScore = nPlayerScoreForFac;
+			ClientContext & context = m_ClientContext[GameServer::client(i)];
+			if (context.nFactionId != f)
+				continue;
+			GameProfile * pProfile = WidgetCast<GameProfile>(context.pProfile);
+			if (!pProfile)
+				continue;
+			nPlayerScoreForFac += pProfile->calculateRank() + 1;
 		}
+	
+		if (nPlayerScoreForFac > nPlayerScore)
+			nPlayerScore = nPlayerScoreForFac;
 	}
 
 	return nPlayerScore;
