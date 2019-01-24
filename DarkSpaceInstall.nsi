@@ -71,7 +71,7 @@ Section "MainSection" SEC01
   File ".\Bin\ijl15.dll"
   File ".\Bin\dbghelp.dll"
   File ".\Bin\AudioDS.dll"
-  File ".\Bin\Constants.ini"
+  File ".\Constants.ini"
   File ".\Bin\Version.ini"
   File ".\Bin\DarkSpace.dll"
   File ".\Bin\DarkSpaceClient.exe"

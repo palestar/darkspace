@@ -155,7 +155,8 @@ bool GameServer::update()
 						nSpawnScore += pShip->rank() + 1;
 					else if (pShip->type() == NounShip::TRANSPORT
 						|| pShip->type() == NounShip::ENGINEER
-						|| pShip->type() == NounShip::PLATFORM)
+						|| pShip->type() == NounShip::PLATFORM
+						|| pShip->type() == NounShip::UNKNOWN)
 						continue;
 					else
 						nSpawnScore += pShip->gadgetLevel();
@@ -1662,7 +1663,8 @@ int GameServer::spawnedScore(int a_nFactionId )
 			nSpawnedScore += pShip->rank() + 1;
 		else if (pShip->type() == NounShip::TRANSPORT
 			|| pShip->type() == NounShip::ENGINEER
-			|| pShip->type() == NounShip::PLATFORM)
+			|| pShip->type() == NounShip::PLATFORM
+			|| pShip->type() == NounShip::UNKNOWN)
 			continue;
 		else
 			nSpawnedScore += pShip->gadgetLevel();
