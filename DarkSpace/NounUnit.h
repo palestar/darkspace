@@ -76,6 +76,7 @@ public:
 	virtual int			buildTime() const = 0;			// how many seconds does it take to build this unit
 	virtual int			buildCost() const = 0;			// cost in resources to build unit
 	virtual bool		shipCaptureBonus() const = 0;	// does this unit get a bonus to ship capturing
+	virtual bool		cannotBoardShip() const = 0;	// can this unit board an enemy ship
 
 	s16					hex() const;
 	int					damage() const;

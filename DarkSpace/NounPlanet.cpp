@@ -25,6 +25,7 @@
 #include "StructureDepot.h"
 #include "StructurePort.h"
 #include "StructureHub.h"
+#include "StructureMIHub.h"
 #include "StructureFactory.h"
 #include "Constants.h"
 #include "VerbSetFlags.h"
@@ -282,6 +283,18 @@ void NounPlanet::initialize()
 	if (this->description() == "Arena" && !this->testFlags(FLAG_NOT_CAPTURABLE))
 	{
 		setAllegiance(20);
+		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
+	}
+	// home planets cannot be captured
+	if (this->description() == "Home Planet")
+	{
+		setAllegiance(10);
+		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
+	}
+	// home moons cannot be captured
+	if (this->description() == "Home Moon")
+	{
+		setAllegiance(10);
 		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
 	}
 }

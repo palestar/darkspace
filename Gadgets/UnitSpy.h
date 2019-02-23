@@ -38,7 +38,7 @@ public:
 	}
 	dword damageType() const
 	{
-		return DAMAGE_KINETIC|DAMAGE_ENERGY;
+		return DAMAGE_KINETIC | DAMAGE_ENERGY;
 	}
 	int healAmount() const
 	{
@@ -54,7 +54,7 @@ public:
 	}
 	int buildTime() const
 	{
-		return 60 * 5;	
+		return 60 * 5;
 	}
 	int buildTechnology() const
 	{
@@ -69,6 +69,10 @@ public:
 		return 0;
 	}
 	bool shipCaptureBonus() const
+	{
+		return false;
+	}
+	bool cannotBoardShip() const
 	{
 		return false;
 	}

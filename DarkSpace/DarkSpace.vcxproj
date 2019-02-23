@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{04D9C4B4-B762-4074-A2F7-E5FA29E55C01}</ProjectGuid>
     <RootNamespace>DarkSpace</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLinux|Win32'" Label="Configuration">
@@ -389,6 +389,7 @@
     <ClInclude Include="StructureLab.h" />
     <ClInclude Include="StructureLab2.h" />
     <ClInclude Include="StructureLab3.h" />
+    <ClInclude Include="StructureMIHub.h" />
     <ClInclude Include="StructureMine.h" />
     <ClInclude Include="StructureMine2.h" />
     <ClInclude Include="StructureMine3.h" />
@@ -579,6 +580,7 @@
     <ClCompile Include="StructureDefense.cpp" />
     <ClCompile Include="StructureFactory.cpp" />
     <ClCompile Include="StructureHub.cpp" />
+    <ClCompile Include="StructureMIHub.cpp" />
     <ClCompile Include="StructureMine.cpp" />
     <ClCompile Include="StructurePort.cpp" />
     <ClCompile Include="Structures.cpp" />

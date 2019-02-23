@@ -66,6 +66,10 @@ public:
 	{
 		return false;
 	}
+	bool cannotBoardShip() const
+	{
+		return false;
+	}
 };
 
 //----------------------------------------------------------------------------

@@ -13,11 +13,13 @@ IMPLEMENT_FACTORY( MavericksUltimateBuild, NounEnhancement );
 IMPLEMENT_FACTORY( MavericksDefense, NounEnhancement );
 IMPLEMENT_FACTORY( MavericksWeaponDamage, NounEnhancement );
 IMPLEMENT_FACTORY( PantheonJumpCore, NounEnhancement );
+IMPLEMENT_FACTORY( DragonHeart, NounEnhancement);
 
 REGISTER_FACTORY_ALIAS( MavericksUltimateBuild, NounEnhancement_MavericksUltimateBuild );
 REGISTER_FACTORY_ALIAS( MavericksDefense, NounEnhancement_MavericksDefense );
 REGISTER_FACTORY_ALIAS( MavericksWeaponDamage, NounEnhancement_MaverickWeaponDamage );
 REGISTER_FACTORY_ALIAS( PantheonJumpCore, NounEnhancement_PantheonJumpCore );
+REGISTER_FACTORY_ALIAS( DragonHeart, NounEnhancement_DragonHeart );
 
 //---------------------------------------------------------------------------------------------------
 //EOF

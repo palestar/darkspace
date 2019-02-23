@@ -39,6 +39,7 @@
 #include "GadgetELF.h"
 #include "StructurePort.h"
 #include "StructureHub.h"
+#include "StructureMIHub.h"
 #include "StructureBarracks.h"
 #include "StructurePower.h"
 #include "StructurePort.h"
@@ -1178,7 +1179,7 @@ bool NounShip::updateBuildOrder()
 		nResearch += pStructure->research();
 	}
 
-	if ( CountChildren<StructureHub>( pPlanet ) < 1 )
+	if ( CountChildren<StructureHub>( pPlanet ) < 1 && CountChildren<StructureMIHub>( pPlanet ) < 1 )
 		pBuild = FindChild<StructureHub>( pBuildRoot );
 	if ( pBuild == NULL && CountChildren<StructureBarracks>( pPlanet ) < 1 )
 		pBuild = FindChild<StructureBarracks>( pBuildRoot );

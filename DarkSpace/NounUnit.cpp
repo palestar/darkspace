@@ -670,6 +670,11 @@ void NounUnit::attackTarget( Noun * pTarget )
 		//This unit is on a ship and has bonus to shipcapturing!
 		damage *= SHIP_CAPTURE_ATTACK_BONUS;
 	}
+	if (WidgetCast<NounShip>( parent() ) != NULL && cannotBoardShip())
+	{
+		//A unit that cannot board an enemy ship, cannot defend their own ship.
+		damage = 0;
+	}
 	// in range, attack the target
 	NounGame * pDamage = WidgetCast<NounGame>( pTarget );
 	if ( pDamage != NULL )
