@@ -284,20 +284,8 @@ void NounPlanet::initialize()
 		|| strstr<char>(description(), "Home") != NULL)
 		&& (flags() & FLAG_NOT_CAPTURABLE) == 0)
 	{
-		setAllegiance(20);
+		setAllegiance(10);
 		setControl(maxControl());
-		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
-	}
-	// home planets cannot be captured
-	if (this->description() == "Home Planet")
-	{
-		setAllegiance(10);
-		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
-	}
-	// home moons cannot be captured
-	if (this->description() == "Home Moon")
-	{
-		setAllegiance(10);
 		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
 	}
 }
