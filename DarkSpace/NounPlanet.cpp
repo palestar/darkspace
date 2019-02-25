@@ -278,10 +278,13 @@ void NounPlanet::initialize()
 
 	updateStatusLines();
 
-	// if this is an arena planet we want to set it to non_capturable
-	if (this->description() == "Arena" && !this->testFlags(FLAG_NOT_CAPTURABLE))
+	// if this is an arena or home planet we want to set it to non_capturable
+	if ((strstr<char>(description(), "Arena") != NULL
+		|| strstr<char>(description(), "Home") != NULL)
+		&& (flags() & FLAG_NOT_CAPTURABLE) == 0)
 	{
 		setAllegiance(20);
+		setControl(maxControl());
 		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
 	}
 }
