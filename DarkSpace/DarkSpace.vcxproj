@@ -398,6 +398,7 @@
     <ClInclude Include="StructureLab.h" />
     <ClInclude Include="StructureLab2.h" />
     <ClInclude Include="StructureLab3.h" />
+    <ClInclude Include="StructureMIHub.h" />
     <ClInclude Include="StructureMine.h" />
     <ClInclude Include="StructureMine2.h" />
     <ClInclude Include="StructureMine3.h" />
@@ -588,6 +589,7 @@
     <ClCompile Include="StructureDefense.cpp" />
     <ClCompile Include="StructureFactory.cpp" />
     <ClCompile Include="StructureHub.cpp" />
+    <ClCompile Include="StructureMIHub.cpp" />
     <ClCompile Include="StructureMine.cpp" />
     <ClCompile Include="StructurePort.cpp" />
     <ClCompile Include="Structures.cpp" />

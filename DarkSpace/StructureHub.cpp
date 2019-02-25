@@ -8,6 +8,7 @@
 #include "World/VerbChat.h"
 #include "resource.h"
 #include "StructureHub.h"
+#include "StructureMIHub.h"
 #include "GameContext.h"
 
 //----------------------------------------------------------------------------
@@ -73,8 +74,8 @@ bool StructureHub::canBuild( NounPlanet * pPlanet, bool bUpgrade ) const
 	if (! validateNoun( pPlanet ) )
 		return false;
 	for(int i=0;i<pPlanet->childCount();i++)
-		if ( WidgetCast<StructureHub>( pPlanet->child(i) ) != NULL )
-			return false;	// planet already has a colony hub
+		if ( WidgetCast<StructureHub>( pPlanet->child(i) ) != NULL || WidgetCast<StructureMIHub>(pPlanet->child(i)) != NULL )
+			return false;	// planet already has a colony hub or an MI hub
 
 	return NounStructure::canBuild( pPlanet, bUpgrade );
 }

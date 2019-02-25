@@ -25,6 +25,7 @@
 #include "StructureDepot.h"
 #include "StructurePort.h"
 #include "StructureHub.h"
+#include "StructureMIHub.h"
 #include "StructureFactory.h"
 #include "Constants.h"
 #include "VerbSetFlags.h"
@@ -285,6 +286,18 @@ void NounPlanet::initialize()
 	{
 		setAllegiance(20);
 		setControl(maxControl());
+		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
+	}
+	// home planets cannot be captured
+	if (this->description() == "Home Planet")
+	{
+		setAllegiance(10);
+		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
+	}
+	// home moons cannot be captured
+	if (this->description() == "Home Moon")
+	{
+		setAllegiance(10);
 		VerbPlanetEvent(this, VerbPlanetEvent::NOT_CAPTURABLE, true);
 	}
 }

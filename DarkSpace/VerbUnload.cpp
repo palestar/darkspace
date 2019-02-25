@@ -149,7 +149,8 @@ bool VerbUnload::canUnload( Noun * pTarget, Noun * pUnload, NounShip * pShip )
 		NounShip * pTargetShip = WidgetCast<NounShip>( pTarget );
 		if( pTargetShip && pTargetShip->isMonster() )
 			return false;	// cannot unload to space monsters
-
+		if (pTargetShip && ((NounUnit *)pUnload)->cannotBoardShip())
+			return false;	// armor cannot board enemy ships
 		// unloading to an enemy ?
 		if( pShip->isEnemy( pTarget ) )
 			if( ! WidgetCast<NounUnit>( pUnload ) )

@@ -606,6 +606,9 @@
     <ClInclude Include="GadgetModifierEW.h">
       <Filter>Gadgets</Filter>
     </ClInclude>
+    <ClInclude Include="StructureMIHub.h">
+      <Filter>Structures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Universe.rc">
@@ -1112,6 +1115,9 @@
     </ClCompile>
     <ClCompile Include="GadgetModifierEW.cpp">
       <Filter>Gadgets</Filter>
+    </ClCompile>
+    <ClCompile Include="StructureMIHub.cpp">
+      <Filter>Structures</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

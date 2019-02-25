@@ -131,6 +131,43 @@ public:
 	}
 };
 
+class DragonHeart : public NounEnhancement
+{
+public:
+	DECLARE_WIDGET_CLASS();
+
+	DragonHeart()
+	{
+		m_Modifiers.push_back(new ShipModifier(MT_JUMPCOOLDOWN, 500));
+		m_Modifiers.push_back(new ShipModifier(MT_DRIVE_VELOCITY, 250));
+		m_Modifiers.push_back(new ShipModifier(MT_DRIVE_THRUST, 250));
+		m_Modifiers.push_back(new ShipModifier(MT_TURNRATE, 100));
+		m_Modifiers.push_back(new ShipModifier(MT_DAMAGE_REDUCTION, 20));
+		m_Modifiers.push_back(new ShipModifier(MT_BUILD_SPEED, 50));
+		m_Modifiers.push_back(new ShipModifier(MT_BEAM_DAMAGE, 50));
+		m_Modifiers.push_back(new ShipModifier(MT_WEAPON_DAMAGE, 50));
+		m_Modifiers.push_back(new ShipModifier(MT_BEAM_RANGE, 50));
+		m_Modifiers.push_back(new ShipModifier(MT_BEAM_ENERGY, 50));
+	}
+
+	virtual const char * getName() const
+	{
+		return "The Dragon's Heart";
+	}
+	virtual const char * getIconName() const
+	{
+		return "interface/icons/enh_shipshield.prt";
+	}
+	virtual dword requirementFlags() const
+	{
+		return REQ_ADMIN;
+	}
+	virtual Rarity rarity()  const
+	{
+		return RARITY_ULTRA_RARE;
+	}
+};
+
 //---------------------------------------------------------------------------------------------------
 
 #endif

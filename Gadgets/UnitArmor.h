@@ -48,15 +48,15 @@ public:
 	}
 	int buildTime() const
 	{
-		return 60 * 4;
+		return 60 * 8;
 	}
 	int buildTechnology() const
 	{
-		return 25;
+		return 40;
 	}
 	int	buildCost() const
 	{
-		return 25;
+		return 50;
 	}
 	dword buildFlags() const
 	{
@@ -65,6 +65,10 @@ public:
 	bool shipCaptureBonus() const
 	{
 		return false;
+	}
+	bool cannotBoardShip() const
+	{
+		return true;
 	}
 };
 
