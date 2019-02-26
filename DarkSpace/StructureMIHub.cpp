@@ -1,5 +1,5 @@
 /*
-	StructureHub.cpp
+	StructureMIHub.cpp
 	(c)2000 Palestar Inc, Richard Lyle
 */
 
@@ -14,7 +14,6 @@
 //----------------------------------------------------------------------------
 
 IMPLEMENT_FACTORY(StructureMIHub, NounStructure);
-REGISTER_FACTORY_KEY(StructureMIHub, 4358191680267792349LL);
 
 BEGIN_PROPERTY_LIST(StructureMIHub, NounStructure)
 END_PROPERTY_LIST();
@@ -117,7 +116,7 @@ int StructureMIHub::research() const
 
 int StructureMIHub::production() const
 {
-	return 20;
+	return 5;
 }
 
 int StructureMIHub::technology() const
