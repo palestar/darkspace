@@ -51,32 +51,32 @@ pushd ..\..\
 SET BUILD_DIR=%CD%
 popd
 
-echo "%DEVENV%" "%BUILD_DIR%\Medusa\Medusa.sln" /%ACTION% %CONFIG% /out Logs\Medusa.log
-"%DEVENV%" "%BUILD_DIR%\Medusa\Medusa.sln" /%ACTION% %CONFIG% /out Logs\Medusa.log
+echo "%DEVENV%" "%BUILD_DIR%\\Medusa\\Medusa.sln" /%ACTION% %CONFIG% /out Logs\\Medusa.log
+"%DEVENV%" "%BUILD_DIR%\\Medusa\\Medusa.sln" /%ACTION% %CONFIG% /out Logs\\Medusa.log
 if errorlevel 1 goto :Error
 
 IF "%ACTION%"=="Clean" goto :SkipUnitTest
 echo Running Medusa UnitTest...
-%BUILD_DIR%\Medusa\Bin\UnitTest.exe > Logs\UnitTest.log
+%BUILD_DIR%\\Medusa\\Bin\\UnitTest.exe > Logs\UnitTest.log
 if NOT errorlevel 0 goto :Error
-del %BUILD_DIR%\Medusa\Bin\UnitTest*.dmp
+del %BUILD_DIR%\\Medusa\\Bin\\UnitTest*.dmp
 :SkipUnitTest
 
 
-echo "%DEVENV%" "%BUILD_DIR%\Medusa\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\MedusaTools.log
-"%DEVENV%" "%BUILD_DIR%\Medusa\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\MedusaTools.log
+echo "%DEVENV%" "%BUILD_DIR%\\Medusa\\Tools\\Tools.sln" /%ACTION% %CONFIG% /out Logs\\MedusaTools.log
+"%DEVENV%" "%BUILD_DIR%\\Medusa\\Tools\\Tools.sln" /%ACTION% %CONFIG% /out Logs\\MedusaTools.log
 if errorlevel 1 goto :Error
 
-echo "%DEVENV%" "%BUILD_DIR%\GameCQ\GameCQ.sln" /%ACTION% %CONFIG% /out Logs\GameCQ.log
-"%DEVENV%" "%BUILD_DIR%\GameCQ\GameCQ.sln" /%ACTION% %CONFIG% /out Logs\GameCQ.log
+echo "%DEVENV%" "%BUILD_DIR%\\GameCQ\\GameCQ.sln" /%ACTION% %CONFIG% /out Logs\\GameCQ.log
+"%DEVENV%" "%BUILD_DIR%\\GameCQ\\GameCQ.sln" /%ACTION% %CONFIG% /out Logs\\GameCQ.log
 if errorlevel 1 goto :Error
 
-echo "%DEVENV%" "%BUILD_DIR%\DarkSpace\DarkSpace.sln" /%ACTION% %CONFIG% /out Logs\DarkSpace.log
-"%DEVENV%" "%BUILD_DIR%\DarkSpace\DarkSpace.sln" /%ACTION% %CONFIG% /out Logs\DarkSpace.log
+echo "%DEVENV%" "%BUILD_DIR%\\DarkSpace\\DarkSpace.sln" /%ACTION% %CONFIG% /out Logs\\DarkSpace.log
+"%DEVENV%" "%BUILD_DIR%\\DarkSpace\\DarkSpace.sln" /%ACTION% %CONFIG% /out Logs\\DarkSpace.log
 if errorlevel 1 goto :Error
 
-echo "%DEVENV%" "%BUILD_DIR%\DarkSpace\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
-"%DEVENV%" "%BUILD_DIR%\DarkSpace\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
+echo "%DEVENV%" "%BUILD_DIR%\\DarkSpace\\Tools\\Tools.sln" /%ACTION% %CONFIG% /out Logs\\DarkSpaceTools.log
+"%DEVENV%" "%BUILD_DIR%\\DarkSpace\\Tools\\Tools.sln" /%ACTION% %CONFIG% /out Logs\\DarkSpaceTools.log
 if errorlevel 1 goto :Error
 
 :Done
