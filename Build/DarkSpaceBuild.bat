@@ -1,7 +1,6 @@
-@echo off
+SET MSBUILD="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBUILD"
+SET LINUXBUILDER=builder@192.168.1.5
 
-IF "%DEVENV%"=="" SET DEVENV=devenv.exe
-IF "%LINUXBUILDER%"=="" SET LINUXBUILDER=builder@192.168.1.5
 IF "%BRANCH%"=="" SET BRANCH=work/Trunk/
 IF "%CONFIG%"=="" SET CONFIG=Release
 IF "%ACTION%"=="" SET ACTION=Build
@@ -51,8 +50,9 @@ pushd ..\..\
 SET BUILD_DIR=%CD%
 popd
 
-echo "%DEVENV%" "%BUILD_DIR%\Medusa\Medusa.sln" /%ACTION% %CONFIG% /out Logs\Medusa.log
-"%DEVENV%" "%BUILD_DIR%\Medusa\Medusa.sln" /%ACTION% %CONFIG% /out Logs\Medusa.log
+echo %MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\Medusa\Medusa.sln"
+%MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\Medusa\Medusa.sln" > Logs\Medusa.log
+echo "errorlevel: %errorlevel%"
 if errorlevel 1 goto :Error
 
 IF "%ACTION%"=="Clean" goto :SkipUnitTest
@@ -63,20 +63,20 @@ del %BUILD_DIR%\Medusa\Bin\UnitTest*.dmp
 :SkipUnitTest
 
 
-echo "%DEVENV%" "%BUILD_DIR%\Medusa\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\MedusaTools.log
-"%DEVENV%" "%BUILD_DIR%\Medusa\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\MedusaTools.log
+echo %MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\Medusa\Tools\Tools.sln"
+%MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\Medusa\Tools\Tools.sln" > Logs\MedusaTools.log
 if errorlevel 1 goto :Error
 
-echo "%DEVENV%" "%BUILD_DIR%\GameCQ\GameCQ.sln" /%ACTION% %CONFIG% /out Logs\GameCQ.log
-"%DEVENV%" "%BUILD_DIR%\GameCQ\GameCQ.sln" /%ACTION% %CONFIG% /out Logs\GameCQ.log
+echo %MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\GameCQ\GameCQ.sln"
+%MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\GameCQ\GameCQ.sln" > Logs\GameCQ.log
 if errorlevel 1 goto :Error
 
-echo "%DEVENV%" "%BUILD_DIR%\DarkSpace\DarkSpace.sln" /%ACTION% %CONFIG% /out Logs\DarkSpace.log
-"%DEVENV%" "%BUILD_DIR%\DarkSpace\DarkSpace.sln" /%ACTION% %CONFIG% /out Logs\DarkSpace.log
+echo %MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\DarkSpace\DarkSpace.sln"
+%MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\DarkSpace\DarkSpace.sln" > Logs\DarkSpace.log
 if errorlevel 1 goto :Error
 
-echo "%DEVENV%" "%BUILD_DIR%\DarkSpace\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
-"%DEVENV%" "%BUILD_DIR%\DarkSpace\Tools\Tools.sln" /%ACTION% %CONFIG% /out Logs\DarkSpaceTools.log
+echo %MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\DarkSpace\Tools\Tools.sln"
+%MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "%BUILD_DIR%\DarkSpace\Tools\Tools.sln" > Logs\DarkSpaceTools.log
 if errorlevel 1 goto :Error
 
 :Done

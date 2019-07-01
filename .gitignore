@@ -22,3 +22,7 @@ server/
 keyboard.map
 KeyManifest.txt
 multiverse/
+DarkSpace/ReleaseLinux/
+DarkSpaceServer/ReleaseLinux/
+Gadgets/ReleaseLinux/
+.Constants.ini.swo

@@ -1,4 +1,4 @@
-@echo off
+REM @echo off
 
 SET CONFIG=Release
 SET ACTION=Build

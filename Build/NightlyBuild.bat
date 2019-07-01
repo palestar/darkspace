@@ -1,6 +1,4 @@
-@echo off
-
-IF "%DEVENV%"=="" SET DEVENV=devenv.exe
+SET MSBUILD="C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBUILD"
 
 cd C:\Work\Trunk\DarkSpace\Build\
 del /Q Logs\*.log
@@ -16,7 +14,7 @@ call DarkSpaceBuildRelease.bat
 if errorlevel 1 goto :Error
 
 echo Alpha Distribution...
-"%DEVENV%" ..\Distribution\Distribution.sln /build Release /out Logs\Distribution.log
+%MSBUILD% /p:Configuration=%CONFIG% /t:%ACTION% "..\Distribution\Distribution.sln" > Logs\Distribution.log
 if errorlevel 1 goto :Error
 
 echo Promoting Alpha to Beta...
