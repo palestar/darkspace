@@ -4,19 +4,19 @@ echo Getting latest from GIT...
 cd C:\Work\Trunk\DarkSpace\
 git fetch origin
 if errorlevel 1 goto :Error
-git reset --hard 
+git reset --hard origin/develop
 if errorlevel 1 goto :Error
 
 cd C:\Work\Trunk\Medusa\
 git fetch origin
 if errorlevel 1 goto :Error
-git reset --hard
+git reset --hard origin/develop
 if errorlevel 1 goto :Error
 
 cd C:\Work\Trunk\GameCQ\
 git fetch origin
 if errorlevel 1 goto :Error
-git reset --hard
+git reset --hard origin/develop
 if errorlevel 1 goto :Error
 
 :Done
