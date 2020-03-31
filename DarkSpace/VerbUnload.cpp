@@ -145,15 +145,20 @@ bool VerbUnload::canUnload( Noun * pTarget, Noun * pUnload, NounShip * pShip )
 	// if target is ourselves, then we are ejecting the cargo into space
 	if ( pTarget != pShip )
 	{
-		// unloading to a ship ?
 		NounShip * pTargetShip = WidgetCast<NounShip>( pTarget );
-		if( pTargetShip && pTargetShip->isMonster() )
-			return false;	// cannot unload to space monsters
-		if (pTargetShip && ((NounUnit *)pUnload)->cannotBoardShip())
-			return false;	// armor cannot board enemy ships
+		NounUnit * pUnit = WidgetCast<NounUnit>( pUnload );
+
+		if (pTargetShip)
+		{
+			if (pTargetShip->isMonster())
+				return false;	// cannot unload to space monsters
+			if (pUnit)
+				if (pUnit->cannotBoardShip())
+					return false;	// armor cannot board enemy ships
+		}
 		// unloading to an enemy ?
 		if( pShip->isEnemy( pTarget ) )
-			if( ! WidgetCast<NounUnit>( pUnload ) )
+			if(!pUnit)
 				return false;	// can only unload units to enemy objects
 		
 		// make sure the target can hold the cargo
