@@ -1764,7 +1764,7 @@ static float SegmentDistance( const Vector3 & a_s1_p0, const Vector3 & a_s1_p1,
     return dP.magnitude();	// return the closest distance
 }
 
-const float AVOID_BASE_TIME = 5.0f;
+const float AVOID_BASE_TIME = 10.0f;
 
 bool NounShip::avoidCollision()
 {
