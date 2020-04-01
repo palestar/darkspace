@@ -1792,7 +1792,7 @@ bool NounShip::avoidCollision()
 		InsertAvoid( avoid, a );
 	}
 
-#if 0
+#if 1
 	// now add contacts that we must avoid, these are much higher in pririty..
 	for(int i=0;i<m_Contacts.size();++i)
 	{
