@@ -1764,7 +1764,7 @@ static float SegmentDistance( const Vector3 & a_s1_p0, const Vector3 & a_s1_p1,
     return dP.magnitude();	// return the closest distance
 }
 
-const float AVOID_BASE_TIME = 10.0f;
+const float AVOID_BASE_TIME = 5.0f;
 
 bool NounShip::avoidCollision()
 {
@@ -1793,7 +1793,7 @@ bool NounShip::avoidCollision()
 	}
 
 #if 1
-	// now add contacts that we must avoid, these are much higher in pririty..
+	// avoid planets and stars
 	for(int i=0;i<m_Contacts.size();++i)
 	{
 		Avoid a;
@@ -1802,9 +1802,16 @@ bool NounShip::avoidCollision()
 			continue;
 		if (! a.m_pObject->canShipCollide() )
 			continue;
+		if (WidgetCast<NounPlanet>(a.m_pObject) == NULL &&
+			WidgetCast<NounStar>(a.m_pObject) == NULL)
+			continue;
+
+		// don't add orbit target into avoid list
+		if (m_Command == ORBIT && a.m_pObject == m_OrderTarget)
+			continue;
 
 		a.m_fDistance = (vWorldPosition - a.m_pObject->worldPosition()).magnitude2();
-		a.m_fPriority = a.m_fDistance;	
+		a.m_fPriority = a.m_fDistance;
 
 		InsertAvoid( avoid, a );
 	}
