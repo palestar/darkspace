@@ -26,6 +26,7 @@ public:
 	CClientApp();
 
 	void			RunGame( InterfaceContext * pInterface );
+	void			OnMainWindowFocusLoss(InterfaceContext * pInterface);
 	int				StartGame();
 
 	CharString		m_sAddress;

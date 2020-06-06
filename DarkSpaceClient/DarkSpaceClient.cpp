@@ -113,40 +113,10 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 #ifndef _DEBUG
 	__try {
 #endif
-#ifdef _DEBUG
-		Settings settings("ClientD");
-#else
-		Settings settings("Client");
-#endif
-		GameDocument * pDoc = WidgetCast<GameDocument>(pInterface->document());
-		HWND hWnd = NULL;
-		bool bMuteOnFocusLoss = settings.get("MuteOnFocusLoss", 1 ) != 0;
 		// THE MAIN GAME LOOP 
 		while (pInterface->render())
 		{
-			if (bMuteOnFocusLoss)
-			{
-				// update our saved values if the volume is changed
-				if (pInterface->audio() != NULL && pDoc->jukeBox() != NULL)
-				{
-					// get our main window
-					hWnd = FindWindowA("DarkSpace", NULL);
-
-					// mute our device if we lose focus
-					if (hWnd != GetForegroundWindow())
-					{
-						pInterface->audio()->setVolume(0.0f);
-						pDoc->jukeBox()->setVolume(0.0f);
-					}
-					else
-					{
-						float nSfxVolume = Clamp<float>(settings.get("sfxVolume", 75), 0.0f, 100.0f)/100.f;
-						int nMusicVolume = Clamp<int>(settings.get("musicVolume", 75), 0, 100);
-						pInterface->audio()->setVolume(nSfxVolume);
-						pDoc->jukeBox()->setVolume(nMusicVolume);
-					}
-				}
-			}
+			OnMainWindowFocusLoss(pInterface);
 		};
 
 #ifndef _DEBUG
@@ -157,6 +127,40 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 		m_Error = true;
 	}
 #endif
+}
+
+void CClientApp::OnMainWindowFocusLoss( InterfaceContext * pInterface ) {
+#ifdef _DEBUG
+	Settings settings("ClientD");
+#else
+	Settings settings("Client");
+#endif
+	GameDocument * pDoc = WidgetCast<GameDocument>(pInterface->document());
+	HWND hWnd = NULL;
+	bool bMuteOnFocusLoss = settings.get("MuteOnFocusLoss", 1) != 0;
+	float nSfxVolume = Clamp<float>(settings.get("sfxVolume", 75), 0.0f, 100.0f) / 100.f;
+	int nMusicVolume = Clamp<int>(settings.get("musicVolume", 75), 0, 100);
+	if (bMuteOnFocusLoss)
+	{
+		// update our saved values if the volume is changed
+		if (pInterface->audio() != NULL && pDoc->jukeBox() != NULL)
+		{
+			// get our main window
+			hWnd = FindWindowA("DarkSpace", NULL);
+
+			// mute our device if we lose focus
+			if (hWnd != GetForegroundWindow())
+			{
+				pInterface->audio()->setVolume(0.0f);
+				pDoc->jukeBox()->setVolume(0.0f);
+			}
+			else
+			{
+				pInterface->audio()->setVolume(nSfxVolume);
+				pDoc->jukeBox()->setVolume(nMusicVolume);
+			}
+		}
+	}
 }
 
 int CClientApp::StartGame()
