@@ -119,8 +119,6 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 		Settings settings("Client");
 #endif
 		GameDocument * pDoc = WidgetCast<GameDocument>(pInterface->document());
-		float fSVolume = 0.0f;
-		int fMVolume = 0;
 		HWND hWnd = NULL;
 		bool bMuteOnFocusLoss = settings.get("MuteOnFocusLoss", 1 ) != 0;
 		// THE MAIN GAME LOOP 
@@ -134,12 +132,6 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 					// get our main window
 					hWnd = FindWindowA("DarkSpace", NULL);
 
-					if (pInterface->audio()->volume() > 0)
-						fSVolume = pInterface->audio()->volume();
-
-					if (pDoc->jukeBox()->volume() > 0)
-						fMVolume = pDoc->jukeBox()->volume();
-
 					// mute our device if we lose focus
 					if (hWnd != GetForegroundWindow())
 					{
@@ -148,8 +140,10 @@ void CClientApp::RunGame( InterfaceContext * pInterface )
 					}
 					else
 					{
-						pInterface->audio()->setVolume(fSVolume);
-						pDoc->jukeBox()->setVolume(fMVolume);
+						float nSfxVolume = Clamp<float>(settings.get("sfxVolume", 75), 0.0f, 100.0f)/100.f;
+						int nMusicVolume = Clamp<int>(settings.get("musicVolume", 75), 0, 100);
+						pInterface->audio()->setVolume(nSfxVolume);
+						pDoc->jukeBox()->setVolume(nMusicVolume);
 					}
 				}
 			}
