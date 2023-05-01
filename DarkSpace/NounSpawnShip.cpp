@@ -84,7 +84,7 @@ static CharString GenerateRomanNumerals( unsigned int a_nNumber )
 }
 
 //---------------------------------------------------------------------------------------------------
-const int BASE_FACTION_AI = 15;
+const int BASE_FACTION_AI = 45;
 const int MIN_SPAWN_DELAY = TICKS_PER_SECOND * 5;
 const int MAX_ATTEMPTS = 10;
 const int MAX_PLACEMENT_ATTEMPTS = 10;
