@@ -84,7 +84,6 @@ static CharString GenerateRomanNumerals( unsigned int a_nNumber )
 }
 
 //---------------------------------------------------------------------------------------------------
-const int BASE_FACTION_AI = 45;
 const int MIN_SPAWN_DELAY = TICKS_PER_SECOND * 5;
 const int MAX_ATTEMPTS = 10;
 const int MAX_PLACEMENT_ATTEMPTS = 10;
@@ -308,7 +307,7 @@ void NounSpawnShip::simulate( dword nTick )
 			{
 				// the max spawn is the difference between the number of spawned ships on this faction
 				// and the faction with the most spawned ships. (including our own faction)
-				nMaxSpawn = context()->user()->maxPlayerScoreAI() + BASE_FACTION_AI;
+				nMaxSpawn = context()->user()->maxPlayerScoreAI() + context()->user()->baseTeamAi();
 				nTotalSpawnScore = context()->user()->spawnedScore(factionId());
 			}
 			break;

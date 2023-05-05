@@ -33,6 +33,7 @@ IMPLEMENT_LIGHT_FACTORY( ProxyShip, NounShip);
 dword GameServer::sm_nAlwaysSpawnFlags		= MetaClient::ADMINISTRATOR|MetaClient::DEVELOPER;
 bool GameServer::sm_bEnableTeamSpawners		= true;
 bool GameServer::sm_bHiddenServer			= false;
+int GameServer::sm_nBaseTeamAi = 0;
 
 //---------------------------------------------------------------------------------------------------
 
@@ -1699,6 +1700,11 @@ int GameServer::maxPlayerScoreAI()
 	}
 
 	return nPlayerScore;
+}
+
+int GameServer::baseTeamAi() const
+{
+	return sm_nBaseTeamAi;
 }
 
 

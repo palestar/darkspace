@@ -23,6 +23,7 @@ public:
 	static dword		sm_nAlwaysSpawnFlags;		// what flags are needed to always allow spawning of any ship
 	static bool			sm_bEnableTeamSpawners;		// if true, then team spawners are created automatically
 	static bool			sm_bHiddenServer;			// if true, then server is registered as sub-game server
+	static int			sm_nBaseTeamAi;				// sets base ai to spawn
 
 	// Construction
 	GameServer();
@@ -63,6 +64,7 @@ public:
 	virtual bool		saveStorage( Noun * a_pSelf );
 	virtual int			spawnedScore( int a_nFactionId );
 	virtual int			maxPlayerScoreAI();
+	virtual int			baseTeamAi() const;
 
 	// GameContext::GameUser interface
 	virtual void		onKill( Noun * pWho, Noun *pDead );

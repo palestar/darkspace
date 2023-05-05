@@ -138,6 +138,7 @@ int RunServer( void * pINI )
 	GameServer::sm_nAlwaysSpawnFlags = settings.get( "alwaysSpawnFlags", MetaClient::ADMINISTRATOR|MetaClient::DEVELOPER );
 	GameServer::sm_bEnableTeamSpawners = settings.get("enableTeamSpawners", 1 ) != 0;
 	GameServer::sm_bHiddenServer = settings.get( "hiddenServer", (dword)0 ) != 0;
+	GameServer::sm_nBaseTeamAi = settings.get("baseTeamAi", 45);
 
 	// how often to automatically stop the server
 	CharString sRestartTimeMask = settings.get( "RestartTimeMask", "" );
